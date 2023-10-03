@@ -1,0 +1,16 @@
+1.	A quina línia es declara la variable numero?
+---- RESPOSTA ----
+La variable numero es declara a la linia 13
+
+2.	A quina línia s'inicialitza la variable numero?
+---- RESPOSTA ----
+La variable numero s'inicialitza a la linia 21
+
+3.	Si el valor pensat és 10, amb quin valor s'inicialitza la variable numero?
+---- RESPOSTA ----
+El valor amb que s'inicialitza serà 30, perquè es multiplica per 3
+
+4.	La variable numero va canviant de valor durant el programa. Ets capaç d'indicar els diferents valors que va rebent dins del programa quan el numeroPensat és 10? Afegeix la línia en la que pren cada valor.
+---- RESPOSTA ----
+Quan s'inicialitza serà 30, al següent pas serà 36, seguidament serà 12 i per últim serà 2
+
