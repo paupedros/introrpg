@@ -1,0 +1,29 @@
+
+
+1.		/* La Clara és més jove que tu */
+		edatClara < edatMeva
+		
+2.		/* La Clara i el Marc són més joves que tu */
+		(edatClara && edatMarc) < edatMeva
+		
+3.		/* La Clara és més jove que tu i tu ets més jove que el Marc */
+		(edatClara < edatMeva) && (edatMeva < edatMarc)
+		
+4.		/* La Clara no és més jove que el Marc */
+		!(edatClara < edatMarc)
+		
+5.		/* No és cert que el Marc sigui més jove que la Clara */
+		!(edatMarc < edatClara)
+		
+6.		/* Ni el Marc és més jove que la Clara ni tu ets més jove que el Marc */
+		!(edatMarc < edatClara) && !(edatMeva < edatMarc)
+		
+7.		/* Tu ets més gran que la Clara i el Marc junts o bé la Clara i el Marc tenen la mateixa edat */
+		(edatMeva > (edatClara + edatMarc)) || edatClara == edatMarc
+		
+8.		/* Tu ets més petit que la Clara i ets més gran que el Marc */
+		(edatMeva < edatClara) && (edatMeva > edatMarc)
+		
+9.		/* La Clara té la mateixa edat que tu i el Marc junts */
+		edatClara == (edatMeva + edatMarc)
+			
