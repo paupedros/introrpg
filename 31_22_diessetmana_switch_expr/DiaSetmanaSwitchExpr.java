@@ -1,4 +1,4 @@
-public class DiaSetmanaSwitch {
+public class DiaSetmanaSwitchExpr {
 	public static void main(String[] args) {
 		int num = Integer.parseInt(args[0]);
 		String dia = "";
