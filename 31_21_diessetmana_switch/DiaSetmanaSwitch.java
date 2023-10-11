@@ -1,3 +1,6 @@
+/* Programa que indica el nom del dia de la setmana segons el seu numero,
+	utilitzant switch */
+
 public class DiaSetmanaSwitch {
 	public static void main(String[] args) {
 		int num = Integer.parseInt(args[0]);

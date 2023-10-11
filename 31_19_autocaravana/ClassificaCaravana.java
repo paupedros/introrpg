@@ -1,3 +1,5 @@
+/* Programa que indica quina es la categoria de les caravanes segons el seu preu */
+
 public class ClassificaCaravana {
 	public static void main(String[] args){
 		int preu = Integer.parseInt(args[0]);

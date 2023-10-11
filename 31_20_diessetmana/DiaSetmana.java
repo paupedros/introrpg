@@ -1,3 +1,5 @@
+/* Programa que indica el nom corresponent del dia segons el numero */
+
 public class DiaSetmana {
 	public static void main(String[] args) {
 		int num = Integer.parseInt(args[0]);
