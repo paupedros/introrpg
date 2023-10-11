@@ -8,7 +8,7 @@ public class DosEnOrdre {
 		System.out.println("Segon?");
 		int segon = Integer.parseInt(Entrada.readLine());
         
-		if ( primer > segon ){
+		if ( primer < segon ){
 			System.out.println(primer + " i " + segon);
       }
 		else {
