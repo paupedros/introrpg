@@ -67,7 +67,7 @@ public class Ascensor {
         		System.out.println(pis0);
         	}
         }
-        System.out.println(numPis);
+        
 	}
 }
 
