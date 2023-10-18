@@ -1,27 +1,38 @@
 public class SumaPositius {
-
     public static void main(String[] args) {
 
-        int suma = 0;
+        // creem la variable on guardarem el resultat de sumar
+        int suma = 0;   // inicialment no hem sumat res i per tant és 0
 
-        int valor = 0;
+        // demanem valors
 
-        while (valor >= 0) {
+        // declarem la variable que contindrà els valors llegits
+        int valor;
 
-            System.out.println("Introdueix valor");
-
-            valor = Integer.parseInt(Entrada.readLine());
-
-            if (valor >= 0) {
-
-                suma = suma + valor;
-
-            }
-
+        // processem el primer valor
+        System.out.println("Introdueix el primer valor");
+        valor = Integer.parseInt(Entrada.readLine());
+        if (valor >= 0) {
+            suma = suma + valor;
+            System.out.println("Introdueix el segon valor");
+        	valor = Integer.parseInt(Entrada.readLine());
+        	if (valor >= 0) {
+            	suma = suma + valor;
+            	System.out.println("Introdueix el tercer valor");
+        		valor = Integer.parseInt(Entrada.readLine());
+        		if (valor >= 0) {
+            		suma = suma + valor;
+        		}
+        	}
         }
 
+        // processem el segon valor
+        
+
+        // processem el tercer valor
+        
+
+        // mostrem el resultat
         System.out.println("La suma és " + suma);
-
     }
-
 }
