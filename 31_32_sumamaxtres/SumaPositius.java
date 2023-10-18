@@ -3,16 +3,16 @@ public class SumaPositius {
     public static void main(String[] args) {
 
 
-        // creem la variable on guardarem el resultat de sumar
+        int suma = 0;
 
-        int suma = 0;   // inicialment no hem sumat res i per tant és 0
+        int valor;
 
 
         // demana el primer valor
 
         System.out.println("Introdueix valor");
 
-        int valor = Integer.parseInt(Entrada.readLine());
+        valor = Integer.parseInt(Entrada.readLine());
 
 
         // ves sumant mentre el valor sigui positiu
