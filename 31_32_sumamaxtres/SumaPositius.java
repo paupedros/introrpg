@@ -14,9 +14,10 @@ public class SumaPositius {
         valor = Integer.parseInt(Entrada.readLine());
         
         while (valor >= 0){
+        	suma = suma + valor;
         	System.out.println("Introdueix el tercer valor");
         	valor = Integer.parseInt(Entrada.readLine());
-        	suma = suma + valor;
+        	
         }
 
         // mostrem el resultat
