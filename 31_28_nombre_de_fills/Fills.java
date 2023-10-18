@@ -16,7 +16,7 @@ public class Fills {
 			System.out.println("Compte de no mimar-lo massa!");
 		}
 		else if (fills > 4){
-			System.out.println("Tu si fas país!");
+			System.out.println("Tu sí fas país!");
 		}
 		else if (fills > 1 || fills < 5){
 			System.out.println("No t'avorreixes a casa, eh?");
