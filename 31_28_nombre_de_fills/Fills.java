@@ -15,12 +15,13 @@ public class Fills {
 		else if (fills == 1){
 			System.out.println("Compte de no mimar-lo massa!");
 		}
-		else if (fills > 1 || fills > 5){
-			System.out.println("No t'avorreixes a casa, eh?");
-		}
 		else if (fills > 4){
 			System.out.println("Tu si fas país!");
 		}
+		else if (fills > 1 || fills < 5){
+			System.out.println("No t'avorreixes a casa, eh?");
+		}
+		
 	}
 }
 
