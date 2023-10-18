@@ -22,7 +22,7 @@ public class Ascensor {
         	numPis = 2;
         }
         
-        if (boto.equals("puja un")){
+        if (boto.equals("pujar un")){
         	numPis = numPis + 1;
         	if (numPis >= 3){
         		System.out.println("error");
@@ -34,7 +34,7 @@ public class Ascensor {
         		System.out.println(pis2);
         	}
         }
-        if (boto.equals("puja dos")){
+        if (boto.equals("pujar dos")){
         	numPis = numPis + 2;
         	if (numPis >= 3){
         		System.out.println("error");
@@ -43,7 +43,7 @@ public class Ascensor {
         		System.out.println(pis2);
         	}
         }
-        if (boto.equals("baixa un")){
+        if (boto.equals("baixar un")){
         	numPis = numPis - 1;
         	if (numPis < 0){
         		System.out.println("error");
@@ -55,7 +55,7 @@ public class Ascensor {
         		System.out.println(pis1);
         	}
         }
-        if (boto.equals("baixa dos")){
+        if (boto.equals("baixar dos")){
         	numPis = numPis - 2;
         	if (numPis < 0){
         		System.out.println("error");
@@ -67,7 +67,7 @@ public class Ascensor {
         		System.out.println(pis0);
         	}
         }
-        
+        System.out.println(numPis);
 	}
 }
 
