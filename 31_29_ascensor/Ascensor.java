@@ -70,6 +70,9 @@ public class Ascensor {
         		System.out.println(pis0);
         	}
         }
+        else {
+        	System.out.println("error");
+        }
         
 	}
 }
