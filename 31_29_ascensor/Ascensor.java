@@ -21,6 +21,9 @@ public class Ascensor {
         else if (pis.equals(pis2)){
         	numPis = 2;
         }
+        else {
+        	numPis = 3;
+        }
         
         if (boto.equals("pujar un")){
         	numPis = numPis + 1;
