@@ -1,3 +1,5 @@
+/* En aquest programa demanem nombres i els sumem */
+
 public class SumaPositius {
     public static void main(String[] args) {
 
