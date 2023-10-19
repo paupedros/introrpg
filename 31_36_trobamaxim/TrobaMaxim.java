@@ -15,6 +15,9 @@ public class TrobaMaxim {
 				System.out.println("Introdueix un valor");
 				valor = Integer.parseInt(Entrada.readLine());
 			}
+			
+		}
+		else {
 			maxim = 0;
 		}
 		System.out.println("El màxim és " + maxim);
