@@ -7,13 +7,15 @@ public class TrobaMaxim {
 		System.out.println("Introdueix un valor");
 		int valor = Integer.parseInt(Entrada.readLine());
 		int maxim = valor;
-		
-		while(valor>=0){
-			if (valor > maxim){
-				maxim = valor;
+		if (valor>= 0){
+			while(valor>=0){
+				if (valor > maxim){
+					maxim = valor;
+				}
+				System.out.println("Introdueix un valor");
+				valor = Integer.parseInt(Entrada.readLine());
 			}
-			System.out.println("Introdueix un valor");
-			valor = Integer.parseInt(Entrada.readLine());
+			maxim = 0;
 		}
 		System.out.println("El màxim és " + maxim);
 	}
