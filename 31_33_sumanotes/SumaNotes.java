@@ -13,7 +13,7 @@ public class SumaNotes {
 			notaFinal = notaFinal + nota;
 			System.out.println("Introdueix una nota");
 			nota = Integer.parseInt(Entrada.readLine());
-			System.out.println(nota);
+			
 			
 			
 		}
