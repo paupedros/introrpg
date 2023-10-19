@@ -9,29 +9,31 @@ public class TrobaMesProxim {
 		if (ancora>0){
 			System.out.println("Introdueix un valor");
 			int valor = Integer.parseInt(Entrada.readLine());
+			int valorProxim = valor;
 			if (valor>0){
-			
-		
-				int valorProxim = valor;
 				int calculProxim = (ancora - valor);
 				if (calculProxim<0){
 						calculProxim= calculProxim*(-1); 
-					}
+				}
+				
 				while (valor>=0){
 					System.out.println("Introdueix un valor");
 					valor = Integer.parseInt(Entrada.readLine());
-					int calcul2 = (ancora - valor) ;
-					if (calcul2<0){
-						calcul2= calcul2*(-1); 
-					}
-					if (calcul2 == calculProxim && valorProxim >= valor){
-						valorProxim = valor;
-					}
-					if (calcul2 < calculProxim){
-						valorProxim = valor;
-						calculProxim = calcul2;
+					if(valor>=0){
+						int calcul2 = (ancora - valor) ;
+						if (calcul2<0){
+							calcul2= calcul2*(-1); 
+						}
+						if (calcul2 == calculProxim && valorProxim >= valor){
+							valorProxim = valor;
+						}
+						if (calcul2 < calculProxim){
+							valorProxim = valor;
+							calculProxim = calcul2;
+						}
 					}
 				}
+				
 				System.out.println("El valor introduït més pròxim a "+ancora +" és "+valorProxim);
 			}
 			else {
