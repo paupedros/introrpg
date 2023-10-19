@@ -1,3 +1,7 @@
+
+/* En aquest programa introduim valor enters positius i els anem 
+	sumant fins que introduim un nombre negatiu */
+
 public class SumaPositius {
     public static void main(String[] args) {
 
