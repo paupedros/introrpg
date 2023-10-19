@@ -14,7 +14,7 @@ public class NotaMitja {
 		if (nota>=0 && nota<=100){
 			sumaNotes = nota;
 			while (nota>=0 && nota<=100){
-				System.out.println("Introdueix una nota");
+				System.out.println("Introdueix un valor");
 				nota = Integer.parseInt(Entrada.readLine());
 				if (nota>=0 && nota<=100){
 					notes = notes+1;
