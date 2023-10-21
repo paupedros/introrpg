@@ -1,7 +1,7 @@
 /* En aquest programa el sistema pensara un numero entre el 1 i el 100, l'usuari l'ha d'endevinar
 	amb pistes de si es mes gran o mes petit */
 	
-public class Endevina {
+public class EndevinaNombre {
 	public static void main(String[] args){
 		int numPensat = 42;
 		
