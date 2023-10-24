@@ -10,19 +10,19 @@ public class EndevinaNombre {
 		int numEndevina = Integer.parseInt(Entrada.readLine());
 		
 		while (numEndevina != numPensat){
-			
-			if (numEndevina > numPensat){
-				System.out.println("És més petit que " + numEndevina);
-			}
-			else if (numEndevina < numPensat) {
-				System.out.println("És més gran que " + numEndevina);
-			}
-			else if (numEndevina > 100){
+			if (numEndevina > 100){
 				System.out.println("Com a màxim 100");
 			}
 			else if (numEndevina < 1){
 				System.out.println("Com a miním 1");
 			}
+			else if (numEndevina > numPensat){
+				System.out.println("És més petit que " + numEndevina);
+			}
+			else if (numEndevina < numPensat) {
+				System.out.println("És més gran que " + numEndevina);
+			}
+			
 			System.out.println("Introdueix un valor");
 			numEndevina = Integer.parseInt(Entrada.readLine());
 		}
