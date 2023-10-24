@@ -14,7 +14,7 @@ public class EndevinaNombre {
 				System.out.println("Com a màxim 100");
 			}
 			else if (numEndevina < 1){
-				System.out.println("Com a miním 1");
+				System.out.println("Com a mínim 1");
 			}
 			else if (numEndevina > numPensat){
 				System.out.println("És més petit que " + numEndevina);
