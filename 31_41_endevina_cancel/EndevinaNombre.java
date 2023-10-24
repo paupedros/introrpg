@@ -29,7 +29,7 @@ public class EndevinaNombre {
 					System.out.println("Introdueix un valor");
 					numEndevina = Entrada.readLine();
 				}
-				else {
+				else { // Si no es diferent al numPensat es perque ha encertat
 					System.out.println("Has encertat!");
 					encertat = true;
 					
@@ -41,7 +41,7 @@ public class EndevinaNombre {
 			
 			
 		}
-		if (numEndevina.isEmpty()) {
+		if (numEndevina.isEmpty()) { // Si esta buit es cancel·la
 			System.out.println("Cancel·lat!");
 		}
 		
