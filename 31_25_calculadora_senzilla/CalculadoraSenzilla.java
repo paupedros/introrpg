@@ -19,7 +19,7 @@ public class CalculadoraSenzilla {
            	System.out.println(operand1 + " - " + operand2 + " = " + resultat);
         }
 		else if (operador == '/'){
-			if (operand1 == 0 || operand2 == 0) {
+			if ( operand2 == 0) {
 				System.out.println("No es pot dividir entre 0");
 			}
 			else {
