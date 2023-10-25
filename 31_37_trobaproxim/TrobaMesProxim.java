@@ -32,7 +32,7 @@ public class TrobaMesProxim {
 							calculProxim = calcul2;
 						}
 					}
-					else {
+					else if (valor<0) {
 						System.out.println("No s'ha introduït cap valor positiu");
 					}
 				}
