@@ -37,9 +37,9 @@ public class TrobaMesProxim {
 				
 				System.out.println("El valor introduït més pròxim a "+ancora +" és "+valorProxim);
 			}
-			else {
+			/*else {
 				System.out.println("No s'ha introduït cap valor positiu");
-			}
+			}*/
 		
 		}
 		else {
