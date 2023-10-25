@@ -11,5 +11,7 @@ Comandes
 		System.out.print("Impressió simple");
 		System.out.print("Impressió amb salt de línia");
 
- 
+.. code-block:: java
+	hola
+	
 
