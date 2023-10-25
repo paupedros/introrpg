@@ -6,11 +6,11 @@ public class TrobaMesProxim {
 	public static void main(String[] args){
 		System.out.println("Introdueix l'àncora");
 		int ancora = Integer.parseInt(Entrada.readLine());
-		if (ancora>0){
+		if (ancora>=0){
 			System.out.println("Introdueix un valor");
 			int valor = Integer.parseInt(Entrada.readLine());
 			int valorProxim = valor;
-			if (valor>0){
+			if (valor>=0){
 				int calculProxim = (ancora - valor);
 				if (calculProxim<0){
 						calculProxim= calculProxim*(-1); 
