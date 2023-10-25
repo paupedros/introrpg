@@ -32,12 +32,15 @@ public class TrobaMesProxim {
 							calculProxim = calcul2;
 						}
 					}
+					else {
+						System.out.println("No s'ha introduït cap valor positiu");
+					}
 				}
 				
 				System.out.println("El valor introduït més pròxim a "+ancora +" és "+valorProxim);
 			}
 			else {
-			System.out.println("No s'ha introduït cap valor positiu");
+				System.out.println("No s'ha introduït cap valor positiu");
 			}
 		
 		}
