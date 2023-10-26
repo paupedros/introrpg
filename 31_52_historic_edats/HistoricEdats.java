@@ -11,7 +11,12 @@ public class HistoricEdats{
 		System.out.println("L'any actual?");
 		int any = Integer.parseInt(Entrada.readLine());
 		
-		if (edat==0){
+		
+		if (nom.isEmpty() || edat<0 || any<1971){
+			System.out.println("Entrada incorrecta");
+		}
+		
+		else if (edat==0){
 			System.out.println("Adéu " + nom);
 		}
 		else {
