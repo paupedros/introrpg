@@ -35,7 +35,7 @@ public class TrobaMesProxim {
 						// Calculem la diferencia de ancora amb el valor actual
 						
 						/*if (calcul2<0){
-							calcul2= calcul2*(-1); 
+							calcul2= calcul2*(-1);
 						}*/
 						if (calcul2 == calculProxim && valorProxim >= valor){ 
 						// Si el calcul de la diferencia actual és igual al calcul anterior i el valor més proxim és mes gran o igual al valor actual, canviem el valor més proxim al valor d'ara
