@@ -7,12 +7,18 @@ public class QuadratNombres {
 		System.out.println("Valor final?");
 		int valor = Integer.parseInt(Entrada.readLine());
 		
-		for (int linia=1; linia<=valor; linia++){
-			for (int i=1; i<=valor; i++){
-				System.out.print(" " + i);
-			}
-			System.out.println();
+		if (valor<1 || valor>9){
+			System.out.println("Valor inadequat");
 		}
+		else {
+			for (int linia=1; linia<=valor; linia++){
+				for (int i=1; i<=valor; i++){
+					System.out.print(" " + i);
+				}
+				System.out.println();
+			}
+		}
+		
 	}
 }
 
