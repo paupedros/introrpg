@@ -1,0 +1,64 @@
+
+/* En aquest programa dibuixarem rombos a partir dels 10 primers nombres naturals,
+	segons quants ens indiqui l'usuari */
+
+public class Rombos{
+	public static void main(String[] args){
+		System.out.println("quants?");
+		int valor = Integer.parseInt(Entrada.readLine());
+		
+		for (int rombe=1; rombe<=valor; rombe++){ // num triangle
+		
+			// ------------ TRIANGLE NORMAL ----------
+			for (int linia=9; linia>=0; linia--){
+				
+					
+				for (int punts=1; punts<=linia; punts++){
+					System.out.print(".");
+				}
+					
+				for (int i=linia; i<=9; i++){			
+					System.out.print(i);
+				}
+					
+				
+				for (int i=8; i>=linia; i--){			
+					System.out.print(i);
+				}
+				
+				for (int punts=1; punts<=linia; punts++){
+					System.out.print(".");
+				}
+				
+			System.out.println();
+			}
+			
+			
+			// ---------- TRIANGLE INVERTIT ----------	
+			for (int linia=1; linia<=9; linia++){
+				
+				for (int punts=1; punts<=linia; punts++){
+					System.out.print(".");
+				}
+					
+				for (int i=linia; i<=9; i++){			
+					System.out.print(i);
+				}
+					
+				
+				for (int i=8; i>=linia; i--){			
+					System.out.print(i);
+				}
+				
+				for (int punts=1; punts<=linia; punts++){
+					System.out.print(".");
+				}
+				
+			System.out.println();
+			}
+		
+		}
+
+	}
+}
+
