@@ -16,10 +16,17 @@ public class TaulaMultiplicar {
 		}
 		
 		for (int i=primer; i<=segon; i++) {
-			int mult = i*tercer;
-			System.out.println(i + " x " + tercer + " = " + mult);
-			mult = i*quart;
-			System.out.println(i + " x " + quart + " = " + mult);
+			if (tercer == quart){
+				int mult = i*tercer;
+				System.out.println(i + " x " + tercer + " = " + mult);
+			}
+			else {
+				int mult = i*tercer;
+				System.out.println(i + " x " + tercer + " = " + mult);
+				mult = i*quart;
+				System.out.println(i + " x " + quart + " = " + mult);
+			}
+			
 		}
 	}
 }
