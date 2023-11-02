@@ -14,6 +14,11 @@ public class TaulaMultiplicar {
 			primer = segon;
 			segon = primerTmp;
 		}
+		if (tercer>quart){
+			int tercerTmp = tercer;
+			tercer = quart;
+			quart = tercerTmp;
+		}
 		
 		for (int i=primer; i<=segon; i++) {
 			if (tercer == quart){
@@ -21,10 +26,12 @@ public class TaulaMultiplicar {
 				System.out.println(i + " x " + tercer + " = " + mult);
 			}
 			else {
-				int mult = i*tercer;
-				System.out.println(i + " x " + tercer + " = " + mult);
-				mult = i*quart;
-				System.out.println(i + " x " + quart + " = " + mult);
+				for (int multiplicador = tercer; multiplicador<=quart; multiplicador++){
+					int mult = i*multiplicador;
+					System.out.println(i + " x " + multiplicador + " = " + mult);
+				}
+				
+				
 			}
 			
 		}
