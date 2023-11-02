@@ -21,5 +21,5 @@ Volem dibuixar una forma geomètrica amb angles rectes (rectangle/quadrat), per�
 
 
 ..
-	
+	 Repte © 2023 by Pau Pedrós Ribas is licensed under CC BY-NC-ND 4.0 
 
