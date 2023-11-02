@@ -6,12 +6,13 @@ public class InformeCaracter{
 	public static void main(String[] args){
 		System.out.println("Caràcter?");
 		String text = Entrada.readLine();
-		char caracter = text.charAt(0);
+		
 		
 		if (text.isBlank()){
 			System.out.println("Caràcter buit");
 		}
 		else {
+			char caracter = text.charAt(0);
 			System.out.println("Character.getName('" + caracter + "'): " + Character.getName(caracter));
 			System.out.println("Character.isDigit('" + caracter + "'): " + Character.isDigit(caracter));
 			System.out.println("Character.isJavaIdentifierStart('" + caracter + "'): " + Character.isJavaIdentifierStart(caracter));
