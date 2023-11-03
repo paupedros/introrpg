@@ -15,12 +15,14 @@ public class ManipulaString {
 
 		    
 
-		    // Mostra la penúltima lletra de la paraula
-		    System.out.println("La penúltima lletra és '" + paraula.charAt(paraula.length()-2) + "'");
+		   
 		}
         // Mostra la darrera lletra de la paraula
 			System.out.println("La darrera lletra és '" + paraula.charAt(paraula.length()-1) + "'");
 
+		 // Mostra la penúltima lletra de la paraula
+		    System.out.println("La penúltima lletra és '" + paraula.charAt(paraula.length()-2) + "'");
+		    
         // Mostra la paraula amb totes les lletres en majúscules
         System.out.println("La paraula en majúscules és " + "\"" + paraula.toUpperCase() + "\"");
 		
