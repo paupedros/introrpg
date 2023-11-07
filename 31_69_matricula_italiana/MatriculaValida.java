@@ -40,10 +40,7 @@ public class MatriculaValida {
 				for (int i=0; i<=2; i++){
 					char caracter = nums.charAt(i);
 					
-					if (Character.isDigit(caracter)){
-						boolNums=true;
-					}
-					else {
+					if (!Character.isDigit(caracter)){
 						boolNums=false;
 					}
 				}
