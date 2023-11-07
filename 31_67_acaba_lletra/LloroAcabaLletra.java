@@ -9,7 +9,7 @@ public class LloroAcabaLletra {
         
         while (!paraula.isBlank()){
         	paraula.toLowerCase();
-        	if (paraula.endsWith("a") || paraula.endsWith("e") || paraula.endsWith("i") || paraula.endsWith("o") || paraula.endsWith("u")) {		    	
+        	if (paraula.endsWith("a") || paraula.endsWith("e") || paraula.endsWith("i") || paraula.endsWith("o") || paraula.endsWith("u") || paraula.endsWith("A") || paraula.endsWith("E") || paraula.endsWith("I") || paraula.endsWith("O") || paraula.endsWith("U")) {		    	
         	}
         	else {
         		System.out.println("El lloro diu: " + paraula);
