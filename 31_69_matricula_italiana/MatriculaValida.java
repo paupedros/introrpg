@@ -11,61 +11,64 @@ public class MatriculaValida {
 		String nums = matricula.substring(2,5);
 		String lletresFinal = matricula.substring(5,7);
 		
-		boolean valida = false;
-		
+		boolean boolInici = false;
+		boolean boolNums = false;
+		boolean boolFinal = false;
 		
 		// Validació primeres dues lletres
 		for (int i=0; i<=1; i++){
 			char caracter = lletresInicial.charAt(i);
 			int ascii = (int) caracter;
-			
-			if (ascii<65 || ascii>=90){
-				valida=true;
+			if (ascii>=65 && ascii<=90){
+				boolInici=true;
 			}
 			
-			else if (caracter == 'I'
+			if (caracter == 'I'
 			|| caracter == 'O'
 			|| caracter == 'Q'
 			|| caracter == 'U'){
-				valida=false;
+				boolInici=false;
 			}
-			else valida=false;
 			
 		}
 		
-		if (valida==true){
+		
+		if (boolInici==true){
 			// Validació nombres
 			for (int i=0; i<=2; i++){
 				char caracter = nums.charAt(i);
 				
 				if (Character.isDigit(caracter)){
-					valida=true;
+					boolNums=true;
 				}
 				else {
-					valida=false;
+					boolNums=false;
 				}
 			}
-		}
+			
+			
+			if (boolNums==true) {
 		
-		if (valida==true) {
-			// Validació dues lletres finals
-			for (int i=0; i<=1; i++){
-				char caracter = lletresFinal.charAt(i);
-				int ascii = (int) caracter;
-				
-				if (ascii<65 || ascii>=90){
-					valida=true;
+				// Validació dues lletres finals
+				for (int i=0; i<=1; i++){
+					char caracter = lletresFinal.charAt(i);
+					int ascii = (int) caracter;
+					
+					if (ascii>=65 || ascii<=90){
+						boolFinal=true;
+					}
+					
+					if (caracter == 'I'
+					|| caracter == 'O'
+					|| caracter == 'Q'
+					|| caracter == 'U'){
+						boolFinal=false;
+					}
+					
+					
 				}
-				
-				else if (caracter == 'I'
-				|| caracter == 'O'
-				|| caracter == 'Q'
-				|| caracter == 'U'){
-					valida=false;
-				}
-				else valida=false;
-				
 			}
+			
 		}
 		
 		
@@ -73,7 +76,10 @@ public class MatriculaValida {
 		
 		
 		
-		if (valida == true) {
+		
+		
+		
+		if (boolFinal == true) {
 			System.out.println("És una matrícula italiana vàlida");
 		}
 		
