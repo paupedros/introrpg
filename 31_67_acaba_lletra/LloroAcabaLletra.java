@@ -10,12 +10,12 @@ public class LloroAcabaLletra {
         while (!paraula.isBlank()){
         	String paraulaMin = paraula.toLowerCase();
         	char charFinal = paraulaMin.charAt(paraulaMin.length()-1);
-        	if (charFinal == ('a') 
-        	|| charFinal == ('e') 
-        	|| charFinal == ('i') 
-        	|| charFinal == ('o')  
-        	|| charFinal == ('u')  ){
-        		  
+        	if (charFinal != ('a') 
+        	|| charFinal != ('e') 
+        	|| charFinal != ('i') 
+        	|| charFinal != ('o')  
+        	|| charFinal != ('u')  ){
+        		  System.out.println(charFinal);
         		  	
         	}
         	else {
