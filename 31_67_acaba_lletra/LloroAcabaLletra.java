@@ -11,10 +11,10 @@ public class LloroAcabaLletra {
         	String paraulaMin = paraula.toLowerCase();
         	char charFinal = paraulaMin.charAt(paraulaMin.length()-1);
         	if (charFinal != ('a') 
-        	|| charFinal != ('e') 
-        	|| charFinal != ('i') 
-        	|| charFinal != ('o')  
-        	|| charFinal != ('u')  ){
+        	&& charFinal != ('e') 
+        	&& charFinal != ('i') 
+        	&& charFinal != ('o')  
+        	&& charFinal != ('u')  ){
         		  	
         	
         		System.out.println("El lloro diu: " + paraula);
