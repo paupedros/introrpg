@@ -7,7 +7,7 @@ public class MatriculaValida {
 		System.out.println("Introduïu una matrícula");
 		String matricula = Entrada.readLine();
 		
-		if (matricula.length() != 6){
+		if (!(matricula.length() == 7)){
 		
 			String lletresInicial = matricula.substring(0,2);
 			String nums = matricula.substring(2,5);
