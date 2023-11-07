@@ -10,7 +10,7 @@ public class SegonaIgualPenultima {
 		while (!text.isBlank()){
 			
 			if (text.length() <= 1){
-				System.out.println("Segona diferent a penúltima");
+				System.out.println("Segona diferent de penúltima");
 			}
 			
 			
