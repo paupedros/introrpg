@@ -23,7 +23,7 @@ public class SegonaIgualPenultima {
 					System.out.println("Segona igual a penúltima");
 				}
 				else {
-					System.out.println("Segona diferent a penúltima");
+					System.out.println("Segona diferent de penúltima");
 				}
 			}
 			
