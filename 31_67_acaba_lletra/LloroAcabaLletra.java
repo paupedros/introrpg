@@ -9,7 +9,14 @@ public class LloroAcabaLletra {
         
         while (!paraula.isBlank()){
         	String paraulaMin = paraula.toLowerCase();
-        	if (paraulaMin.endsWith("a") || paraulaMin.endsWith("e") || paraulaMin.endsWith("i") || paraulaMin.endsWith("o") || paraulaMin.endsWith("u")){		    	
+        	char charFinal = paraulaMin.charAt(-1);
+        	if (charFinal == ('a') 
+        	|| charFinal == ('e') 
+        	|| charFinal == ('i') 
+        	|| charFinal == ('o')  
+        	|| charFinal == ('u')  ){
+        		  
+        		  	
         	}
         	else {
         		System.out.println("El lloro diu: " + paraula);
