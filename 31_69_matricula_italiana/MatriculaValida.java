@@ -33,18 +33,29 @@ public class MatriculaValida {
 				}
 				
 			}
+			System.out.println(boolInici);
 			
 			
 			if (boolInici==true){
 				// Validació nombres
-				for (int i=0; i<=2; i++){
-					char caracter = nums.charAt(i);
+				boolean flag = true;
+				int x = 0;
+				while (flag==true || x<=1) {
+					char caracter = nums.charAt(x);
 					
 					if (!Character.isDigit(caracter)){
 						boolNums=false;
+						flag = false;
 					}
+					else {
+						boolNums=true;
+					}
+					x++;
 				}
 				
+				
+				
+				System.out.println(boolNums);
 				
 				if (boolNums==true) {
 			
@@ -66,6 +77,7 @@ public class MatriculaValida {
 						
 						
 					}
+					System.out.println(boolFinal);
 				}
 				
 			}
