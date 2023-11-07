@@ -8,7 +8,8 @@ public class LloroAcabaLletra {
 		String paraula = Entrada.readLine();
         
         while (!paraula.isBlank()){
-        	if (paraula.endsWith("a") || paraula.endsWith("e") || paraula.endsWith("i") || paraula.endsWith("o") || paraula.endsWith("u") || paraula.endsWith("A") || paraula.endsWith("E") || paraula.endsWith("I") || paraula.endsWith("O") || paraula.endsWith("U")) {		    	
+        	String paraulaMin = paraula.toLowerCase();
+        	if (paraulaMin.endsWith("a") || paraulaMin.endsWith("e") || paraulaMin.endsWith("i") || paraulaMin.endsWith("o") || paraulaMin.endsWith("u")){		    	
         	}
         	else {
         		System.out.println("El lloro diu: " + paraula);
