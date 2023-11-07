@@ -15,7 +15,6 @@ public class LloroAcabaLletra {
         	|| charFinal != ('i') 
         	|| charFinal != ('o')  
         	|| charFinal != ('u')  ){
-        		  System.out.println(charFinal);
         		  	
         	}
         	else {
