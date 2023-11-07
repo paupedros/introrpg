@@ -10,20 +10,20 @@ public class LloroAcabaLletra {
         while (!paraula.isBlank()){
         	String paraulaMin = paraula.toLowerCase();
         	char charFinal = paraulaMin.charAt(paraulaMin.length()-1);
-        	if (charFinal != ('a') 
-        	&& charFinal != ('e') 
-        	&& charFinal != ('i') 
-        	&& charFinal != ('o')  
-        	&& charFinal != ('u')  ){
-        		  	
-        	
-        		System.out.println("El lloro diu: " + paraula);
+        	if (Character.isLetter(charFinal)){
+		    	if (charFinal != ('a') 
+		    	&& charFinal != ('e') 
+		    	&& charFinal != ('i') 
+		    	&& charFinal != ('o')  
+		    	&& charFinal != ('u')  ){
+		    	
+		    		System.out.println("El lloro diu: " + paraula);
+		    		
+		    	}
         	}
+        	
         	System.out.println("El lloro pregunta paraula que finalitzi per lletra no vocal");
         	paraula = Entrada.readLine();
-        	
-        	
-        	
         	
 		}
         
