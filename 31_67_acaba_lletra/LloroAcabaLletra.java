@@ -9,7 +9,7 @@ public class LloroAcabaLletra {
         
         while (!paraula.isBlank()){
         	String paraulaMin = paraula.toLowerCase();
-        	char charFinal = paraulaMin.charAt(-1);
+        	char charFinal = paraulaMin.charAt(paraulaMin.length()-1);
         	if (charFinal == ('a') 
         	|| charFinal == ('e') 
         	|| charFinal == ('i') 
