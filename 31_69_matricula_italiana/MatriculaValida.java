@@ -40,7 +40,7 @@ public class MatriculaValida {
 				// Validació nombres
 				boolean flag = true;
 				int x = 0;
-				while (flag==true || x<=1) {
+				while (flag==true && x<=1) {
 					char caracter = nums.charAt(x);
 					
 					if (!Character.isDigit(caracter)){
