@@ -12,18 +12,19 @@ public class AnalitzaCaracter{
 		int pos = Integer.parseInt(Entrada.readLine());
 		char caracter = ' ';
 		
-		if (pos < 0){
-			caracter = text.charAt(text.length() + pos);
-		}
-		else {
-			caracter = text.charAt(pos);
-		}
+		
 		
 		// Si pos es mes gran que el text o si pos es mes petit que la llargada del text en negatiu
 		if (pos == text.length() || pos < (text.length())*-1){ 
 			System.out.println("Fora de rang");
 		}
 		else {
+			if (pos < 0){
+				caracter = text.charAt(text.length() + pos);
+			}
+			else {
+				caracter = text.charAt(pos);
+			}
 		
 			if (Character.isDigit(caracter)){
 				System.out.println("\'" + caracter +  "\' " + "és un nombre");
