@@ -49,8 +49,9 @@ public class MatriculaValida {
 					}
 					else {
 						boolNums=true;
+						x++;
 					}
-					x++;
+					
 				}
 				
 				
