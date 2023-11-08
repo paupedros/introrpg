@@ -11,11 +11,11 @@ public class NomesLletres{
 		for (int i=0; i<text.length(); i++){
 			caracter = text.charAt(i);
 			if (Character.isAlphabetic(caracter)){
-				if (i==text.length()-1){
+				if (i==0){
 					textNou = textNou.concat("" + caracter);
 				}
 				else {
-					textNou = textNou.concat("" + caracter + ", ");
+					textNou = textNou.concat(", " + caracter);
 				}
 				
 			}
