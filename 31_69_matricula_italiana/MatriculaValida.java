@@ -33,7 +33,7 @@ public class MatriculaValida {
 				}
 				
 			}
-			System.out.println(boolInici);
+			//System.out.println(boolInici);
 			
 			
 			if (boolInici==true){
@@ -55,7 +55,7 @@ public class MatriculaValida {
 				
 				
 				
-				System.out.println(boolNums);
+				//System.out.println(boolNums);
 				
 				if (boolNums==true) {
 			
@@ -77,7 +77,7 @@ public class MatriculaValida {
 						
 						
 					}
-					System.out.println(boolFinal);
+					//System.out.println(boolFinal);
 				}
 				
 			}
