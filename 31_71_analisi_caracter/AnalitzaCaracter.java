@@ -20,7 +20,7 @@ public class AnalitzaCaracter{
 		}
 		
 		// Si pos es mes gran que el text o si pos es mes petit que la llargada del text en negatiu
-		if (pos > text.length()-1 || pos < (text.length())*-1){ 
+		if (pos > (text.length()-1) || pos < (text.length())*-1){ 
 			System.out.println("Fora de rang");
 		}
 		else {
