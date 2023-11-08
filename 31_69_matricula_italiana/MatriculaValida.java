@@ -36,7 +36,7 @@ public class MatriculaValida {
 			}
 					
 					
-			System.out.println(valid);
+			//System.out.println(valid);
 			if (valid=false){
 				System.out.println("No és una matrícula italiana vàlida");
 			}
