@@ -26,13 +26,13 @@ public class AnalitzaCaracter{
 		else {
 		
 			if (Character.isDigit(caracter)){
-				System.out.println("\'" + caracter +  "\'" + "és un nombre");
+				System.out.println("\'" + caracter +  "\' " + "és un nombre");
 			}
 			else if (Character.isLetter(caracter)){
-				System.out.println("\'" + caracter +  "\'" + "és una lletra");
+				System.out.println("\'" + caracter +  "\' " + "és una lletra");
 			}
 			else {
-				System.out.println("\'" + caracter +  "\'" + "és una altra cosa");
+				System.out.println("\'" + caracter +  "\' " + "és una altra cosa");
 			}
 		}
 		
