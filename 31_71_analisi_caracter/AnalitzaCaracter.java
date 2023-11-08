@@ -13,14 +13,14 @@ public class AnalitzaCaracter{
 		char caracter = ' ';
 		
 		if (pos < 0){
-			caracter = text.charAt(text.length() - pos);
+			caracter = text.charAt(text.length() + pos);
 		}
 		else {
 			caracter = text.charAt(pos);
 		}
 		
-		
-		if (pos > text.length()-1 || pos < (text.length())*-1){
+		// Si pos es mes gran que el text o si pos es mes petit que la llargada del text en negatiu
+		if (pos > text.length()-1 || pos < (text.length())*-1){ 
 			System.out.println("Fora de rang");
 		}
 		else {
