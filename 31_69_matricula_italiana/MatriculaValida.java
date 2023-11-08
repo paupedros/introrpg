@@ -6,97 +6,44 @@ public class MatriculaValida {
 	
 		System.out.println("Introduïu una matrícula");
 		String matricula = Entrada.readLine();
+		boolean valid = true;
+		char caracter = ' ';
 		
 		if (matricula.length() == 7){
-		
-			String lletresInicial = matricula.substring(0,2);
-			String nums = matricula.substring(2,5);
-			String lletresFinal = matricula.substring(5,7);
 			
-			boolean boolInici = false;
-			boolean boolNums = false;
-			boolean boolFinal = false;
-			
-			// Validació primeres dues lletres
-			for (int i=0; i<=1; i++){
-				char caracter = lletresInicial.charAt(i);
-				int ascii = (int) caracter;
-				if (ascii>=65 && ascii<=90){
-					boolInici=true;
-				}
-				
-				if (caracter == 'I'
-				|| caracter == 'O'
-				|| caracter == 'Q'
-				|| caracter == 'U'){
-					boolInici=false;
-				}
-				
-			}
-			//System.out.println(boolInici);
-			
-			
-			if (boolInici==true){
-				// Validació nombres
-				boolean flag = true;
-				int x = 0;
-				while (flag==true && x<=2) {
-					char caracter = nums.charAt(x);
-					
-					if (!Character.isDigit(caracter)){
-						boolNums=false;
-						flag = false;
+			for (int i=0; i<7; i++){
+				caracter = matricula.charAt(i);
+				// Primeres i ultimes dues lletres 
+				if (i==0 || i==1 || i==5 || i==6){
+					if (!Character.isLetter(caracter)){
+						valid=false;
 					}
-					else {
-						boolNums=true;
-						x++;
+					else if (Character.toUpperCase(caracter) != caracter){
+						valid = false;
 					}
-					
-				}
-				
-				
-				
-				//System.out.println(boolNums);
-				
-				if (boolNums==true) {
-			
-					// Validació dues lletres finals
-					for (int i=0; i<=1; i++){
-						char caracter = lletresFinal.charAt(i);
-						int ascii = (int) caracter;
-						
-						if (ascii>=65 || ascii<=90){
-							boolFinal=true;
-						}
-						
-						if (caracter == 'I'
+					else if (caracter == 'I'
 						|| caracter == 'O'
 						|| caracter == 'Q'
-						|| caracter == 'U'){
-							boolFinal=false;
-						}
-						
-						
+						|| caracter == 'U') {
+						valid = false;
 					}
-					//System.out.println(boolFinal);
 				}
-				
+				if (i==2 || i==3 || i==4){
+					if(!Character.isDigit(caracter)){
+						valid=false;
+					}
+				}
 			}
-			
-			
-			if (boolFinal == true) {
+					
+					
+			//System.out.println(valid);
+			if (valid=false){
 				System.out.println("És una matrícula italiana vàlida");
 			}
-			
 			else {
 				System.out.println("No és una matrícula italiana vàlida");
 			}
+			
 		}
-		else {
-			System.out.println("No és una matrícula italiana vàlida");
-		}
-		
-		
-
 	}
 }
