@@ -31,6 +31,7 @@ public class MatriculaValida {
 						valid = false;
 					}
 				}
+				// Nombres
 				if (i==2 || i==3 || i==4){
 					if(!Character.isDigit(caracter)){
 						valid=false;
