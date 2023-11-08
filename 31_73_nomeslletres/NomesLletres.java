@@ -8,7 +8,8 @@ public class NomesLletres{
 		String text = Entrada.readLine();
 		char caracter = ' ';
 		String textNou = "";
-		for (int i=0; i<text.length(); i++){
+		int i = 0;
+		while (i<text.length()){
 			caracter = text.charAt(i);
 			if (Character.isAlphabetic(caracter)){
 				if (i==0){
@@ -17,8 +18,9 @@ public class NomesLletres{
 				else {
 					textNou = textNou.concat(", " + caracter);
 				}
-				
+				i++;
 			}
+			
 		}
 		
 		System.out.println(textNou);
