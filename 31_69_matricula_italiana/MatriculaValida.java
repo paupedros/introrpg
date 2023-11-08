@@ -27,6 +27,9 @@ public class MatriculaValida {
 						|| caracter == 'U') {
 						valid = false;
 					}
+					else if (!(caracter >= 'A' && caracter <= 'Z')) {
+						valid = false;
+					}
 				}
 				if (i==2 || i==3 || i==4){
 					if(!Character.isDigit(caracter)){
