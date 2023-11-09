@@ -16,17 +16,29 @@ public class MostraInterval {
 		if (numFinal > text.length()){
 			numFinal = text.length()-1;
 		}
-		else if (inici > text.length()) {
+		if (inici > text.length()) {
 			inici = text.length()-1;
 		}
+		if (inici < 0) {
+			inici = text.length()+inici;
+		}
+		if (numFinal < 0){
+			numFinal = text.length()+numFinal;
+		}
 		
-		if (text.length()+inici<numFinal){
+		
+		/*if (text.length()+inici<numFinal){
 			for (int i=inici; i<=numFinal; i++){
 				System.out.println(text.charAt(text.length()+i));
 			}
 		}
+		if (text.length()+inici>numFinal) {
+			for (int i=inici; i>=numFinal; i++){
+				System.out.println(text.charAt(text.length()+i));
+			}
+		}*/
 		
-		else if (inici<=numFinal){
+		if (inici<=numFinal){
 			for (int i=inici; i<=numFinal; i++){
 				System.out.println(text.charAt(i));
 			}
