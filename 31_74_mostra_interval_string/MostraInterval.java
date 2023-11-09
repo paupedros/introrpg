@@ -13,10 +13,10 @@ public class MostraInterval {
 		
 		
 		
-		if (numFinal > text.length()){
+		if (numFinal >= text.length()){
 			numFinal = text.length()-1;
 		}
-		if (inici > text.length()) {
+		if (inici >= text.length()) {
 			inici = text.length()-1;
 		}
 		if (inici < 0) {
