@@ -20,10 +20,10 @@ public class MostraInterval {
 			inici = text.length()-1;
 		}
 		if (inici < 0) {
-			inici = text.length()+inici;
+			inici = inici+text.length();
 		}
 		if (numFinal < 0){
-			numFinal = text.length()+numFinal;
+			numFinal = numFinal+text.length();
 		}
 		
 		
