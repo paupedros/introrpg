@@ -12,6 +12,7 @@ public class MostraInterval {
 		
 		
 		
+		
 		if (numFinal > text.length()){
 			numFinal = text.length()-1;
 		}
@@ -19,7 +20,13 @@ public class MostraInterval {
 			inici = text.length()-1;
 		}
 		
-		if (inici<=numFinal){
+		if (text.length()+inici<numFinal){
+			for (int i=inici; i<numFinal; i++){
+				System.out.println(text.charAt(text.length()+i));
+			}
+		}
+		
+		else if (inici<=numFinal){
 			for (int i=inici; i<=numFinal; i++){
 				System.out.println(text.charAt(i));
 			}
