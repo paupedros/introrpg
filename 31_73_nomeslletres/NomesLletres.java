@@ -8,12 +8,14 @@ public class NomesLletres{
 		String text = Entrada.readLine();
 		char caracter = ' ';
 		String textNou = "";
+		boolean primer = false;
 		for (int i=0; i<text.length(); i++){
 			caracter = text.charAt(i);
 			
 			if (Character.isAlphabetic(caracter)){
-				if (i==0){
+				if (primer==false){
 					textNou = textNou.concat("" + caracter);
+					primer=true;
 				}
 				else {
 					textNou = textNou.concat(", " + caracter);
