@@ -14,7 +14,7 @@ public class EsEnter{
 			number = true;
 			for (int i = 0; i<text.length(); i++){
 				char ch = text.charAt(i);
-				if (ch == '-' || ch == '+'){
+				if ( i == 0 && (ch == '-' || ch == '+')){
 				
 				}
 				else if (!Character.isDigit(ch)){
