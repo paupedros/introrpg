@@ -18,14 +18,25 @@ public class CadenaContinua {
 				
 			}
 			else {
-				for (int i=0; nova.length()<=num-1; i++){ 
+				int i = 0;
+				while(nova.length()<=num-1){
+					if (i>=text.length()){
+						i=0;
+					}
+					nova = nova.concat("" + text.charAt(i));
+					i++;
+				}
+			
+			
+			
+			/*	for (int i=0; nova.length()<=num-1; i++){ 
 				// Mentre que la llargada de la nova cadena sigui més petita o igual al nombre indicat -1
 					if (i>=text.length()){
 						i=0;
 					}
 					nova = nova.concat("" + text.charAt(i));
 					
-				}
+				}*/
 				System.out.println(nova);
 			}
 			
