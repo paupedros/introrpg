@@ -37,7 +37,7 @@ public class Endevina {
 			int numUser = Integer.parseInt(num);
 			
 			if (numPensat == numUser){
-				System.out.println("Has encertat!");
+				System.out.println("Encertat!");
 				return;
 			}
 			if (numUser > 100){
