@@ -15,12 +15,13 @@ public class Endevina {
 			num = num.strip();
 			
 			// Si és enter
-			while (enter == false){
+			while (!enter){
 				for (int i=0; i<num.length(); i++){
 					char ch = num.charAt(i);
 					if (i == 0 && (ch == '-' || ch == '+')) continue;
 					if (!Character.isDigit(ch)){
 						System.out.println("Només nombres");
+						enter = false;
 						break;
 					}
 					enter = true;
@@ -28,7 +29,7 @@ public class Endevina {
 				if (enter == true) continue;
 				System.out.println("Nombre?");
 				num = Entrada.readLine();
-				
+				num = num.strip();
 			}
 			
 			
@@ -41,16 +42,20 @@ public class Endevina {
 				return;
 			}
 			if (numUser > 100){
-						System.out.println("Fora de rang");
+				System.out.println("Fora de rang");
+				continue;
 			}
 			else if (numUser < 1){
 				System.out.println("Fora de rang");
+				continue;
 			}
 			else if (numUser > numPensat){
 				System.out.println("Massa gran");
+				continue;
 			}
 			else if (numUser < numPensat) {
 				System.out.println("Massa petit");
+				continue;
 			}
 			
 
