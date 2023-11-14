@@ -26,12 +26,10 @@ public class Endevina {
 					}
 					enter = true;
 				}
-				if (!enter){
-					System.out.println("Nombre?");
-					num = Entrada.readLine();
-					num = num.strip();
-				}
-				
+					
+				System.out.println("Nombre?");
+				num = Entrada.readLine();
+				num = num.strip();
 			}
 			
 			
