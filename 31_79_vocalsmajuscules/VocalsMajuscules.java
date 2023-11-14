@@ -10,7 +10,7 @@ public class VocalsMajuscules{
 		
 		for (int i=0; i<text.length(); i++){
 			char ch = text.charAt(i);
-			// Comprovar si el caracter es una vocal
+			// Comprovar si el caracter es una vocal (el passarem a majuscula)
 			boolean vocal = false;
 			for (int n=0; n<vocals.length(); n++){
 				if (ch == vocals.charAt(n)){
