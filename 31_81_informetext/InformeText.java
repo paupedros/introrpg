@@ -14,6 +14,8 @@ public class InformeText{
 		int digits = 0;
 		int altre = 0;
 		int carac = text.length();
+		
+		if(text.isBlank()) return;
 		for (int i=0; i<text.length(); i++){
 			char ch = text.charAt(i);
 			
