@@ -31,6 +31,7 @@ public class InformeText{
 			else if (Character.isDigit(ch)){
 				digits++;
 			}
+			// Altres caracters
 			else {
 				altre++;
 			}
