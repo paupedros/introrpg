@@ -67,7 +67,7 @@ public class InformeText{
 		System.out.printf("total vocals: %d (%.2f%%)%n", vocalsTotal, 100.0 * vocalsTotal/carac);
 		System.out.printf("digits: %d (%.2f%%)%n", digits, 100.0 * digits/carac);
 		System.out.printf("altres caràcters: %d (%.2f%%)%n", altre, 100.0 * altre/carac);
-		System.out.printf("total caràcters: %d %n", carac);
+		System.out.printf("total caràcters: %d", carac);
 		
 		
 		
