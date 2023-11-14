@@ -14,19 +14,19 @@ public class Endevina {
 			
 			num = num.strip();
 			
-			// Si és enter
+			// Mentre que no sigui enter
 			while (!enter){
 				for (int i=0; i<num.length(); i++){
 					char ch = num.charAt(i);
 					if (i == 0 && (ch == '-' || ch == '+')) continue;
-					if (!Character.isDigit(ch)){
+					if (!Character.isDigit(ch)){ // Si el caracter no és un nombre
 						System.out.println("Només nombres");
 						enter = false;
 						break;
 					}
 					enter = true;
 				}
-				if (!enter){
+				if (!enter){ 	// Si no és enter tornem a demanar un nombre
 					System.out.println("Nombre?");
 					num = Entrada.readLine();
 					num = num.strip();
@@ -35,7 +35,7 @@ public class Endevina {
 				break;
 				
 			}
-			enter = false;
+			enter = false; // Reiniciem si és enter per el seguent nombre
 			
 			
 			
