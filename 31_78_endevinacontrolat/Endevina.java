@@ -5,7 +5,7 @@
 public class Endevina {
 	public static void main(String[] args){
 		int numPensat = 42;
-		boolean enter = true;
+		boolean enter = false;
 		
 		while (true){
 			System.out.println("Nombre?");
@@ -15,7 +15,7 @@ public class Endevina {
 			num = num.strip();
 			
 			// Si és enter
-			while (enter){
+			while (!enter){
 				for (int i=0; i<num.length(); i++){
 					char ch = num.charAt(i);
 					if (i == 0 && (ch == '-' || ch == '+')) continue;
@@ -29,11 +29,13 @@ public class Endevina {
 				if (!enter){
 					System.out.println("Nombre?");
 					num = Entrada.readLine();
-					num = num.strip();	
+					num = num.strip();
+					continue;
 				}
+				break;
 				
 			}
-			
+			enter = false;
 			
 			
 			
