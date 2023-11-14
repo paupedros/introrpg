@@ -18,7 +18,7 @@ public class MajusculitzaInicials{
 					paraula = true; // Estem en una paraula
 				}
 			}
-			else {
+			else { // Si estem en una paraula
 				if(Character.isLetter(ch)){ // Si el caracter es una lletra
 					ch = Character.toLowerCase(ch);
 				}
