@@ -53,6 +53,10 @@ public class TransformaText{
 			vocal = false;
 			
 		}
+		if(Character.isDigit(textNou.charAt(textNou.length()-1))){
+			textNou+=")";
+		}
+		
 		System.out.println(textNou);
 		
 	}
