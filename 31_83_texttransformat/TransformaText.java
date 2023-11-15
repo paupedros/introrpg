@@ -13,51 +13,56 @@ public class TransformaText{
 		String vocals = "aeiouàéèíïóòúü";
 		
 		// Recorrem el text
-		for (int i=0; i<text.length(); i++){
-			char ch = text.charAt(i);
-			boolean vocal = false;
-			if(!nombre){ // Si no estem en un nombre
-				if(Character.isDigit(ch)){
-					textNou+="(";
-					nombre = true;
-				}
-			}
-			if (nombre){ // si estem en un nombre
-				if(!Character.isDigit(ch)){ // si no es un digit
-					textNou+=")";
-					nombre = false;
-				}
-				else{ // si es un digit
-					textNou+=ch;
-				}
-			}
-			
-			if(Character.isLetter(ch)){
-				// Comprovar si el caracter es una vocal (el passarem a minuscula)
-				vocal = false;
-				for (int n=0; n<vocals.length(); n++){
-					if (ch == vocals.charAt(n)){
-						vocal = true;
-						break;
+		while (!text.isBlank()){
+		
+			for (int i=0; i<text.length(); i++){
+				char ch = text.charAt(i);
+				boolean vocal = false;
+				if(!nombre){ // Si no estem en un nombre
+					if(Character.isDigit(ch)){
+						textNou+="(";
+						nombre = true;
 					}
 				}
-				if(!vocal){
-					ch = Character.toUpperCase(ch);
+				if (nombre){ // si estem en un nombre
+					if(!Character.isDigit(ch)){ // si no es un digit
+						textNou+=")";
+						nombre = false;
+					}
+					else{ // si es un digit
+						textNou+=ch;
+					}
 				}
 				
+				if(Character.isLetter(ch)){
+					// Comprovar si el caracter es una vocal (el passarem a minuscula)
+					vocal = false;
+					for (int n=0; n<vocals.length(); n++){
+						if (ch == vocals.charAt(n)){
+							vocal = true;
+							break;
+						}
+					}
+					if(!vocal){
+						ch = Character.toUpperCase(ch);
+					}
+					
+				}
+				else if(!Character.isWhitespace(ch)){ // Si el caracter es blanc
+					continue;
+				}
+				textNou+=ch;
+				vocal = false;
+				
 			}
-			else if(!Character.isWhitespace(ch)){ // Si el caracter es blanc
-				continue;
+			if(Character.isDigit(textNou.charAt(textNou.length()-1))){
+				textNou+=")";
 			}
-			textNou+=ch;
-			vocal = false;
 			
-		}
-		if(Character.isDigit(textNou.charAt(textNou.length()-1))){
-			textNou+=")";
+			System.out.println(textNou);
+		
 		}
 		
-		System.out.println(textNou);
 		
 	}
 }
