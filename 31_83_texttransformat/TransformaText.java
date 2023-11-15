@@ -49,7 +49,6 @@ public class TransformaText{
 			else if(!Character.isSpaceChar(ch)){
 				continue;
 			}
-			System.out.println(ch);	
 			textNou+=ch;
 			vocal = false;
 			
