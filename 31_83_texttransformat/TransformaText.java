@@ -46,7 +46,7 @@ public class TransformaText{
 				}
 				
 			}
-			else if(!Character.isSpaceChar(ch)){
+			else if(!Character.isWhitespace(ch)){ // Si el caracter es blanc
 				continue;
 			}
 			textNou+=ch;
