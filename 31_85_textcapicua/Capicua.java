@@ -12,7 +12,11 @@ public class Capicua{
 			textNou+=ch;
 		}
 		
-		if(text.equals(textNou)){
+		
+		if(text.isBlank()){
+			System.out.println("No és capicua");
+		}
+		else if(text.equals(textNou)){
 			System.out.println("És capicua");
 		}
 		else {
