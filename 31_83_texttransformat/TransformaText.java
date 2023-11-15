@@ -13,7 +13,7 @@ public class TransformaText{
 		String vocals = "aeiouàéèíïóòúü";
 		
 		// Recorrem el text
-		while (!text.isBlank()){
+		if (!text.isBlank()){
 		
 			for (int i=0; i<text.length(); i++){
 				char ch = text.charAt(i);
