@@ -11,6 +11,10 @@ public class PiramideLletres{
 		int numPunts = 0;
 		String textFinal = "";
 		
+		if(text.isBlank()){
+			return;
+		}
+		
 		// Creacio de la paraula completa separada per punts
 		for (int i=0; i<text.length(); i++){
 			char ch = text.charAt(i);
