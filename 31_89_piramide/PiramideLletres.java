@@ -20,12 +20,14 @@ public class PiramideLletres{
 			}
 			textNou = textNou + ch + ".";
 		}
+		
 		int textNouLen = textNou.length();
 		numPunts = textLen + textNouLen%textLen-1;
 		for (int punts=0; punts<numPunts; punts++){
-				System.out.print(".");
+				textFinal += ".";
 		}
 		textNou = "";
+		
 		for (int linia=0; linia<text.length(); linia++){
 			
 			for (int columna=0; columna<=linia; columna++){
@@ -56,7 +58,6 @@ public class PiramideLletres{
 			// Text del reves
 			for (int i=textFinal.length()-1; i>=0; i--){
 				char ch = textFinal.charAt(i);
-			
 				System.out.print(ch);
 			}	
 			// Print textFinal al reves
