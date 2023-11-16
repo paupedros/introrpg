@@ -45,7 +45,7 @@ public class PiramideLletres{
 			}
 			else if(linia!=0){// Si la linea no es la primera
 				textNouLen = textNou.length();
-				numPunts = textLen + textNouLen%textLen-1;
+				numPunts -= 2;
 				for (int punts=0; punts<numPunts; punts++){
 					textFinal += ".";
 				}
