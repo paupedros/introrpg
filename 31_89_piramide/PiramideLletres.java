@@ -47,7 +47,7 @@ public class PiramideLletres{
 				//System.out.print(textNou);
 				//System.out.println("-");
 			}
-			else if(linia!=0){// Si la linea no es la primera
+			else if(linia!=0){// Si la linea no es la primera li treiem 2 punts
 				textNouLen = textNou.length();
 				numPunts -= 2;
 				for (int punts=0; punts<numPunts; punts++){
