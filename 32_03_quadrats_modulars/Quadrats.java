@@ -4,8 +4,6 @@
 public class Quadrats{
 	public static void main(String[] args){
 		
-		
-		
 		dibuixaQuadrats();
 		
 	}
