@@ -27,10 +27,6 @@ public class LloroQuadrat{
 			text = Entrada.readLine();
 		}
 		
-		while(!text.isBlank()){
-			
-		}
-		
 		System.out.println("Adéu");
 		
 	}
