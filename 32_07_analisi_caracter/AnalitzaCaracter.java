@@ -17,32 +17,32 @@ public class AnalitzaCaracter{
 		// Si pos es mes gran que el text o si pos es mes petit que la llargada del text en negatiu
 		if (pos == text.length() || pos < (text.length())*-1){ 
 			System.out.println("Fora de rang");
+			return;
+		}
+		if (pos < 0){
+				caracter = text.charAt(text.length() + pos);
 		}
 		else {
-			analitzaCaracter(caracter, pos, text);
+			caracter = text.charAt(pos);
 		}
+		analitzaCaracter(caracter);
 		
 		
 		
 	}
 	
-	public static void analitzaCaracter(char caracter, int pos, String text){
-		if (pos < 0){
-				caracter = text.charAt(text.length() + pos);
-			}
-			else {
-				caracter = text.charAt(pos);
-			}
+	public static void analitzaCaracter(char caracter){
 		
-			if (Character.isDigit(caracter)){
-				System.out.println("\'" + caracter +  "\' " + "és un nombre");
-			}
-			else if (Character.isLetter(caracter)){
-				System.out.println("\'" + caracter +  "\' " + "és una lletra");
-			}
-			else {
-				System.out.println("\'" + caracter +  "\' " + "és una altra cosa");
-			}
+	
+		if (Character.isDigit(caracter)){
+			System.out.println("\'" + caracter +  "\' " + "és un nombre");
+		}
+		else if (Character.isLetter(caracter)){
+			System.out.println("\'" + caracter +  "\' " + "és una lletra");
+		}
+		else {
+			System.out.println("\'" + caracter +  "\' " + "és una altra cosa");
+		}
 	}
 	
 }
