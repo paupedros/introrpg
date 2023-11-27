@@ -1,5 +1,6 @@
 
-/* En aquest programa dibuixarem quadrats amb X, amb parametritzacio */
+/* En aquest programa dibuixarem quadrats amb X i un nombre determinat d'allargada,
+	 amb parametritzacio */
 
 public class Quadrat{
 	public static void main(String[] args){
