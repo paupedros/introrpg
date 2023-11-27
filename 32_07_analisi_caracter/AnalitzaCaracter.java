@@ -1,6 +1,6 @@
 
 /* En aquest programa introduirem un text i una posicio, amb aquesta posicio direm la categoria del
-	caracter */
+	caracter, tot utilitzant un modul per a fer l'anal·lisi del caracter */
 
 public class AnalitzaCaracter{
 	public static void main(String[] args){
@@ -19,7 +19,15 @@ public class AnalitzaCaracter{
 			System.out.println("Fora de rang");
 		}
 		else {
-			if (pos < 0){
+			analitzaCaracter(caracter, pos, text);
+		}
+		
+		
+		
+	}
+	
+	public static void analitzaCaracter(char caracter, int pos, String text){
+		if (pos < 0){
 				caracter = text.charAt(text.length() + pos);
 			}
 			else {
@@ -35,11 +43,8 @@ public class AnalitzaCaracter{
 			else {
 				System.out.println("\'" + caracter +  "\' " + "és una altra cosa");
 			}
-		}
-		
-		
-		
 	}
+	
 }
 
 
