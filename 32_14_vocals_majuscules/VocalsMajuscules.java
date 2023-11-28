@@ -1,5 +1,7 @@
 
-/* En aquest programa introduirem un text i convertirem les vocals en majuscules */
+/* En aquest programa introduirem un text i convertirem les vocals en majuscules.
+	Amb el modul main obtenim les dades d'entrada, amb un altre tractem les vocals
+	per a que estiguin en majuscules */
 
 public class VocalsMajuscules{
 	public static void main(String[] args){
