@@ -22,7 +22,7 @@ public class CodificaBasic{
 		for (int i=0; i<text.length(); i++){
 			char ch = text.charAt(i);
 			
-			if (ch == 'z'){
+			if (ch == 'z' && quants != 0){
 				ch = 'a';
 				ch = (char) (ch + quants - 1);
 			}
