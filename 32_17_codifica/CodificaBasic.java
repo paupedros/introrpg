@@ -22,16 +22,10 @@ public class CodificaBasic{
 		for (int i=0; i<text.length(); i++){
 			char ch = text.charAt(i);
 			
-			/*if (ch == 'z' && quants != 0){
-				ch = 'a';
-				ch = (char) (ch + quants - 1);
-			}
-			else if(ch >= 'a' && ch <= 'z'){
-				ch = (char) (ch + quants);
-			}*/
-			if (ch >= 'a' && ch <= 'z') {
-		        if (ch + quants > 'z') {
-		        	ch = (char) (ch + quants - 26);
+			
+			if (ch >= 'a' && ch <= 'z') { // Si el caracter esta entre a i z
+		        if (ch + quants > 'z') { // Si la suma de quants es major a z
+		        	ch = (char) (ch + quants - 26); // tornem a la a + quants
 		        }
 		        else {
 		            ch = (char) (ch + quants);
