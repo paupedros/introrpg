@@ -1,5 +1,7 @@
 
-/* En aquest programa introduim un text i el retornem amb les lletres separades per comes */
+/* En aquest programa introduim un text i el retornem amb les lletres separades per comes.
+	Les dades d'entrada es faran al main, el tractament 
+	de les dades es fara a un modul parametritzat */
 
 public class NomesLletres{
 	public static void main(String[] args){
