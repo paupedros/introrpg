@@ -22,13 +22,21 @@ public class CodificaBasic{
 		for (int i=0; i<text.length(); i++){
 			char ch = text.charAt(i);
 			
-			if (ch == 'z' && quants != 0){
+			/*if (ch == 'z' && quants != 0){
 				ch = 'a';
 				ch = (char) (ch + quants - 1);
 			}
 			else if(ch >= 'a' && ch <= 'z'){
 				ch = (char) (ch + quants);
-			}
+			}*/
+			if (ch >= 'a' && ch <= 'z') {
+		        if (ch + quants > 'z') {
+		        	ch = (char) (ch + quants - 26);
+		        }
+		        else {
+		            ch = (char) (ch + quants);
+		        }
+        	}
 			
 			
 			textNou+=ch;
