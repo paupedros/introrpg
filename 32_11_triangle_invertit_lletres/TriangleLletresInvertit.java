@@ -17,8 +17,6 @@ public class TriangleLletresInvertit{
 			text = text.substring(0,text.length()-1);
 		}
 		
-		
-		
 	}
 	
 	public static void dibuixaTriangleInvertit(String text){
