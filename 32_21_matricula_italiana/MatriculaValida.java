@@ -17,12 +17,15 @@ public class MatriculaValida {
 				// Primeres i ultimes dues lletres 
 				if (i==0 || i==1 || i==5 || i==6){
 					valid = esLletraValidaPerMatriculaItaliana(caracter);
+					System.out.println(valid);
 				}
 				// Nombres
 				if (i==2 || i==3 || i==4){
 					if(!Character.isDigit(caracter)){
 						valid=false;
+						break;
 					}
+					System.out.println(valid);
 				}
 			}
 			
