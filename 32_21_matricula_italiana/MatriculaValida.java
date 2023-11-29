@@ -17,6 +17,9 @@ public class MatriculaValida {
 				// Primeres i ultimes dues lletres 
 				if (i==0 || i==1 || i==5 || i==6){
 					valid = esLletraValidaPerMatriculaItaliana(caracter);
+					if (valid==false){
+						break;
+					}
 					//System.out.println(valid);
 				}
 				// Nombres
