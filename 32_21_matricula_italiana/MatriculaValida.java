@@ -40,23 +40,23 @@ public class MatriculaValida {
 	}
 	
 	public static boolean esLletraValidaPerMatriculaItaliana(char caracter){
-		boolean lletraValida = true;
+		
 		if (!Character.isLetter(caracter)){
-			lletraValida=false;
+			return false;
 		}
 		else if (Character.toUpperCase(caracter) != caracter){
-			lletraValida = false;
+			return false;
 		}
 		else if (caracter == 'I'
 			|| caracter == 'O'
 			|| caracter == 'Q'
 			|| caracter == 'U') {
-			lletraValida = false;
+			return false;
 		}
 		else if (!(caracter >= 'A' && caracter <= 'Z')) {
-			lletraValida = false;
+			return false;
 		}
-		return lletraValida;
+		return true;
 	}
 	
 }
