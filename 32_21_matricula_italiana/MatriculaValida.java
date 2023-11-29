@@ -17,7 +17,7 @@ public class MatriculaValida {
 				// Primeres i ultimes dues lletres 
 				if (i==0 || i==1 || i==5 || i==6){
 					valid = esLletraValidaPerMatriculaItaliana(caracter);
-					if (valid==false){
+					if (valid==false){ // Si la lletra no es valida parem de recorrer el text
 						break;
 					}
 					//System.out.println(valid);
@@ -35,14 +35,15 @@ public class MatriculaValida {
 			//System.out.println(valid);
 			if (valid==false){
 				System.out.println("No és una matrícula italiana vàlida");
+				return;
 			}
-			else if (valid) {
-				System.out.println("És una matrícula italiana vàlida");
-			}
+			
+			System.out.println("És una matrícula italiana vàlida");
+			return;
+			
 		}
-		else {
-			System.out.println("No és una matrícula italiana vàlida");
-		}
+		System.out.println("No és una matrícula italiana vàlida");
+		
 	}
 	
 	public static boolean esLletraValidaPerMatriculaItaliana(char caracter){
