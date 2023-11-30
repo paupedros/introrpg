@@ -17,23 +17,21 @@ public class MatriculaValida {
 				// Primeres i ultimes dues lletres 
 				if (i==0 || i==1 || i==5 || i==6){
 					valid = esLletraValidaPerMatriculaItaliana(caracter);
-					if (valid==false){ // Si la lletra no es valida parem de recorrer el text
-						break;
-					}
+					if (!valid) break; // Si la lletra no es valida parem de recorrer el text
+					
 					//System.out.println(valid);
 				}
 				// Nombres
 				if (i==2 || i==3 || i==4){
-					if(!Character.isDigit(caracter)){
-						valid=false;
-						break;
-					}
+					valid = numValid(caracter);
+					if(!valid) break;
+					
 					//System.out.println(valid);
 				}
 			}
 			
 			//System.out.println(valid);
-			if (valid==false){
+			if (!valid){
 				System.out.println("No és una matrícula italiana vàlida");
 				return;
 			}
@@ -48,21 +46,22 @@ public class MatriculaValida {
 	
 	public static boolean esLletraValidaPerMatriculaItaliana(char caracter){
 		
-		if (!Character.isLetter(caracter)){
-			return false;
-		}
-		else if (Character.toUpperCase(caracter) != caracter){
-			return false;
-		}
+		if (!Character.isLetter(caracter)) return false;
+		
+		else if (Character.toUpperCase(caracter) != caracter) return false;
+		
 		else if (caracter == 'I'
 			|| caracter == 'O'
 			|| caracter == 'Q'
-			|| caracter == 'U') {
-			return false;
-		}
-		else if (!(caracter >= 'A' && caracter <= 'Z')) {
-			return false;
-		}
+			|| caracter == 'U') return false;
+			
+		else if (!(caracter >= 'A' && caracter <= 'Z')) return false;
+		
+		return true;
+	}
+	
+	public static boolean numValid(char caracter){
+		if(!Character.isDigit(caracter)) return false;
 		return true;
 	}
 	
