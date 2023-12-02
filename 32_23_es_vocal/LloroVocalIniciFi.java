@@ -10,6 +10,7 @@ public class LloroVocalIniciFi{
 		while(true){
 			System.out.println("El lloro demana paraula amb vocal a l'inici o/i final");
 			String paraula = Entrada.readLine();
+			String paraulaMin = paraula.toLowerCase();
 			if(paraula.isEmpty()){
 				System.out.println("El lloro demana confirmació per finalitzar");
 				String resposta = Entrada.readLine();
@@ -19,8 +20,8 @@ public class LloroVocalIniciFi{
 					continue;
 				}
 			}
-			if(UtilString.esVocal(paraula.charAt(0)) 
-			|| UtilString.esVocal(paraula.charAt(paraula.length()-1))){
+			if(UtilString.esVocal(paraulaMin.charAt(0)) 
+			|| UtilString.esVocal(paraulaMin.charAt(paraulaMin.length()-1))){
 				System.out.println("El lloro diu: " + paraula);
 				
 			}
