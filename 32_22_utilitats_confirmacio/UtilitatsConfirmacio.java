@@ -3,10 +3,6 @@
 
 public class UtilitatsConfirmacio{
 
-	public static void main(String[] args){
-		
-	}
-
 	public static boolean respostaABoolean(String resposta) {
 
         if (null == resposta) return false;
