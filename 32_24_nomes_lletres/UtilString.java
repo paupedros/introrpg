@@ -3,8 +3,10 @@
 	Moduls:
 	- esVocal: Comprovar si un caracter en concret es una vocal catalana
 	- nomesLletres: Agafa un String i retorna la mateixa amb nomes lletres
+	- lletresSeparades: Agafa un String i retorna la mateixa separada per comes	
 	
-	*/
+	
+*/
 
 public class UtilString{
 	
