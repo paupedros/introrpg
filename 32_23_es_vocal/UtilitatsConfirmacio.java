@@ -1,5 +1,6 @@
 
-/* Amb aquest programa filtrem la confirmació d'un usuari */
+/* Amb aquest programa filtrem la confirmació d'un usuari, ens retorna un valor 
+	boolea com a resposta */
 
 public class UtilitatsConfirmacio{
 

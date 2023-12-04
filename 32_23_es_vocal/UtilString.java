@@ -1,5 +1,6 @@
 
-/* Programa que conte moduls per utilitzar amb Strings */
+/* Programa que conte moduls per utilitzar amb Strings, comprovar si es una vocal un caracter
+	en concret */
 
 public class UtilString{
 	
