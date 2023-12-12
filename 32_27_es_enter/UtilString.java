@@ -80,6 +80,7 @@ public class UtilString{
 	}
 	
 	public static boolean esEnter(String text){
+		if(text.isEmpty()) return false;
 		for (int i = 0; i<text.length(); i++){
 			char ch = text.charAt(i);
 			if ( i == 0 && (ch == '-' || ch == '+')){
