@@ -1,5 +1,7 @@
 
-/* En aquest programa introduim dos valors i indiquem els caracters que hi ha entre els dos intervals */
+/* En aquest programa introduim dos valors i indiquem els caracters que hi ha entre els dos intervals.
+	Versió modular: Amb el modul intervalString reutilitzat del fitxer UtilString agafem els valors i
+	creem la nova seccio del text */
 
 public class MostraInterval {
 	public static void main(String[] args){
