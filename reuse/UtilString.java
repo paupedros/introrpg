@@ -4,8 +4,8 @@
 	- esVocal: Comprovar si un caracter en concret es una vocal catalana
 	- nomesLletres: Agafa un String i retorna la mateixa amb nomes lletres
 	- lletresSeparades: Agafa un String i retorna la mateixa separada per comes	
-	- intervalString: Donat un text, valor inicial i valor final, retorna la secció del text entre
-	aquest interval
+	- intervalString: Donat un text, valor inicial i valor final, retorna la secció del text entre aquest interval
+	- esEnter: donat un nombre ens dira si és enter o no
 	
 */
 
