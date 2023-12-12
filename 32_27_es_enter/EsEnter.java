@@ -7,7 +7,7 @@ public class EsEnter{
 		System.out.println("Introdueix texts (enter sol per finalitzar)");
 		String text = Entrada.readLine();
 		
-		while(!text.isBlank()){
+		while(!text.isEmpty()){
 			text = text.strip();
 			boolean number = UtilString.esEnter(text);
 			if (!number){
