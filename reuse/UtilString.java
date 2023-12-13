@@ -10,7 +10,7 @@
 */
 
 public class UtilString{
-	
+		
 	public static boolean esVocal(char ch){
 		String vocals = "aàeèéiíïoóòuúü";
 		char chMin = Character.toLowerCase(ch);
