@@ -1,11 +1,13 @@
 
 /* Programa que conte moduls per utilitzar amb Strings:
-	Moduls:
+	Moduls i funcions:
 	- esVocal: Comprovar si un caracter en concret es una vocal catalana
 	- nomesLletres: Agafa un String i retorna la mateixa amb nomes lletres
 	- lletresSeparades: Agafa un String i retorna la mateixa separada per comes	
 	- intervalString: Donat un text, valor inicial i valor final, retorna la secció del text entre aquest interval
 	- esEnter: donat un nombre ens dira si és enter o no
+	- esEnter(estricte): donat un nombre ens dira si és enter o no, accepta texts amb espais a l'inici i al final
+	- aEnter: 
 	
 */
 
@@ -92,6 +94,26 @@ public class UtilString{
 			
 		}
 		return true;
+	}
+	
+	public static boolean esEnter(String text, boolean estricte){
+		if(estricte){
+			return esEnter(text);
+		}
+		text = text.strip();
+		return esEnter(text);
+	}
+	
+	public static int aEnter(String text, boolean estricte){
+		int num;
+		if(estricte){
+			num = Integer.parseInt(text);
+		}
+		else {
+			text = text.strip();
+			num = Integer.parseInt(text);
+		}
+		return num;
 	}
 	
 }
