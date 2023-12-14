@@ -146,7 +146,7 @@ public class UtilString{
 			
 			if(ch == subtext.charAt(0)){ // Trobem un caracter que es igual al primer del subtext
 				
-				if(conte(text, substring i)) return true;				
+				if(conte(text, substring, i)) return true;				
 			}
 			
 			i++;
