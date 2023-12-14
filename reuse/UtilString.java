@@ -4,11 +4,18 @@
 	- esVocal: Comprovar si un caracter en concret es una vocal catalana
 	- nomesLletres: Agafa un String i retorna la mateixa amb nomes lletres
 	- lletresSeparades: Agafa un String i retorna la mateixa separada per comes	
-	- intervalString: Donat un text, valor inicial i valor final, retorna la secció del text entre aquest interval
+	- intervalString: Donat un text, valor inicial i valor final, retorna la secció del 
+	text entre aquest interval
 	- esEnter: donat un nombre ens dira si és enter o no
-	- esEnter(estricte): donat un nombre ens dira si és enter o no, accepta texts amb espais a l'inici i al final
+	- esEnter(estricte): donat un nombre ens dira si és enter o no, accepta 
+	texts amb espais a l'inici i al final
 	- aEnter: donat un text s'intenta passar a un nombre aquest text
-	- cadenaContinua: donat un text i un nombre de longitud, s'allarga la cadena fins a que sigui igual a la longitud desitjada
+	- cadenaContinua: donat un text i un nombre de longitud, s'allarga la 
+	cadena fins a que sigui igual a la longitud desitjada
+	- esSubstring (no estricte): Si no es estricte ignora les majusucles i minuscules, a demes dels
+	caracter catalans
+	- esSubstring (estricte): Fara el mateix que String.contains(), retornara true si un string 
+	esta dins d'un altre
 	
 */
 
@@ -129,6 +136,55 @@ public class UtilString{
 		}
 		return newText;
 	}
+	
+	public static boolean esSubstring(String text, String subtext, boolean extricte){
+		
+		// Iniciem variable de recorregut de la cadena
+		int i = 0;
+		while (i<text.length()){ // Recorrem tota la cadena
+			char ch = text.charAt(i);
+			
+			if(ch == subtext.charAt(0)){ // Trobem un caracter que es igual al primer del subtext
+				
+				if(conte(text, substring i)) return true;				
+			}
+			
+			i++;
+		}
+		return false;
+		
+	}
+	
+	pulic static boolean conte(String text, String subtext, int i){
+		// Comprovem si els seguents caracters coincideixen tambe amb els del subtext
+		int j = 1; // Variable de recorregut del subtext
+		while(j<subtext.length()){
+			char ch2 = text.length(j);
+			if (ch2 != subtext.charAt(j)){
+				return false;
+			}
+			j++;
+		}
+		return true;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }
