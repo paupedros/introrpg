@@ -19,6 +19,10 @@ public class CadenaContinua {
 				System.out.println(UtilString.cadenaContinua(text, numInt));
 				
 			}
+			else{
+				System.out.println("error");
+				return;
+			}
 			return;
 		}
 		
