@@ -15,9 +15,9 @@ public class CadenaContinua {
 			String num = Entrada.readLine();
 			if(UtilString.esEnter(num)){
 				int numInt = UtilString.aEnter(num, true);
-				if (numInt>1){
-					System.out.println(UtilString.cadenaContinua(text, numInt));
-				}
+				
+				System.out.println(UtilString.cadenaContinua(text, numInt));
+				
 			}
 			return;
 		}
