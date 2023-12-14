@@ -158,11 +158,13 @@ public class UtilString{
 	public static boolean conte(String text, String subtext, int i){
 		// Comprovem si els seguents caracters coincideixen tambe amb els del subtext
 		int j = 1; // Variable de recorregut del subtext
-		while(j<subtext.length()){
-			char ch2 = text.length(j);
-			if (ch2 != subtext.charAt(j)){
+		while(j<subtext.length()){ // Recorrem tota la cadena del subtext
+			char ch = text.charAt(i); // Caracter actual del text 
+			// Si el caracter actual no es igual al caracter del subtext
+			if (ch != subtext.charAt(j)){ 
 				return false;
 			}
+			i++;
 			j++;
 		}
 		return true;
