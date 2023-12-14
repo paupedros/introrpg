@@ -8,7 +8,7 @@
 	- esEnter: donat un nombre ens dira si és enter o no
 	- esEnter(estricte): donat un nombre ens dira si és enter o no, accepta texts amb espais a l'inici i al final
 	- aEnter: donat un text s'intenta passar a un nombre aquest text
-	- cadenaContinua: 
+	- cadenaContinua: donat un text i un nombre de longitud, s'allarga la cadena fins a que sigui igual a la longitud desitjada
 	
 */
 
