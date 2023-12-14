@@ -155,7 +155,7 @@ public class UtilString{
 		
 	}
 	
-	pulic static boolean conte(String text, String subtext, int i){
+	public static boolean conte(String text, String subtext, int i){
 		// Comprovem si els seguents caracters coincideixen tambe amb els del subtext
 		int j = 1; // Variable de recorregut del subtext
 		while(j<subtext.length()){
