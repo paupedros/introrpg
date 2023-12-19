@@ -188,7 +188,10 @@ public class UtilString{
 			}
 			else {
 				i++;
+				j++;
 			}
+			
+			
 			
 		}
 		return true;
