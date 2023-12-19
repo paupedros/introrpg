@@ -137,6 +137,10 @@ public class UtilString{
 		return newText;
 	}
 	
+	public static boolean esSubstring(String text, String subtext){
+		return esSubstring(text, subtext, true);
+	}
+	
 	public static boolean esSubstring(String text, String subtext, boolean extricte){
 		if(subtext.isBlank()) return true;
 		if(!extricte){
