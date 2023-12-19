@@ -165,22 +165,23 @@ public class UtilString{
 			char ch = text.charAt(i); // Caracter actual del text
 			
 			// Si el caracter actual no es igual al caracter del subtext
-			if (ch != subtext.charAt(j)){ 
+			if (ch != subtext.charAt(j)){
+				boolean catala = false; 
+				if(!extricte){
+					char chMin = Character.toLowerCase(ch);
+					for (int k=0; k<vocals.length(); k++){
+						if (chMin == vocals.charAt(k)){
+							catala = true;
+							break;
+						}
+					}
+				}
+				if (catala) continue;
 				return false;
 			}
 			i++;
 			j++;
-			boolean catala = false; 
-			if(!extricte){
-				char chMin = Character.toLowerCase(ch);
-				for (int k=0; k<vocals.length(); k++){
-					if (chMin == vocals.charAt(k)){
-						catala = true;
-						break;
-					}
-				}
-			}
-			if (catala) continue;
+			
 		}
 		return true;
 	}
