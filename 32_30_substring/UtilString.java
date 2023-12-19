@@ -164,7 +164,6 @@ public class UtilString{
 	}
 	
 	public static boolean conte(String text, String subtext, int i, boolean extricte){
-		String vocals = "aàeèéiíïoóòuúüç";
 		// Comprovem si els seguents caracters coincideixen tambe amb els del subtext
 		int j = 0; // Variable de recorregut del subtext
 		while(j<subtext.length()){ // Recorrem tota la cadena del subtext
@@ -181,12 +180,8 @@ public class UtilString{
 				}
 				return false;
 			}
-			
 			i++;
 			j++;
-			
-			
-			
 		}
 		return true;
 	}
@@ -194,7 +189,9 @@ public class UtilString{
 	public static boolean lletraCatalana(char ch){
 		String lletres = "aàeèéiíïoóòuúüç";
 		ch = Character.toLowerCase(ch);
-		if (ch == 'c' || ch == 'ç') return true;
+		
+		// Si el caracter és una 'ç' retornem true ja que es pot escriure com una c també
+		if (ch == 'ç') return true;
 		
 		for (int i=0; i<lletres.length(); i++){
 			
