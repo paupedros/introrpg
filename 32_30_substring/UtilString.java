@@ -182,14 +182,8 @@ public class UtilString{
 				return false;
 			}
 			
-			// Si el caracter actual es una 'ç'
-			if (ch == 'ç'){
-				j++;
-			}
-			else {
-				i++;
-				j++;
-			}
+			i++;
+			j++;
 			
 			
 			
@@ -200,8 +194,10 @@ public class UtilString{
 	public static boolean lletraCatalana(char ch){
 		String lletres = "aàeèéiíïoóòuúüç";
 		ch = Character.toLowerCase(ch);
+		if (ch == 'c' || ch == 'ç') return true;
 		
 		for (int i=0; i<lletres.length(); i++){
+			
 			if(lletres.indexOf(ch) != -1) return true;
 		}
 		return false;
