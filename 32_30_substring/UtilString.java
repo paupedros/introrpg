@@ -20,7 +20,7 @@
 */
 
 public class UtilString{
-		
+	
 	public static boolean esVocal(char ch){
 		String vocals = "aàeèéiíïoóòuúü";
 		char chMin = Character.toLowerCase(ch);
@@ -140,10 +140,7 @@ public class UtilString{
 	public static boolean esSubstring(String text, String subtext, boolean extricte){
 		text = text.toUpperCase();
 		subtext = subtext.toUpperCase();
-		if(extricte){
-			
-		}
-		
+
 		// Iniciem variable de recorregut de la cadena
 		int i = 0;
 		while (i<text.length()){ // Recorrem tota la cadena
@@ -151,7 +148,8 @@ public class UtilString{
 			
 			if(ch == subtext.charAt(0)){ // Trobem un caracter que es igual al primer del subtext
 				
-				if(conte(text, subtext, i)) return true;				
+				
+				if(conte(text, subtext, i, extricte)) return true;				
 			}
 			
 			i++;
@@ -160,11 +158,22 @@ public class UtilString{
 		
 	}
 	
-	public static boolean conte(String text, String subtext, int i){
+	public static boolean conte(String text, String subtext, int i, boolean extricte){
+		String vocals = "aàeèéiíïoóòuúüç";
 		// Comprovem si els seguents caracters coincideixen tambe amb els del subtext
 		int j = 0; // Variable de recorregut del subtext
 		while(j<subtext.length()){ // Recorrem tota la cadena del subtext
-			char ch = text.charAt(i); // Caracter actual del text 
+			char ch = text.charAt(i); // Caracter actual del text
+			boolean catala = false; 
+			if(!extricte){
+				char chMin = Character.toLowerCase(ch);
+				for (int k=0; k<vocals.length(); k++){
+					if (chMin == vocals.charAt(k)){
+						catala = true;
+					}
+				}
+			}
+			if (catala) continue;
 			// Si el caracter actual no es igual al caracter del subtext
 			if (ch != subtext.charAt(j)){ 
 				return false;
@@ -174,7 +183,6 @@ public class UtilString{
 		}
 		return true;
 	}
-	
 	
 	
 	
