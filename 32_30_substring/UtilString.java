@@ -167,7 +167,12 @@ public class UtilString{
 			// Si el caracter actual no es igual al caracter del subtext
 			if (ch != subtext.charAt(j)){
 				if(!extricte){
-					if(lletraCatalana(ch)) continue;
+					if(lletraCatalana(ch)){
+						i++;
+						j++;
+						continue;
+					}
+					
 				}
 				return false;
 			}
@@ -186,7 +191,6 @@ public class UtilString{
 			if(lletres.indexOf(ch) != -1) return true;
 		}
 		return false;
-		
 	}
 	
 	
