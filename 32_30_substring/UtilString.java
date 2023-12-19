@@ -178,12 +178,17 @@ public class UtilString{
 						j++;
 						continue;
 					}
-					
 				}
 				return false;
 			}
-			i++;
-			j++;
+			
+			// Si el caracter actual es una 'ç'
+			if (ch == 'ç'){
+				j++;
+			}
+			else {
+				i++;
+			}
 			
 		}
 		return true;
