@@ -191,7 +191,7 @@ public class UtilString{
 		ch = Character.toLowerCase(ch);
 		
 		// Si el caracter és una 'ç' retornem true ja que es pot escriure com una c també
-		if (ch == 'ç') return true;
+		if (ch == 'c' || ch == 'ç') return true;
 		
 		for (int i=0; i<lletres.length(); i++){
 			
