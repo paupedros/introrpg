@@ -141,6 +141,7 @@ public class UtilString{
 		
 		if(extricte){
 			text = text.toUpperCase();
+			subtext = subtext.toUpperCase();
 		}
 		
 		// Iniciem variable de recorregut de la cadena
