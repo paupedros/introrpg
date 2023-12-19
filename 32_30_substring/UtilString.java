@@ -147,9 +147,7 @@ public class UtilString{
 			char ch = text.charAt(i);
 			
 			if(ch == subtext.charAt(0)){ // Trobem un caracter que es igual al primer del subtext
-				
-				
-				if(conte(text, subtext, i, extricte)) return true;				
+				if(conte(text, subtext, i, extricte)) return true;			
 			}
 			
 			i++;
@@ -164,6 +162,13 @@ public class UtilString{
 		int j = 0; // Variable de recorregut del subtext
 		while(j<subtext.length()){ // Recorrem tota la cadena del subtext
 			char ch = text.charAt(i); // Caracter actual del text
+			
+			// Si el caracter actual no es igual al caracter del subtext
+			if (ch != subtext.charAt(j)){ 
+				return false;
+			}
+			i++;
+			j++;
 			boolean catala = false; 
 			if(!extricte){
 				char chMin = Character.toLowerCase(ch);
@@ -175,12 +180,6 @@ public class UtilString{
 				}
 			}
 			if (catala) continue;
-			// Si el caracter actual no es igual al caracter del subtext
-			if (ch != subtext.charAt(j)){ 
-				return false;
-			}
-			i++;
-			j++;
 		}
 		return true;
 	}
