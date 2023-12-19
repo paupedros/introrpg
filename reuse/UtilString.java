@@ -20,7 +20,7 @@
 */
 
 public class UtilString{
-		
+	
 	public static boolean esVocal(char ch){
 		String vocals = "aàeèéiíïoóòuúü";
 		char chMin = Character.toLowerCase(ch);
@@ -137,20 +137,24 @@ public class UtilString{
 		return newText;
 	}
 	
+	public static boolean esSubstring(String text, String subtext){
+		return esSubstring(text, subtext, true);
+	}
+	
 	public static boolean esSubstring(String text, String subtext, boolean extricte){
-		
-		if(extricte){
+		if(subtext.isBlank()) return true;
+		if(!extricte){
 			text = text.toUpperCase();
+			subtext = subtext.toUpperCase();
 		}
-		
+
 		// Iniciem variable de recorregut de la cadena
 		int i = 0;
 		while (i<text.length()){ // Recorrem tota la cadena
 			char ch = text.charAt(i);
 			
 			if(ch == subtext.charAt(0)){ // Trobem un caracter que es igual al primer del subtext
-				
-				if(conte(text, subtext, i)) return true;				
+				if(conte(text, subtext, i, extricte)) return true;			
 			}
 			
 			i++;
@@ -159,13 +163,21 @@ public class UtilString{
 		
 	}
 	
-	public static boolean conte(String text, String subtext, int i){
+	public static boolean conte(String text, String subtext, int i, boolean extricte){
 		// Comprovem si els seguents caracters coincideixen tambe amb els del subtext
 		int j = 0; // Variable de recorregut del subtext
 		while(j<subtext.length()){ // Recorrem tota la cadena del subtext
-			char ch = text.charAt(i); // Caracter actual del text 
+			char ch = text.charAt(i); // Caracter actual del text
+			
 			// Si el caracter actual no es igual al caracter del subtext
-			if (ch != subtext.charAt(j)){ 
+			if (ch != subtext.charAt(j)){
+				if(!extricte){
+					if(lletraCatalana(ch)){
+						i++;
+						j++;
+						continue;
+					}
+				}
 				return false;
 			}
 			i++;
@@ -174,6 +186,19 @@ public class UtilString{
 		return true;
 	}
 	
+	public static boolean lletraCatalana(char ch){
+		String lletres = "aàeèéiíïoóòuúüç";
+		ch = Character.toLowerCase(ch);
+		
+		// Si el caracter és una 'ç' retornem true ja que es pot escriure com una c també
+		if (ch == 'c' || ch == 'ç') return true;
+		
+		for (int i=0; i<lletres.length(); i++){
+			
+			if(lletres.indexOf(ch) != -1) return true;
+		}
+		return false;
+	}
 	
 	
 	
