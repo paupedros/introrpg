@@ -139,8 +139,10 @@ public class UtilString{
 	
 	public static boolean esSubstring(String text, String subtext, boolean extricte){
 		text = text.toUpperCase();
-		subtext = subtext.toUpperCase();
 		
+		if(!extricte){
+			
+		}
 
 		// Iniciem variable de recorregut de la cadena
 		int i = 0;
