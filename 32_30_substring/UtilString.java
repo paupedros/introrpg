@@ -170,6 +170,7 @@ public class UtilString{
 				for (int k=0; k<vocals.length(); k++){
 					if (chMin == vocals.charAt(k)){
 						catala = true;
+						break;
 					}
 				}
 			}
