@@ -166,17 +166,9 @@ public class UtilString{
 			
 			// Si el caracter actual no es igual al caracter del subtext
 			if (ch != subtext.charAt(j)){
-				boolean catala = false; 
 				if(!extricte){
-					char chMin = Character.toLowerCase(ch);
-					for (int k=0; k<vocals.length(); k++){
-						if (chMin == vocals.charAt(k)){
-							catala = true;
-							break;
-						}
-					}
+					if(lletraCatalana(ch)) continue;
 				}
-				if (catala) continue;
 				return false;
 			}
 			i++;
@@ -184,6 +176,17 @@ public class UtilString{
 			
 		}
 		return true;
+	}
+	
+	public static boolean lletraCatalana(char ch){
+		String lletres = "aàeèéiíïoóòuúüç";
+		ch = Character.toLowerCase(ch);
+		
+		for (int i=0; i<lletres.length(); i++){
+			if(lletres.indexOf(ch) != -1) return true;
+		}
+		return false;
+		
 	}
 	
 	
