@@ -3,6 +3,10 @@
         {
             "type": "add",
             "pluginName": "fleet.ai"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.java"
         }
     ]
 }
