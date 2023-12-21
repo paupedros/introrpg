@@ -210,7 +210,7 @@ public class UtilString{
 		}
 		
 		char primeraLletra = text.charAt(0);
-		if(primeraLletra == prefix.charAt(0)){ // Trobem un caracter que es igual al primer del prefix
+		if(Character.toLowerCase(primeraLletra) == Character.toLowerCase(prefix.charAt(0))){ // Trobem un caracter que es igual al primer del prefix
 			if(conte(text, prefix, 0, extricte)) return true;
 		}
 		return false;
