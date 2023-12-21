@@ -231,12 +231,29 @@ public class UtilString{
 
 	// retorna cert quan text finalitza amb sufix, considerant si ha de ser o no extricte
 	public static boolean esSufix(String text, String sufix, boolean extricte){
-		return true;
+		if(sufix.isBlank()) return true;
+		if(!extricte){
+			text = text.toUpperCase();
+			sufix = sufix.toUpperCase();
+		}
+
+		// Iniciem variable de recorregut de la cadena
+		int i = 0;
+		while (i<text.length()){ // Recorrem tota la cadena
+			char ch = text.charAt(i);
+
+			if(ch == sufix.charAt(0)){ // Trobem un caracter que es igual al primer del prefix
+				if(conte(text, sufix, i, extricte)) return true;
+			}
+
+			i++;
+		}
+		return false;
 	}
 
 	// equival a esSufix(text, sufix, true)
 	public static boolean esSufix(String text, String sufix){
-		return true;
+		return esSufix(text, sufix, true);
 	}
 	
 	
