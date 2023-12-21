@@ -208,23 +208,15 @@ public class UtilString{
 			text = text.toUpperCase();
 			prefix = prefix.toUpperCase();
 		}
-
-		// Iniciem variable de recorregut de la cadena
-		int i = 0;
-		while (i<text.length()){ // Recorrem tota la cadena
-			char ch = text.charAt(i);
-			char primeraLletra = text.charAt(0);
-
-			if(primeraLletra == prefix.charAt(0)){ // Trobem un caracter que es igual al primer del prefix
-				if(conte(text, prefix, i, extricte)) return true;
-			}
-
-			i++;
+		
+		char primeraLletra = text.charAt(0);
+		if(primeraLletra == prefix.charAt(0)){ // Trobem un caracter que es igual al primer del prefix
+			if(conte(text, prefix, 0, extricte)) return true;
 		}
 		return false;
-
 	}
-	
+
+
 	// equival a esPrefix(text, prefix, true)
 	public static boolean esPrefix(String text, String prefix){
 		return esPrefix(text, prefix, true);
