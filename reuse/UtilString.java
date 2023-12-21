@@ -207,6 +207,10 @@ public class UtilString{
 		if(!extricte){
 			text = text.toUpperCase();
 			prefix = prefix.toUpperCase();
+			if(text.length()==prefix.length()){
+				if(text.equals(prefix)) return true;
+				return false;
+			}
 		}
 		
 		char primeraLletra = text.charAt(0);
