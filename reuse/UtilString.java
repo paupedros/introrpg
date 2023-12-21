@@ -243,7 +243,12 @@ public class UtilString{
 			char ch = text.charAt(i);
 
 			if(ch == sufix.charAt(0)){ // Trobem un caracter que es igual al primer del prefix
-				if(conte(text, sufix, i, extricte)) return true;
+				if(conte(text, sufix, i, extricte)){
+					if(text.charAt(text.length()-1) == sufix.charAt(sufix.length()-1)){
+						return true;
+					}
+				}
+
 			}
 
 			i++;
