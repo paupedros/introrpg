@@ -202,6 +202,7 @@ public class UtilString{
 	
 	// retorna cert quan text comença amb prefix, considerant si ha de ser o no extricte
 	public static boolean esPrefix(String text, String prefix, boolean extricte){
+		if(prefix.length()>text.length()) return false;
 		if(prefix.isBlank()) return true;
 		if(!extricte){
 			text = text.toUpperCase();
@@ -231,6 +232,7 @@ public class UtilString{
 
 	// retorna cert quan text finalitza amb sufix, considerant si ha de ser o no extricte
 	public static boolean esSufix(String text, String sufix, boolean extricte){
+		if(sufix.length()>text.length()) return false;
 		if(sufix.isBlank()) return true;
 		if(!extricte){
 			text = text.toUpperCase();
