@@ -202,12 +202,12 @@ public class UtilString{
 	
 	// retorna cert quan text comença amb prefix, considerant si ha de ser o no extricte
 	public static boolean esPrefix(String text, String prefix, boolean extricte){
-		if(prefix.length()>text.length()) return false;
-		if(prefix.isBlank()) return true;
+		if(prefix.length()>text.length()) return false; // Si el prefix es mes llarg que el text retorna false
+		if(prefix.isBlank()) return true; // Si esta vuit true
 		if(!extricte){
 			text = text.toUpperCase();
 			prefix = prefix.toUpperCase();
-			if(text.length()==prefix.length()){
+			if(text.length()==prefix.length()){ // Si son de la mateixa llargada i son iguals true, sino false
 				if(text.equals(prefix)) return true;
 				return false;
 			}
