@@ -1,6 +1,7 @@
 /**
  * En aquest programa recollim notes d'un alumne i al final en diem quina ha sigut la nota mes alta.
- * a de mes direm quines han sigut totes les notes sense incloure la nota mes alta
+ * a de mes direm quines han sigut totes les notes sense incloure la nota mes alta, treu les
+ * notes repetides i les dona ordenades
  * 
  */
 public class NotaMesAlta {
