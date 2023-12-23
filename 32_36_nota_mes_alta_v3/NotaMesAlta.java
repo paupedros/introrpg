@@ -20,8 +20,13 @@ public class NotaMesAlta {
 
         int notaMesAlta = getNotaMesAlta(notes);
         notes = transformNotes(notes, notaMesAlta);
+
+        String resta = ". La resta de notes és: " + notes;
+        if(notes.length() < 1){
+            resta = "No queda cap altra nota.";
+        }
         
-        System.out.println("La nota més alta és " + notaMesAlta + ". La resta de notes és: " + notes);
+        System.out.println("La nota més alta és " + notaMesAlta + resta);
         
     }
 
@@ -40,6 +45,11 @@ public class NotaMesAlta {
         String newText = "";
 		for (int i = 0; i < text.length(); i++) {
 			char ch = text.charAt(i);
+            boolean found = false;
+            for(int j=0; j < newText.length(); j++){
+                if(ch == newText.charAt(j)) found = true;
+            }
+            if(found) continue;
             if(Character.getNumericValue(ch) == notaMesAlta) continue;
 			else if (i == 0) {
 				newText += ch;
