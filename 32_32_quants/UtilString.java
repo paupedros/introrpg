@@ -188,10 +188,10 @@ public class UtilString{
 	
 	public static boolean lletraCatalana(char ch){
 		String lletres = "aàeèéiíïoóòuúüç";
-		ch = Character.toUpperCase(ch);
+		ch = Character.toLowerCase(ch);
 		
 		// Si el caracter és una 'ç' retornem true ja que es pot escriure com una c també
-		if (ch == 'C' || ch == 'Ç') return true;
+		if (ch == 'c' || ch == 'ç') return true;
 		
 		for (int i=0; i<lletres.length(); i++){
 			
@@ -265,8 +265,8 @@ public class UtilString{
 		int quants = 0;
 		if(subtext.isEmpty()) return quants;
 		if(!extricte){
-			text = text.toUpperCase();
-            subtext = subtext.toUpperCase();
+			text = text.toLowerCase();
+            subtext = subtext.toLowerCase();
 		}
 		
 		for (int i=0; i<text.length(); i++){
