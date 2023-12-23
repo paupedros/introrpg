@@ -21,7 +21,7 @@ public class NotaMesAlta {
         int notaMesAlta = getNotaMesAlta(notes);
         notes = transformNotes(notes);
         
-        System.out.println("La nota més alta és " + notaMesAlta + "de les introduïdes: " + notes);
+        System.out.println("La nota més alta és " + notaMesAlta + " de les introduïdes: " + notes);
         
     }
 
