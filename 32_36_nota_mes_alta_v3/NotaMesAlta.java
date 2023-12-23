@@ -59,13 +59,13 @@ public class NotaMesAlta {
                 i++;
                 continue;
             }
-            else if(Character.getNumericValue(ch) == notaMesAlta) continue;
-			else if (!first) {
+            if(Character.getNumericValue(ch) == notaMesAlta) continue;
+			if (!first) {
 				newText += ch;
                 first = true;
 				continue;
 			}
-            else if((i == text.length() - 1) && first == true){
+            if((i == text.length() - 1) && first == true){
                 newText += " i " + ch;
                 continue;
             }
