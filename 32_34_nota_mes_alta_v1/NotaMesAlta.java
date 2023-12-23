@@ -19,7 +19,6 @@ public class NotaMesAlta {
         int notaMesAlta = 0;
         for (int i = 0; i < notes.length(); i++) {
             char ch = notes.charAt(i);
-            System.out.println(ch);
             if(Character.getNumericValue(ch) >= notaMesAlta){
                 notaMesAlta = Character.getNumericValue(ch);
             }
