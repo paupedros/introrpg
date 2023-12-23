@@ -29,7 +29,7 @@ public class NotaMesAlta {
 
         String resta = ". La resta de notes és: " + notes;
         if(notes.length() < 1){
-            resta = ". No queda cap altra nota.";
+            resta = ". No queden altres notes.";
         }
         
         System.out.println("La nota més alta és " + notaMesAlta + resta);
@@ -96,6 +96,12 @@ public class NotaMesAlta {
             if(text.charAt(i) == ch) return true;
         }
         return false;
+    }
+
+    public static String ordena(String text){
+        String newText = "";
+
+        // ordenem la cadena
     }
     
 }
