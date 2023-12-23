@@ -8,17 +8,21 @@ public class NotaMesAlta {
         System.out.println("Introdueix les notes (-1 per finalitzar)");
         int nota = Integer.parseInt(Entrada.readLine());
         String notes = "";
+        int notaMesAlta = 0;
         while (nota != -1) {
             notes += nota;
             nota = Integer.parseInt(Entrada.readLine());
+            if(nota == 10) notaMesAlta = 10;
         }
 
         if(notes.length() <= 1){
             System.out.println("Com a mínim calen dues notes");
             return;
         }
-
-        int notaMesAlta = getNotaMesAlta(notes);
+        if(notaMesAlta != 10){
+            notaMesAlta = getNotaMesAlta(notes);
+        }
+        
         notes = transformNotes(notes, notaMesAlta);
 
         String resta = ". La resta de notes és: " + notes;
