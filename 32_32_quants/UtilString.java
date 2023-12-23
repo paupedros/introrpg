@@ -163,29 +163,28 @@ public class UtilString{
 		
 	}
 	
-	public static boolean conte(String text, String subtext, int i, boolean extricte) {
-		int j = 0;
-	
-		while (j < subtext.length() && i < text.length()) {
-			char ch = text.charAt(i);
-	
-			if (ch != subtext.charAt(j)) {
-				if (!extricte) {
-					if (lletraCatalana(ch)) {
+	public static boolean conte(String text, String subtext, int i, boolean extricte){
+		// Comprovem si els seguents caracters coincideixen tambe amb els del subtext
+		int j = 0; // Variable de recorregut del subtext
+		while(j<subtext.length()){ // Recorrem tota la cadena del subtext
+			char ch = text.charAt(i); // Caracter actual del text
+			
+			// Si el caracter actual no es igual al caracter del subtext
+			if (ch != subtext.charAt(j)){
+				if(!extricte){
+					if(lletraCatalana(ch)){
 						i++;
+						j++;
 						continue;
 					}
 				}
 				return false;
 			}
-	
 			i++;
 			j++;
 		}
-	
-		return j == subtext.length();
+		return true;
 	}
-	
 	
 	public static boolean lletraCatalana(char ch){
 		String lletres = "aàeèéiíïoóòuúüç";
@@ -288,6 +287,3 @@ public class UtilString{
 	
 	
 }
-
-		
-	
