@@ -25,9 +25,7 @@ public class NotaMesAlta {
         
         notes = transformNotes(notes, notaMesAlta);
 
-        if(notes.charAt(notes.length() - 3) != 'i'){
-
-        }
+        
 
         String resta = ". La resta de notes és: " + notes;
         if(notes.length() < 1){
