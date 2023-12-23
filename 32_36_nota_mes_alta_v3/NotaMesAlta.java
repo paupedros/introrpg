@@ -49,6 +49,7 @@ public class NotaMesAlta {
         String newText = "";
 		for (int i = 0; i < text.length(); i++) {
 			char ch = text.charAt(i);
+            boolean first = false;
             /*boolean found = false;
             for(int j=0; j < newText.length(); j++){
                 if(ch == newText.charAt(j)) found = true;
@@ -59,8 +60,9 @@ public class NotaMesAlta {
                 continue;
             }
             else if(Character.getNumericValue(ch) == notaMesAlta) continue;
-			else if (i == 0) {
+			else if (!first) {
 				newText += ch;
+                first = true;
 				continue;
 			}
             else if(i == text.length() - 1){
