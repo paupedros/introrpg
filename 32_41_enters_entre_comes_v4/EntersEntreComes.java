@@ -10,6 +10,7 @@ public class EntersEntreComes {
         int quants = demanaEnter(entrada);
         if(quants < 0){
             System.out.println("Res a fer");
+            return;
         }
         System.out.println("Separador?");
         char separador = getSeparador(Entrada.readLine());
