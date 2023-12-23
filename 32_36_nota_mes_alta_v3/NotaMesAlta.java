@@ -19,7 +19,7 @@ public class NotaMesAlta {
         }
 
         int notaMesAlta = getNotaMesAlta(notes);
-        notes = transformNotes(notes);
+        notes = transformNotes(notes, notaMesAlta);
         
         System.out.println("La nota més alta és " + notaMesAlta + ". La resta de notes és: " + notes);
         
@@ -36,7 +36,7 @@ public class NotaMesAlta {
         return notaMesAlta;
     }
 
-    public static String transformNotes(String text, notaMesAlta){
+    public static String transformNotes(String text, int notaMesAlta){
         String newText = "";
 		for (int i = 0; i < text.length(); i++) {
 			char ch = text.charAt(i);
