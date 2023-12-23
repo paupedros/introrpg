@@ -98,10 +98,10 @@ public class NotaMesAlta {
         return false;
     }
 
-    public static String ordena(String text){
-        String newText = "";
+    //public static String ordena(String text){
+      //  String newText = "";
 
         // ordenem la cadena
-    }
+    //}
     
 }
