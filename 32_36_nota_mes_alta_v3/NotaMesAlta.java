@@ -73,7 +73,10 @@ public class NotaMesAlta {
                 newText += " i " + ch;
                 continue;
             }
-			newText += ", " + ch;
+            else{
+                newText += ", " + ch;
+            }
+			
 		}
 		return newText;
     }
