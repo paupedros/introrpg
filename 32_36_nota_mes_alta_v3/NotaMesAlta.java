@@ -55,17 +55,21 @@ public class NotaMesAlta {
                 if(ch == newText.charAt(j)) found = true;
             }
             if(found) continue;*/
+
+            // treiem la nota mes alta
             if (ch == '1' && text.charAt(i+1) == '0'){
                 i++;
                 continue;
             }
             else if(Character.getNumericValue(ch) == notaMesAlta) continue;
+
+            // si es el primer
 			if (!first) {
 				newText += ch;
                 first = true;
 				continue;
 			}
-            if((i == text.length() - 1) && first == true){
+            else if((i == text.length() - 1)){
                 newText += " i " + ch;
                 continue;
             }
