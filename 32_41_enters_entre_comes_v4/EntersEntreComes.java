@@ -6,9 +6,9 @@
 public class EntersEntreComes {
     public static void main(String[] args){
         System.out.println("Quants?");
-        boolean enter = false;
         String entrada = Entrada.readLine();
         int quants = demanaEnter(entrada);
+        if(quants < 0) return System.out.println("Res a fer");
         System.out.println("Separador?");
         char separador = getSeparador(Entrada.readLine());
         int[] numeros = new int[quants];
