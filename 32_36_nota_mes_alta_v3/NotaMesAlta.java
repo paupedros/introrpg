@@ -78,7 +78,7 @@ public class NotaMesAlta {
         String newText = "";
 
         for (int i = 0; i < text.length(); i++) {
-            if(i==1){
+            if(i==0){
                 newText += text.charAt(i);
                 continue;
             }
