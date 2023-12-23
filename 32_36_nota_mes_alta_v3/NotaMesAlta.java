@@ -23,7 +23,7 @@ public class NotaMesAlta {
             notaMesAlta = getNotaMesAlta(notes);
         }
         
-        notes = transformNotes(notes, notaMesAlta);
+        notes = comes(transformNotes(notes, notaMesAlta));
 
         
 
@@ -78,7 +78,17 @@ public class NotaMesAlta {
         String newText = "";
 
         for (int i = 0; i < text.length(); i++) {
-
+            if(i==1){
+                newText += text.charAt(i);
+                continue;
+            }
+            else if(i == text.length() - 1){
+                newText += " i " + text.charAt(i);
+                continue;
+            }
+            else {
+                newText += ", " + text.charAt(i);
+            }
         }
         return newText;
 
