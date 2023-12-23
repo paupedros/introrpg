@@ -65,7 +65,7 @@ public class NotaMesAlta {
                 first = true;
 				continue;
 			}
-            else if(i == text.length() - 1){
+            else if(i == text.length() - 1 && first == true){
                 newText += " i " + ch;
                 continue;
             }
