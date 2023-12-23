@@ -54,7 +54,11 @@ public class NotaMesAlta {
                 if(ch == newText.charAt(j)) found = true;
             }
             if(found) continue;*/
-            if(Character.getNumericValue(ch) == notaMesAlta) continue;
+            if (ch == '1' && text.charAt(i+1) == '0'){
+                i++;
+                continue;
+            }
+            else if(Character.getNumericValue(ch) == notaMesAlta) continue;
 			else if (i == 0) {
 				newText += ch;
 				continue;
