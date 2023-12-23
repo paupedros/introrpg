@@ -65,29 +65,23 @@ public class NotaMesAlta {
                 continue;
             }
             else if(Character.getNumericValue(ch) == notaMesAlta) continue;
-
-            
+            else {
+                newText += ch;
+            }
 			
 		}
-        String newestText = "";
+        
+		return newText;
+    }
 
-        for (int i = 0; i < newText.length(); i++) {
-            char ch = newText.charAt(i);
-            // si es el primer
-			if (!first) {
-				newestText += ch;
-                first = true;
-				continue;
-			}
-            else if((i == text.length() - 1)){
-                newestText += " i " + ch;
-                continue;
-            }
-            else{
-                newestText += ", " + ch;
-            }
+    public static String comes(String text){
+        String newText = "";
+
+        for (int i = 0; i < text.length(); i++) {
+
         }
-		return newestText;
+        return newText;
+
     }
     
 }
