@@ -188,7 +188,7 @@ public class UtilString{
 	
 	public static boolean lletraCatalana(char ch){
 		String lletres = "aàeèéiíïoóòuúüç";
-		ch = Character.toLowerCase(ch);
+		ch = Character.toUpperCase(ch);
 		
 		// Si el caracter és una 'ç' retornem true ja que es pot escriure com una c també
 		if (ch == 'c' || ch == 'ç') return true;
