@@ -45,11 +45,11 @@ public class NotaMesAlta {
         String newText = "";
 		for (int i = 0; i < text.length(); i++) {
 			char ch = text.charAt(i);
-            boolean found = false;
+            /*boolean found = false;
             for(int j=0; j < newText.length(); j++){
                 if(ch == newText.charAt(j)) found = true;
             }
-            if(found) continue;
+            if(found) continue;*/
             if(Character.getNumericValue(ch) == notaMesAlta) continue;
 			else if (i == 0) {
 				newText += ch;
