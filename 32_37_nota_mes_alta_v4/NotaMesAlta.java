@@ -21,7 +21,6 @@ public class NotaMesAlta {
             nota = Integer.parseInt(Entrada.readLine());
             if(nota == 10) notaMesAlta = 10;
         }
-        System.out.println(notes);
 
         if(notes.length() <= 1){
             System.out.println("Com a mínim calen dues notes");
@@ -78,7 +77,7 @@ public class NotaMesAlta {
 		return newText;
     }
 
-    
+
 
     public static String comes(String text){
         String newText = "";
