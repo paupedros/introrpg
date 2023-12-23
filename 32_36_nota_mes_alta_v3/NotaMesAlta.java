@@ -70,8 +70,8 @@ public class NotaMesAlta {
 			
 		}
 
-        for (int i = 0; i < text.length(); i++) {
-            char ch = text.charAt(i);
+        for (int i = 0; i < newText.length(); i++) {
+            char ch = newText.charAt(i);
             // si es el primer
 			if (!first) {
 				newText += ch;
