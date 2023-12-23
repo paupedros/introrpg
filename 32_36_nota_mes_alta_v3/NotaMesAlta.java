@@ -69,24 +69,25 @@ public class NotaMesAlta {
             
 			
 		}
+        String newestText = "";
 
         for (int i = 0; i < newText.length(); i++) {
             char ch = newText.charAt(i);
             // si es el primer
 			if (!first) {
-				newText += ch;
+				newestText += ch;
                 first = true;
 				continue;
 			}
             else if((i == text.length() - 1)){
-                newText += " i " + ch;
+                newestText += " i " + ch;
                 continue;
             }
             else{
-                newText += ", " + ch;
+                newestText += ", " + ch;
             }
         }
-		return newText;
+		return newestText;
     }
     
 }
