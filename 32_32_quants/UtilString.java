@@ -164,11 +164,11 @@ public class UtilString{
 	}
 	
 	public static boolean conte(String text, String subtext, int i, boolean extricte) {
-		int j = 0;
-	
-		while (j < subtext.length() && (i + j) < text.length()) {
+    	int j = 0;
+
+   		while (j < subtext.length() && (i + j) < text.length()) {
 			char ch = text.charAt(i + j);
-	
+
 			if (ch != subtext.charAt(j)) {
 				if (!extricte) {
 					if (lletraCatalana(ch)) {
@@ -178,13 +178,13 @@ public class UtilString{
 				}
 				return false;
 			}
-	
+
 			j++;
-		}
-	
-		return j == subtext.length();
+    	}
+
+    	return j == subtext.length();
 	}
-	
+
 	
 	public static boolean lletraCatalana(char ch){
 		String lletres = "aàeèéiíïoóòuúüç";
@@ -270,7 +270,7 @@ public class UtilString{
 		}
 		
 		for (int i=0; i<text.length(); i++){
-			if((i+subtext.length())>text.length()) break;
+			if((subtext.length())>text.length()) break;
 			if(conte(text, subtext, i, extricte)) quants++;
 		}
 		return quants;
@@ -287,3 +287,9 @@ public class UtilString{
 	
 	
 }
+
+
+		
+	
+		
+	
