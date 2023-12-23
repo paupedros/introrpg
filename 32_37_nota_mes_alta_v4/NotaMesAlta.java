@@ -9,8 +9,15 @@ public class NotaMesAlta {
         int nota = Integer.parseInt(Entrada.readLine());
         String notes = "";
         int notaMesAlta = 0;
+        int notaAnterior = 0;
         while (nota != -1) {
-            notes += nota;
+            if(nota < notaAnterior){
+                notes = notes + nota;
+            }
+            else {
+                notes = nota + notes;
+            }
+            notaAnterior = nota;
             nota = Integer.parseInt(Entrada.readLine());
             if(nota == 10) notaMesAlta = 10;
         }
