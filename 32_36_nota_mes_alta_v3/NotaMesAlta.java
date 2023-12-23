@@ -59,7 +59,7 @@ public class NotaMesAlta {
                 i++;
                 continue;
             }
-            if(Character.getNumericValue(ch) == notaMesAlta) continue;
+            else if(Character.getNumericValue(ch) == notaMesAlta) continue;
 			if (!first) {
 				newText += ch;
                 first = true;
