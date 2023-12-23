@@ -264,6 +264,10 @@ public class UtilString{
 	public static int quants(String text, String subtext, boolean extricte){
 		int quants = 0;
 		if(subtext.isEmpty()) return quants;
+		if(!extricte){
+			text = text.toUpperCase();
+            subtext = subtext.toUpperCase();
+		}
 		
 		for (int i=0; i<text.length(); i++){
 			if((i+subtext.length())>text.length()) break;
