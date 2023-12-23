@@ -9,7 +9,7 @@ public class Arguments {
             System.out.println("Cap argument");
             return;
         }
-    
+
         for (int i = 0; i < args.length; i++) {
             System.out.print("[" + i + "]" + " "); // La posicio de l'argument
             String text = "";
