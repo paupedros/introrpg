@@ -23,7 +23,7 @@ public class NotaMesAlta {
 
         String resta = ". La resta de notes és: " + notes;
         if(notes.length() < 1){
-            resta = " No queda cap altra nota.";
+            resta = ". No queda cap altra nota.";
         }
         
         System.out.println("La nota més alta és " + notaMesAlta + resta);
