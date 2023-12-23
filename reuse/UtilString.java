@@ -206,17 +206,22 @@ public class UtilString {
 	}
 
 	public static char lletraAccentuada(char ch) {
-        ch = Character.toLowerCase(ch);
+		ch = Character.toLowerCase(ch);
 
-        // Si el caracter és una 'ç' retornem true ja que es pot escriure com una c
-        // també
-        if (ch == 'c' || ch == 'ç')
-            return 'c';
-		if(ch=='à') return 'a';
-		if(ch=='è' || ch=='é') return 'e';
-		if(ch=='í' || ch=='ï') return 'i';
-		if(ch=='ó' || ch=='ò') return 'o';
-		if(ch=='ú' || ch=='ü') return 'u';
+		// Si el caracter és una 'ç' retornem true ja que es pot escriure com una c
+		// també
+		if (ch == 'c' || ch == 'ç')
+			return 'c';
+		if (ch == 'à')
+			return 'a';
+		if (ch == 'è' || ch == 'é')
+			return 'e';
+		if (ch == 'í' || ch == 'ï')
+			return 'i';
+		if (ch == 'ó' || ch == 'ò')
+			return 'o';
+		if (ch == 'ú' || ch == 'ü')
+			return 'u';
 		return ch;
 	}
 
@@ -315,12 +320,11 @@ public class UtilString {
 			char ch = lletraAccentuada(text.charAt(i));
 			if (i == 0)
 				continue;
-			else if (!estricta){
+			else if (!estricta) {
 				if (ch <= lletraAccentuada(text.charAt(i - 1)))
-                    continue;
+					continue;
 				return false;
-			}
-			else if (ch < lletraAccentuada(text.charAt(i - 1)))
+			} else if (ch < lletraAccentuada(text.charAt(i - 1)))
 				return false;
 		}
 
@@ -334,21 +338,112 @@ public class UtilString {
 	public static boolean esDecreixent(String text, boolean estricta) {
 		for (int i = 0; i < text.length(); i++) {
 			char ch = text.charAt(i);
-            if (i == 0)
-                continue;
-			else if (!estricta){
+			if (i == 0)
+				continue;
+			else if (!estricta) {
 				if (ch >= lletraAccentuada(text.charAt(i - 1)))
-                    continue;
+					continue;
 				return false;
-			}
-            else if (ch > text.charAt(i - 1))
-                return false;
+			} else if (ch > text.charAt(i - 1))
+				return false;
 		}
 		return true;
 
 	}
 
 	public static boolean esDecreixent(String text) {
-        return esDecreixent(text, true);
+		return esDecreixent(text, true);
+	}
+
+	public static boolean esCreixidecri(String text, boolean estricta) {
+		boolean creixi = false;
+		boolean decri = false;
+		for (int i = 0; i < text.length(); i++) {
+			char ch = lletraAccentuada(text.charAt(i));
+			if (i == 0)
+				continue;
+			// estricta == false
+			else if (!estricta) {
+
+				if (ch >= lletraAccentuada(text.charAt(i - 1))
+						&& decri == false
+						&& creixi == false) {
+					creixi = true;
+					continue;
+				} else if (ch <= lletraAccentuada(text.charAt(i - 1))
+						&& decri == false
+						&& creixi == true) {
+					decri = true;
+					continue;
+				} else if (decri == true && ch >= text.charAt(i - 1))
+					return false;
+
+			}
+			// estricta == true
+			else if (ch > lletraAccentuada(text.charAt(i - 1))
+					&& decri == false
+					&& creixi == false) {
+				creixi = true;
+			} else if (ch < lletraAccentuada(text.charAt(i - 1))
+					&& decri == false
+					&& creixi == true) {
+				decri = true;
+			} else if (decri == true && ch > text.charAt(i - 1))
+				return false;
+
+		}
+		if (creixi && decri)
+			return true;
+		return false;
+	}
+
+	public static boolean esCreixidecri(String text) {
+		return esCreixidecri(text, true);
+	}
+
+	public static boolean esDecricreixi(String text, boolean estricta) {
+		boolean creixi = false;
+		boolean decri = false;
+		for (int i = 0; i < text.length(); i++) {
+			char ch = lletraAccentuada(text.charAt(i));
+			if (i == 0)
+				continue;
+			// estricta == false
+			else if (!estricta) {
+				if (ch > lletraAccentuada(text.charAt(i - 1))
+						&& decri == true
+						&& creixi == false) {
+					creixi = true;
+					continue;
+				} else if (ch < lletraAccentuada(text.charAt(i - 1))
+						&& decri == false
+						&& creixi == false) {
+					decri = true;
+					continue;
+				} else if (creixi == true && ch < text.charAt(i - 1))
+					return false;
+
+			}
+			// estricta == true
+			else if (ch > lletraAccentuada(text.charAt(i - 1))
+					&& decri == true
+					&& creixi == false) {
+				creixi = true;
+			} else if (ch < lletraAccentuada(text.charAt(i - 1))
+					&& decri == false
+					&& creixi == false) {
+				decri = true;
+			} else if (creixi == true && ch < text.charAt(i - 1))
+				return false;
+
+		}
+		if (creixi && decri)
+			return true;
+		return false;
+	}
+
+	public static boolean esDecricreixi(String text) {
+        return esDecricreixi(text, true);
     }
+
 }
