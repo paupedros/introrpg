@@ -25,6 +25,10 @@ public class NotaMesAlta {
         
         notes = transformNotes(notes, notaMesAlta);
 
+        if(notes.charAt(notes.length() - 3) != 'i'){
+
+        }
+
         String resta = ". La resta de notes és: " + notes;
         if(notes.length() < 1){
             resta = ". No queda cap altra nota.";
@@ -64,6 +68,11 @@ public class NotaMesAlta {
             }
             else if(Character.getNumericValue(ch) == notaMesAlta) continue;
 
+            
+			
+		}
+
+        for (int i = 0; i < newText.length(); i++) {
             // si es el primer
 			if (!first) {
 				newText += ch;
@@ -77,8 +86,7 @@ public class NotaMesAlta {
             else{
                 newText += ", " + ch;
             }
-			
-		}
+        }
 		return newText;
     }
     
