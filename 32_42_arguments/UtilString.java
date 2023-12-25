@@ -105,13 +105,14 @@ public class UtilString {
 		return true;
 	}
 
-	public static boolean esEnter(String text, boolean estricte) {
+	
+	/*public static boolean esEnter(String text, boolean estricte) {
 		if (estricte) {
 			return esEnter(text);
 		}
 		text = text.strip();
 		return esEnter(text);
-	}
+	}*/
 
 	public static int aEnter(String text, boolean estricte) {
 		int num;
