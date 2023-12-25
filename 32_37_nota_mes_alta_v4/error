@@ -1,0 +1,7 @@
+
+[91;40;1mERROR:[0m Hi ha fitxers no afegits a git.
+       Considera una de les següents possibilitats:
+       $ git add error
+       o
+       $ git add --all
+
