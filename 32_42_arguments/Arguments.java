@@ -13,7 +13,7 @@ public class Arguments {
         for (int i = 0; i < args.length; i++) {
             System.out.print("[" + i + "]" + " "); // La posicio de l'argument
             String text = "";
-            if(UtilString.esEnter(args[i], true)){ // text de si es enter o no
+            if(UtilString.esEnter(args[i])){ // text de si es enter o no
                 text = "és enter";
             }
             else {
