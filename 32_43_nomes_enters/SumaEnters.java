@@ -10,7 +10,7 @@ public class SumaEnters {
             return;
         }
         int quants = quantsEnters(args);
-        int[] enters = filtraEnters(args, quants);
+        int[] enters = filtraEnters(args);
         String strEnters = Arrays.toString(enters);
         int suma = sumaEnters(enters);
         System.out.println(suma);
@@ -26,7 +26,8 @@ public class SumaEnters {
         return quants;
     }
 
-    public static int[] filtraEnters(String[] valors, int quants) {
+    public static int[] filtraEnters(String[] valors) {
+        int quants = quantsEnters(valors);
         int[] enters = new int[quants];
         int j = 0;
         for (int i = 0; i < valors.length; i++) {
