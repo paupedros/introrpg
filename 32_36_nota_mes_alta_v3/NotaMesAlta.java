@@ -64,7 +64,8 @@ public class NotaMesAlta {
                 i++;
                 continue;
             }
-            else if((int charInt = ch - 0)) == notaMesAlta) continue;
+            int charInt = ch - 0;
+            else if(charInt == notaMesAlta) continue;
             else {
                 newText += ch;
             }
