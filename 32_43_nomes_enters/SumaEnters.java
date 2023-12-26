@@ -6,7 +6,7 @@ public class SumaEnters {
     public static void main(String[] args) {
         int quants = quantsEnters(args);
         int[] enters = filtraEnters(args, quants);
-        System.out.println(quants);
+        System.out.println(enters);
     }
 
     public static int quantsEnters(String[] valors) {
