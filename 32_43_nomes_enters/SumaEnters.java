@@ -1,7 +1,6 @@
 /*
  * En aquest programa mostrarem el resultat de la suma dels arguments, nomes els enters
  */
-import java.util.Arrays;
 
 public class SumaEnters {
     public static void main(String[] args) {
@@ -11,7 +10,6 @@ public class SumaEnters {
         }
         int quants = quantsEnters(args);
         int[] enters = filtraEnters(args);
-        String strEnters = Arrays.toString(enters);
         int suma = sumaEnters(enters);
         System.out.println(suma);
     }
