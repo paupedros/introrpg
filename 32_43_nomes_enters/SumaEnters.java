@@ -12,7 +12,8 @@ public class SumaEnters {
         int quants = quantsEnters(args);
         int[] enters = filtraEnters(args, quants);
         String strEnters = Arrays.toString(enters);
-        System.out.println(strEnters);
+        int suma = sumaEnters(enters);
+        System.out.println(suma);
     }
 
     public static int quantsEnters(String[] valors) {
@@ -35,6 +36,14 @@ public class SumaEnters {
             }
         }
         return enters;
+    }
+
+    public static int sumaEnters(int[] enters){
+        int suma = 0;
+        for (int i = 0; i < enters.length; i++) {
+            suma += enters[i];
+        }
+        return suma;
     }
 
     public static boolean esEnter(String text) {
