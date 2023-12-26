@@ -64,7 +64,7 @@ public class NotaMesAlta {
                 i++;
                 continue;
             }
-            else if(Integer.parseInt(String.valueOf(ch)) == notaMesAlta) continue;
+            else if((int charInt = ch - 0)) == notaMesAlta) continue;
             else {
                 newText += ch;
             }
