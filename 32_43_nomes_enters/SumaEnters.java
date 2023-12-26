@@ -25,9 +25,11 @@ public class SumaEnters {
 
     public static int[] filtraEnters(String[] valors, int quants) {
         int[] enters = new int[quants];
+        int j = 0;
         for (int i = 0; i < valors.length; i++) {
             if (esEnter(valors[i])) {
-                enters[i] = Integer.parseInt(valors[i]);
+                enters[j] = Integer.parseInt(valors[i]);
+                j++;
             }
         }
         return enters;
