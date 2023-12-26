@@ -5,6 +5,7 @@
 public class SumaEnters {
     public static void main(String[] args) {
         int quants = quantsEnters(args);
+        int[] enters = filtraEnters(args, quants);
         System.out.println(quants);
     }
 
@@ -16,6 +17,16 @@ public class SumaEnters {
             }
         }
         return quants;
+    }
+
+    public static int[] filtraEnters(String[] valors, int quants) {
+        int[] enters = new int[quants];
+        for (int i = 0; i < valors.length; i++) {
+            if (esEnter(valors[i])) {
+                enters[i] = Integer.parseInt(valors[i]);
+            }
+        }
+        return enters;
     }
 
     public static boolean esEnter(String text) {
