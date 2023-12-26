@@ -4,6 +4,10 @@
 
 public class SumaEnters {
     public static void main(String[] args) {
+        if(args.length == 0) {
+            System.out.println(0);
+            return;
+        }
         int quants = quantsEnters(args);
         int[] enters = filtraEnters(args, quants);
         System.out.println(enters);
