@@ -19,7 +19,7 @@ public class SumaEnters {
     public static int quantsEnters(String[] valors) {
         int quants = 0;
         for (int i = 0; i < valors.length; i++) {
-            if (esEnter(valors[i])) {
+            if (UtilString.esEnter(valors[i])) {
                 quants++;
             }
         }
@@ -30,7 +30,7 @@ public class SumaEnters {
         int[] enters = new int[quants];
         int j = 0;
         for (int i = 0; i < valors.length; i++) {
-            if (esEnter(valors[i])) {
+            if (UtilString.esEnter(valors[i])) {
                 enters[j] = Integer.parseInt(valors[i]);
                 j++;
             }
@@ -46,19 +46,5 @@ public class SumaEnters {
         return suma;
     }
 
-    public static boolean esEnter(String text) {
-		if (text.isEmpty())
-			return false;
-		for (int i = 0; i < text.length(); i++) {
-			char ch = text.charAt(i);
-			if (i == 0 && (ch == '-' || ch == '+')) {
-				continue;
-			} else if (!Character.isDigit(ch)) {
-				return false;
-			}
-
-		}
-		return true;
-	}
 
 }
