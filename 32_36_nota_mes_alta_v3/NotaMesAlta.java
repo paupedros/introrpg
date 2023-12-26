@@ -58,13 +58,13 @@ public class NotaMesAlta {
                 if(ch == newText.charAt(j)) found = true;
             }
             if(found) continue;*/
-
+            int charInt = ch - 0;
             // treiem la nota mes alta
             if (ch == '1' && text.charAt(i+1) == '0'){
                 i++;
                 continue;
             }
-            int charInt = ch - 0;
+            
             else if(charInt == notaMesAlta) continue;
             else {
                 newText += ch;
