@@ -468,16 +468,19 @@ public class UtilString {
 
 			while (i < text.length()) { // recorrem string text
 				char ch = text.charAt(i);
-				
-				if(Character.isWhitespace(ch)) {
-					if(inclouBlancs){
+
+				if (Character.isWhitespace(ch)) {
+					if (inclouBlancs) {
 						paraula += ch;
 					}
 					i++;
 					break;
-				}
-				else {
-					
+				} else {
+					if (i + 1 < text.length() && Character.isWhitespace(text.charAt(i + 1))) {
+						paraula += ch;
+						i++;
+						break;
+					}
 				}
 				paraula += ch;
 				i++;
