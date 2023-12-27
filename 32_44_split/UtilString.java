@@ -469,26 +469,15 @@ public class UtilString {
 			while (i < text.length()) { // recorrem string text
 				char ch = text.charAt(i);
 
-				// Si es un espai i volem incloure blancs l'afegim
-				if (Character.isWhitespace(ch)) {
-					if (inclouBlancs) {
-						paraula += ch;
-					}
-					if(i + 1 < text.length() && !Character.isWhitespace(text.charAt(i))) {
+				if(!inclouBlancs){
+					if(!Character.isWhitespace(ch)){
+						i++;
 						break;
 					}
-					i++;
-					continue;
 				}
-
-				// Si no es un espai
-				paraula += ch;
-				if (i + 1 < text.length() && Character.isWhitespace(text.charAt(i + 1))) {
-					// Si el caracter seguent no esta fora de rang i es un espai sortim
-					
-					break; 
+				else {
+					paraula += ch;
 				}
-				i++;
 			}
 
 			newText[j] = paraula;
