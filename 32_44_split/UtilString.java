@@ -476,6 +476,8 @@ public class UtilString {
 					i++;
 					break;
 				}
+				paraula += ch;
+				i++;
 
 			}
 			newText[j] = paraula;
