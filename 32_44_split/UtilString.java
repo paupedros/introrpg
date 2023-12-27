@@ -478,6 +478,7 @@ public class UtilString {
 				else {
 					paraula += ch;
 				}
+				i++;
 			}
 
 			newText[j] = paraula;
