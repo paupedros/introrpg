@@ -469,22 +469,35 @@ public class UtilString {
 			while (i < text.length()) { // recorrem string text
 				char ch = text.charAt(i);
 
-				if(!inclouBlancs){
-					if(Character.isWhitespace(ch)){
+				if (!inclouBlancs) {
+					if (Character.isWhitespace(ch)) {
 						i++;
 						break;
 					}
 				}
-				paraula += ch;
-				
-				i++;
-			}
+				if (inclouBlancs) {
+					if (Character.isWhitespace(ch)) {
+						paraula += ch; // afegim espai
+						i++;
+						// Mentre que el seguent caracter sigui un espai afegim espais a la paraula
+						while (i + 1 < text.length() && Character.isWhitespace(text.charAt(i + 1))) {
+							paraula += " ";
+							i++;
+						}
+						break;
+					}
+				}
 
+				paraula += ch;
+
+				i++;
+
+			}
 			newText[j] = paraula;
 		}
-		
 
 		return newText;
+
 	}
 
 	// equival a separa(text, true)
