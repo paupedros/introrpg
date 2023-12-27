@@ -476,10 +476,9 @@ public class UtilString {
 					i++;
 					break;
 				} else {
-					paraula += ch;
-					
-					if(Character.isWhitespace(text.charAt(i +1))) break;
+					if(Character.isWhitespace(text.charAt(i + 1))) break;
 				}
+				paraula += ch;
 				i++;
 
 			}
