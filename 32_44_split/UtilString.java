@@ -474,7 +474,7 @@ public class UtilString {
 						paraula += ch;
 					}
 					i++;
-					continue;
+					break;
 				}
 
 			}
