@@ -474,6 +474,10 @@ public class UtilString {
 						i++;
 						break;
 					}
+					else {
+						paraula += ch;
+                        i++;
+					}
 				}
 				if (inclouBlancs) {
 					if (Character.isWhitespace(ch)) {
