@@ -479,9 +479,6 @@ public class UtilString {
 						i++;
 						break; // Sortim del loop ja que ja no estariem en una paraula (espaiosa jeje)
 					}
-					else {
-						continue;
-					}
 				}
 
 				i++;
