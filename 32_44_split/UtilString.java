@@ -478,6 +478,7 @@ public class UtilString {
 					if(i < text.length() && Character.isWhitespace(text.charAt(i))) continue;
 					break;
 				} else {
+					// Si el seguent caracter es un espai farem el break
 					if (i + 1 < text.length() && Character.isWhitespace(text.charAt(i + 1))) {
 						paraula += ch;
 						i++;
@@ -521,6 +522,13 @@ public class UtilString {
 					paraules++;
 					paraula = true;
 				}
+				else { // ens trobem un espai en blanc
+					if (inclouBlancs && espai == false) {
+                        espai = true;
+                        blanks++;
+                    }
+
+				}
 			} else { // si estem en una paraula i ens trobem un espai en blanc
 				if (Character.isWhitespace(ch)) {
 					if (inclouBlancs && espai == false) {
@@ -530,9 +538,7 @@ public class UtilString {
 					paraula = false;
 				}
 			}
-			if(i==text.length() && Character.isWhitespace(text.charAt(i))){
-				paraules++;
-			}
+			
 
 		}
 
