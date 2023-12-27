@@ -466,6 +466,20 @@ public class UtilString {
 		for (int j = 0; j < newText.length; j++) { // recorrem l'array
 			String paraula = "";
 
+			while (i < text.length()) {
+				char ch = text.charAt(i);
+
+				if (Character.isWhitespace(ch)) {
+					if (inclouBlancs) {
+						paraula += ch;
+					}
+					i++;
+				} else {
+					break;
+				}
+
+			}
+
 			while (i < text.length()) { // recorrem string text
 				char ch = text.charAt(i);
 
