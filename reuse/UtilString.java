@@ -589,7 +589,6 @@ public class UtilString {
 		String newText = "";
 		for (int i = 0; i < cadenes.length; i++) {
 			
-				
 			newText += cadenes[i];
 			if(i == cadenes.length - 2){
 				newText += darrerSeparador;
