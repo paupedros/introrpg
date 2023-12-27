@@ -481,7 +481,7 @@ public class UtilString {
 						i++;
 						// Mentre que el seguent caracter sigui un espai afegim espais a la paraula
 						while (i + 1 < text.length() && Character.isWhitespace(text.charAt(i + 1))) {
-							paraula += " ";
+							paraula += ch;
 							i++;
 						}
 						break;
