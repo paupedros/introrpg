@@ -480,6 +480,7 @@ public class UtilString {
 						paraula += ch; // afegim espai
 						
 						if(i +1 < text.length() && !Character.isWhitespace(text.charAt(i + 1))){
+							i++;
 							break;
 						}
 						
