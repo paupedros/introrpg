@@ -530,6 +530,9 @@ public class UtilString {
 					paraula = false;
 				}
 			}
+			if(i==text.length() && Character.isWhitespace(text.charAt(i))){
+				paraules++;
+			}
 
 		}
 
