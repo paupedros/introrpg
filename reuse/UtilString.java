@@ -489,8 +489,6 @@ public class UtilString {
 			if (!paraula.isEmpty() || inclouBlancs) {
 				newText[j] = paraula;
 
-			} else {
-				j--;
 			}
 		}
 
