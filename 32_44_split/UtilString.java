@@ -474,7 +474,7 @@ public class UtilString {
 					if (inclouBlancs) {
 						paraula += ch;
 					}
-					if(i + 1 < text.length() && Character.isWhitespace(text.charAt(i))) {
+					if(i + 1 < text.length() && !Character.isWhitespace(text.charAt(i))) {
 						break;
 					}
 					i++;
