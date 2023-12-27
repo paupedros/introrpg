@@ -486,7 +486,12 @@ public class UtilString {
 				i++;
 
 			}
-			newText[j] = paraula;
+			if (!paraula.isEmpty() || inclouBlancs) {
+				newText[j] = paraula;
+
+			} else {
+				j--;
+			}
 		}
 
 		return newText;
