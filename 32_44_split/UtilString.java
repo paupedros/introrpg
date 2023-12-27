@@ -474,13 +474,9 @@ public class UtilString {
 						i++;
 						break;
 					}
-					else {
-						paraula += ch;
-					}
 				}
-				else {
-					paraula += ch;
-				}
+				paraula += ch;
+				
 				i++;
 			}
 
