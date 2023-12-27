@@ -466,8 +466,6 @@ public class UtilString {
 		for (int j = 0; j < newText.length; j++) { // recorrem l'array
 			String paraula = "";
 
-			
-
 			while (i < text.length()) { // recorrem string text
 				char ch = text.charAt(i);
 
@@ -476,8 +474,9 @@ public class UtilString {
 						paraula += ch;
 					}
 					i++;
+					// Si el seguent caracter es un espai seguim sino sortim del bucle
 					if(Character.isWhitespace(ch)) continue;
-					break;
+					else break;
 				} else {
 					if (i + 1 < text.length() && Character.isWhitespace(text.charAt(i + 1))) {
 						paraula += ch;
