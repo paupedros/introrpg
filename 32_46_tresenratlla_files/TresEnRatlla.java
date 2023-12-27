@@ -3,6 +3,9 @@
  */
 
 public class TresEnRatlla {
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
 
         // declaració de les files
