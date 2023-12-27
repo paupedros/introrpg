@@ -504,7 +504,7 @@ public class UtilString {
 
 	// equival a separa(text, true)
 	public static String[] separa(String text) {
-		return separa(text, true);
+		return separa(text, false);
 	}
 
 	public static int comptaParaules(String text, boolean inclouBlancs) {
