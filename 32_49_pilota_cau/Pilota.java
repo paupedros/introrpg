@@ -40,12 +40,16 @@ public class Pilota {
     }
 
     public static int seguentFila(int actual) {
+        // Si arriba al final de la fila retornem la posicio 0 de la fila
         if(actual == N_FILES - 1) return 0;
+        // Sino a la seguent fila
         return actual + 1;
     }
 
     public static int seguentCol(int actual) {
+        // Si arriba al final de la columna retornem la posicio 0 de la columna
         if(actual == N_COLS - 1) return 0;
+        // Sino a la seguent columna
         return actual + 1;
 
     }
