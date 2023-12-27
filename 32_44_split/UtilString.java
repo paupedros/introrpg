@@ -474,15 +474,12 @@ public class UtilString {
 						i++;
 						break;
 					}
-					else {
-						paraula += ch;
-                        i++;
-					}
 				}
 				if (inclouBlancs) {
 					if (Character.isWhitespace(ch)) {
 						paraula += ch; // afegim espai
 						i++;
+						
 
 						// Mentre que el seguent caracter sigui un espai afegim espais a la paraula
 						while (i + 1 < text.length() && Character.isWhitespace(text.charAt(i + 1))) {
@@ -498,6 +495,10 @@ public class UtilString {
 						break;
 					}
 				}
+
+				paraula += ch;
+
+				i++;
 
 			}
 			newText[j] = paraula;
