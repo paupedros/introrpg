@@ -475,7 +475,7 @@ public class UtilString {
 					}
 					i++;
 					// Si el seguent caracter es un espai seguim sino sortim del bucle
-					if(i < text.length() && !Character.isWhitespace(text.charAt(i))) break;
+					if(i < text.length() && Character.isWhitespace(text.charAt(i))) continue;
 					break;
 				} else {
 					if (i + 1 < text.length() && Character.isWhitespace(text.charAt(i + 1))) {
