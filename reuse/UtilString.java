@@ -477,8 +477,10 @@ public class UtilString {
 					i++;
 					continue;
 				}
+
+				// Si no es un espai
 				paraula += ch;
-				if (i + 1 < text.length() && Character.isWhitespace(text.charAt(i + 1))) {
+				if (i + 1 < text.length()-1 && Character.isWhitespace(text.charAt(i + 1))) {
 					// Si el caracter seguent no esta fora de rang i es un espai sortim
 					break; 
 				}
