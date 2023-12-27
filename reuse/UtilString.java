@@ -1,23 +1,60 @@
 
-/* Programa que conte moduls per utilitzar amb Strings:
+/* 	Programa que conte moduls per utilitzar amb Strings:
 	Moduls i funcions:
+	
 	- esVocal: Comprovar si un caracter en concret es una vocal catalana
+	
 	- nomesLletres: Agafa un String i retorna la mateixa amb nomes lletres
+	
 	- lletresSeparades: Agafa un String i retorna la mateixa separada per comes	
+	
 	- intervalString: Donat un text, valor inicial i valor final, retorna la secció del 
 	text entre aquest interval
+	
 	- esEnter: donat un nombre ens dira si és enter o no
+	
 	- esEnter(estricte): donat un nombre ens dira si és enter o no, accepta 
 	texts amb espais a l'inici i al final
+	
 	- aEnter: donat un text s'intenta passar a un nombre aquest text
+	
 	- cadenaContinua: donat un text i un nombre de longitud, s'allarga la 
 	cadena fins a que sigui igual a la longitud desitjada
+	
 	- esSubstring (no estricte): Si no es estricte ignora les majusucles i minuscules, a demes dels
 	caracter catalans
+	
 	- esSubstring (estricte): Fara el mateix que String.contains(), retornara true si un string 
 	esta dins d'un altre
+	
 	- esPrefix: Comprovar si un string es un prefix d'un altre
+	
 	- esSuffix: Comprovar si un string es un suffix d'un altre
+	
+	- quants(String text, String subtext, boolean extricte): Retorna el nombre 
+	d'aparicions de subtext dins de text, tenint en compte majúscules, minúscules i caràcters catalans.
+	
+	- esCreixent(String text, boolean estricta): Comprova si els caràcters de la 
+	cadena estan en ordre ascendent, amb opció de ordenació estricta.
+	
+	- esDecreixent(String text, boolean estricta): Comprova si els caràcters de la 
+	cadena estan en ordre descendent, amb opció de ordenació estricta.
+
+	- esCreixidecri(String text, boolean estricta): Comprova si els caràcters de la 
+	cadena primer augmenten i després disminueixen, amb opció de ordenació estricta.
+
+	- esDecricreixi(String text, boolean estricta): Comprova si els caràcters de la 
+	cadena primer disminueixen i després augmenten, amb opció de ordenació estricta.
+
+	- entreComes(int[] numeros, char separador): Retorna una cadena amb els 
+	enters separats pel separador especificat.
+
+	- separa(String text, boolean inclouBlancs): Retorna un array de subcadenes 
+	del text, separades per espais en blanc. El paràmetre inclouBlancs inclou o exclou els espais en blanc al resultat.
+
+	- comptaParaules(String text, boolean inclouBlancs): Compta el nombre de
+	paraules al text, tenint en compte els espais en blanc. El paràmetre inclouBlancs 
+	inclou o exclou els espais en blanc en el recompte.
 	
 */
 
@@ -459,7 +496,8 @@ public class UtilString {
 	// blanc, incloent els caracters en blanc quan inclouBlancs és cert
 
 	public static String[] separa(String text, boolean inclouBlancs) {
-		if(text.isEmpty()) return new String[0]; // si rep un text buit retorna un array buit
+		if (text.isEmpty())
+			return new String[0]; // si rep un text buit retorna un array buit
 		int numParaules = comptaParaules(text, inclouBlancs); // comptem les paraules que hi ha en el text
 		String[] newText = new String[numParaules];
 		int i = 0;
@@ -476,7 +514,8 @@ public class UtilString {
 					}
 					i++;
 					// Si el seguent caracter es un espai seguim sino sortim del bucle
-					if(i < text.length() && Character.isWhitespace(text.charAt(i))) continue;
+					if (i < text.length() && Character.isWhitespace(text.charAt(i)))
+						continue;
 					break;
 				} else {
 					// Si el seguent caracter es un espai farem el break
@@ -522,12 +561,11 @@ public class UtilString {
 					}
 					paraules++;
 					paraula = true;
-				}
-				else { // ens trobem un espai en blanc
+				} else { // ens trobem un espai en blanc
 					if (inclouBlancs && espai == false) {
-                        espai = true;
-                        blanks++;
-                    }
+						espai = true;
+						blanks++;
+					}
 
 				}
 			} else { // si estem en una paraula i ens trobem un espai en blanc
@@ -539,11 +577,29 @@ public class UtilString {
 					paraula = false;
 				}
 			}
-			
 
 		}
 
 		return paraules + blanks;
+	}
+
+	// retorna un String format per les cadenes de text separades pel separador amb
+	// darrer separador
+	public static String junta(String[] cadenes, String separador, String darrerSeparador){
+		String newText = "";
+		for (int i = 0; i < cadenes.length; i++) {
+			if (i != 0)
+				newText += separador + " ";
+			newText += cadenes[i];
+		}
+
+
+
+		return newText;
+	}
+	// equivalent a junta(cadenes, separador, separador)
+	public static String junta(String[] cadenes, String separador){
+
 	}
 
 }
