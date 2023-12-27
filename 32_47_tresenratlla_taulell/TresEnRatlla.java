@@ -27,7 +27,7 @@ public class TresEnRatlla {
 
         // inicialització de la fila 2
         taulell[2][0] = '·';
-        taulell[2][1] = 'X';
+        taulell[2][1] = '·';
         taulell[2][2] = 'X';
 
         // mostra la posició inicial del taulell
