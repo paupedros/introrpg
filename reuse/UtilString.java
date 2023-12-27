@@ -478,7 +478,6 @@ public class UtilString {
 				if (inclouBlancs) {
 					if (Character.isWhitespace(ch)) {
 						paraula += ch; // afegim espai
-						i++;
 						
 						if(i +1 < text.length() && !Character.isWhitespace(text.charAt(i + 1))){
 							break;
@@ -486,14 +485,10 @@ public class UtilString {
 						
 					}
 					// Si el seguent caracter es un espai sortim del bucle per acabar la paraula
-					else if (Character.isWhitespace(ch)){
+					else {
 						paraula += ch;
-						i++;
-						break;
 					}
 				}
-
-				paraula += ch;
 
 				i++;
 
