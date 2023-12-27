@@ -486,7 +486,6 @@ public class UtilString {
 							paraula += ch;
 							i++;
 						}
-						break;
 					}
 					// Si el seguent caracter es un espai sortim del bucle per acabar la paraula
 					else if (i + 1 < text.length() && Character.isWhitespace(text.charAt(i + 1))){
