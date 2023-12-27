@@ -471,14 +471,13 @@ public class UtilString {
 
 				paraula += ch;
 
-				if (inclouBlancs) {
-
-					if (i + 1 < text.length() // si el caracter seguent no esta fora de rang
-							&& (Character.isWhitespace(ch) != Character.isWhitespace(text.charAt(i + 1)))) {
-						// Si el caracter actual es un espai i el seguent no es un espai
+				if (i + 1 < text.length() // si el caracter seguent no esta fora de rang
+						&& (Character.isWhitespace(ch) != Character.isWhitespace(text.charAt(i + 1)))) {
+					// Si el caracter actual es un espai i el seguent no es un espai
+					if (!inclouBlancs) {
 						i++;
-						break; // Sortim del loop ja que ja no estariem en una paraula (espaiosa jeje)
 					}
+					break; // Sortim del loop ja que ja no estariem en una paraula (espaiosa jeje)
 				}
 
 				i++;
