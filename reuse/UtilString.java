@@ -485,7 +485,7 @@ public class UtilString {
 				paraula += ch;
 				if (i + 1 < text.length() && Character.isWhitespace(text.charAt(i + 1))) {
 					// Si el caracter seguent no esta fora de rang i es un espai sortim
-					i++;
+					
 					break; 
 				}
 				i++;
