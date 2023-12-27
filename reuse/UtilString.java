@@ -470,7 +470,7 @@ public class UtilString {
 				char ch = text.charAt(i);
 
 				if(!inclouBlancs){
-					if(!Character.isWhitespace(ch)){
+					if(Character.isWhitespace(ch)){
 						i++;
 						break;
 					}
@@ -483,6 +483,7 @@ public class UtilString {
 
 			newText[j] = paraula;
 		}
+		
 
 		return newText;
 	}
