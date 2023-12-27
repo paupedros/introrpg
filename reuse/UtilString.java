@@ -459,6 +459,7 @@ public class UtilString {
 	// blanc, incloent els caracters en blanc quan inclouBlancs és cert
 
 	public static String[] separa(String text, boolean inclouBlancs) {
+		if(text.isEmpty()) return new String[0];
 		int numParaules = comptaParaules(text, inclouBlancs);
 		String[] newText = new String[numParaules];
 		int i = 0;
