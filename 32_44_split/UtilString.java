@@ -543,7 +543,6 @@ public class UtilString {
 					paraula = false;
 				}
 			}
-
 		}
 
 		return paraules + blanks;
