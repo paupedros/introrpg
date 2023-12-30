@@ -91,7 +91,7 @@ public class DigitArt {
     public static void main(String[] args) {
         // comprova que com a mínim hi hagi un argument
         if(args.length < 1) {
-            System.out.println("Introdueix un argument");
+            System.out.println("Especifiqueu un o més dígits en la línia de comandes");
             return;
         }
         // processa cada argument
