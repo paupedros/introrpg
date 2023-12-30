@@ -106,12 +106,33 @@ public class Pilota {
         canviaIncrement(increment, incFila, incCol);
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         char[][] camp = new char[N_FILES][N_COLS];
         netejaCamp(camp);
 
         int[] posicio = new int[2]; // fila, col
         canviaPosicio(posicio, 0, 0); // posició inicial (0, 0)
+
+        int[] increment = new int[2]; // incFila, incCol
+        canviaIncrement(increment, 1, 1); // desplaçament inicial: 1 fila 1 columna
+
+        do {
+            posicionaPilota(camp, posicio);
+            netejaPantalla();
+            mostraCamp(camp);
+            netejaPosicio(camp, posicio);
+            seguentPosicio(posicio, increment);
+            System.out.printf("%nEnter per continuar");
+        } while (Entrada.readLine().isEmpty());
+    }*/
+
+    // main que simula quan la pilota arriba a la ultima fila i columna
+    public static void main(String[] args) {
+        char[][] camp = new char[N_FILES][N_COLS];
+        netejaCamp(camp);
+
+        int[] posicio = new int[2]; // fila, col
+        canviaPosicio(posicio, 8, 13); // posició inicial (0, 0)
 
         int[] increment = new int[2]; // incFila, incCol
         canviaIncrement(increment, 1, 1); // desplaçament inicial: 1 fila 1 columna
