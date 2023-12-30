@@ -82,7 +82,7 @@ public class Pilota {
         fila = incFila;
 
         if (fila < 0) { // es passa per sobre
-            fila = 1; // torna a la primera fila
+            fila = 0; // torna a la primera fila
             incFila = 1; // toca baixar
         } else if (fila > N_FILES - 1) {
             // es passa per sota
