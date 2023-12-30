@@ -84,7 +84,8 @@ public class Pilota {
         if (fila < 0) { // es passa per sobre
             fila = 1; // torna a la primera fila
             incFila = 1; // toca baixar
-        } else if (fila > N_FILES - 1) {
+        }
+        if (fila > N_FILES - 1) {
             // es passa per sota
             fila = N_FILES - 2; // torna a la última fila
             incFila = -1; // toca pujar
@@ -96,10 +97,12 @@ public class Pilota {
         if (col < 0) { // es passa per la esquerra
             col = 1; // torna a la primera columna
             incCol = 1; // toca a la dreta
-        } else if (col > N_COLS - 1) { // es passa per la dreta
+        }
+        if (col > N_COLS - 1) { // es passa per la dreta
             col = N_COLS - 2; // torna a la última columna
             incCol = -1; // toca a la esquerra
         }
+
 
         // actualitza la posició i l'increment
         canviaPosicio(posicio, fila, col);
