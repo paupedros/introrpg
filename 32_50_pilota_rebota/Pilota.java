@@ -87,7 +87,7 @@ public class Pilota {
         } else if (fila > N_FILES - 1) {
             // es passa per sota
             fila = N_FILES - 2; // torna a la última fila
-            incFila = -1; // toca pujar
+            incFila = -incFila; // toca pujar
         }
 
         // actualitza la columna
@@ -98,7 +98,7 @@ public class Pilota {
             incCol = 1; // toca a la dreta
         } else if (col > N_COLS - 1) { // es passa per la dreta
             col = N_COLS - 2; // torna a la última columna
-            incCol = -1; // toca a la esquerra
+            incCol = -incCol; // toca a la esquerra
         }
 
         // actualitza la posició i l'increment
