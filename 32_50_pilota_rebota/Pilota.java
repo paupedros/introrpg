@@ -79,7 +79,7 @@ public class Pilota {
         int incCol = obteIncrCol(increment);
 
         // actualitza la fila
-        fila += incFila;
+        fila = incFila;
 
         if (fila < 0) { // es passa per sobre
             fila = 1; // torna a la primera fila
@@ -91,7 +91,7 @@ public class Pilota {
         }
 
         // actualitza la columna
-        col += incCol;
+        col = incCol;
 
         if (col < 0) { // es passa per la esquerra
             col = 1; // torna a la primera columna
