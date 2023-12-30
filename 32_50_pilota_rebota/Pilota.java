@@ -67,8 +67,9 @@ public class Pilota {
     }
 
     public static void canviaIncrement(int[] increment, int nouIncFila, int nouIncCol) {
-        nouIncCol = increment[1];
-        nouIncFila = increment[0];
+        increment[0] = nouIncFila;
+        increment[1] = nouIncCol;
+        System.out.println("Increment" + increment[0] + " " + increment[1]);
     }
 
     public static void seguentPosicio(int[] posicio, int[] increment) {
@@ -106,7 +107,7 @@ public class Pilota {
         canviaIncrement(increment, incFila, incCol);
     }
 
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         char[][] camp = new char[N_FILES][N_COLS];
         netejaCamp(camp);
 
@@ -124,10 +125,10 @@ public class Pilota {
             seguentPosicio(posicio, increment);
             System.out.printf("%nEnter per continuar");
         } while (Entrada.readLine().isEmpty());
-    }*/
+    }
 
     // main que simula quan la pilota arriba a la ultima fila i columna
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         char[][] camp = new char[N_FILES][N_COLS];
         netejaCamp(camp);
 
@@ -137,13 +138,6 @@ public class Pilota {
         int[] increment = new int[2]; // incFila, incCol
         canviaIncrement(increment, 1, 1); // desplaçament inicial: 1 fila 1 columna
 
-        do {
-            posicionaPilota(camp, posicio);
-            netejaPantalla();
-            mostraCamp(camp);
-            netejaPosicio(camp, posicio);
-            seguentPosicio(posicio, increment);
-            System.out.printf("%nEnter per continuar");
-        } while (Entrada.readLine().isEmpty());
-    }
+        seguentPosicio(posicio, increment);
+    }*/
 }
