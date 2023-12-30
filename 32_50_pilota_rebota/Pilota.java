@@ -101,11 +101,6 @@ public class Pilota {
             incCol = -1; // toca a la esquerra
         }
 
-        if(posicio[0] == 9 && posicio[1] == 14) {
-            fila = 7;
-            col = 13;
-        }
-
         // actualitza la posició i l'increment
         canviaPosicio(posicio, fila, col);
         canviaIncrement(increment, incFila, incCol);
@@ -127,6 +122,7 @@ public class Pilota {
             mostraCamp(camp);
             netejaPosicio(camp, posicio);
             seguentPosicio(posicio, increment);
+            System.out.println(increment[0] + " " + increment[1]);
             System.out.printf("%nEnter per continuar");
         } while (Entrada.readLine().isEmpty());
     }
