@@ -103,7 +103,7 @@ public class Pilota {
 
         if(posicio[0] == 9 && posicio[1] == 14) {
             fila = 7;
-            col = 12;
+            col = 13;
         }
 
         // actualitza la posició i l'increment
