@@ -69,6 +69,7 @@ public class Pilota {
     public static void canviaIncrement(int[] increment, int nouIncFila, int nouIncCol) {
         nouIncCol = increment[1];
         nouIncFila = increment[0];
+        System.out.printf("Increment: %d, %d\n", nouIncFila, nouIncCol);
     }
 
     public static void seguentPosicio(int[] posicio, int[] increment) {
