@@ -54,26 +54,16 @@ public class Pilota {
     }
 
     public static int obteIncrFila(int[] increment) {
-        int incrementFila = increment[0];
-
-
-
-        return incrementFila;
+        return increment[0];
     }
 
     public static int obteIncrCol(int[] increment) {
-        int incrementCol = increment[1];
-
-
-
-        return incrementCol;
+        return increment[1];
     }
 
     public static void canviaPosicio(int[] posicio, int novaFila, int novaCol) {
-        int fila = posicio[0];
-        int col = posicio[1];
-        posicio[0] = fila;
-        posicio[1] = col;
+        posicio[0] = novaFila;
+        posicio[1] = novaCol;
     }
 
     public static void canviaIncrement(int[] increment, int nouIncFila, int nouIncCol) {
