@@ -79,7 +79,7 @@ public class Pilota {
         int incCol = obteIncrCol(increment);
 
         // actualitza la fila
-        fila = incFila;
+        fila += incFila;
 
         if (fila < 0) { // es passa per sobre
             fila = 1; // torna a la primera fila
@@ -87,18 +87,18 @@ public class Pilota {
         } else if (fila > N_FILES - 1) {
             // es passa per sota
             fila = N_FILES - 2; // torna a la última fila
-            incFila = -1; // toca pujar
+            incFila = -incFila; // toca pujar
         }
 
         // actualitza la columna
-        col = incCol;
+        col += incCol;
 
         if (col < 0) { // es passa per la esquerra
             col = 1; // torna a la primera columna
             incCol = 1; // toca a la dreta
         } else if (col > N_COLS - 1) { // es passa per la dreta
             col = N_COLS - 2; // torna a la última columna
-            incCol = -1; // toca a la esquerra
+            incCol = -incCol; // toca a la esquerra
         }
 
         // actualitza la posició i l'increment
@@ -122,7 +122,6 @@ public class Pilota {
             mostraCamp(camp);
             netejaPosicio(camp, posicio);
             seguentPosicio(posicio, increment);
-            System.out.println(increment[0] + " " + increment[1]);
             System.out.printf("%nEnter per continuar");
         } while (Entrada.readLine().isEmpty());
     }
