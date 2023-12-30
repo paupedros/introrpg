@@ -3,22 +3,22 @@
 	Moduls i funcions:
 	- esVocal: Comprovar si un caracter en concret es una vocal catalana
 	- nomesLletres: Agafa un String i retorna la mateixa amb nomes lletres
-	- lletresSeparades: Agafa un String i retorna la mateixa separada per comes	
-	- intervalString: Donat un text, valor inicial i valor final, retorna la secció del 
+	- lletresSeparades: Agafa un String i retorna la mateixa separada per comes
+	- intervalString: Donat un text, valor inicial i valor final, retorna la secció del
 	text entre aquest interval
 	- esEnter: donat un nombre ens dira si és enter o no
-	- esEnter(estricte): donat un nombre ens dira si és enter o no, accepta 
+	- esEnter(estricte): donat un nombre ens dira si és enter o no, accepta
 	texts amb espais a l'inici i al final
 	- aEnter: donat un text s'intenta passar a un nombre aquest text
-	- cadenaContinua: donat un text i un nombre de longitud, s'allarga la 
+	- cadenaContinua: donat un text i un nombre de longitud, s'allarga la
 	cadena fins a que sigui igual a la longitud desitjada
 	- esSubstring (no estricte): Si no es estricte ignora les majusucles i minuscules, a demes dels
 	caracter catalans
-	- esSubstring (estricte): Fara el mateix que String.contains(), retornara true si un string 
+	- esSubstring (estricte): Fara el mateix que String.contains(), retornara true si un string
 	esta dins d'un altre
 	- esPrefix: Comprovar si un string es un prefix d'un altre
 	- esSuffix: Comprovar si un string es un suffix d'un altre
-	
+
 */
 
 public class UtilString {
@@ -459,15 +459,18 @@ public class UtilString {
 	// blanc, incloent els caracters en blanc quan inclouBlancs és cert
 
 	public static String[] separa(String text, boolean inclouBlancs) {
-		if(text.isEmpty()) return new String[0]; // si rep un text buit retorna un array buit
+		if (text.isEmpty())
+			return new String[0]; // si rep un text buit retorna un array buit
 		int numParaules = comptaParaules(text, inclouBlancs); // comptem les paraules que hi ha en el text
 		String[] newText = new String[numParaules];
 		int i = 0;
 
-		for (int j = 0; j < newText.length; j++) { // recorrem l'array
+		int j = 0;
+
+		while (j < newText.length) {
 			String paraula = "";
 
-			while (i < text.length()) { // recorrem string text
+			while (i < text.length()) {
 				char ch = text.charAt(i);
 
 				if (Character.isWhitespace(ch)) {
@@ -475,11 +478,12 @@ public class UtilString {
 						paraula += ch;
 					}
 					i++;
-					// Si el seguent caracter es un espai seguim sino sortim del bucle
-					if(i < text.length() && Character.isWhitespace(text.charAt(i))) continue;
+
+					if (i < text.length() && Character.isWhitespace(text.charAt(i))) {
+						continue;
+					}
 					break;
 				} else {
-					// Si el seguent caracter es un espai farem el break
 					if (i + 1 < text.length() && Character.isWhitespace(text.charAt(i + 1))) {
 						paraula += ch;
 						i++;
@@ -488,14 +492,15 @@ public class UtilString {
 				}
 				paraula += ch;
 				i++;
-
 			}
+
 			if (!paraula.isEmpty() || inclouBlancs) {
 				newText[j] = paraula;
-
 			} else {
 				j--;
 			}
+
+			j++;
 		}
 
 		return newText;
@@ -522,12 +527,11 @@ public class UtilString {
 					}
 					paraules++;
 					paraula = true;
-				}
-				else { // ens trobem un espai en blanc
+				} else { // ens trobem un espai en blanc
 					if (inclouBlancs && espai == false) {
-                        espai = true;
-                        blanks++;
-                    }
+						espai = true;
+						blanks++;
+					}
 
 				}
 			} else { // si estem en una paraula i ens trobem un espai en blanc
@@ -539,7 +543,6 @@ public class UtilString {
 					paraula = false;
 				}
 			}
-			
 
 		}
 
