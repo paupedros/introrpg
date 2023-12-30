@@ -49,7 +49,16 @@ public class DigitArt {
     }
 
     public static void mostraResultat(char[][] origen, char[][] resultat) {
-        
+        for (int i = 0; i < origen.length; i++) { // Recorrem les files de la taula
+            for (int j = 0; j < origen[i].length; j++) { // Recorrem element per element de la taula
+                System.out.print(origen[i][j]);
+            }
+            System.out.print(" -> ");
+            for (int j = 0; j < origen[i].length; j++) { // Recorrem element per element de la taula
+                System.out.print(resultat[i][j]);
+            }
+            System.out.println();
+        }
     }
 
     public static void processaCaracter(char ch) {
@@ -74,12 +83,20 @@ public class DigitArt {
 
     public static void processaArgument(String arg) {
         /* XXX crida a processaCaracter() per cada caracter de arg */
+        for (int i = 0; i < arg.length(); i++) {
+            processaCaracter(arg.charAt(i));
+        }
     }
 
     public static void main(String[] args) {
         // comprova que com a mínim hi hagi un argument
-        /* XXX */
+        if(args.length < 1) {
+            System.out.println("Introdueix un argument");
+            return;
+        }
         // processa cada argument
-        /* XXX crida a processaArgument() per cada argument */
+        for (int i = 0; i < args.length; i++) {
+            processaArgument(args[i]);
+        }
     }
 }
