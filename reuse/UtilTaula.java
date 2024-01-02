@@ -44,14 +44,15 @@ public class UtilTaula {
     }
 
     public static void inicialitzaSequencial(int[][] taula, int valorInicial) {
+        int valor = valorInicial;
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             for (int j = 0; j < taula[i].length; j++) { // recorrem element per element de la taula
                 if (taula[i][j] == 0) { // si estem al primer element li donem com a valor el valorInicial
-                    taula[i][j] = valorInicial;
+                    taula[i][j] = valor;
                     continue;
                 }
-                valorInicial += 1; // incrementem el valor
-                taula[i][j] = valorInicial; // asignem el valor
+                valor += 1; // incrementem el valor
+                taula[i][j] = valor; // asignem el valor
             }
         }
     }
