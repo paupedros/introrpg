@@ -47,12 +47,11 @@ public class UtilTaula {
         int valor = valorInicial;
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             for (int j = 0; j < taula[i].length; j++) { // recorrem element per element de la taula
-                if (taula[i][j] == 0) { // si estem al primer element li donem com a valor el valorInicial
-                    taula[i][j] = valor;
-                    continue;
+                if (taula[i][j] != 0) {
+                    valor += 1; // incrementem el valor
+                    taula[i][j] = valor; // asignem el valor
                 }
-                valor += 1; // incrementem el valor
-                taula[i][j] = valor; // asignem el valor
+                taula[i][j] = valor;
             }
         }
     }
