@@ -24,13 +24,12 @@ public class UtilTaula {
         return newArray;
     }
 
-    public static int[][] inicialitzaTaula(int[][] taula, int valor) {
+    public static void inicialitzaTaula(int[][] taula, int valor) {
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             for (int j = 0; j < taula[i].length; j++) { // recorrem element per element de la taula
                 taula[i][j] = valor; // canviem el valor de l'element al valor asignat
             }
         }
-        return taula;
     }
 
     public static String taulaToString(int[][] taula) {
