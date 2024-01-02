@@ -37,7 +37,7 @@ public class UtilTaula {
         String resultat = "";
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             for (int j = 0; j < taula[i].length; j++) { // recorrem element per element de la taula
-                resultat += String.format("%8d ", taula[i][j]); // afegim l'element al string resultat mes un espai
+                resultat += String.format("%8d", taula[i][j]); // afegim l'element al string resultat mes un espai
             }
             resultat += "\n"; // al acabar la fila de la taula fem un salt de línea
         }
