@@ -85,8 +85,7 @@ public class UtilTaula {
         int mig;
         if (taula[0].length % 2 == 0) {
             mig = taula[0].length / 2 - 1;
-        }
-        else {
+        } else {
             mig = taula[0].length / 2;
         }
 
@@ -104,10 +103,9 @@ public class UtilTaula {
 
     public static boolean[][] inicialitzaHoritzontalMig(boolean[][] taula) {
         int mig;
-        if(taula.length % 2 == 0) {
+        if (taula.length % 2 == 0) {
             mig = taula.length / 2 - 1;
-        }
-        else {
+        } else {
             mig = taula.length / 2;
         }
 
@@ -128,14 +126,12 @@ public class UtilTaula {
         int migHorizontal;
         if (taula[0].length % 2 == 0) {
             migVertical = taula[0].length / 2 - 1;
-        }
-        else {
+        } else {
             migVertical = taula[0].length / 2;
         }
-        if(taula.length % 2 == 0) {
+        if (taula.length % 2 == 0) {
             migHorizontal = taula.length / 2 - 1;
-        }
-        else {
+        } else {
             migHorizontal = taula.length / 2;
         }
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
@@ -144,12 +140,22 @@ public class UtilTaula {
                     taula[i][j] = true;
                     continue;
                 }
-                if(j == migVertical) {
+                if (j == migVertical) {
                     taula[i][j] = true;
                     continue;
                 }
                 taula[i][j] = false;
 
+            }
+        }
+        return taula;
+    }
+
+    public static boolean[][] inicialitzaSegonaDiagonal(boolean[][] taula) {
+        int pos = taula[0].length - 1;
+        for (int i = 0; i < taula.length; i++) {
+            if (pos - i >= 0) {
+                taula[i][pos - i] = true;a
             }
         }
         return taula;
