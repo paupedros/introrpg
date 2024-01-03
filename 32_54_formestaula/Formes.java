@@ -30,6 +30,7 @@ public class Formes {
                 }
                 int fila = Integer.parseInt(espe[0]);
                 int columna = Integer.parseInt(espe[1]);
+                System.out.println(fila + "x" + columna);
                 boolean[][] taula = new boolean[fila][columna];
                 switch(valor) {
                     case "\\":
