@@ -23,7 +23,7 @@ public class Formes {
             boolean hihaValor = false;
             if (espe.length > 2)
                 hihaValor = true;
-            String valor = "No hi ha valor";
+            String valor = "";
             if (espeCorrecte(espe)) { // si l'especificació és correcta
                 if (hihaValor) {
                     valor = espe[2]; // obtenim el valor de l'argument
@@ -48,11 +48,11 @@ public class Formes {
                     case "+":
                         taula = UtilTaula.inicialitzaQuarts(taula);
                         break;
-/*
+
                     case "/":
                         taula = UtilTaula.inicialitzaSegonaDiagonal(taula);
                         break;
-
+/*
                     case "x":
                         taula = UtilTaula.inicialitzaCreu(taula);
                         break;
@@ -85,7 +85,7 @@ public class Formes {
         /*
          * Aquesta funció passem per exemple de: 3x4/ a ["3","4", "/"]
          * si no hi ha valor retornara [fila, columna]
-         * sino [filla, columna, valor]
+         * sino [fila, columna, valor]
          */
         if (especificacio.length() > 3) {
             String espe = especificacio.substring(0, 3); // espe = "3x4"
