@@ -63,7 +63,9 @@ public class UtilTaula {
                 }
                 resultat += caracterFalse;
             }
-            resultat += "\n"; // al acabar la fila de la taula fem un salt de línea
+            if (i!= taula.length - 1) {
+                resultat += "\n"; // al acabar la fila de la taula fem un salt de línea
+            }
         }
         return resultat;
     }
