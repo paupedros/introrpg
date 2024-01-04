@@ -21,6 +21,9 @@ public class Formes {
             if(!args[i].contains("x")) return;
             // Passem per exemple de: 3x4/ a ["3","4", "/"] -> [fila, columna, valor]
             String[] espe = formatEspe(args[i]);
+            for (int j = 0; j < espe.length; j++) {
+                if(espe[j].isEmpty()) return;
+            }
             boolean hihaValor = false;
             if (espe.length > 2)
                 hihaValor = true;
