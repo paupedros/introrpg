@@ -25,13 +25,16 @@ public class Formes {
             }
             // Passem per exemple de: 3x4/ a ["3","4", "/"] -> [fila, columna, valor]
             String[] espe = formatEspe(args[i]);
+            boolean valida = true;
             for (int j = 0; j < espe.length -1; j++) {
                 if(espe[j].isEmpty()){ // error espe
                     System.out.println(args[i]);
                     System.out.println("Especificació no vàlida");
-                    continue;
+                    valida = false;
+                    break;
                 }
             }
+            if(!valida) continue;
             boolean hihaValor = false;
             if (espe.length > 2)
                 hihaValor = true;
