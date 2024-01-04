@@ -18,11 +18,17 @@ public class Formes {
 
     public static void main(String[] args) {
         for (int i = 0; i < args.length; i++) { // recorrem els arguments
-            if(!args[i].contains("x")) return;
+            if(!args[i].contains("x")){
+                System.out.println("Especificació no vàlida");
+                return;
+            }
             // Passem per exemple de: 3x4/ a ["3","4", "/"] -> [fila, columna, valor]
             String[] espe = formatEspe(args[i]);
             for (int j = 0; j < espe.length -1; j++) {
-                if(espe[j].isEmpty()) return;
+                if(espe[j].isEmpty()){ // error espe
+                    System.out.println("Especificació no vàlida");
+                    return;
+                }
             }
             boolean hihaValor = false;
             if (espe.length > 2)
@@ -79,6 +85,9 @@ public class Formes {
 
                 String resultat = UtilTaula.taulaToString(taula, 'X', '·');
                 System.out.println(resultat);
+            }
+            else {
+                System.out.println("Especificació no vàlida");
             }
 
         }
