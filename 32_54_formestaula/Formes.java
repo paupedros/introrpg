@@ -32,7 +32,7 @@ public class Formes {
                 int columna = Integer.parseInt(espe[1]);
                 System.out.println(fila + "x" + columna);
                 boolean[][] taula = new boolean[fila][columna];
-                switch(valor) {
+                switch (valor) {
                     case "\\":
                         taula = UtilTaula.inicialitzaPrimeraDiagonal(taula);
                         break;
@@ -52,27 +52,26 @@ public class Formes {
                     case "/":
                         taula = UtilTaula.inicialitzaSegonaDiagonal(taula);
                         break;
-/*
+
                     case "x":
                         taula = UtilTaula.inicialitzaCreu(taula);
                         break;
 
-                    case "=" :
-                        taula = UtilTaula.inicialitzaPasDeVianants(taula);
+                    case "=":
+                        taula = UtilTaula.inicialitzaPasVianants(taula);
                         break;
 
-                    case "||" :
+                    case "||":
                         taula = UtilTaula.inicialitzaZebra(taula);
                         break;
 
-                    case "++" :
+                    case "++":
                         taula = UtilTaula.inicialitzaEscacs(taula);
                         break;
-                    */
+
                     default:
                         break;
                 }
-
 
                 String resultat = UtilTaula.taulaToString(taula, 'X', '·');
                 System.out.println(resultat);
@@ -87,38 +86,42 @@ public class Formes {
          * si no hi ha valor retornara [fila, columna]
          * sino [fila, columna, valor]
          */
-        if (especificacio.length() > 3) {
-            String espe = especificacio.substring(0, 3); // espe = "3x4"
-            String valor = especificacio.substring(3, especificacio.length()); // valor = "/";
-            String[] espeNums = espe.split("x"); // espeNums = ["3","4"]
-            String espeFinal[] = new String[3];
-            espeFinal[0] = espeNums[0];
-            espeFinal[1] = espeNums[1];
-            espeFinal[2] = valor;
-            return espeFinal; // [fila, columna, valor]
+        boolean trobaX = false;
+        String[] espe = new String[3]; // [fila, columna, valor]
+        espe[0] = ""; // fila
+        espe[1] = ""; // columna
+        espe[2] = ""; // valor
+        for (int i = 0; i < especificacio.length(); i++) {
+            char ch = especificacio.charAt(i);
+            if (ch == 'x' && !trobaX) { // si trobem una x i no haviem trobat la de la espe
+                trobaX = true;
+                continue;
+            }
+            // si no hem trobat la x i trobem un numero l'afegim a la espe com a fila
+            if (Character.isDigit(ch) && !trobaX) {
+                espe[0] += Character.toString(ch);
+            }
+            // si haviem trobat la x i trobem un numero l'afegim a la espe com a columna
+            if (Character.isDigit(ch) && trobaX) {
+                espe[1] += Character.toString(ch);
+            }
+            if (!Character.isDigit(ch) && trobaX) {
+                espe[2] += Character.toString(ch);
+            }
         }
-        String[] espe = especificacio.split("x");
-        return espe; // [fila, columna]
+        return espe;
     }
 
     public static boolean espeCorrecte(String[] espe) {
-        if (espe.length > 2) {
-            for (int i = 0; i < espe.length - 1; i++) { // recorrem els elements menys l'ultim
-                if (!UtilString.esEnter(espe[i]))
-                    return false;
-                int valor = Integer.parseInt(espe[i]);
-                if (valor < 0 || valor > 99)
-                    return false;
-            }
-        } else {
-            for (int i = 0; i < espe.length; i++) {
-                if (!UtilString.esEnter(espe[i]))
-                    return false;
-                int valor = Integer.parseInt(espe[i]);
-                if (valor < 0 || valor > 99)
-                    return false;
-            }
+
+        for (int i = 0; i < espe.length - 2; i++) { // recorrem els elements menys l'ultim
+            if (!UtilString.esEnter(espe[i]))
+                return false;
+            int valor = Integer.parseInt(espe[i]);
+            if (valor < 0 || valor > 99)
+                return false;
         }
+
         return true;
     }
 

@@ -160,4 +160,64 @@ public class UtilTaula {
         }
         return taula;
     }
+
+    public static boolean[][] inicialitzaCreu(boolean[][] taula) {
+        // primera diagonal
+        int pos = taula[0].length - 1;
+        for (int i = 0; i < taula.length; i++) { // recorrem la taula
+            for (int j = 0; j < taula[i].length; j++) { // recorrem element per element de la taula
+                if (i == j) {
+                    taula[i][j] = true;
+                }
+            }
+            // segona diagonal
+            if (pos - i >= 0) {
+                taula[i][pos - i] = true;
+            }
+        }
+
+        return taula;
+    }
+
+    public static boolean[][] inicialitzaPasVianants(boolean[][] taula) {
+        for (int i = 0; i < taula.length; i++) { // recorrem la taula
+            if (i % 2 != 0) { // si la linea es senar
+                for (int j = 0; j < taula[i].length; j++) { // recorrem element per element
+                    taula[i][j] = true;
+                }
+            }
+        }
+
+        return taula;
+    }
+
+    public static boolean[][] inicialitzaZebra(boolean[][] taula) {
+        for (int i = 0; i < taula.length; i++) { // recorrem la taula
+            for (int j = 0; j < taula[i].length; j++) { // recorrem element per element
+                if (j % 2 != 0)
+                    taula[i][j] = true;
+            }
+        }
+
+        return taula;
+    }
+
+    public static boolean[][] inicialitzaEscacs(boolean[][] taula) {
+        for (int i = 0; i < taula.length; i++) { // recorrem la taula
+            if (i % 2 != 0) { // si la linea es senar
+                for (int j = 0; j < taula[i].length; j++) { // recorrem element per element
+                    if (j % 2 == 0) {
+                        taula[i][j] = true;
+                    }
+                }
+            } else {
+                for (int j = 0; j < taula[i].length; j++) { // recorrem element per element
+                    if(j % 2 != 0) taula[i][j] = true;
+                }
+            }
+        }
+
+        return taula;
+    }
+
 }
