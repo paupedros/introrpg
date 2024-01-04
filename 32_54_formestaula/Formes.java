@@ -19,6 +19,7 @@ public class Formes {
     public static void main(String[] args) {
         for (int i = 0; i < args.length; i++) { // recorrem els arguments
             if(!args[i].contains("x")){
+                System.out.println(args[i]);
                 System.out.println("Especificació no vàlida");
                 return;
             }
@@ -26,6 +27,7 @@ public class Formes {
             String[] espe = formatEspe(args[i]);
             for (int j = 0; j < espe.length -1; j++) {
                 if(espe[j].isEmpty()){ // error espe
+                    System.out.println(args[i]);
                     System.out.println("Especificació no vàlida");
                     return;
                 }
@@ -87,6 +89,7 @@ public class Formes {
                 System.out.println(resultat);
             }
             else {
+                System.out.println(args[i]);
                 System.out.println("Especificació no vàlida");
             }
 
