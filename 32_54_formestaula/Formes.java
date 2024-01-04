@@ -134,7 +134,7 @@ public class Formes {
 
     public static boolean espeCorrecte(String[] espe) {
 
-        for (int i = 0; i < espe.length - 2; i++) { // recorrem els elements menys l'ultim
+        for (int i = 0; i < espe.length - 1; i++) { // recorrem els elements menys l'ultim
             if (espe[i] == null || espe[i].isEmpty() || !UtilString.esEnter(espe[i])) {
                 return false;
             }
