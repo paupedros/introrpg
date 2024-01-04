@@ -18,6 +18,7 @@ public class Formes {
 
     public static void main(String[] args) {
         for (int i = 0; i < args.length; i++) { // recorrem els arguments
+            if(!args[i].contains("x")) return;
             // Passem per exemple de: 3x4/ a ["3","4", "/"] -> [fila, columna, valor]
             String[] espe = formatEspe(args[i]);
             boolean hihaValor = false;
@@ -88,25 +89,26 @@ public class Formes {
          */
         boolean trobaX = false;
         String[] espe = new String[3]; // [fila, columna, valor]
-        espe[0] = ""; // fila
-        espe[1] = ""; // columna
-        espe[2] = ""; // valor
+        for (int i = 0; i < espe.length; i++) {
+            espe[i] = "";
+        }
         for (int i = 0; i < especificacio.length(); i++) {
             char ch = especificacio.charAt(i);
+
             if (ch == 'x' && !trobaX) { // si trobem una x i no haviem trobat la de la espe
                 trobaX = true;
                 continue;
             }
             // si no hem trobat la x i trobem un numero l'afegim a la espe com a fila
             if (Character.isDigit(ch) && !trobaX) {
-                espe[0] += Character.toString(ch);
+                espe[0] += ch;
             }
             // si haviem trobat la x i trobem un numero l'afegim a la espe com a columna
             if (Character.isDigit(ch) && trobaX) {
-                espe[1] += Character.toString(ch);
+                espe[1] += ch;
             }
             if (!Character.isDigit(ch) && trobaX) {
-                espe[2] += Character.toString(ch);
+                espe[2] += ch;
             }
         }
         return espe;
@@ -115,8 +117,9 @@ public class Formes {
     public static boolean espeCorrecte(String[] espe) {
 
         for (int i = 0; i < espe.length - 2; i++) { // recorrem els elements menys l'ultim
-            if (!UtilString.esEnter(espe[i]))
+            if (espe[i] == null || espe[i].isEmpty() || !UtilString.esEnter(espe[i])) {
                 return false;
+            }
             int valor = Integer.parseInt(espe[i]);
             if (valor < 0 || valor > 99)
                 return false;
