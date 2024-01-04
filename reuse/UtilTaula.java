@@ -155,7 +155,7 @@ public class UtilTaula {
         int pos = taula[0].length - 1;
         for (int i = 0; i < taula.length; i++) {
             if (pos - i >= 0) {
-                taula[i][pos - i] = true;a
+                taula[i][pos - i] = true;
             }
         }
         return taula;
