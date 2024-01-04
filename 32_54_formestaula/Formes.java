@@ -21,7 +21,7 @@ public class Formes {
             if(!args[i].contains("x")){
                 System.out.println(args[i]);
                 System.out.println("Especificació no vàlida");
-                return;
+                continue;
             }
             // Passem per exemple de: 3x4/ a ["3","4", "/"] -> [fila, columna, valor]
             String[] espe = formatEspe(args[i]);
@@ -29,7 +29,7 @@ public class Formes {
                 if(espe[j].isEmpty()){ // error espe
                     System.out.println(args[i]);
                     System.out.println("Especificació no vàlida");
-                    return;
+                    continue;
                 }
             }
             boolean hihaValor = false;
