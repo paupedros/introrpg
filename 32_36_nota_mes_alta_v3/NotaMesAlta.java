@@ -57,7 +57,7 @@ public class NotaMesAlta {
             if (ch == '1' && text.charAt(i+1) == '0'){
                 continue;
             }
-            if (ch == '0' && text.charAt(i-1) == '1') continue;
+            if (ch == '0' && text.charAt(i-1) == '1' && i != 0) continue;
 
             else if(charInt == notaMesAlta) continue;
             else {
