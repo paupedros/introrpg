@@ -49,7 +49,7 @@ public class Formes {
                 boolean[][] taula = new boolean[fila][columna];
                 for (int k = 0; k < taula.length; k++){
                     for(int j = 0; j < taula[k].length; j++){
-                        taula[k][j] = false;
+                        taula[k][j] = true;
                     }
                 }
                 switch (valor) {
