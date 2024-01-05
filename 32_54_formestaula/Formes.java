@@ -47,6 +47,12 @@ public class Formes {
                 int columna = Integer.parseInt(espe[1]);
                 System.out.println(fila + "x" + columna + valor);
                 boolean[][] taula = new boolean[fila][columna];
+                for (int k = 0; k < taula.length; k++){
+                    for(int j = 0; j < taula[i].length; j++){
+                        boolean ch = taula[i][j];
+                        ch = true;
+                    }
+                }
                 switch (valor) {
                     case "\\":
                         UtilTaula.inicialitzaPrimeraDiagonal(taula);
