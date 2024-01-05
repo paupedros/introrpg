@@ -48,9 +48,8 @@ public class Formes {
                 System.out.println(fila + "x" + columna + valor);
                 boolean[][] taula = new boolean[fila][columna];
                 for (int k = 0; k < taula.length; k++){
-                    for(int j = 0; j < taula[i].length; j++){
-                        boolean ch = taula[i][j];
-                        ch = true;
+                    for(int j = 0; j < taula[k].length; j++){
+                        taula[k][j] = true;
                     }
                 }
                 switch (valor) {
