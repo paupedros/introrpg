@@ -50,8 +50,9 @@ public class NotaMesAlta {
     public static String transformNotes(String text, int notaMesAlta){
         String newText = "";
         boolean first = false;
-		for (int i = 0; i < text.length(); i++) {
-			char ch = text.charAt(i);
+        int i = 0;
+        while (i< text.length()){
+            char ch = text.charAt(i);
 
             /*boolean found = false;
             for(int j=0; j < newText.length(); j++){
@@ -69,8 +70,9 @@ public class NotaMesAlta {
             else {
                 newText += ch;
             }
+            i++;
 
-		}
+        }
 
 		return newText;
     }
