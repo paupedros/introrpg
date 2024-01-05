@@ -123,7 +123,12 @@ public class Formes {
             }
             // si haviem trobat la x i trobem un numero l'afegim a la espe com a columna
             if (Character.isDigit(ch) && trobaX) {
-                espe[1] += ch;
+                if(espe[1].length() != 2) { // Si la llargada de la columna encara no es 2 ho afegim al valor
+                    espe[1] += ch;
+                }
+                else{
+                    espe[2] += ch;
+                }
             }
             if (!Character.isDigit(ch) && trobaX) {
                 espe[2] += ch;
