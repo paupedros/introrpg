@@ -70,7 +70,7 @@ public class UtilTaula {
         return resultat;
     }
 
-    public static boolean[][] inicialitzaPrimeraDiagonal(boolean[][] taula) {
+    public static void inicialitzaPrimeraDiagonal(boolean[][] taula) {
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             for (int j = 0; j < taula[i].length; j++) { // recorrem element per element de la taula
                 if (i == j) {
@@ -83,7 +83,7 @@ public class UtilTaula {
         return taula;
     }
 
-    public static boolean[][] inicialitzaVerticalMig(boolean[][] taula) {
+    public static void inicialitzaVerticalMig(boolean[][] taula) {
         int mig;
         if (taula[0].length % 2 == 0) {
             mig = taula[0].length / 2 - 1;
@@ -103,7 +103,7 @@ public class UtilTaula {
         return taula;
     }
 
-    public static boolean[][] inicialitzaHoritzontalMig(boolean[][] taula) {
+    public static void inicialitzaHoritzontalMig(boolean[][] taula) {
         int mig;
         if (taula.length % 2 == 0) {
             mig = taula.length / 2 - 1;
