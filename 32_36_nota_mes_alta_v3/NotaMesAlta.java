@@ -1,7 +1,7 @@
 /**
  * En aquest programa recollim notes d'un alumne i al final en diem quina ha sigut la nota mes alta.
  * a de mes direm quines han sigut totes les notes sense incloure la nota mes alta
- * 
+ *
  */
 public class NotaMesAlta {
     public static void main(String[] args) {
@@ -22,18 +22,18 @@ public class NotaMesAlta {
         if(notaMesAlta != 10){
             notaMesAlta = getNotaMesAlta(notes);
         }
-        
+
         notes = comes(transformNotes(notes, notaMesAlta));
 
-        
+
 
         String resta = ". La resta de notes és: " + notes;
         if(notes.length() < 1){
             resta = ". No queda cap altra nota.";
         }
-        
+
         System.out.println("La nota més alta és " + notaMesAlta + resta);
-        
+
     }
 
     public static int getNotaMesAlta (String notes){
@@ -49,10 +49,10 @@ public class NotaMesAlta {
 
     public static String transformNotes(String text, int notaMesAlta){
         String newText = "";
-        boolean first = false;
-		for (int i = 0; i < text.length(); i++) {
-			char ch = text.charAt(i);
-            
+		int i = 0;
+        while (i<text.length()){
+            char ch = text.charAt(i);
+
             /*boolean found = false;
             for(int j=0; j < newText.length(); j++){
                 if(ch == newText.charAt(j)) found = true;
@@ -64,14 +64,15 @@ public class NotaMesAlta {
                 i++;
                 continue;
             }
-            
+
             else if(charInt == notaMesAlta) continue;
             else {
                 newText += ch;
             }
-			
-		}
-        
+
+            i++;
+        }
+
 		return newText;
     }
 
@@ -94,5 +95,5 @@ public class NotaMesAlta {
         return newText;
 
     }
-    
+
 }
