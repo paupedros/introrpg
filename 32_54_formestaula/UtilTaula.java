@@ -160,6 +160,7 @@ public class UtilTaula {
     }
 
     public static void inicialitzaSegonaDiagonal(boolean[][] taula) {
+        inicialitzaBuida(taula);
         int pos = taula[0].length - 1;
         for (int i = 0; i < taula.length; i++) {
             if (pos - i >= 0) {
