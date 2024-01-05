@@ -90,6 +90,7 @@ public class Formes {
                         break;
 
                     default:
+                        UtilTaula.inicialitzaBuida(taula);
                         break;
                 }
 

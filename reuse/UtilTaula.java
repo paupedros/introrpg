@@ -70,6 +70,15 @@ public class UtilTaula {
         return resultat;
     }
 
+    public static void inicialitzaBuida(boolean[][] taula){
+        for (int k = 0; k < taula.length; k++){
+            for(int j = 0; j < taula[k].length; j++){
+                taula[k][j] = false;
+            }
+        }
+    }
+
+
     public static void inicialitzaPrimeraDiagonal(boolean[][] taula) {
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             for (int j = 0; j < taula[i].length; j++) { // recorrem element per element de la taula
