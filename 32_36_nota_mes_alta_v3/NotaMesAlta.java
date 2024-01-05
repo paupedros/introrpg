@@ -55,9 +55,9 @@ public class NotaMesAlta {
             int charInt = ch - '0';
             // treiem la nota mes alta
             if (ch == '1' && text.charAt(i+1) == '0'){
-                i++;
                 continue;
             }
+            if (ch == '0' && text.charAt(i-1) == '1') continue;
 
             else if(charInt == notaMesAlta) continue;
             else {
