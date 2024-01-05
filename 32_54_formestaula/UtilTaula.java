@@ -80,6 +80,7 @@ public class UtilTaula {
 
 
     public static void inicialitzaPrimeraDiagonal(boolean[][] taula) {
+        inicialitzaBuida(taula);
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             for (int j = 0; j < taula[i].length; j++) { // recorrem element per element de la taula
                 if (i == j) {
