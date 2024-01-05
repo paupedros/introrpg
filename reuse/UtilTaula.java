@@ -120,7 +120,7 @@ public class UtilTaula {
         }
     }
 
-    public static boolean[][] inicialitzaQuarts(boolean[][] taula) {
+    public static void inicialitzaQuarts(boolean[][] taula) {
         int migVertical;
         int migHorizontal;
         if (taula[0].length % 2 == 0) {
@@ -147,20 +147,18 @@ public class UtilTaula {
 
             }
         }
-        return taula;
     }
 
-    public static boolean[][] inicialitzaSegonaDiagonal(boolean[][] taula) {
+    public static void inicialitzaSegonaDiagonal(boolean[][] taula) {
         int pos = taula[0].length - 1;
         for (int i = 0; i < taula.length; i++) {
             if (pos - i >= 0) {
                 taula[i][pos - i] = true;
             }
         }
-        return taula;
     }
 
-    public static boolean[][] inicialitzaCreu(boolean[][] taula) {
+    public static void inicialitzaCreu(boolean[][] taula) {
         // primera diagonal
         int pos = taula[0].length - 1;
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
@@ -174,11 +172,9 @@ public class UtilTaula {
                 taula[i][pos - i] = true;
             }
         }
-
-        return taula;
     }
 
-    public static boolean[][] inicialitzaPasVianants(boolean[][] taula) {
+    public static void inicialitzaPasVianants(boolean[][] taula) {
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             if (i % 2 != 0) { // si la linea es senar
                 for (int j = 0; j < taula[i].length; j++) { // recorrem element per element
@@ -186,22 +182,18 @@ public class UtilTaula {
                 }
             }
         }
-
-        return taula;
     }
 
-    public static boolean[][] inicialitzaZebra(boolean[][] taula) {
+    public static void inicialitzaZebra(boolean[][] taula) {
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             for (int j = 0; j < taula[i].length; j++) { // recorrem element per element
                 if (j % 2 != 0)
                     taula[i][j] = true;
             }
         }
-
-        return taula;
     }
 
-    public static boolean[][] inicialitzaEscacs(boolean[][] taula) {
+    public static void inicialitzaEscacs(boolean[][] taula) {
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             if (i % 2 != 0) { // si la linea es senar
                 for (int j = 0; j < taula[i].length; j++) { // recorrem element per element
@@ -215,8 +207,6 @@ public class UtilTaula {
                 }
             }
         }
-
-        return taula;
     }
 
 }

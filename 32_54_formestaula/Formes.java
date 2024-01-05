@@ -61,27 +61,27 @@ public class Formes {
                         break;
 
                     case "+":
-                        taula = UtilTaula.inicialitzaQuarts(taula);
+                        UtilTaula.inicialitzaQuarts(taula);
                         break;
 
                     case "/":
-                        taula = UtilTaula.inicialitzaSegonaDiagonal(taula);
+                        UtilTaula.inicialitzaSegonaDiagonal(taula);
                         break;
 
                     case "x":
-                        taula = UtilTaula.inicialitzaCreu(taula);
+                        UtilTaula.inicialitzaCreu(taula);
                         break;
 
                     case "=":
-                        taula = UtilTaula.inicialitzaPasVianants(taula);
+                        UtilTaula.inicialitzaPasVianants(taula);
                         break;
 
                     case "||":
-                        taula = UtilTaula.inicialitzaZebra(taula);
+                        UtilTaula.inicialitzaZebra(taula);
                         break;
 
                     case "++":
-                        taula = UtilTaula.inicialitzaEscacs(taula);
+                        UtilTaula.inicialitzaEscacs(taula);
                         break;
 
                     default:
