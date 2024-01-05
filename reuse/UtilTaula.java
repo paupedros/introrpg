@@ -80,7 +80,6 @@ public class UtilTaula {
                 }
             }
         }
-        return taula;
     }
 
     public static void inicialitzaVerticalMig(boolean[][] taula) {
@@ -100,7 +99,6 @@ public class UtilTaula {
                 taula[i][j] = false;
             }
         }
-        return taula;
     }
 
     public static void inicialitzaHoritzontalMig(boolean[][] taula) {
@@ -120,7 +118,6 @@ public class UtilTaula {
                 taula[i][j] = false;
             }
         }
-        return taula;
     }
 
     public static boolean[][] inicialitzaQuarts(boolean[][] taula) {

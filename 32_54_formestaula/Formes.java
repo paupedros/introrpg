@@ -49,15 +49,15 @@ public class Formes {
                 boolean[][] taula = new boolean[fila][columna];
                 switch (valor) {
                     case "\\":
-                        taula = UtilTaula.inicialitzaPrimeraDiagonal(taula);
+                        UtilTaula.inicialitzaPrimeraDiagonal(taula);
                         break;
 
                     case "|":
-                        taula = UtilTaula.inicialitzaVerticalMig(taula);
+                        UtilTaula.inicialitzaVerticalMig(taula);
                         break;
 
                     case "-":
-                        taula = UtilTaula.inicialitzaHoritzontalMig(taula);
+                        UtilTaula.inicialitzaHoritzontalMig(taula);
                         break;
 
                     case "+":
