@@ -50,27 +50,39 @@ public class NotaMesAlta {
     public static String transformNotes(String text, int notaMesAlta){
         String newText = "";
         boolean first = false;
-		for (int i = 0; i < text.length(); i++) {
-			char ch = text.charAt(i);
+		int i = 0;
+        while (i < text.length()) {
+            char ch = text.charAt(i);
 
             /*boolean found = false;
-            for(int j=0; j < newText.length(); j++){
-                if(ch == newText.charAt(j)) found = true;
+            int j = 0;
+            while (j < newText.length()) {
+                if (ch == newText.charAt(j)) {
+                    found = true;
+                    break;
+                }
+                j++;
             }
-            if(found) continue;*/
-            int charInt = ch - '0';
-            // treiem la nota mes alta
-            if (ch == '1' && text.charAt(i+1) == '0'){
+            if (found) {
                 i++;
                 continue;
-            }
+            }*/
 
-            else if(charInt == notaMesAlta) continue;
-            else {
+            int charInt = ch - '0';
+            // treiem la nota mes alta
+            if (ch == '1' && text.charAt(i + 1) == '0') {
+                i++;
+                continue;
+            } else if (charInt == notaMesAlta) {
+                i++;
+                continue;
+            } else {
                 newText += ch;
             }
 
-		}
+            i++;
+        }
+
 
 		return newText;
     }
