@@ -1,0 +1,113 @@
+ProjectXMT.java
+- externalLinked
+    Quin tipus de dades guardarà?
+        tipus TMXEntry (potser, nose si és un tipus)
+    És un paràmetre?
+        No
+    És una constant?
+        No
+    Respecta la convenció camelCase?
+        Sí
+    Indica un mòdul pel que aquesta variable sigui global
+        Cap
+    Indica un mòdul pel que aquesta variable sigui local
+        calcExternalLinkedMode (361)
+    Indica un mòdul pel que aquesta variable sigui inaccessible
+        getDefaults (382)
+
+
+- id
+    Quin tipus de dades guardarà?
+        String
+    És un paràmetre?
+        no
+    És una constant?
+        No
+    Respecta la convenció camelCase?
+        Sí
+    Indica un mòdul pel que aquesta variable sigui global
+        Cap
+    Indica un mòdul pel que aquesta variable sigui local
+        onEntry (288)
+    Indica un mòdul pel que aquesta variable sigui inaccessible
+        calcExternalLinkedModern (361)
+
+- levelTwo
+    Quin tipus de dades guardarà?
+        boolean
+    És un paràmetre?
+        Si
+    És una constant?
+        Si
+    Respecta la convenció camelCase?
+        Sí
+    Indica un mòdul pel que aquesta variable sigui global
+        Cap
+    Indica un mòdul pel que aquesta variable sigui local
+        exportTMX
+    Indica un mòdul pel que aquesta variable sigui inaccessible
+        getDefaults (382)
+
+- PROP_FILE
+    Quin tipus de dades guardarà?
+        String
+    És un paràmetre?
+        No
+    És una constant?
+        Si
+    Respecta la convenció camelCase?
+        No, es tot uppercase
+    Indica un mòdul pel que aquesta variable sigui global
+        exportTMX (161)
+    Indica un mòdul pel que aquesta variable sigui local
+        cap
+    Indica un mòdul pel que aquesta variable sigui inaccessible
+        tots
+
+- segmentSource
+    Quin tipus de dades guardarà?
+        String
+    És un paràmetre?
+        No
+    És una constant?
+        No
+    Respecta la convenció camelCase?
+        Sí
+    Indica un mòdul pel que aquesta variable sigui global
+        Cap
+    Indica un mòdul pel que aquesta variable sigui local
+        onEntry (288)
+    Indica un mòdul pel que aquesta variable sigui inaccessible
+        getDefaults (382)
+
+- sourceLang
+    Quin tipus de dades guardarà?
+        Language
+    És un paràmetre?
+        No
+    És una constant?
+        No
+    Respecta la convenció camelCase?
+        Sí
+    Indica un mòdul pel que aquesta variable sigui global
+        onEntry (288)
+    Indica un mòdul pel que aquesta variable sigui local
+        TMXReader2.LoadCallBack (277)
+    Indica un mòdul pel que aquesta variable sigui inaccessible
+        setTranslation (253)
+
+- translationUpdatedByUser
+    Quin tipus de dades guardarà?
+        boolean
+    És un paràmetre?
+        Si
+    És una constant?
+        No
+    Respecta la convenció camelCase?
+        Sí
+    Indica un mòdul pel que aquesta variable sigui global
+        Cap
+    Indica un mòdul pel que aquesta variable sigui local
+        save (127)
+    Indica un mòdul pel que aquesta variable sigui inaccessible
+        getDefaults (382)
