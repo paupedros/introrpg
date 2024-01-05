@@ -170,6 +170,7 @@ public class UtilTaula {
     }
 
     public static void inicialitzaCreu(boolean[][] taula) {
+        inicialitzaBuida(taula);
         // primera diagonal
         int pos = taula[0].length - 1;
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
@@ -186,6 +187,7 @@ public class UtilTaula {
     }
 
     public static void inicialitzaPasVianants(boolean[][] taula) {
+        inicialitzaBuida(taula);
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             if (i % 2 != 0) { // si la linea es senar
                 for (int j = 0; j < taula[i].length; j++) { // recorrem element per element
@@ -196,6 +198,7 @@ public class UtilTaula {
     }
 
     public static void inicialitzaZebra(boolean[][] taula) {
+        inicialitzaBuida(taula);
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             for (int j = 0; j < taula[i].length; j++) { // recorrem element per element
                 if (j % 2 != 0)
@@ -205,6 +208,7 @@ public class UtilTaula {
     }
 
     public static void inicialitzaEscacs(boolean[][] taula) {
+        inicialitzaBuida(taula);
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
             if (i % 2 != 0) { // si la linea es senar
                 for (int j = 0; j < taula[i].length; j++) { // recorrem element per element
