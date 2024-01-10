@@ -3,24 +3,24 @@
 	Moduls i funcions:
 	- esVocal: Comprovar si un caracter en concret es una vocal catalana
 	- nomesLletres: Agafa un String i retorna la mateixa amb nomes lletres
-	- lletresSeparades: Agafa un String i retorna la mateixa separada per comes	
-	- intervalString: Donat un text, valor inicial i valor final, retorna la secció del 
+	- lletresSeparades: Agafa un String i retorna la mateixa separada per comes
+	- intervalString: Donat un text, valor inicial i valor final, retorna la secció del
 	text entre aquest interval
 	- esEnter: donat un nombre ens dira si és enter o no
-	- esEnter(estricte): donat un nombre ens dira si és enter o no, accepta 
+	- esEnter(estricte): donat un nombre ens dira si és enter o no, accepta
 	texts amb espais a l'inici i al final
 	- aEnter: donat un text s'intenta passar a un nombre aquest text
-	- cadenaContinua: donat un text i un nombre de longitud, s'allarga la 
+	- cadenaContinua: donat un text i un nombre de longitud, s'allarga la
 	cadena fins a que sigui igual a la longitud desitjada
 	- esSubstring (no estricte): Si no es estricte ignora les majusucles i minuscules, a demes dels
 	caracter catalans
-	- esSubstring (estricte): Fara el mateix que String.contains(), retornara true si un string 
+	- esSubstring (estricte): Fara el mateix que String.contains(), retornara true si un string
 	esta dins d'un altre
-	
+
 */
 
 public class UtilString{
-	
+
 	public static boolean esVocal(char ch){
 		String vocals = "aàeèéiíïoóòuúü";
 		char chMin = Character.toLowerCase(ch);
@@ -31,7 +31,7 @@ public class UtilString{
 		}
 		return false;
 	}
-	
+
 	public static String nomesLletres(String text){
 		String newText = "";
 		for (int i=0; i<text.length(); i++){
@@ -42,7 +42,7 @@ public class UtilString{
 		}
 		return newText;
 	}
-	
+
 	public static String lletresSeparades(String text){
 		String newText = "";
 		for (int i=0; i<text.length(); i++){
@@ -55,10 +55,10 @@ public class UtilString{
 		}
 		return newText;
 	}
-	
+
 	public static String intervalString(String text, int inici, int numFinal){
 		String newText = "";
-		
+
 		// Ajustament dels intervals
 		if (numFinal >= text.length()){
 			numFinal = text.length()-1;
@@ -72,7 +72,7 @@ public class UtilString{
 		if (numFinal < 0){
 			numFinal = 0;
 		}
-		
+
 		// Creació de la secció del nou text
 		if (inici<=numFinal){
 			for (int i=inici; i<=numFinal; i++){
@@ -88,7 +88,7 @@ public class UtilString{
 		}
 		return newText;
 	}
-	
+
 	public static boolean esEnter(String text){
 		if(text.isEmpty()) return false;
 		for (int i = 0; i<text.length(); i++){
@@ -99,11 +99,11 @@ public class UtilString{
 			else if (!Character.isDigit(ch)){
 				return false;
 			}
-			
+
 		}
 		return true;
 	}
-	
+
 	public static boolean esEnter(String text, boolean estricte){
 		if(estricte){
 			return esEnter(text);
@@ -111,7 +111,7 @@ public class UtilString{
 		text = text.strip();
 		return esEnter(text);
 	}
-	
+
 	public static int aEnter(String text, boolean estricte){
 		int num;
 		if(estricte){
@@ -123,7 +123,7 @@ public class UtilString{
 		}
 		return num;
 	}
-	
+
 	public static String cadenaContinua(String text, int num){
 		String newText = "";
 		int i=0;
@@ -136,11 +136,11 @@ public class UtilString{
 		}
 		return newText;
 	}
-	
+
 	public static boolean esSubstring(String text, String subtext){
 		return esSubstring(text, subtext, true);
 	}
-	
+
 	public static boolean esSubstring(String text, String subtext, boolean extricte){
 		if(subtext.isBlank()) return true;
 		if(!extricte){
@@ -152,23 +152,23 @@ public class UtilString{
 		int i = 0;
 		while (i<text.length()){ // Recorrem tota la cadena
 			char ch = text.charAt(i);
-			
+			if (i>=text.length() -1) break;
 			if(ch == subtext.charAt(0)){ // Trobem un caracter que es igual al primer del subtext
-				if(conte(text, subtext, i, extricte)) return true;			
+				if(conte(text, subtext, i, extricte)) return true;
 			}
-			
+
 			i++;
 		}
 		return false;
-		
+
 	}
-	
+
 	public static boolean conte(String text, String subtext, int i, boolean extricte){
 		// Comprovem si els seguents caracters coincideixen tambe amb els del subtext
 		int j = 0; // Variable de recorregut del subtext
 		while(j<subtext.length()){ // Recorrem tota la cadena del subtext
 			char ch = text.charAt(i); // Caracter actual del text
-			
+
 			// Si el caracter actual no es igual al caracter del subtext
 			if (ch != subtext.charAt(j)){
 				if(!extricte){
@@ -185,37 +185,37 @@ public class UtilString{
 		}
 		return true;
 	}
-	
+
 	public static boolean lletraCatalana(char ch){
 		String lletres = "aàeèéiíïoóòuúüç";
 		ch = Character.toLowerCase(ch);
-		
+
 		// Si el caracter és una 'ç' retornem true ja que es pot escriure com una c també
 		if (ch == 'c' || ch == 'ç') return true;
-		
+
 		for (int i=0; i<lletres.length(); i++){
-			
+
 			if(lletres.indexOf(ch) != -1) return true;
 		}
 		return false;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
