@@ -21,8 +21,8 @@
 	- cadenaContinua: donat un text i un nombre de longitud, s'allarga la
 	cadena fins a que sigui igual a la longitud desitjada
 
-	- esSubstring (no estricte): Si no es estricte ignora les majusucles i minuscules, a demes dels
-	caracter catalans
+	- esSubstring (no estricte): Si no es estricte ignora les majusucles i minuscules,
+	a demes dels caracter catalans
 
 	- esSubstring (estricte): Fara el mateix que String.contains(), retornara true si un string
 	esta dins d'un altre
@@ -50,11 +50,17 @@
 	enters separats pel separador especificat.
 
 	- separa(String text, boolean inclouBlancs): Retorna un array de subcadenes
-	del text, separades per espais en blanc. El paràmetre inclouBlancs inclou o exclou els espais en blanc al resultat.
+	del text, separades per espais en blanc. El paràmetre inclouBlancs inclou o exclou els
+	espais en blanc al resultat.
 
 	- comptaParaules(String text, boolean inclouBlancs): Compta el nombre de
 	paraules al text, tenint en compte els espais en blanc. El paràmetre inclouBlancs
 	inclou o exclou els espais en blanc en el recompte.
+
+	- junta(String[] cadenes, String separador, String darrerSeparador): Retorna un String
+	format per les cadenes de text separades pel separador amb l'últim separador especificat.
+
+	- junta(String[] cadenes, String separador): Equivalent a junta(cadenes, separador, separador).
 
 */
 
