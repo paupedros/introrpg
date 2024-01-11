@@ -351,6 +351,7 @@ public class UtilTaula {
     }
 
     public static void inicialitzaQuartsNOPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "*+"
         int[] center = getCenter(taula); // [hori, vertical]
         inicialitzaQuarts(taula); // fem la forma de creu
@@ -394,6 +395,7 @@ public class UtilTaula {
     }
 
     public static void inicialitzaQuartsSEPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "+**"
         int[] center = getCenter(taula); // [vertical, hori]
         inicialitzaQuarts(taula); // fem la forma de creu
@@ -424,6 +426,7 @@ public class UtilTaula {
     }
 
     public static void inicialitzaQuartsSONEPlens(boolean[][] taula) {
+        inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "**+*"
         inicialitzaQuartsSOPle(taula);
         int[] center = getCenter(taula); // [vertical, hori]
