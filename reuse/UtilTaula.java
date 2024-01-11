@@ -524,12 +524,12 @@ public class UtilTaula {
         int[] center = getCenter(taula); // [vertical, hori]
         inicialitzaCreuOPle(taula);
         for (int i = 0; i < taula.length; i++) {
-            if (i <= center[0]) { // si no hem arribat al centre horitzontal
+            if (i < center[0]) { // si no hem arribat al centre horitzontal
                 for (int j = taula[i].length - 1; j > taula[i].length - 1 - i; j--) {
                     taula[i][j] = true;
                 }
             } else {
-                for (int j = taula[i].length - 1; j > taula[i].length - (taula.length - i); j--) {
+                for (int j = taula[i].length - 1; j > taula[i].length - (taula[i].length - i); j--) {
                     taula[i][j] = true;
                 }
             }
