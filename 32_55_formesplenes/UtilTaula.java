@@ -294,12 +294,17 @@ public class UtilTaula {
                 taula[i][j] = true;
             }
         }
-
     }
 
     public static void inicialitzaVerticalMigSegonPle(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "|*"
+        int mig = getCenterVertical(taula);
+        for (int i = 0; i < taula.length; i++) {
+            for (int j = 0; j < taula[i].length; j++) {
+                if(j > mig) taula[i][j] = true;
+            }
+        }
     }
 
     public static void inicialitzaHoritzontalMigPrimerPle(boolean[][] taula) {
