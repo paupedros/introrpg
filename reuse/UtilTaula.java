@@ -172,6 +172,27 @@ public class UtilTaula {
         return taula.length / 2;
     }
 
+    public static int[] getCenter(boolean[][] taula){
+        int[] center = new int[2]; // [vertical, horitzontal]
+
+        // Calcul vertical
+        if (taula[0].length % 2 == 0) {
+            center[0] = taula[0].length / 2 - 1;
+        }
+        else {
+            center[0] = taula[0].length / 2;
+        }
+
+        // Calcul horitzontal
+        if (taula.length % 2 == 0) {
+            center[1] = taula.length / 2 - 1;
+        } else {
+            center[1] = taula.length / 2;
+        }
+
+        return center;
+    }
+
     public static void inicialitzaSegonaDiagonal(boolean[][] taula) {
         inicialitzaBuida(taula);
         int pos = taula[0].length - 1;
@@ -332,6 +353,24 @@ public class UtilTaula {
     public static void inicialitzaQuartsNOPle(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "*+"
+        int[] center = getCenter(taula); // [vertical, hori]
+        for (int i = 0; i < taula.length; i++){
+            if (i == center[0]){
+                for (int j = 0; j < taula[i].length; j++){
+                    taula[i][j] = true;
+                }
+            }
+            if (i < center[0]){
+                for (int j = 0; j <= center[1]; j++){
+                    taula[i][j] = true;
+                }
+            }
+            else {
+                for (int j = 0; j < taula[i].length; j++){
+                    if (j == center[1]) taula[i][j] = true;
+                }
+            }
+        }
     }
 
     public static void inicialitzaQuartsSOPle(boolean[][] taula) {
