@@ -355,7 +355,21 @@ public class UtilTaula {
         // Implementa la lògica addicional per a "*+"
         int[] center = getCenter(taula); // [vertical, hori]
         for (int i = 0; i < taula.length; i++){
-            if (i == center[0]){
+            inicialitzaCreu(taula);
+            if (i < center[0]){
+                for (int j = 0; j <= center[1]; j++){
+                    taula[i][j] = true;
+                }
+            }
+        }
+    }
+
+    public static void inicialitzaQuartsSOPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "**+"
+        int[] center = getCenter(taula); // [vertical, hori]
+        for (int i = 0; i < taula.length; i++){
+            if (i == center[0]){ // linea horitzontal
                 for (int j = 0; j < taula[i].length; j++){
                     taula[i][j] = true;
                 }
@@ -371,11 +385,6 @@ public class UtilTaula {
                 }
             }
         }
-    }
-
-    public static void inicialitzaQuartsSOPle(boolean[][] taula) {
-        inicialitzaBuida(taula);
-        // Implementa la lògica addicional per a "**+"
     }
 
     public static void inicialitzaQuartsNEPle(boolean[][] taula) {
