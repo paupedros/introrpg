@@ -172,14 +172,13 @@ public class UtilTaula {
         return taula.length / 2;
     }
 
-    public static int[] getCenter(boolean[][] taula){
+    public static int[] getCenter(boolean[][] taula) {
         int[] center = new int[2]; // [vertical, horitzontal]
 
         // Calcul vertical
         if (taula[0].length % 2 == 0) {
             center[0] = taula[0].length / 2 - 1;
-        }
-        else {
+        } else {
             center[0] = taula[0].length / 2;
         }
 
@@ -323,7 +322,8 @@ public class UtilTaula {
         int mig = getCenterVertical(taula);
         for (int i = 0; i < taula.length; i++) {
             for (int j = 0; j < taula[i].length; j++) {
-                if(j >= mig) taula[i][j] = true;
+                if (j >= mig)
+                    taula[i][j] = true;
             }
         }
     }
@@ -332,8 +332,8 @@ public class UtilTaula {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "*-"
         int mig = getCenterHori(taula);
-        for (int i = 0; i <= mig; i++){
-            for (int j = 0; j < taula[i].length; j++){
+        for (int i = 0; i <= mig; i++) {
+            for (int j = 0; j < taula[i].length; j++) {
                 taula[i][j] = true;
             }
         }
@@ -343,8 +343,8 @@ public class UtilTaula {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "-*"
         int mig = getCenterHori(taula);
-        for (int i = taula.length-1; i >= mig; i--){
-            for (int j = 0; j < taula[i].length; j++){
+        for (int i = taula.length - 1; i >= mig; i--) {
+            for (int j = 0; j < taula[i].length; j++) {
                 taula[i][j] = true;
             }
         }
@@ -354,9 +354,9 @@ public class UtilTaula {
         // Implementa la lògica addicional per a "*+"
         int[] center = getCenter(taula); // [hori, vertical]
         inicialitzaQuarts(taula); // fem la forma de creu
-        for (int i = 0; i < taula.length; i++){
-            if (i < center[0]){ // si no hem arribat al mig horitzontal
-                for (int j = 0; j <= center[1]; j++){ // fins el centre vertical
+        for (int i = 0; i < taula.length; i++) {
+            if (i < center[0]) { // si no hem arribat al mig horitzontal
+                for (int j = 0; j <= center[1]; j++) { // fins el centre vertical
                     taula[i][j] = true;
                 }
             }
@@ -368,9 +368,9 @@ public class UtilTaula {
         // Implementa la lògica addicional per a "**+"
         int[] center = getCenter(taula); // [vertical, hori]
         inicialitzaQuarts(taula); // fem la forma de creu
-        for (int i = 0; i < taula.length; i++){
-            if (i > center[0]){ // si ja em passat el mig horitzontal
-                for (int j = 0; j <= center[1]; j++){ // fins el centre vertical
+        for (int i = 0; i < taula.length; i++) {
+            if (i > center[0]) { // si ja em passat el mig horitzontal
+                for (int j = 0; j <= center[1]; j++) { // fins el centre vertical
                     taula[i][j] = true;
                 }
             }
@@ -382,10 +382,11 @@ public class UtilTaula {
         // Implementa la lògica addicional per a "+*"
         int[] center = getCenter(taula); // [vertical, hori]
         inicialitzaQuarts(taula); // fem la forma de creu
-        for (int i = 0; i < taula.length; i++){
-            if (i < center[0]){ // si no hem arribat al centre hortitzontal
-                for (int j = 0; j < taula[i].length; j++){
-                    if (j > center[1]) taula[i][j] = true; // Si hem passat el centre vertical
+        for (int i = 0; i < taula.length; i++) {
+            if (i < center[0]) { // si no hem arribat al centre hortitzontal
+                for (int j = 0; j < taula[i].length; j++) {
+                    if (j > center[1])
+                        taula[i][j] = true; // Si hem passat el centre vertical
                 }
             }
         }
@@ -396,10 +397,11 @@ public class UtilTaula {
         // Implementa la lògica addicional per a "+**"
         int[] center = getCenter(taula); // [vertical, hori]
         inicialitzaQuarts(taula); // fem la forma de creu
-        for (int i = 0; i < taula.length; i++){
-            if (i > center[0]){ // si ja hem arribat al centre hortitzontal
-                for (int j = 0; j < taula[i].length; j++){
-                    if (j > center[1]) taula[i][j] = true; // Si hem passat el centre vertical
+        for (int i = 0; i < taula.length; i++) {
+            if (i > center[0]) { // si ja hem arribat al centre hortitzontal
+                for (int j = 0; j < taula[i].length; j++) {
+                    if (j > center[1])
+                        taula[i][j] = true; // Si hem passat el centre vertical
                 }
             }
         }
@@ -410,10 +412,11 @@ public class UtilTaula {
         // Implementa la lògica addicional per a "*+**"
         inicialitzaQuartsNOPle(taula);
         int[] center = getCenter(taula); // [vertical, hori]
-        for (int i = 0; i < taula.length; i++){
-            if (i > center[0]){ // si ja hem arribat al centre hortitzontal
-                for (int j = 0; j < taula[i].length; j++){
-                    if (j > center[1]) taula[i][j] = true; // Si hem passat el centre vertical
+        for (int i = 0; i < taula.length; i++) {
+            if (i > center[0]) { // si ja hem arribat al centre hortitzontal
+                for (int j = 0; j < taula[i].length; j++) {
+                    if (j > center[1])
+                        taula[i][j] = true; // Si hem passat el centre vertical
                 }
             }
         }
@@ -424,10 +427,11 @@ public class UtilTaula {
         // Implementa la lògica addicional per a "**+*"
         inicialitzaQuartsSOPle(taula);
         int[] center = getCenter(taula); // [vertical, hori]
-        for (int i = 0; i < taula.length; i++){
-            if (i < center[0]){ // si no hem arribat al centre hortitzontal
-                for (int j = 0; j < taula[i].length; j++){
-                    if (j > center[1]) taula[i][j] = true; // Si hem passat el centre vertical
+        for (int i = 0; i < taula.length; i++) {
+            if (i < center[0]) { // si no hem arribat al centre hortitzontal
+                for (int j = 0; j < taula[i].length; j++) {
+                    if (j > center[1])
+                        taula[i][j] = true; // Si hem passat el centre vertical
                 }
             }
         }
@@ -436,31 +440,95 @@ public class UtilTaula {
     public static void inicialitzaCreuNPle(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "*x"
+        inicialitzaCreu(taula);
+        int[] center = getCenter(taula); // [vertical, hori]
+        for (int i = 0; i < taula.length; i++){
+            if (i < center[0]){ // si no hem arribat al centre horitzontal
+                for (int j = i; j < taula[i].length - 1 - i; j++){
+                    taula[i][j] = true;
+                }
+            }
+        }
     }
 
     public static void inicialitzaCreuOPle(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "**x"
+        inicialitzaCreu(taula);
+        int[] center = getCenter(taula); // [vertical, hori]
+        for (int i = 0; i < taula.length; i++){
+            if (i <= center[0]){ // si no hem arribat al centre horitzontal
+                for (int j = 0; j < i; j++){
+                    taula[i][j] = true;
+                }
+            }
+            else {
+                for (int j = 0; j < taula[i].length - 1 - i; j++){
+                    taula[i][j] = true;
+                }
+            }
+        }
     }
 
     public static void inicialitzaCreuSPle(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "x*"
+        inicialitzaCreu(taula);
+        int[] center = getCenter(taula); // [vertical, hori]
+        for (int i = taula.length - 1; i > 0; i--){
+            if (i > center[0]){ // si ja hem arribat al centre horitzontal
+                for (int j = taula.length - i; j < taula[i].length - (taula.length -i); j++){
+                    taula[i][j] = true;
+                }
+            }
+        }
     }
 
     public static void inicialitzaCreuEPle(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "x**"
+        inicialitzaCreu(taula);
+        int[] center = getCenter(taula); // [vertical, hori]
+        for (int i = 0; i < taula.length; i++){
+            if (i <= center[0]){ // si no hem arribat al centre horitzontal
+                for (int j = taula.length; j < i; j++){
+                    taula[i][j] = true;
+                }
+            }
+            else {
+                for (int j = 0; j < taula[i].length - 1 - i; j++){
+                    taula[i][j] = true;
+                }
+            }
+        }
     }
 
     public static void inicialitzaCreuNSPlens(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "*x*"
+        int[] center = getCenter(taula); // [vertical, hori]
+        inicialitzaCreuNPle(taula);
+        for (int i = taula.length - 1; i > 0; i--){
+            if (i > center[0]){ // si ja hem arribat al centre horitzontal
+                for (int j = taula.length - i; j < taula[i].length - (taula.length -i); j++){
+                    taula[i][j] = true;
+                }
+            }
+        }
     }
 
     public static void inicialitzaCreuOEPlens(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "**x**"
+        int[] center = getCenter(taula); // [vertical, hori]
+        inicialitzaCreuOPle(taula);
+        for (int i = 0; i < taula.length; i++){
+            if (i < center[0]){ // si no hem arribat al centre horitzontal
+                for (int j = i; j < taula[i].length - i; j++){
+                    taula[i][j] = true;
+                }
+            }
+        }
     }
 
 }
