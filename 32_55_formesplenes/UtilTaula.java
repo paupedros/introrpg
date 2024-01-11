@@ -310,6 +310,12 @@ public class UtilTaula {
     public static void inicialitzaHoritzontalMigPrimerPle(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "*-"
+        int mig = getCenterHori(taula);
+        for (int i = 0; i <= mig; i++){
+            for (int j = 0; j < taula[i].length; j++){
+                taula[i][j] = true;
+            }
+        }
     }
 
     public static void inicialitzaHoritzontalMigSegonPle(boolean[][] taula) {
