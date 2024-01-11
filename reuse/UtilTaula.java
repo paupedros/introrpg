@@ -480,7 +480,6 @@ public class UtilTaula {
         for (int i = taula.length - 1; i > 0; i--) {
             if (i > center[0]) { // si ja hem arribat al centre horitzontal
                 for (int j = taula[i].length - i; j < taula[i].length - (taula[i].length - i); j++) {
-                    
                     taula[i][j] = true;
                 }
             }
