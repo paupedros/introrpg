@@ -351,13 +351,12 @@ public class UtilTaula {
     }
 
     public static void inicialitzaQuartsNOPle(boolean[][] taula) {
-        inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "*+"
-        int[] center = getCenter(taula); // [vertical, hori]
-        inicialitzaQuarts(taula);
+        int[] center = getCenter(taula); // [hori, vertical]
+        inicialitzaQuarts(taula); // fem la forma de creu
         for (int i = 0; i < taula.length; i++){
-            if (i < center[0]){
-                for (int j = 0; j <= center[1]; j++){
+            if (i < center[0]){ // si no hem arribat al mig horitzontal
+                for (int j = 0; j <= center[1]; j++){ // fins el centre vertical
                     taula[i][j] = true;
                 }
             }
@@ -368,20 +367,11 @@ public class UtilTaula {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "**+"
         int[] center = getCenter(taula); // [vertical, hori]
+        inicialitzaQuarts(taula); // fem la forma de creu
         for (int i = 0; i < taula.length; i++){
-            if (i == center[0]){ // linea horitzontal
-                for (int j = 0; j < taula[i].length; j++){
+            if (i > center[0]){ // si ja em passat el mig horitzontal
+                for (int j = 0; j <= center[1]; j++){ // fins el centre vertical
                     taula[i][j] = true;
-                }
-            }
-            if (i < center[0]){
-                for (int j = 0; j <= center[1]; j++){
-                    taula[i][j] = true;
-                }
-            }
-            else {
-                for (int j = 0; j < taula[i].length; j++){
-                    if (j == center[1]) taula[i][j] = true;
                 }
             }
         }
@@ -390,21 +380,57 @@ public class UtilTaula {
     public static void inicialitzaQuartsNEPle(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "+*"
+        int[] center = getCenter(taula); // [vertical, hori]
+        inicialitzaQuarts(taula); // fem la forma de creu
+        for (int i = 0; i < taula.length; i++){
+            if (i < center[0]){ // si no hem arribat al centre hortitzontal
+                for (int j = 0; j < taula[i].length; j++){
+                    if (j > center[1]) taula[i][j] = true; // Si hem passat el centre vertical
+                }
+            }
+        }
+
     }
 
     public static void inicialitzaQuartsSEPle(boolean[][] taula) {
-        inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "+**"
+        int[] center = getCenter(taula); // [vertical, hori]
+        inicialitzaQuarts(taula); // fem la forma de creu
+        for (int i = 0; i < taula.length; i++){
+            if (i > center[0]){ // si ja hem arribat al centre hortitzontal
+                for (int j = 0; j < taula[i].length; j++){
+                    if (j > center[1]) taula[i][j] = true; // Si hem passat el centre vertical
+                }
+            }
+        }
     }
 
     public static void inicialitzaQuartsNOSEPlens(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "*+**"
+        inicialitzaQuartsNOPle(taula);
+        int[] center = getCenter(taula); // [vertical, hori]
+        for (int i = 0; i < taula.length; i++){
+            if (i > center[0]){ // si ja hem arribat al centre hortitzontal
+                for (int j = 0; j < taula[i].length; j++){
+                    if (j > center[1]) taula[i][j] = true; // Si hem passat el centre vertical
+                }
+            }
+        }
+
     }
 
     public static void inicialitzaQuartsSONEPlens(boolean[][] taula) {
-        inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "**+*"
+        inicialitzaQuartsSOPle(taula);
+        int[] center = getCenter(taula); // [vertical, hori]
+        for (int i = 0; i < taula.length; i++){
+            if (i < center[0]){ // si no hem arribat al centre hortitzontal
+                for (int j = 0; j < taula[i].length; j++){
+                    if (j > center[1]) taula[i][j] = true; // Si hem passat el centre vertical
+                }
+            }
+        }
     }
 
     public static void inicialitzaCreuNPle(boolean[][] taula) {
