@@ -158,6 +158,20 @@ public class UtilTaula {
         }
     }
 
+    public static int getCenterVertical(boolean[][] taula) {
+        if (taula[0].length % 2 == 0) {
+            return taula[0].length / 2 - 1;
+        }
+        return taula[0].length / 2;
+    }
+
+    public static int getCenterHori(boolean[][] taula) {
+        if (taula.length % 2 == 0) {
+            return taula.length / 2 - 1;
+        }
+        return taula.length / 2;
+    }
+
     public static void inicialitzaSegonaDiagonal(boolean[][] taula) {
         inicialitzaBuida(taula);
         int pos = taula[0].length - 1;
@@ -249,24 +263,114 @@ public class UtilTaula {
         }
     }
 
-    public static void inicialitzaSegonaDiagonalPrimerPle(boolean[][] taula){
+    public static void inicialitzaSegonaDiagonalPrimerPle(boolean[][] taula) {
         inicialitzaBuida(taula);
-        for (int i = 0; i < taula.length; i++){
+        for (int i = 0; i < taula.length; i++) {
             // recorrem element per element
-            for (int j = 0; j < taula[i].length - i; j++){
+            for (int j = 0; j < taula[i].length - i; j++) {
                 taula[i][j] = true;
             }
         }
     }
 
-    public static void inicialitzaSegonaDiagonalSegonPle(boolean[][] taula){
+    public static void inicialitzaSegonaDiagonalSegonPle(boolean[][] taula) {
         inicialitzaBuida(taula);
-        for (int i = 0; i < taula.length; i++){
+        for (int i = 0; i < taula.length; i++) {
             // recorrem element per element
-            for (int j = taula[i].length-1; j >= (taula[i].length - 1) - i; j--){
+            // mentre que la posicio del element sigui mes gran o igual a
+            // l'ultima posicio de la fila menys la fila actual
+            for (int j = taula[i].length - 1; j >= (taula[i].length - 1) - i; j--) {
                 taula[i][j] = true;
             }
         }
+    }
+
+    public static void inicialitzaVerticalMigPrimerPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "*|"
+        int mig = getCenterVertical(taula);
+        System.out.println(mig);
+        for (int i = 0; i < taula.length; i++) {
+            for (int j = 0; j <= mig; j++) {
+                taula[i][j] = true;
+            }
+        }
+
+    }
+
+    public static void inicialitzaVerticalMigSegonPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "|*"
+    }
+
+    public static void inicialitzaHoritzontalMigPrimerPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "*-"
+    }
+
+    public static void inicialitzaHoritzontalMigSegonPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "-*"
+    }
+
+    public static void inicialitzaQuartsNOPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "*+"
+    }
+
+    public static void inicialitzaQuartsSOPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "**+"
+    }
+
+    public static void inicialitzaQuartsNEPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "+*"
+    }
+
+    public static void inicialitzaQuartsSEPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "+**"
+    }
+
+    public static void inicialitzaQuartsNOSEPlens(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "*+**"
+    }
+
+    public static void inicialitzaQuartsSONEPlens(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "**+*"
+    }
+
+    public static void inicialitzaCreuNPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "*x"
+    }
+
+    public static void inicialitzaCreuOPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "**x"
+    }
+
+    public static void inicialitzaCreuSPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "x*"
+    }
+
+    public static void inicialitzaCreuEPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "x**"
+    }
+
+    public static void inicialitzaCreuNSPlens(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "*x*"
+    }
+
+    public static void inicialitzaCreuOEPlens(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        // Implementa la lògica addicional per a "**x**"
     }
 
 }

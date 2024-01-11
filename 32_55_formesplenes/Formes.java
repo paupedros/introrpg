@@ -124,11 +124,11 @@ public class Formes {
                     case "/*":
                         UtilTaula.inicialitzaSegonaDiagonalSegonPle(taula);
                         break;
-/*
+
                     case "*|":
                         UtilTaula.inicialitzaVerticalMigPrimerPle(taula);
                         break;
-
+/*
                     case "|*":
                         UtilTaula.inicialitzaVerticalMigSegonPle(taula);
                         break;
