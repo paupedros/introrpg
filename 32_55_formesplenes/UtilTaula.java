@@ -289,7 +289,6 @@ public class UtilTaula {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "*|"
         int mig = getCenterVertical(taula);
-        System.out.println(mig);
         for (int i = 0; i < taula.length; i++) {
             for (int j = 0; j <= mig; j++) {
                 taula[i][j] = true;
