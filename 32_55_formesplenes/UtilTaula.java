@@ -356,8 +356,8 @@ public class UtilTaula {
         int[] center = getCenter(taula); // [hori, vertical]
         inicialitzaQuarts(taula); // fem la forma de creu
         for (int i = 0; i < taula.length; i++) {
-            if (i < center[0]) { // si no hem arribat al mig horitzontal
-                for (int j = 0; j <= center[1]; j++) { // fins el centre vertical
+            if (i <= center[0]) { // si no hem arribat al mig horitzontal
+                for (int j = 0; j < center[1] -1; j++) { // fins el centre vertical
                     taula[i][j] = true;
                 }
             }
