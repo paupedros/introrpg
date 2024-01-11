@@ -166,7 +166,7 @@ public class UtilString{
 	public static boolean conte(String text, String subtext, int i, boolean extricte){
 		// Comprovem si els seguents caracters coincideixen tambe amb els del subtext
 		int j = 0; // Variable de recorregut del subtext
-		while(j<subtext.length()){ // Recorrem tota la cadena del subtext
+		while(i<text.length() && j<subtext.length()){ // Recorrem tota la cadena del subtext
 			char ch = text.charAt(i); // Caracter actual del text
 
 			// Si el caracter actual no es igual al caracter del subtext
