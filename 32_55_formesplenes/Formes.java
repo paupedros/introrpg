@@ -112,11 +112,11 @@ public class Formes {
                     case "*\\":
                         UtilTaula.inicialitzaPrimeraDiagonalPrimerPle(taula);
                         break;
-/*
+
                     case "\\*":
                         UtilTaula.inicialitzaPrimeraDiagonalSegonPle(taula);
                         break;
-*/
+
 //                    case "*/":
 //                       UtilTaula.inicialitzaSegonaDiagonalPrimerPle(taula);
 //                        break;
