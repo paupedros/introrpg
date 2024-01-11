@@ -252,7 +252,18 @@ public class UtilTaula {
     public static void inicialitzaSegonaDiagonalPrimerPle(boolean[][] taula){
         inicialitzaBuida(taula);
         for (int i = 0; i < taula.length; i++){
+            // recorrem element per element
             for (int j = 0; j < taula[i].length - i; j++){
+                taula[i][j] = true;
+            }
+        }
+    }
+
+    public static void inicialitzaSegonaDiagonalSegonPle(boolean[][] taula){
+        inicialitzaBuida(taula);
+        for (int i = 0; i < taula.length; i++){
+            // recorrem element per element
+            for (int j = taula[i].length; j >= i; j--){
                 taula[i][j] = true;
             }
         }
