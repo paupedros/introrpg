@@ -263,7 +263,7 @@ public class UtilTaula {
         inicialitzaBuida(taula);
         for (int i = 0; i < taula.length; i++){
             // recorrem element per element
-            for (int j = taula[i].length-1; j > i; j--){
+            for (int j = taula[i].length-1; j >= i; j--){
                 taula[i][j] = true;
             }
         }
