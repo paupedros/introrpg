@@ -63,21 +63,20 @@ public class UtilTaula {
                 }
                 resultat += caracterFalse;
             }
-            //if (i!= taula.length - 1) {
-                resultat += "\n"; // al acabar la fila de la taula fem un salt de línea
-            //}
+            // if (i!= taula.length - 1) {
+            resultat += "\n"; // al acabar la fila de la taula fem un salt de línea
+            // }
         }
         return resultat;
     }
 
-    public static void inicialitzaBuida(boolean[][] taula){
-        for (int k = 0; k < taula.length; k++){
-            for(int j = 0; j < taula[k].length; j++){
+    public static void inicialitzaBuida(boolean[][] taula) {
+        for (int k = 0; k < taula.length; k++) {
+            for (int j = 0; j < taula[k].length; j++) {
                 taula[k][j] = false;
             }
         }
     }
-
 
     public static void inicialitzaPrimeraDiagonal(boolean[][] taula) {
         inicialitzaBuida(taula);
@@ -218,8 +217,20 @@ public class UtilTaula {
                 }
             } else {
                 for (int j = 0; j < taula[i].length; j++) { // recorrem element per element
-                    if(j % 2 != 0) taula[i][j] = true;
+                    if (j % 2 != 0)
+                        taula[i][j] = true;
                 }
+            }
+        }
+    }
+
+    public static void inicialitzaPrimeraDiagonalPrimerPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
+        for (int i = 0; i < taula.length; i++) { // recorrem la taula filaxfila
+            // recorrem els elements de la fila fins que estiguem al
+            // element amb posicio coincident al valor de i
+            for (int j = 0; j<=i; j++){
+                taula[i][j] = true;
             }
         }
     }
