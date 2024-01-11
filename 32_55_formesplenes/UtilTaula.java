@@ -302,7 +302,7 @@ public class UtilTaula {
         int mig = getCenterVertical(taula);
         for (int i = 0; i < taula.length; i++) {
             for (int j = 0; j < taula[i].length; j++) {
-                if(j > mig) taula[i][j] = true;
+                if(j >= mig) taula[i][j] = true;
             }
         }
     }
