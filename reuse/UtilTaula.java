@@ -354,8 +354,8 @@ public class UtilTaula {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "*+"
         int[] center = getCenter(taula); // [vertical, hori]
+        inicialitzaQuarts(taula);
         for (int i = 0; i < taula.length; i++){
-            inicialitzaQuarts(taula);
             if (i < center[0]){
                 for (int j = 0; j <= center[1]; j++){
                     taula[i][j] = true;
