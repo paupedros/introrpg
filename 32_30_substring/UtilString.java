@@ -147,7 +147,7 @@ public class UtilString{
 			text = text.toUpperCase();
 			subtext = subtext.toUpperCase();
 		}
-
+		if (subtext.length() > text.length()) return false;
 		// Iniciem variable de recorregut de la cadena
 		int i = 0;
 		while (i<text.length()){ // Recorrem tota la cadena
