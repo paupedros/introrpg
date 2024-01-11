@@ -128,7 +128,7 @@ public class Formes {
                     case "*|":
                         UtilTaula.inicialitzaVerticalMigPrimerPle(taula);
                         break;
-/*
+
                     case "|*":
                         UtilTaula.inicialitzaVerticalMigSegonPle(taula);
                         break;
@@ -188,7 +188,7 @@ public class Formes {
                     case "**x**":
                         UtilTaula.inicialitzaCreuOEPlens(taula);
                         break;
-*/
+
                     default:
                         UtilTaula.inicialitzaBuida(taula);
                         break;
