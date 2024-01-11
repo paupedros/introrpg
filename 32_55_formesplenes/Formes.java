@@ -117,9 +117,9 @@ public class Formes {
                         UtilTaula.inicialitzaPrimeraDiagonalSegonPle(taula);
                         break;
 
-//                    case "*/":
-//                       UtilTaula.inicialitzaSegonaDiagonalPrimerPle(taula);
-//                        break;
+                    case "*/":
+                       UtilTaula.inicialitzaSegonaDiagonalPrimerPle(taula);
+                        break;
 /*
                     case "/*":
                         UtilTaula.inicialitzaSegonaDiagonalSegonPle(taula);

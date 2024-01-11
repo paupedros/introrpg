@@ -229,21 +229,31 @@ public class UtilTaula {
         for (int i = 0; i < taula.length; i++) { // recorrem la taula filaxfila
             // recorrem els elements de la fila fins que estiguem al
             // element amb posicio coincident al valor de i
-            for (int j = 0; j<=i; j++){
+            for (int j = 0; j <= i; j++) {
                 taula[i][j] = true;
             }
         }
     }
 
-    public static void inicialitzaPrimeraDiagonalSegonPle(boolean[][] taula){
+    public static void inicialitzaPrimeraDiagonalSegonPle(boolean[][] taula) {
         inicialitzaBuida(taula);
         for (int i = 0; i < taula.length; i++) { // recorrem la taula filaxfila
-            // recorrem els elements de la fila fins que estiguem al
-            // element amb posicio coincident al valor de i
-            for (int j = 0; j<taula[i].length; j++){
-                if(j >= i){
+            // recorrem els elements de la fila, si estem en
+            // un element que la seva posicio es superior o
+            // igual al valor de i el posem a true
+            for (int j = 0; j < taula[i].length; j++) {
+                if (j >= i) {
                     taula[i][j] = true;
                 }
+            }
+        }
+    }
+
+    public static void inicialitzaSegonaDiagonalPrimerPle(boolean[][] taula){
+        inicialitzaBuida(taula);
+        for (int i = 0; i < taula.length; i++){
+            for (int j = 0; j < taula[i].length - i; j++){
+                taula[i][j] = true;
             }
         }
     }
