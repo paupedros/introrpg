@@ -240,7 +240,7 @@ public class UtilTaula {
         for (int i = 0; i < taula.length; i++) { // recorrem la taula filaxfila
             // recorrem els elements de la fila fins que estiguem al
             // element amb posicio coincident al valor de i
-            for (int j = taula[i].length; j>=i; j--){
+            for (int j = taula[i].length; j>i; j--){
                 taula[i][j] = true;
             }
         }
