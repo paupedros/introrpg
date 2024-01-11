@@ -493,7 +493,7 @@ public class UtilTaula {
         int[] center = getCenter(taula); // [vertical, hori]
         for (int i = 0; i < taula.length; i++) {
             if (i <= center[0]) { // si no hem arribat al centre horitzontal
-                for (int j = taula[i].length - 1; j > taula.length - 1 - i; j--) {
+                for (int j = taula[i].length - 1; j > taula[i].length - 1 - i; j--) {
                     taula[i][j] = true;
                 }
             } else {
@@ -525,7 +525,7 @@ public class UtilTaula {
         inicialitzaCreuOPle(taula);
         for (int i = 0; i < taula.length; i++) {
             if (i <= center[0]) { // si no hem arribat al centre horitzontal
-                for (int j = taula[i].length - 1; j > taula.length - 1 - i; j--) {
+                for (int j = taula[i].length - 1; j > taula[i].length - 1 - i; j--) {
                     taula[i][j] = true;
                 }
             } else {
