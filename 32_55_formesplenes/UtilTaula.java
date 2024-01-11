@@ -241,7 +241,7 @@ public class UtilTaula {
             // recorrem els elements de la fila fins que estiguem al
             // element amb posicio coincident al valor de i
             for (int j = 0; j<=i; j++){
-                if(j >= i){
+                if(j > i){
                     taula[i][j] = true;
 
                 }
