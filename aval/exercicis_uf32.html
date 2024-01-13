@@ -4,36 +4,45 @@
      <meta charset="UTF-8">
      <title>Resum de resultats</title>
      <style>
-       tr.exercise:hover { background-color: #f5f5f5; }
-       th, td { font-weight: normal; padding: 5px 10px; }
-       th { background-color: #1d96b2; color: white; }
-       td { border-bottom: 1px solid #ddd; }
-       tr.header th:first-child { border-top-left-radius: 5px; }
-       tr.header th:last-child { border-top-right-radius: 5px; }
+        div.title-container { display: flex; align-items: center; }
+        h1 { margin-left: 10px; }
+        img { height: 5em; vertical-align: middle; }
 
-       .questionable { cursor: help; }
-       span.help { cursor: help; }
-       td.attributes { text-align: center; white-space: nowrap; font-size: .6em;}
-       td.result     { text-align: center; padding: .5em; }
-       span.activeattrib { color: blue; font-weight:bolder; text-shadow: 1px 1px 2px #000000; cursor: help;}
-       span.innactiveattrib { color: lightgrey; font-weight: lighter; cursor: help;}
-       a.discrete:link, a.discrete:visited { color: black; text-decoration: none; }
+        tr.exercise:hover { background-color: #f5f5f5; }
+        th, td { font-weight: normal; padding: 5px 2px; }
+        th { background-color: #1d96b2; color: white; }
+        td { border-bottom: 1px solid #ddd; }
+        tr.header th:first-child { border-top-left-radius: 5px; }
+        tr.header th:last-child { border-top-right-radius: 5px; }
 
-       span.tooltip {
-           background-color: #fffffa;
-           padding: 10px;
-           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-           border-radius: 5px;
-           position: absolute;
-           z-index: 1;
-       }
-       span.clickable { cursor: pointer; }
-       #entry1 { position: relative; }
-       td.overdue { color: grey; font-style: italic; }
+        .questionable { cursor: help; }
+        span.help { cursor: help; }
+        td.attributes { text-align: center; white-space: nowrap; font-size: .6em;}
+        td.result     { text-align: center; padding: .5em; }
+        span.activeattrib { color: blue; font-weight:bolder; text-shadow: 1px 1px 2px #000000; cursor: help;}
+        span.innactiveattrib { color: lightgrey; font-weight: lighter; cursor: help;}
+        a.discrete:link, a.discrete:visited { color: black; text-decoration: none; }
+
+        span.tooltip {
+            background-color: #fffffa;
+            padding: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            position: absolute;
+            z-index: 1;
+        }
+        span.clickable { cursor: pointer; }
+        #entry1 { position: relative; }
+        td.overdue { color: grey; font-style: italic; }
      </style>
   </head>
   <body>
-      <h1>Resultats de la correcció automàtica</h1>
+      <div class="title-container">
+        <a class="discrete" href="https://gatrenat.github.io/introprgdev/">
+        <img src="https://gatrenat.github.io/introprgdev/_static/logoprg.png" alt="logo" title="obre els apunts">
+        </a>
+        <h1>Resultats de la correcció automàtica</h1>
+      </div>
       <p>Hola Pau</p>
       <p>Aquest és un resum dels resultats de la correcció automàtica dels exercicis del teu repositori: <tt>git@github.com:paupedros/introrpg.git</b>.</tt>
       <table>
@@ -49,12 +58,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #70243788: 2023-11-23 10:30:40</span>
                                 </td>
@@ -66,12 +75,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #6b11bf6a: 2023-11-23 10:34:37</span>
                                 </td>
@@ -83,12 +92,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #7b36cc15: 2023-11-23 11:58:58</span>
                                 </td>
@@ -100,12 +109,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #69820d30: 2023-11-23 13:34:29</span>
                                 </td>
@@ -117,12 +126,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #18f5372f: 2023-11-27 20:18:59</span>
                                 </td>
@@ -134,12 +143,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #8c933542: 2023-11-23 13:49:43</span>
                                 </td>
@@ -151,12 +160,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #ced313aa: 2023-11-27 20:25:58</span>
                                 </td>
@@ -168,12 +177,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #6278141a: 2023-11-27 20:31:49</span>
                                 </td>
@@ -185,12 +194,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #e77e8279: 2023-11-27 20:48:27</span>
                                 </td>
@@ -202,12 +211,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #90e611ff: 2023-11-28 08:09:02</span>
                                 </td>
@@ -219,12 +228,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #2324c41b: 2023-11-28 08:20:14</span>
                                 </td>
@@ -236,12 +245,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #2ce43ea9: 2023-11-28 08:25:03</span>
                                 </td>
@@ -253,12 +262,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #3129fb1e: 2023-11-28 08:29:23</span>
                                 </td>
@@ -270,12 +279,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #07e9b814: 2023-11-28 08:32:46</span>
                                 </td>
@@ -287,12 +296,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #9c35a484: 2023-11-28 08:36:28</span>
                                 </td>
@@ -304,12 +313,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #70d2f979: 2023-11-28 08:38:58</span>
                                 </td>
@@ -321,12 +330,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #94878424: 2023-11-28 08:58:24</span>
                                 </td>
@@ -338,12 +347,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #09245263: 2023-11-29 10:21:41</span>
                                 </td>
@@ -355,12 +364,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #9bb1828d: 2023-11-29 10:39:29</span>
                                 </td>
@@ -372,12 +381,12 @@
                   <span class="activeattrib" title="Exercici amb complexitat addicional">☆</span>
                   <span class="innactiveattrib" title="Exercici sense proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="lliurat">☑</span>
               </td>
               <td>
-                  <span class="help">Lliurat dins de termini</span>
+                  <span>Lliurat dins de termini</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #c68ec940: 2023-11-29 11:38:57</span>
                                 </td>
@@ -389,12 +398,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #292a37ce: 2023-11-30 13:42:47</span>
                                 </td>
@@ -406,12 +415,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #9eb0f52b: 2023-12-02 09:40:18</span>
                                 </td>
@@ -423,12 +432,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #03a0a786: 2023-12-04 08:17:27</span>
                                 </td>
@@ -440,12 +449,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #70587384: 2023-12-04 09:26:39</span>
                                 </td>
@@ -457,12 +466,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="innactiveattrib" title="Exercici sense proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="lliurat">☑</span>
               </td>
               <td>
-                  <span class="help">Lliurat dins de termini</span>
+                  <span>Lliurat dins de termini</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #d02e88f5: 2024-01-05 16:18:36</span>
                                 </td>
@@ -474,12 +483,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #2f114103: 2023-12-12 08:49:47</span>
                                 </td>
@@ -491,12 +500,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #900cb07d: 2023-12-12 10:35:07</span>
                                 </td>
@@ -508,12 +517,12 @@
                   <span class="innactiveattrib" title="Exercici amb complexitat estàndard">☆</span>
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
-              <td duedate="2024-01-09T23:59:59.999999+01:00">dm 9 de gener</td>
+              <td duedate="2024-01-12T23:59:59.999999+01:00">dv 12 de gener</td>
               <td class="result">
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #3f16daba: 2023-12-13 12:18:45</span>
                                 </td>
@@ -530,7 +539,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #2e4d8a52: 2023-12-14 13:07:06</span>
                                 </td>
@@ -547,9 +556,9 @@
                   <span class='help' title="falla">❌</span>
               </td>
               <td>
-                  <span class="help">No passa les proves de prgtest</span>
+                  <span>No passa les proves de prgtest</span>
                                     <span class="clickable"></span>
-                  <span class="tooltip">Commit #d50ee449: 2023-12-19 10:38:20</span>
+                  <span class="tooltip">Commit #e1601aae: 2024-01-11 12:11:39</span>
                                 </td>
           </tr>
           <tr class="exercise">
@@ -564,7 +573,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #3db16be9: 2023-12-21 12:59:03</span>
                                 </td>
@@ -581,7 +590,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #b6fdc701: 2023-12-23 20:50:57</span>
                                 </td>
@@ -598,7 +607,7 @@
                   <span class='help' title="lliurat">☑</span>
               </td>
               <td>
-                  <span class="help">Lliurat dins de termini</span>
+                  <span>Lliurat dins de termini</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #6b1f9646: 2023-12-23 16:26:34</span>
                                 </td>
@@ -615,7 +624,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #a69448f1: 2023-12-23 17:57:09</span>
                                 </td>
@@ -632,7 +641,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #fbab3896: 2023-12-23 18:31:20</span>
                                 </td>
@@ -649,7 +658,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #623620e7: 2024-01-05 23:38:26</span>
                                 </td>
@@ -666,7 +675,7 @@
                   <span class='help' title="falla">❌</span>
               </td>
               <td>
-                  <span class="help">No passa les proves de prgtest</span>
+                  <span>No passa les proves de prgtest</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #0619a464: 2023-12-26 01:00:27</span>
                                 </td>
@@ -683,7 +692,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #4fc9408d: 2023-12-23 21:36:09</span>
                                 </td>
@@ -700,7 +709,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #2c7ecd39: 2023-12-23 21:53:40</span>
                                 </td>
@@ -717,7 +726,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #dc820095: 2023-12-23 21:57:42</span>
                                 </td>
@@ -734,7 +743,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #11205553: 2023-12-23 22:42:50</span>
                                 </td>
@@ -751,7 +760,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #ae0a1d57: 2023-12-25 22:21:32</span>
                                 </td>
@@ -768,7 +777,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #7fd39bce: 2023-12-26 10:17:17</span>
                                 </td>
@@ -785,7 +794,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #d8d38dbe: 2023-12-30 15:21:04</span>
                                 </td>
@@ -802,7 +811,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #ebde65b3: 2023-12-30 15:21:46</span>
                                 </td>
@@ -819,7 +828,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #ced20a3c: 2023-12-27 04:17:24</span>
                                 </td>
@@ -836,7 +845,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #babaf306: 2023-12-27 03:45:52</span>
                                 </td>
@@ -853,7 +862,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #8703ce6d: 2023-12-27 06:54:07</span>
                                 </td>
@@ -870,7 +879,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #db81e70b: 2023-12-27 07:16:34</span>
                                 </td>
@@ -887,7 +896,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #63e47b7f: 2023-12-30 14:36:55</span>
                                 </td>
@@ -904,7 +913,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #c7bad1bf: 2023-12-30 15:34:57</span>
                                 </td>
@@ -921,7 +930,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #e60ab42f: 2024-01-02 19:35:59</span>
                                 </td>
@@ -938,7 +947,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #10c6cb0b: 2024-01-02 19:53:37</span>
                                 </td>
@@ -955,7 +964,7 @@
                   <span class='help' title="passa">✅</span>
               </td>
               <td>
-                  <span class="help">Passa totes les proves</span>
+                  <span>Passa totes les proves</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #d8f549d1: 2024-01-05 23:08:39</span>
                                 </td>
@@ -972,7 +981,7 @@
                   <span class='help' title="falla">❌</span>
               </td>
               <td>
-                  <span class="help">No passa les proves de prgtest</span>
+                  <span>No passa les proves de prgtest</span>
                                     <span class="clickable"></span>
                   <span class="tooltip">Commit #3301d055: 2024-01-11 17:01:49</span>
                                 </td>
@@ -989,7 +998,7 @@
                   <span class='help' title="NP">✖</span>
               </td>
               <td>
-                  <span class="help">No lliurat</span>
+                  <span>No lliurat</span>
                                 </td>
           </tr>
           <tr class="exercise">
@@ -1004,7 +1013,7 @@
                   <span class='help' title="NP">✖</span>
               </td>
               <td>
-                  <span class="help">No lliurat</span>
+                  <span>No lliurat</span>
                                 </td>
           </tr>
           <tr class="exercise">
@@ -1019,7 +1028,7 @@
                   <span class='help' title="NP">✖</span>
               </td>
               <td>
-                  <span class="help">No lliurat</span>
+                  <span>No lliurat</span>
                                 </td>
           </tr>
           <tr class="exercise">
@@ -1034,7 +1043,7 @@
                   <span class='help' title="NP">✖</span>
               </td>
               <td>
-                  <span class="help">No lliurat</span>
+                  <span>No lliurat</span>
                                 </td>
           </tr>
           <tr class="exercise">
@@ -1049,7 +1058,7 @@
                   <span class='help' title="NP">✖</span>
               </td>
               <td>
-                  <span class="help">No lliurat</span>
+                  <span>No lliurat</span>
                                 </td>
           </tr>
           <tr class="exercise">
@@ -1064,7 +1073,7 @@
                   <span class='help' title="NP">✖</span>
               </td>
               <td>
-                  <span class="help">No lliurat</span>
+                  <span>No lliurat</span>
                                 </td>
           </tr>
           <tr class="exercise">
@@ -1079,11 +1088,11 @@
                   <span class='help' title="NP">✖</span>
               </td>
               <td>
-                  <span class="help">No lliurat</span>
+                  <span>No lliurat</span>
                                 </td>
           </tr>
                 </table>
-      <p>Darrer commit avaluat #3301d055amb data2024-01-11 17:01:49</p><script>
+      <p>Darrer commit avaluat #3301d055 amb data 2024-01-11 17:01:49</p><script>
       // connect results to tooltip
       document.querySelectorAll('tr.exercise').forEach(function (tr) {
           const button = tr.querySelector('span.clickable');
