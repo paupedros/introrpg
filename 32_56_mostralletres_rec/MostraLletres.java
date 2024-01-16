@@ -16,10 +16,10 @@ public class MostraLletres {
             return;
         }
 
-        // hi ha al menys un caràcter. Comptem quantes lletres hi queden
+        // hi ha al menys un caràcter.
         // considerem el primer caràcter
         char primer = text.charAt(0);
-        if (Character.isLetter(primer)) {
+        if (Character.isLetter(primer)) { // si es una lletra la mostrem
             System.out.print(primer);
         }
 
