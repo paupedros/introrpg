@@ -22,10 +22,10 @@ public class ExtreuNombres {
 
         // tracta pas recursiu
         String rest = text.substring(1);
-        extreuNombres(rest);
+        String restaText = extreuNombres(rest);
 
         // composa resultat
-        String newText = nombre + rest;
+        String newText = nombre + restaText;
         return newText;
     }
 }
