@@ -18,6 +18,7 @@ public class SumaDigits {
         char ch = text.charAt(0);
         if (Character.isDigit(ch)) {
             num = Integer.parseInt(Character.toString(ch));
+            // Si el caracter es un nombre, el pasem a string i el convertim a enter
         }
         // tracta pas recursiu
         String rest = text.substring(1);
