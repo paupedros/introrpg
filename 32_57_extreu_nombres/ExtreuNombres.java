@@ -16,16 +16,16 @@ public class ExtreuNombres {
 
         // tracta pas actual
         char primer = text.charAt(0);
-        if(Character.isDigit(primer)){
+        if(Character.isDigit(primer)){ // si es un nombre li donem a la string el valor del caracter
             nombre = Character.toString(primer);
         }
 
         // tracta pas recursiu
-        String rest = text.substring(1);
-        String restaText = extreuNombres(rest);
+        String rest = text.substring(1); // guardem la resta del text
+        String restaText = extreuNombres(rest); // tractem la resta del text per quedar-nos amb els nombres
 
         // composa resultat
-        String newText = nombre + restaText;
+        String newText = nombre + restaText; // el nombre d'ara mes els demes
         return newText;
     }
 }
