@@ -16,7 +16,7 @@ public class ExtreuNombres {
 
         // tracta pas actual
         char primer = text.charAt(0);
-        if(!Character.isDigit(primer)){
+        if(Character.isDigit(primer)){
             nombre = Character.toString(primer);
         }
 
