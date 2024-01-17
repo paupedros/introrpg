@@ -6,19 +6,7 @@ public class Subcadenes {
     public static void main(String[] args) {
         System.out.println("Text?");
         String text = cleanText(Entrada.readLine());
-        subcadenes(text);
-    }
-
-    public static void subcadenes(String text) {
-        if (text.length() <= 1) { // si es menor o igual a 1 es mostra i s'acaba
-            System.out.printf("%4d: %s%n", text.length(), text);
-            return;
-        }
-
-
-        // Mostrem per pantalla la subcadena
-        System.out.printf("%4d: %s%n", text.length(), text);
-
+        mostraNode(text, 0, text.length());
     }
 
     // Netejem el text per quedarnos nomes amb les lletres
@@ -42,19 +30,18 @@ public class Subcadenes {
         return newText;
     }
 
-    public static String makeSubc(String text){
+    public static void mostraNode(String text, int posInici, int posFinal){
+        // mostrem el node
+        System.out.printf("%4d: %s%n", text.length(), text);
         //cas base
-        if(text.isEmpty()){
-            return text;
+        if(text.length() != 1){
+            // pas actual - tenim una cadena, l'hem de dividir entre dues subcadenes, pel mig
+            String subc1 = text.substring(0, text.length()/2); // Primera meitat
+            String subc2 = text.substring(text.length()/2, text.length()); // Segona meitat
+
+            // pas recursiu
+            mostraNode(subc1, 0, text.length()/2); // mostrem el fill esquerre
+            mostraNode(subc2, text.length()/2+1, subc2.length()); // mostrem el fill dret
         }
-
-        // pas actual - tenim una cadena, l'hem de dividir entre dues subcadenes, pel mig
-        String subc1 = text.substring(0, text.length()/2); // Primera meitat
-        String subc2 = text.substring(text.length()/2, text.length()); // Segona meitat
-
-        // pas recursiu
-        
-
-        return text;
     }
 }
