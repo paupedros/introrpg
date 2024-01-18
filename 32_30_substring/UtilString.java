@@ -148,11 +148,16 @@ public class UtilString{
 			subtext = subtext.toUpperCase();
 		}
 		if (subtext.length() > text.length()) return false;
+		if(text.length() == subtext.length()){
+			if (text.equals(subtext)) return true;
+			else return false;
+		}
 		// Iniciem variable de recorregut de la cadena
 		int i = 0;
 		while (i<text.length()){ // Recorrem tota la cadena
 			char ch = text.charAt(i);
 			if (i>text.length() -1) break;
+
 			if(ch == subtext.charAt(0)){ // Trobem un caracter que es igual al primer del subtext
 				if(conte(text, subtext, i, extricte)) return true;
 			}
