@@ -203,6 +203,7 @@ public class UtilTaula {
     }
 
     public static void inicialitzaCreu(boolean[][] taula) {
+        inicialitzaBuida(taula);
         // primera diagonal
         int pos = taula[0].length - 1;
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
@@ -477,6 +478,7 @@ public class UtilTaula {
     }
 
     public static void inicialitzaCreuSPle(boolean[][] taula) {
+        inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "x*"
         inicialitzaCreu(taula);
         int[] center = getCenter(taula); // [vertical, hori]
@@ -508,17 +510,17 @@ public class UtilTaula {
     }
 
     public static void inicialitzaCreuNSPlens(boolean[][] taula) {
+        inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "*x*"
         int[] center = getCenter(taula); // [vertical, hori]
         inicialitzaCreuNPle(taula);
-        inicialitzaCreuSPle(taula);
-        /*for (int i = taula.length - 1; i >= 0; i--) {
+        for (int i = taula.length - 1; i >= 0; i--) {
             if (i > center[0]) { // si ja hem arribat al centre horitzontal
                 for (int j = taula[i].length - i; j < taula[i].length - (taula[i].length - i); j++) {
                     taula[i][j] = true;
                 }
             }
-        }*/
+        }
     }
 
     public static void inicialitzaCreuOEPlens(boolean[][] taula) {

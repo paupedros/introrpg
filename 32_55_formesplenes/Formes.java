@@ -94,7 +94,6 @@ public class Formes {
                         break;
 
                     case "x":
-                        UtilTaula.inicialitzaBuida(taula);
                         UtilTaula.inicialitzaCreu(taula);
                         break;
 
@@ -167,7 +166,6 @@ public class Formes {
                         break;
 
                     case "*x":
-                        UtilTaula.inicialitzaBuida(taula);
                         UtilTaula.inicialitzaCreuNPle(taula);
                         break;
 
@@ -176,7 +174,6 @@ public class Formes {
                         break;
 
                     case "x*":
-                        UtilTaula.inicialitzaBuida(taula);
                         UtilTaula.inicialitzaCreuSPle(taula);
                         break;
 
@@ -185,7 +182,6 @@ public class Formes {
                         break;
 
                     case "*x*":
-                        UtilTaula.inicialitzaBuida(taula);
                         UtilTaula.inicialitzaCreuNSPlens(taula);
                         break;
 
