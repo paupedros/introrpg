@@ -353,10 +353,10 @@ public class UtilTaula {
     public static void inicialitzaQuartsNOPle(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "*+"
-        int[] center = getCenter(taula); // [hori, vertical]
+        int[] center = getCenter(taula); // [vertical, hori]
         inicialitzaQuarts(taula); // fem la forma de creu
-        for (int i = 0; i < center[0]; i++) { // recorrem l'array fins al centre horitzontal
-            for (int j = 0; j < center[1]; j++) { // fins el centre vertical
+        for (int i = 0; i < center[1]; i++) { // recorrem l'array fins al centre vertical
+            for (int j = 0; j < center[0]; j++) { // fins el centre hori
                     taula[i][j] = true;
             }
             /*
