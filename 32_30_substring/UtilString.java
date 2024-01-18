@@ -152,7 +152,7 @@ public class UtilString{
 		int i = 0;
 		while (i<text.length()){ // Recorrem tota la cadena
 			char ch = text.charAt(i);
-			if (i>=text.length() -1) break;
+			if (i>text.length() -1) break;
 			if(ch == subtext.charAt(0)){ // Trobem un caracter que es igual al primer del subtext
 				if(conte(text, subtext, i, extricte)) return true;
 			}
