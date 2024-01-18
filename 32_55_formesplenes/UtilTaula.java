@@ -203,7 +203,6 @@ public class UtilTaula {
     }
 
     public static void inicialitzaCreu(boolean[][] taula) {
-        inicialitzaBuida(taula);
         // primera diagonal
         int pos = taula[0].length - 1;
         for (int i = 0; i < taula.length; i++) { // recorrem la taula
@@ -493,7 +492,7 @@ public class UtilTaula {
     public static void inicialitzaCreuEPle(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "x**"
-        //inicialitzaCreu(taula);
+        inicialitzaCreu(taula);
         int[] center = getCenter(taula); // [vertical, hori]
         for (int i = 0; i < taula.length; i++) {
             if (i <= center[0]) { // si no hem arribat al centre horitzontal
