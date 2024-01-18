@@ -493,7 +493,7 @@ public class UtilTaula {
     public static void inicialitzaCreuEPle(boolean[][] taula) {
         inicialitzaBuida(taula);
         // Implementa la lògica addicional per a "x**"
-        inicialitzaCreu(taula);
+        //inicialitzaCreu(taula);
         int[] center = getCenter(taula); // [vertical, hori]
         for (int i = 0; i < taula.length; i++) {
             if (i <= center[0]) { // si no hem arribat al centre horitzontal
