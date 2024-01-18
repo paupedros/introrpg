@@ -167,12 +167,12 @@ public class UtilString{
 		// Comprovem si els seguents caracters coincideixen tambe amb els del subtext
 		int j = 0; // Variable de recorregut del subtext
 		while(i < text.length() && j < subtext.length()){
+			if(i > text.length() -1) return false;
 			char ch = text.charAt(i); // Caracter actual del text
 
 			// Si el caracter actual no es igual al caracter del subtext
 			if (ch != subtext.charAt(j)){
 				if(!extricte){
-					if(i > text.length() -1) return false;
 					if(lletraCatalana(ch)){
 						i++;
 						j++;
