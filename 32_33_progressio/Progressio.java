@@ -1,8 +1,19 @@
+/*
+ * Programa que funciona com si fos un lloro; et va demanant un text fins
+ * que li dones un text buit.
+ * Et dira de quin tipus de progressio es el text:
+ * - normalet
+ * - decreixent
+ * - creixent
+ * - creixidecri
+ * - decricreixi
+ */
+
 public class Progressio {
     public static void main(String[] args) {
         System.out.println("Estricte?");
         boolean estricta = UtilitatsConfirmacio.respostaABoolean(Entrada.readLine());
-        
+
         System.out.println("Intruduïu text. Enter per finalitzar.");
         while (true) {
             String text = Entrada.readLine();
