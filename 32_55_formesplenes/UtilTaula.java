@@ -515,7 +515,7 @@ public class UtilTaula {
         int[] center = getCenter(taula); // [vertical, hori]
         inicialitzaCreuNPle(taula);
         for (int i = taula.length - 1; i >= 0; i--) {
-            if (i > center[1]) { // si ja hem arribat al centre horitzontal
+            if (i > center[0]) { // si ja hem arribat al centre horitzontal
                 for (int j = taula[i].length - i; j > taula[i].length - (taula[i].length - i); j++) {
                     if(j < taula[i].length)
                     taula[i][j] = true;
