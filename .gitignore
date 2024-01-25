@@ -33,3 +33,7 @@ gradlew
 gradlew.bat
 .project
 **/.settings/
+
+# No volem la carpeta de conf dels IDEs
+.vscode/
+.fleet/
