@@ -16,6 +16,7 @@ public class Recordat {
         processaEntrada(path);
         System.out.println("D'acord");
         mostraRecords(path);
+        System.out.println("Adéu");
 
     }
     /*
