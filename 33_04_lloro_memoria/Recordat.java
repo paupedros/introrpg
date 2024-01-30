@@ -51,13 +51,14 @@ public class Recordat {
         FileReader fileReader = new FileReader(nomFitxer);
         BufferedReader input = new BufferedReader(fileReader);
 
-        int i = 0;
+        boolean first = true;
         while (true) {
             String linia = input.readLine();
-            if (linia == null && i == 0) {
+            if (linia == null && first) {
                 System.out.println("El lloro no recorda res");
+                first = false;
             }
-            i++;
+
             if (linia == null)
                 break;
             System.out.println("El lloro recorda: " + linia);
