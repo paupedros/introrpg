@@ -56,8 +56,8 @@ public class Recordat {
             String linia = input.readLine();
             if (linia == null && i == 0) {
                 System.out.println("El lloro no recorda res");
-                i++;
             }
+            i++;
             if (linia == null)
                 break;
             System.out.println("El lloro recorda: " + linia);
