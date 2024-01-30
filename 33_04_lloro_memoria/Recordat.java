@@ -48,8 +48,10 @@ public class Recordat {
         FileReader fileReader = new FileReader(nomFitxer);
         BufferedReader input = new BufferedReader(fileReader);
 
+        int i = 0;
         while(true){
             String linia = input.readLine();
+            if (linia == null && i==0) System.out.println("El lloro no recorda res");
             if(linia == null) break;
             System.out.println("El lloro recorda: " + linia);
         }
