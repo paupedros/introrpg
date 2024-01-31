@@ -18,6 +18,7 @@ public class Traduccio {
         // Comprovem que la crida tingui 3 arguments
         if (args.length != 3) {
             System.out.println("ERROR: Cal especificar els fitxers origen, traduccio i destinació");
+            return;
         }
         tradueix(args[0], args[1], args[2]);
 
@@ -52,7 +53,9 @@ public class Traduccio {
 
         String line = linia;
         for (int i = 0; i<dict.length; i++){ // Recorrem el diccionari linia a linia
-            line = linia.replace(dict[i][0], dict[i][1]); // Fem el replace de la linia
+            for (int j = 0; j<dict[i].length; j++){
+                line = linia.replace(dict[i][0], dict[i][1]); // Fem el replace de la linia
+            }
         }
 
         return line;
