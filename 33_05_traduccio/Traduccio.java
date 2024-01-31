@@ -8,8 +8,6 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
-import java.lang.String;
-import java.util.Arrays;
 
 public class Traduccio {
     public static void main(String[] args) throws IOException {
@@ -55,6 +53,7 @@ public class Traduccio {
         for (int i = 0; i<dict.length; i++){ // Recorrem el diccionari linia a linia
             for (int j = 0; j<dict[i].length; j++){
                 line = linia.replace(dict[i][0], dict[i][1]); // Fem el replace de la linia
+                linia = line;
             }
         }
 
@@ -92,9 +91,5 @@ public class Traduccio {
         }
         input.close();
         return k;
-    }
-
-    public static void printArray(String[][] array){
-        System.out.println(Arrays.deepToString(array));
     }
 }
