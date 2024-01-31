@@ -72,7 +72,7 @@ public class Traduccio {
         while(true){
             String line = input.readLine();
             if (line == null) break;
-            String[] keyVal = line.split(","); // [clau, valor]
+            String[] keyVal = line.split(", "); // [clau, valor]
             dict[i] = keyVal; // Assignem la linea al seu lloc del diccionari
             i++;
         }
@@ -86,7 +86,6 @@ public class Traduccio {
         int k = 0;
         while (true){
             String line = input.readLine();
-            line = line.strip();
             if (line == null) break;
             k++; // Incrementem el comptador de linies
         }
