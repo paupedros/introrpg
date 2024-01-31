@@ -49,7 +49,7 @@ public class Traduccio {
 
         // Format del diccionari
         String[][] dict = getDict(fitxerTraduccio);
-        printArray(dict);
+        //printArray(dict);
 
         String line = linia;
         for (int i = 0; i<dict.length; i++){ // Recorrem el diccionari linia a linia
