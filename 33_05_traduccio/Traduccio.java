@@ -86,6 +86,7 @@ public class Traduccio {
         int k = 0;
         while (true){
             String line = input.readLine();
+            line = line.strip();
             if (line == null) break;
             k++; // Incrementem el comptador de linies
         }
