@@ -9,48 +9,54 @@ import java.io.IOException;
 public class Log {
     private static int seq = 0;
 
-    public static void printError(String text) throws IOException {
+    public static String printError(String text) throws IOException {
         seq++;
 
         // Obrim el fitxer 'log.txt' en escriptura per afegir
         BufferedWriter sortida = new BufferedWriter(new FileWriter("./log.txt", true));
 
-        sortida.write(String.format("[%d] ERROR: %s", seq, text));
+        String lineWrite = String.format("[%d] ERROR: %s", seq, text);
+
+        sortida.write(lineWrite);
         sortida.newLine();
         sortida.close();
+        return lineWrite;
     }
 
-    public static void printDebug(String text) throws IOException {
+    public static String printDebug(String text) throws IOException {
         seq++;
 
         // Obrim el fitxer 'log.txt' en escriptura per afegir
         BufferedWriter sortida = new BufferedWriter(new FileWriter("./log.txt", true));
-
-        sortida.write(String.format("[%d] DEBUG: %s", seq, text));
+        String lineWrite = String.format("[%d] DEBUG: %s", seq, text);
+        sortida.write(lineWrite);
         sortida.newLine();
         sortida.close();
+        return lineWrite;
     }
 
-    public static void printWarning(String text) throws IOException{
+    public static String printWarning(String text) throws IOException{
         seq++;
 
         // Obrim el fitxer 'log.txt' en escriptura per afegir
         BufferedWriter sortida = new BufferedWriter(new FileWriter("./log.txt", true));
-
-        sortida.write(String.format("[%d] WARNING: %s", seq, text));
+        String lineWrite = String.format("[%d] WARNING: %s", seq, text);
+        sortida.write(lineWrite);
         sortida.newLine();
         sortida.close();
+        return lineWrite;
     }
 
-    public static void printInfo(String text) throws IOException{
+    public static String printInfo(String text) throws IOException{
         seq++;
 
         // Obrim el fitxer 'log.txt' en escriptura per afegir
         BufferedWriter sortida = new BufferedWriter(new FileWriter("./log.txt", true));
-
-        sortida.write(String.format("[%d] INFO: %s", seq, text));
+        String lineWrite = String.format("[%d] INFO: %s", seq, text);
+        sortida.write(lineWrite);
         sortida.newLine();
         sortida.close();
+        return lineWrite;
     }
 
     public static void reset() throws IOException{
