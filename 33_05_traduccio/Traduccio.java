@@ -46,7 +46,7 @@ public class Traduccio {
     public static String tradueixLinia(String linia, String fitxerTraduccio) throws IOException{
 
         // Format del diccionari
-        String[][] dict = getDict(fitxerTraduccio);
+        String[][] dict = getDictio(fitxerTraduccio);
         //printArray(dict);
 
         String line = linia;
@@ -60,7 +60,7 @@ public class Traduccio {
         return line;
     }
 
-    private static String[][] getDict(String fitxerTraduccio) throws IOException {
+    private static String[][] getDictio(String fitxerTraduccio) throws IOException {
         int lines = getLines(fitxerTraduccio);
         String[][] dict = new String[lines][2];
 

@@ -3,15 +3,15 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.Arrays;
 
-public class getDict {
+public class getDictio {
     public static void main(String[] args) throws IOException {
         String file = "traduccio.csv";
 
-        String[][] dict = getDict(file);
+        String[][] dict = getDictio(file);
         printArray(dict);
     }
 
-    private static String[][] getDict(String fitxerTraduccio) throws IOException {
+    private static String[][] getDictio(String fitxerTraduccio) throws IOException {
         int lines = getLines(fitxerTraduccio);
         String[][] dict = new String[lines][2];
 
