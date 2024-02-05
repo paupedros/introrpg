@@ -1,5 +1,9 @@
 /*
- * Programa que mostra l'utilitzacio de la biblio Log
+ * Programa que mostra l'utilitzacio de la biblio Log,
+ * amb els moduls printError,
+ * printWarning,
+ * printInfo,
+ * reset i printDebug
  */
 
 import java.io.IOException;

@@ -1,5 +1,11 @@
 /*
- * Biblioteca per a realitzar metodes per tenir un log
+ * Biblioteca per a realitzar metodes per tenir un log,
+ * moduls:
+ *  printError: afegeix el string al arxiu log amb error
+ *  printDebug
+ *  printInfo
+ *  reset
+ *  printWarning
  */
 
 import java.io.BufferedWriter;
