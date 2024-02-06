@@ -7,10 +7,47 @@
  * per satisfer les necessitats
  */
 
-public class ClassificaMatricules {
-    public static void main(String[] args) {
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.io.IOException;
 
+public class ClassificaMatricules {
+    public static void main(String[] args) throws IOException{
+        BufferedReader file = new BufferedReader(new FileReader("llegides.txt"));
+        writePlates(file);
     }
+
+
+    public static void writePlates(BufferedReader file) throws IOException{
+
+
+        while (true){
+
+            String plate = file.readLine(); // Llegim la matricula
+            if (plate == null) break;
+            if (plate.isEmpty()) continue;
+            plate = plate.trim();
+            boolean italiana = matriculaItalianaValida(plate); // Indiquem si es valida o no
+
+            String path;
+            if (italiana){ // Assignem a quin arxiu ha de anar
+                path = "italianes.txt";
+            }
+            else {
+                path = "desconegudes.txt";
+            }
+
+            // Guardem la matricula al seu corresponent arxiu
+            BufferedWriter writer = new BufferedWriter(new FileWriter(path, true));
+            writer.write(plate);
+            writer.newLine();
+            writer.close();
+        }
+    }
+
+
 
     public static boolean matriculaItalianaValida(String text){
         boolean valid = true;
