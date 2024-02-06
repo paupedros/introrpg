@@ -1,12 +1,15 @@
 /*
  * A partir d'un fitxer 'llegides.txt' classificarem les matricules
  * en italianes i desconegudes, cadascun del tipus en un fitxer:
- * 'italianes.txt' i 'desconegudes.txt'
+ * 'italianes.txt' i 'desconegudes.txt'.
+ *
+ * S'ha reutilitzat i modularitzat el codi de l'exercici 32_21
+ * per satisfer les necessitats
  */
 
 public class ClassificaMatricules {
     public static void main(String[] args) {
-        
+
     }
 
     public static boolean matriculaItalianaValida(String text){
