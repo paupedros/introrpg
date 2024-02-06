@@ -16,10 +16,10 @@ import java.io.IOException;
 public class ClassificaMatricules {
     public static void main(String[] args) throws IOException{
         BufferedReader file = new BufferedReader(new FileReader("llegides.txt"));
-        writePlates(file);
         BufferedWriter italianes = new BufferedWriter(new FileWriter("italianes.txt"));
         BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
-        
+        writePlates(file);
+
         desconegudes.close();
         italianes.close();
     }
