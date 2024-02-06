@@ -16,24 +16,25 @@ import java.io.IOException;
 public class ClassificaMatricules {
     public static void main(String[] args) throws IOException{
         BufferedReader file = new BufferedReader(new FileReader("llegides.txt"));
+
+        // Sobreescrivim els arxius
         BufferedWriter italianes = new BufferedWriter(new FileWriter("italianes.txt"));
         BufferedWriter desconegudes = new BufferedWriter(new FileWriter("desconegudes.txt"));
         writePlates(file);
 
-        desconegudes.close();
         italianes.close();
+        desconegudes.close();
     }
 
 
     public static void writePlates(BufferedReader file) throws IOException{
 
-
         while (true){
 
             String plate = file.readLine(); // Llegim la matricula
-            if (plate == null) break;
-            if (plate.isEmpty()) continue;
-            plate = plate.trim();
+            if (plate == null) break; // Si arribem al final acabem
+            if (plate.isEmpty()) continue; // Si la matricula es buida passem a la seguent
+            plate = plate.trim(); // Treiem els espais en blanc
             boolean italiana = matriculaItalianaValida(plate); // Indiquem si es valida o no
 
             String path;
