@@ -78,10 +78,10 @@ public class Inspecciona {
                             if(extensions.contains(extension)) {
                                 // Mostrem el contingut del fitxer
                                 System.out.println("Amb els continguts:");
-                                System.out.println(mostraFitxer(file));
-
+                                System.out.print(mostraFitxer(file));
                             }
                         }
+                        System.out.println();
 
                     } else
                         System.out.println(" buit");
