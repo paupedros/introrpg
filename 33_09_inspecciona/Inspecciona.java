@@ -67,14 +67,15 @@ public class Inspecciona {
                     System.out.print(" fitxer");
                     // Indiquem la longitud en bytes
                     long longitud = file.length();
-                    if (longitud > 0)
+                    if (longitud > 0) {
                         System.out.println(" de mida en bytes: " + longitud);
+                        // Mostrem el contingut del fitxer
+                        System.out.println("Amb els continguts:");
+                        System.out.println(mostraFitxer(file));
+                    }
                     else
                         System.out.println(" buit");
 
-                    // Mostrem el contingut del fitxer
-                    System.out.println("Amb els continguts:");
-                    System.out.println(mostraFitxer(file));
 
                 }
 
