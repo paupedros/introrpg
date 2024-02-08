@@ -30,7 +30,7 @@ public class Inspecciona {
         for (String argument : args) {
             File file = new File(argument);
             // Indiquem quin es l'argument que processem
-            String missatge = "Processa argument: " + argument;
+            String missatge = "Processant argument: " + argument;
             System.out.println(missatge);
             for (int i = 0; i < missatge.length(); i++) {
                 System.out.print("=");
