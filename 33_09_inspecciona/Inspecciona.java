@@ -48,7 +48,7 @@ public class Inspecciona {
 
                     String[] list = file.list();
                     if (list.length < 1)
-                        System.out.print(" buida");
+                        System.out.print(" buit");
                     else {
                         System.out.print(" que conté: ");
                         Arrays.sort(list);
