@@ -4,6 +4,7 @@
  */
 
 import java.io.IOException;
+import java.nio.Buffer;
 import java.io.FileReader;
 import java.io.BufferedReader;
 
@@ -73,35 +74,72 @@ public class CercaAlumnes {
     }
 
     public static Alumne csvAAlumne(String csv) {
-        Alumne alumne = new Alumne();
 
+        // [nom, email, edat, esOient, uf1, uf2, uf3, uf4, uf5, uf6]
         String[] csvArray = csv.split(",");
 
-        
+        boolean esOient = false;
+        if (csvArray[3].equals("true"))
+            esOient = true;
+        if (csvArray[3].equals("false"))
+            esOient = false;
 
+        // Creem l'array de notes
+        int[] notes = afegirNotes(csvArray);
+
+        Alumne alumne = construeixAlumne(csvArray[0], csvArray[1], Integer.parseInt(csvArray[2]), esOient, notes);
         return alumne;
+    }
+
+    public static int[] afegirNotes(String[] csv) {
+        int[] notes = new int[6];
+        int j = 0;
+        for (int i = 4; i < csv.length; i++) {
+            // Si la nota equival a NP posarem un -1
+            if (csv[i].equals("NP"))
+                notes[j] = -1;
+            // Sino posarem la nota com a enter
+            else
+                notes[j] = Integer.parseInt(csv[i]);
+            j++;
+        }
+        return notes;
     }
 
     public static void main(String[] args) throws IOException {
         // assegura que hi ha el criteri de cerca
-        // XXX a completar
+        if (args.length < 1) {
+            System.out.println("Error: indica el criteri de cerca");
+            return;
+        }
 
         // declaracions, inicialitzacions, apertura de fitxer, ignora línia de
         // capçaleres, etc.
-        // XXX a completar
 
-        while (true) {
+        BufferedReader alumnes = new BufferedReader(new FileReader("alumnes.csv"));
+        String line = alumnes.readLine(); // Ens passem les capçaleres
+
+        while (true) { // Per cada alumne
             // llegeix entrada i finalitza bucle si no en queden més
-            // XXX a completar
+            line = alumnes.readLine();
+            if (line == null)
+                break;
 
             // converteix l'entrada a Alumne
-            // XXX a completar
+            Alumne alumne = csvAAlumne(line);
 
             // comprova si el criteri de cerca es troba dins del nom o
             // el email. Si és així, mostra'l
-            // XXX a completar
+            String nom = alumne.nom.toLowerCase();
+            String email = alumne.email.toLowerCase();
+            for (int i = 0; i < args.length; i++) { // Per cada argument
+                String argu = args[i].toLowerCase();
+                if (nom.contains(argu) || email.contains(argu)) {
+                    mostraAlumne(alumne);
+                }
+            }
         }
         // consideracions finals com ara el tancament del fitxer
-        // XXX a completar
+        alumnes.close();
     }
 }
