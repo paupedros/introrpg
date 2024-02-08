@@ -68,7 +68,7 @@ public class CercaAlumnes {
     }
 
     public static String alumneACsv(Alumne alumne) {
-        return String.format("%s,%s,%f,%b,%s", alumne.nom, alumne.email, alumne.edat, alumne.esOient,
+        return String.format("%s,%s,%d,%b,%s", alumne.nom, alumne.email, alumne.edat, alumne.esOient,
                 notesACsv(alumne.notes));
 
     }
@@ -140,7 +140,8 @@ public class CercaAlumnes {
                 }
             }
         }
-        if (!trobat) System.out.println("Cap alumne");
+        if (!trobat)
+            System.out.println("Cap alumne");
         // consideracions finals com ara el tancament del fitxer
         alumnes.close();
     }
