@@ -115,7 +115,7 @@ public class CercaAlumnes {
 
         // declaracions, inicialitzacions, apertura de fitxer, ignora línia de
         // capçaleres, etc.
-
+        boolean trobat = false;
         BufferedReader alumnes = new BufferedReader(new FileReader("alumnes.csv"));
         String line = alumnes.readLine(); // Ens passem les capçaleres
 
@@ -135,10 +135,12 @@ public class CercaAlumnes {
             for (int i = 0; i < args.length; i++) { // Per cada argument
                 String argu = args[i].toLowerCase();
                 if (nom.contains(argu) || email.contains(argu)) {
+                    trobat = true;
                     mostraAlumne(alumne);
                 }
             }
         }
+        if (!trobat) System.out.println("Cap alumne");
         // consideracions finals com ara el tancament del fitxer
         alumnes.close();
     }
