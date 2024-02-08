@@ -64,18 +64,27 @@ public class Inspecciona {
 
                 // Si es un fitxer:
                 if (file.isFile()) {
+                    String extensions = ".java, .txt";
                     System.out.print(" fitxer");
                     // Indiquem la longitud en bytes
                     long longitud = file.length();
                     if (longitud > 0) {
                         System.out.println(" de mida en bytes: " + longitud);
-                        // Mostrem el contingut del fitxer
-                        System.out.println("Amb els continguts:");
-                        System.out.println(mostraFitxer(file));
-                    }
-                    else
-                        System.out.println(" buit");
 
+                        String fileName = file.toString(); // nom del fitxer
+                        int index = fileName.lastIndexOf('.'); // Obtenim on comença la extensio
+                        if (index > 0) {
+                            String extension = fileName.substring(index + 1);
+                            if(extensions.contains(extension)) {
+                                // Mostrem el contingut del fitxer
+                                System.out.println("Amb els continguts:");
+                                System.out.println(mostraFitxer(file));
+
+                            }
+                        }
+
+                    } else
+                        System.out.println(" buit");
 
                 }
 
