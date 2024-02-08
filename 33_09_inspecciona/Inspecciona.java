@@ -58,8 +58,8 @@ public class Inspecciona {
                             else
                                 System.out.print(list[i] + ", ");
                         }
-                        System.out.println();
                     }
+                    System.out.println();
                 }
 
                 // Si es un fitxer:
