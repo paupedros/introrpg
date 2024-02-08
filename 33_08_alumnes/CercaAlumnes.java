@@ -1,6 +1,7 @@
 /*
  * Programa que llegeix dades d'un csv amb dades dels alumnes
- * i les seves notes
+ * i les seves notes.
+ * A partir d'un argument cerca al nom i al email si coincideix, el mostra per pantalla
  */
 
 import java.io.IOException;
