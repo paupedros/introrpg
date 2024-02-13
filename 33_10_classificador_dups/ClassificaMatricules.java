@@ -8,7 +8,6 @@
  * per satisfer les necessitats
  */
 
-import java.io.File;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.FileWriter;
@@ -48,33 +47,31 @@ public class ClassificaMatricules {
             }
 
             // Guardem la matricula al seu corresponent arxiu si no ha estat processada
-            if (!checkIfExists(plate)) {
+            if (!checkIfExists(plate, path)) {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(path, true));
                 writer.write(plate);
                 writer.newLine();
                 writer.close();
             }
 
+
         }
     }
 
-    public static boolean checkIfExists(String plate) throws IOException {
-        String[] files = { "italianes.txt", "desconegudes.txt" };
+    public static boolean checkIfExists(String plate, String path) throws IOException {
 
-        for (String path : files) {
-            BufferedReader input = new BufferedReader(new FileReader(path));
-            while (true) {
-                String line = input.readLine();
-                if (line == null)
-                    break;
-                // Si la linea es igual a la matricula actual retornem true
-                if (line.equals(plate)) {
-                    input.close();
-                    return true;
-                }
+        BufferedReader input = new BufferedReader(new FileReader(path));
+        while (true) {
+            String line = input.readLine();
+            if (line == null)
+                break;
+            // Si la linea es igual a la matricula actual retornem true
+            if (line.equals(plate)) {
+                input.close();
+                return true;
             }
-            input.close();
         }
+        input.close();
 
         return false;
     }
