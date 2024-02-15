@@ -3,6 +3,6 @@
  */
 
 public class GatRenat {
-    int vides = 7;
+    public int vides = 7;
     public String posicio = "estirat";
 }
