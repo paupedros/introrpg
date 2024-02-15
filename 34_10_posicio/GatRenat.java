@@ -4,5 +4,5 @@
 
 public class GatRenat {
     int vides = 7;
-    String posicio = "estirat";
+    public String posicio = "estirat";
 }
