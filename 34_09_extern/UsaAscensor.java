@@ -1,5 +1,6 @@
 /*
- * Programa que utilitza la classe Ascensor
+ * Programa que utilitza la classe Ascensor i ens indica en quin
+ * pis esta l'ascensor creat des de fora
  */
 public class UsaAscensor {
     public static void main(String[] args) {
