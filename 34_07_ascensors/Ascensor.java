@@ -14,7 +14,7 @@ public class Ascensor {
 
     public static void main(String[] args){
         boolean enter = UtilString.esEnter(args[0]);
-        if (args.length != 1 || Integer.parseInt(args[0]) == 0 || !enter) {
+        if (args.length != 1 || (Integer.parseInt(args[0]) == 0) || !enter) {
             System.out.println("Cap ascensor");
             return;
         }
