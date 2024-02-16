@@ -1,5 +1,6 @@
 /*
- *
+ * Programa que utilitza la classe Ascensor i el fa pujar de pis,
+ * tot indicant el pis en el que es troba
  */
 public class Ascensor {
     int pis = -1;
