@@ -7,15 +7,14 @@ public class UsaAscensor {
     /* XXX */
 
     public static void main(String[] args) {
-        if (args.length < 2) return;
-        int pisFinal = -1;
-        String movimentFinal = "aturat";
+        Ascensor ascensor = new Ascensor();
+        
+        int pisFinal = ascensor.getPis();
+        String movimentFinal = ascensor.getMoviment();
         if (UtilString.esEnter(args[0]))
             pisFinal = Integer.parseInt(args[0]);
-        if (args.length >=2)
+        if (args.length >= 2)
             movimentFinal = args[1];
-
-        Ascensor ascensor = new Ascensor();
 
         System.out.println("Pis inicial: " + ascensor.getPis());
 
