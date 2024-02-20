@@ -9,9 +9,11 @@ public class UsaAscensor {
     public static void main(String[] args) {
         if (args.length < 2) return;
         int pisFinal = -1;
+        String movimentFinal = "aturat";
         if (UtilString.esEnter(args[0]))
             pisFinal = Integer.parseInt(args[0]);
-        String movimentFinal = args[1];
+        if (args.length >=2)
+            movimentFinal = args[1];
 
         Ascensor ascensor = new Ascensor();
 
