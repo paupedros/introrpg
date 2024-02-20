@@ -8,7 +8,8 @@ public class UsaAscensor {
 
     public static void main(String[] args) {
         Ascensor ascensor = new Ascensor();
-        
+        if (args.length < 1)
+            return;
         int pisFinal = ascensor.getPis();
         String movimentFinal = ascensor.getMoviment();
         if (UtilString.esEnter(args[0]))
