@@ -7,7 +7,7 @@ public class UsaAscensor {
     /* XXX */
 
     public static void main(String[] args) {
-
+        if (args.length != 2) return;
         if (!UtilString.esEnter(args[0])) return;
 
         int pisFinal = Integer.parseInt(args[0]);

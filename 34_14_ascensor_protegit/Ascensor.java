@@ -19,12 +19,14 @@ public class Ascensor {
     }
 
     public void setPis(int newPis) {
-        if(newPis >= -1 && newPis <= 10)
+        if (newPis >= -1 && newPis <= 10)
             pis = newPis;
     }
+
     public void setMoviment(String newMoviment) {
-        String moviments = "aturat,pujant,baixant";
-        if (moviments.contains(newMoviment))
+        if (newMoviment.equals("aturat") ||
+                newMoviment.equals("pujant") ||
+                newMoviment.equals("baixant"))
             moviment = newMoviment;
     }
 }
