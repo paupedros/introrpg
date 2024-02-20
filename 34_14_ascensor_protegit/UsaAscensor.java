@@ -8,6 +8,8 @@ public class UsaAscensor {
 
     public static void main(String[] args) {
 
+        if (!UtilString.esEnter(args[0])) return;
+
         int pisFinal = Integer.parseInt(args[0]);
         String movimentFinal = args[1];
 
