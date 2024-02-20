@@ -31,7 +31,7 @@ public class Ascensor {
     }
 
     public String comEsta(){
-        return String.format("%s en el pis %d", moviment, pis);
+        return String.format("%s al pis %d", moviment, pis);
     }
 
     public boolean esAbaix(){
