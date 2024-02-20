@@ -5,13 +5,16 @@
 
 public class UsaAscensor {
     // considera si et cal algun mòdul d'ajut
+
     public static void main(String[] args) {
         Ascensor ascensor = new Ascensor();
         System.out.println("Pis inicial: " + ascensor.getPis());
         System.out.println("Moviment inicial: " + ascensor.getMoviment());
         System.out.println("Introdueix nou pis:");
         // llegir el nou pis de stdin i assignar-lo a l'ascensor
-        ascensor.setPis(Integer.parseInt(Entrada.readLine()));
+        String newPis = Entrada.readLine();
+        if(!UtilString.esEnter(newPis)) return;
+        ascensor.setPis(Integer.parseInt(newPis));
         System.out.println("Introdueix nou moviment:");
         // llegir el nou moviment de stdin i assignar-lo a l'ascensor
         ascensor.setMoviment(Entrada.readLine());
