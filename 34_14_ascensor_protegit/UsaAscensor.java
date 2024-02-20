@@ -17,7 +17,7 @@ public class UsaAscensor {
 
         int pisFinal = ascensor.getPis();
         String movimentFinal = ascensor.getMoviment();
-        if (args.length > 1) {
+        if (args.length >= 1) {
             if (UtilString.esEnter(args[0]))
                 pisFinal = Integer.parseInt(args[0]);
             if (args.length >= 2)
