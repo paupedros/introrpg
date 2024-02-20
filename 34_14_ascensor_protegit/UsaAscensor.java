@@ -10,16 +10,19 @@ public class UsaAscensor {
         Ascensor ascensor = new Ascensor();
         if (args.length < 1)
             return;
-        int pisFinal = ascensor.getPis();
-        String movimentFinal = ascensor.getMoviment();
-        if (UtilString.esEnter(args[0]))
-            pisFinal = Integer.parseInt(args[0]);
-        if (args.length >= 2)
-            movimentFinal = args[1];
 
         System.out.println("Pis inicial: " + ascensor.getPis());
 
         System.out.println("Moviment inicial: " + ascensor.getMoviment());
+
+        int pisFinal = ascensor.getPis();
+        String movimentFinal = ascensor.getMoviment();
+        if (args.length > 1) {
+            if (UtilString.esEnter(args[0]))
+                pisFinal = Integer.parseInt(args[0]);
+            if (args.length >= 2)
+                movimentFinal = args[1];
+        }
 
         ascensor.setPis(pisFinal);
         ascensor.setMoviment(movimentFinal);

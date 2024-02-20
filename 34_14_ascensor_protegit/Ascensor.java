@@ -27,6 +27,6 @@ public class Ascensor {
         if (newMoviment.equals("aturat") ||
                 newMoviment.equals("pujant") ||
                 newMoviment.equals("baixant"))
-            moviment = newMoviment;
+                moviment = newMoviment;
     }
 }
