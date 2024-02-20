@@ -8,8 +8,6 @@ public class UsaAscensor {
 
     public static void main(String[] args) {
         Ascensor ascensor = new Ascensor();
-        if (args.length < 1)
-            return;
 
         System.out.println("Pis inicial: " + ascensor.getPis());
 
