@@ -59,9 +59,11 @@ public class Ascensor {
     }
 
     public boolean aturat() {
-        if (!moviment.equals("aturat"))
+        if (!moviment.equals("aturat")){
             moviment = "aturat";
-        return true;
+            return true;
+        }
+        return false;
     }
 
     public boolean arrencaAmunt() {
