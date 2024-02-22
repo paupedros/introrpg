@@ -82,10 +82,10 @@ public class GatRenat {
     }
 
     public String reviu(){
-        if (vides == 0)
-            vides += 1;
         if (vides > 0)
             return "...";
+        if (vides == 0)
+            vides += 1;
         return "guai!";
     }
 
