@@ -57,7 +57,7 @@ public class GatRenat {
     public String seu(){
         if (!posicio.equals("assegut")){
             setPosicio("assegut");
-            return "ja m'estiro";
+            return "ja m'assec";
         }
         return "passo de fer res";
     }
