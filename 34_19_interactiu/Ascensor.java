@@ -65,19 +65,23 @@ public class Ascensor {
     }
 
     public boolean arrencaAmunt() {
-        if (!moviment.equals("pujant") && moviment.equals("aturat"))
+        if (!moviment.equals("pujant") && moviment.equals("aturat")) {
             moviment = "pujant";
-        return true;
+            return true;
+        }
+        return false;
     }
 
     public boolean arrencaAbaix() {
-        if (!moviment.equals("baixant") && moviment.equals("aturat"))
+        if (!moviment.equals("baixant") && moviment.equals("aturat")){
             moviment = "baixant";
-        return true;
+            return true;
+        }
+        return false;
     }
 
     public int seguentPis() {
-        if (pis == 10 && esPujant() ){
+        if (pis == 10 && esPujant()) {
             pis = 9;
             setMoviment("baixant");
             return pis;
