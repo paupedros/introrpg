@@ -77,12 +77,17 @@ public class Ascensor {
     }
 
     public int seguentPis() {
-        int nextPis = pis;
+        if (pis == 10 && esPujant() ){
+            pis = 9;
+            setMoviment("baixant");
+            return pis;
+        }
+
         if (moviment.equals("pujant") && pis <= 10)
-            nextPis++;
+            pis++;
         if (moviment.equals("baixant") && pis >= -1)
-            nextPis--;
-        return nextPis;
+            pis--;
+        return pis;
     }
 
 }
