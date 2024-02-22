@@ -88,6 +88,11 @@ public class Ascensor {
             setMoviment("baixant");
             return pis;
         }
+        if (pis == -1 && esBaixant()){
+            pis = 0;
+            setMoviment("pujant");
+            return pis;
+        }
 
         if (moviment.equals("pujant") && pis <= 10)
             pis++;
