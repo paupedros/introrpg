@@ -7,9 +7,9 @@
 public class GatRenat {
     private int vides;
     private String posicio;
-    public GatRenat(int vides, String posicio) {
-        vides = 7;
-        posicio = "estirat";
+    public GatRenat(int newVides, String newPosicio) {
+        vides = newVides;
+        posicio = newPosicio;
     }
     @Override
     public String toString() {
