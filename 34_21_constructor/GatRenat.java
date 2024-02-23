@@ -1,7 +1,8 @@
 /*
  * En aquest programa reutilitzem la classe GatRenat,
  * pero en aquest cas utilitzem un constructor per
- * asignar els valors per defecte de les propietats
+ * asignar els valors per defecte de les propietats.
+ * 
  */
 
 public class GatRenat {
