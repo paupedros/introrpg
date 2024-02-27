@@ -88,9 +88,6 @@ public class Hora {
 
     public void decrementa(int segons) {
         if (getSegons() == 0){
-            if (getSegons()-segons < 0){
-                minuts--;
-            }
             setSegons(59);
             if (getMinuts() == 0){
                 setMinuts(59);
