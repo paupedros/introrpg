@@ -87,7 +87,21 @@ public class Hora {
     }
 
     public void decrementa(int segons) {
-        this.segons -= segons;
+        if (getSegons() == 0){
+            if (getSegons()-segons < 0){
+                minuts--;
+            }
+            setSegons(59);
+            if (getMinuts() == 0){
+                setMinuts(59);
+                if(getHores() == 0){
+                    setHores(23);
+                }
+                else hores--;
+            }
+            else minuts--;
+        }
+        else segons--;
     }
 
     public int compareTo(Hora hora){
