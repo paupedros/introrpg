@@ -71,7 +71,15 @@ public class Hora {
     }
 
     public void decrementa() {
-        segons--;
+        if (getSegons() == 0){
+            setSegons(59);
+            if (getMinuts() == 0){
+                setMinuts(0);
+                hores--;
+            }
+            else minuts--;
+        }
+        else segons--;
     }
 
     public void decrementa(int segons) {
