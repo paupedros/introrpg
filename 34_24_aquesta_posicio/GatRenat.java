@@ -30,7 +30,7 @@ public class GatRenat {
         if (pos.equals("dret")
                 || pos.equals("estirat")
                 || pos.equals("assegut"))
-            posicio = pos;
+            this.posicio = pos;
     }
 
     @Override
