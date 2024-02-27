@@ -98,7 +98,7 @@ public class Hora {
             }
             else minuts--;
         }
-        else segons--;
+        else this.segons -= segons;
     }
 
     public int compareTo(Hora hora){
