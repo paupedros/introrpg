@@ -53,7 +53,17 @@ public class Hora {
 /*                           INCREMENTA I DECREMENTA                          */
 /* -------------------------------------------------------------------------- */
     public void incrementa(){
-        this.segons++;
+        if (getSegons() == 59){ // Si estem a 59 segons pasem a 0
+            setSegons(0);
+            if(getMinuts() == 59){
+                setMinuts(0);
+                hores++;
+            }
+            else minuts++;
+        }
+        else {
+            segons++;
+        }
     }
 
     public void incrementa(int segons) {
