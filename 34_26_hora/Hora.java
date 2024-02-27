@@ -16,7 +16,9 @@ public class Hora {
             minuts = 0;
             segons = 0;
         }
-
+        setHores(hores);
+        setMinuts(minuts);
+        setSegons(segons);
     }
 
 /* -------------------------------------------------------------------------- */
