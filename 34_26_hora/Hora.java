@@ -75,7 +75,10 @@ public class Hora {
             setSegons(59);
             if (getMinuts() == 0){
                 setMinuts(59);
-                hores--;
+                if(getHores() == 0){
+                    setHores(23);
+                }
+                else hores--;
             }
             else minuts--;
         }
