@@ -23,7 +23,7 @@ public class GatRenat {
         return vides;
     }
 
-    public void setVides(int novesVides) {
+    private void setVides(int novesVides) {
         if (novesVides >= 0) {
             vides = novesVides;
         }
@@ -33,13 +33,13 @@ public class GatRenat {
         return posicio;
     }
 
-    public void setPosicio(String pos) {
+    private void setPosicio(String pos) {
         if (pos.equals("dret")
                 || pos.equals("estirat")
                 || pos.equals("assegut"))
             this.posicio = pos;
     }
-    
+
     @Override
     public String toString() {
         return String.format("Vides: %d. Posició: %s", vides, posicio);
