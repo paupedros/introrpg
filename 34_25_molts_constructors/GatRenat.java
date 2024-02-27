@@ -39,6 +39,11 @@ public class GatRenat {
                 || pos.equals("assegut"))
             this.posicio = pos;
     }
+    
+    @Override
+    public String toString() {
+        return String.format("Vides: %d. Posició: %s", vides, posicio);
+    }
 
     public static void main(String[] args) {
         GatRenat[] renats = {
