@@ -1,6 +1,6 @@
 public class GatRenat {
-    private int vides;
-    private String posicio;
+    private int vides = 7;
+    private String posicio = "estirat";
 
     public GatRenat() {
         this(7,"estirat");
@@ -23,7 +23,7 @@ public class GatRenat {
         return vides;
     }
 
-    private void setVides(int novesVides) {
+    public void setVides(int novesVides) {
         if (novesVides >= 0) {
             vides = novesVides;
         }
@@ -33,7 +33,7 @@ public class GatRenat {
         return posicio;
     }
 
-    private void setPosicio(String pos) {
+    public void setPosicio(String pos) {
         if (pos.equals("dret")
                 || pos.equals("estirat")
                 || pos.equals("assegut"))
