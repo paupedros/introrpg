@@ -51,7 +51,7 @@ public class Hora {
 /*                           INCREMENTA I DECREMENTA                          */
 /* -------------------------------------------------------------------------- */
     public void incrementa(){
-        segons++;
+        this.segons++;
     }
 
     public void incrementa(int segons) {
