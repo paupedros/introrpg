@@ -57,13 +57,14 @@ public class Hora {
             setSegons(0);
             if(getMinuts() == 59){
                 setMinuts(0);
-                hores++;
+                if (getHores() == 23){
+                    setHores(0);
+                }
+                else hores++;
             }
             else minuts++;
         }
-        else {
-            segons++;
-        }
+        else segons++;
     }
 
     public void incrementa(int segons) {
