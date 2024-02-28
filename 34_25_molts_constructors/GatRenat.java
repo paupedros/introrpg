@@ -1,3 +1,8 @@
+/*
+ * En aquest programa fem servir el overload amb els constructors,
+ * tenim un general i d'aquest en els altres el cridem amb this()
+ */
+
 public class GatRenat {
     private int vides = 7;
     private String posicio = "estirat";
@@ -15,8 +20,8 @@ public class GatRenat {
     }
 
     public GatRenat(int vides, String posicio){
-        setVides(vides);
-        setPosicio(posicio);
+        this.vides = vides;
+        this.posicio = posicio;
     }
 
     public int getVides() {
