@@ -8,8 +8,8 @@ public class GatRenat {
     private String posicio = "estirat";
 
     public GatRenat(int vides, String posicio) {
-        setVides(vides);
-        setPosicio(posicio);
+        this.vides = vides;
+        this.posicio = posicio;
     }
 
     public int getVides() {
