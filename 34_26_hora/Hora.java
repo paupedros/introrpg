@@ -70,43 +70,48 @@ public class Hora {
     }
 
     public void incrementa(int segons) {
-        int horesInc = 0;
-        int minutsInc = 0;
-        int segonsInc = segons;
-        if (segons >= 60) { // Si els segons superen al minut
-            minutsInc = Math.abs(segons / 60); // Calculem els minuts a incrementar
-            if (minutsInc >= 60) {
-                horesInc = Math.abs(minutsInc / 60); // Calculem les hores a incrementar
+        if (segons < 0) decrementa(segons * -1);
+        else {
+
+            int horesInc = 0;
+            int minutsInc = 0;
+            int segonsInc = segons;
+            if (segons >= 60) { // Si els segons superen al minut
+                minutsInc = Math.abs(segons / 60); // Calculem els minuts a incrementar
+                if (minutsInc >= 60) {
+                    horesInc = Math.abs(minutsInc / 60); // Calculem les hores a incrementar
+                }
+                segonsInc = segons - (minutsInc * 60); // Calculem els segons a incrementar
             }
-            segonsInc = segons - (minutsInc * 60); // Calculem els segons a incrementar
+
+            System.out.println(String.format("hores: %d minuts: %d segons: %d", horesInc, minutsInc, segonsInc));
+
+            // Si la suma dels segons es superior a 60
+            if ((this.segons + segonsInc) >= 60) {
+                // Calculem la diferencia fins a 60
+                int dife = 60 - this.segons;
+                segonsInc = segonsInc - dife;
+                this.segons = segonsInc;
+            } else
+                this.segons += segonsInc;
+
+            if ((this.minuts + minutsInc) >= 60) {
+                // Calculem la diferencia fins a 60
+                int dife = 60 - this.minuts;
+                minutsInc = minutsInc - dife;
+                this.minuts = minutsInc;
+            } else
+                this.minuts += minutsInc;
+
+            if ((this.hores + horesInc) >= 60) {
+                // Calculem la diferencia fins a 60
+                int dife = 60 - this.hores;
+                horesInc = horesInc - dife;
+                this.hores = horesInc;
+            } else
+                this.hores += horesInc;
         }
 
-        System.out.println(String.format("hores: %d minuts: %d segons: %d", horesInc, minutsInc, segonsInc));
-
-        // Si la suma dels segons es superior a 60
-        if ((this.segons + segonsInc) >= 60) {
-            // Calculem la diferencia fins a 60
-            int dife = 60 - this.segons;
-            segonsInc = segonsInc - dife;
-            this.segons = segonsInc;
-        } else
-            this.segons += segonsInc;
-
-        if ((this.minuts + minutsInc) >= 60) {
-            // Calculem la diferencia fins a 60
-            int dife = 60 - this.minuts;
-            minutsInc = minutsInc - dife;
-            this.minuts = minutsInc;
-        } else
-            this.minuts += minutsInc;
-
-        if ((this.hores + horesInc) >= 60) {
-            // Calculem la diferencia fins a 60
-            int dife = 60 - this.hores;
-            horesInc = horesInc - dife;
-            this.hores = horesInc;
-        } else
-            this.hores += horesInc;
     }
 
     public void decrementa() {
