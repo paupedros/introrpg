@@ -103,48 +103,8 @@ public class Hora {
             this.minuts = minutsInc;
             this.hores = horesInc;
 
-            /*
-             * if ((segons + this.segons) >= 60) { // Si els segons superen al minut
-             * minutsInc = Math.abs(segons / 60); // Calculem els minuts a incrementar
-             * if ((minutsInc + this.minuts) >= 60) {
-             * horesInc = Math.abs(minutsInc / 60); // Calculem les hores a incrementar
-             * }
-             * segonsInc = segons - (minutsInc * 60); // Calculem els segons a incrementar
-             * }
-             *
-             */
-
             System.out.println(
                     String.format("dies: %d hores: %d minuts: %d segons: %d", diesInc, horesInc, minutsInc, segonsInc));
-            /*
-             * // Si la suma dels segons es superior a 60
-             * if ((this.segons + segonsInc) >= 60) {
-             * // Calculem la diferencia fins a 60
-             * int dife = 60 - this.segons;
-             * segonsInc = segonsInc - dife;
-             * this.segons = segonsInc;
-             * minutsInc++;
-             * } else
-             * this.segons += segonsInc;
-             *
-             * // Si la suma dels minuts es superior a 60
-             * if ((this.minuts + minutsInc) >= 60) {
-             * // Calculem la diferencia fins a 60
-             * int dife = 60 - this.minuts;
-             * minutsInc = minutsInc - dife;
-             * this.minuts = minutsInc;
-             * } else
-             * this.minuts += minutsInc;
-             *
-             * if ((this.hores + horesInc) >= 24) {
-             * // Calculem la diferencia fins a 24
-             * int dife = 24 - this.hores;
-             * horesInc = horesInc - dife;
-             * this.hores = horesInc;
-             * } else
-             * this.hores += horesInc;
-             *
-             */
         }
 
     }
@@ -174,11 +134,16 @@ public class Hora {
             int segonsAra = minutsAra + horesAra + this.segons;
 
             // Calcul de segons total de les hores
-            int segonsDec = (segonsAra - segons);
+            int segonsDec = 0;
+            if (segonsAra > segons){
+                segonsDec = segonsAra - segons;
+            }
+            else segonsDec = segons - segonsAra;
 
             int minutsDec = 0;
             int horesDec = 0;
             int diesDec = 0;
+
 
             // Passar de segons a hores, minuts i segons adequadament
             while (segonsDec > 59) {
@@ -193,6 +158,8 @@ public class Hora {
                 horesDec -= 24;
                 diesDec++;
             }
+
+            System.out.println(String.format("dies: %d hores: %d minuts: %d segons: %d", diesDec, horesDec, minutsDec, segonsDec));
 
             this.segons = segonsDec;
             this.minuts = minutsDec;
@@ -238,14 +205,14 @@ public class Hora {
 
     public static void main(String[] args) {
         Hora hora1 = new Hora(0, 0, 0);
-        Hora hora2 = new Hora(0, 0, 2);
+        Hora hora2 = new Hora(1, 2, 3);
         System.out.printf("Inicialment hora1: %s %s hora2: %s%n",
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
                 hora2);
         System.out.println("Incrementem 1 segon a la primera i decrementem 1 segon a la segona");
         hora1.incrementa();
-        hora2.decrementa();
+        hora2.decrementa(86399);
         System.out.printf("Finalment hora1: %s %s hora2: %s%n",
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
