@@ -12,8 +12,8 @@ public class Hora {
 
     public Hora(int hores, int minuts, int segons) {
         if ((hores < 0 || hores > 23)
-            || (minuts < 0 || minuts > 59)
-            || (segons < 0 || segons > 59)) {
+                || (minuts < 0 || minuts > 59)
+                || (segons < 0 || segons > 59)) {
             hores = 0;
             minuts = 0;
             segons = 0;
@@ -70,13 +70,14 @@ public class Hora {
     }
 
     public void incrementa(int segons) {
-        if (segons < 0) decrementa(segons * -1);
+        if (segons < 0)
+            decrementa(segons * -1);
         else {
 
             int horesInc = 0;
             int minutsInc = 0;
             int segonsInc = segons;
-            if (segons >= 60) { // Si els segons superen al minut
+            if ((segons + this.segons) >= 60) { // Si els segons superen al minut
                 minutsInc = Math.abs(segons / 60); // Calculem els minuts a incrementar
                 if (minutsInc >= 60) {
                     horesInc = Math.abs(minutsInc / 60); // Calculem les hores a incrementar
@@ -92,9 +93,11 @@ public class Hora {
                 int dife = 60 - this.segons;
                 segonsInc = segonsInc - dife;
                 this.segons = segonsInc;
+                minutsInc++;
             } else
                 this.segons += segonsInc;
 
+            // Si la suma dels minuts es superior a 60
             if ((this.minuts + minutsInc) >= 60) {
                 // Calculem la diferencia fins a 60
                 int dife = 60 - this.minuts;
@@ -177,7 +180,7 @@ public class Hora {
                 composaOperadorComparacio(hora1, hora2),
                 hora2);
         System.out.println("Incrementem 1 segon a la primera i decrementem 1 segon a la segona");
-        hora1.incrementa();
+        hora1.incrementa(59);
         hora2.decrementa();
         System.out.printf("Finalment hora1: %s %s hora2: %s%n",
                 hora1,
