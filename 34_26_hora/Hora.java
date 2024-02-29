@@ -175,7 +175,6 @@ public class Hora {
 
             // Calcul de segons total de les hores
             int segonsDec = (segonsAra - segons);
-            if (segonsDec < 0) segonsDec = segonsDec * -1;
 
             int minutsDec = 0;
             int horesDec = 0;
