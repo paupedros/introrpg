@@ -162,7 +162,7 @@ public class Hora {
 
     public static void main(String[] args) {
         Hora hora1 = new Hora(0, 0, 0);
-        Hora hora2 = new Hora(0, 0, 0);
+        Hora hora2 = new Hora(0, 0, 2);
         System.out.printf("Inicialment hora1: %s %s hora2: %s%n",
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
