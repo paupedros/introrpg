@@ -130,7 +130,7 @@ public class Hora {
     }
 
     public void decrementa(int segons) {
-
+        decrementa();
     }
 
     public int compareTo(Hora hora) {
