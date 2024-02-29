@@ -78,15 +78,15 @@ public class Hora {
             int minutsInc = 0;
             int segonsInc = segons;
 
-            while(segonsInc > 59){
+            while(segonsInc >= 60){
                 segonsInc -= 60;
                 minutsInc += 1;
             }
-            while (minutsInc > 59){
+            while (minutsInc >= 60){
                 minutsInc -= 60;
                 horesInc++;
             }
-            while(horesInc > 23){
+            while(horesInc >= 24){
                 horesInc -= 24;
                 diesInc++;
             }
