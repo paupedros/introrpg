@@ -86,15 +86,15 @@ public class Hora {
             int segonsInc = segons + segonsAra;
 
             // Passar de segons a hores, minuts i segons adequadament
-            while(segonsInc > 59){
+            while (segonsInc > 59) {
                 segonsInc -= 60;
                 minutsInc++;
             }
-            while (minutsInc > 59){
+            while (minutsInc > 59) {
                 minutsInc -= 60;
                 horesInc++;
             }
-            while(horesInc > 23){
+            while (horesInc > 23) {
                 horesInc -= 24;
                 diesInc++;
             }
@@ -103,48 +103,48 @@ public class Hora {
             this.minuts = minutsInc;
             this.hores = horesInc;
 
-
             /*
-            if ((segons + this.segons) >= 60) { // Si els segons superen al minut
-                minutsInc = Math.abs(segons / 60); // Calculem els minuts a incrementar
-                if ((minutsInc + this.minuts) >= 60) {
-                    horesInc = Math.abs(minutsInc / 60); // Calculem les hores a incrementar
-                }
-                segonsInc = segons - (minutsInc * 60); // Calculem els segons a incrementar
-            }
+             * if ((segons + this.segons) >= 60) { // Si els segons superen al minut
+             * minutsInc = Math.abs(segons / 60); // Calculem els minuts a incrementar
+             * if ((minutsInc + this.minuts) >= 60) {
+             * horesInc = Math.abs(minutsInc / 60); // Calculem les hores a incrementar
+             * }
+             * segonsInc = segons - (minutsInc * 60); // Calculem els segons a incrementar
+             * }
+             *
+             */
 
-            */
-
-            System.out.println(String.format("dies: %d hores: %d minuts: %d segons: %d", diesInc, horesInc, minutsInc, segonsInc));
+            System.out.println(
+                    String.format("dies: %d hores: %d minuts: %d segons: %d", diesInc, horesInc, minutsInc, segonsInc));
             /*
-            // Si la suma dels segons es superior a 60
-            if ((this.segons + segonsInc) >= 60) {
-                // Calculem la diferencia fins a 60
-                int dife = 60 - this.segons;
-                segonsInc = segonsInc - dife;
-                this.segons = segonsInc;
-                minutsInc++;
-            } else
-                this.segons += segonsInc;
-
-            // Si la suma dels minuts es superior a 60
-            if ((this.minuts + minutsInc) >= 60) {
-                // Calculem la diferencia fins a 60
-                int dife = 60 - this.minuts;
-                minutsInc = minutsInc - dife;
-                this.minuts = minutsInc;
-            } else
-                this.minuts += minutsInc;
-
-            if ((this.hores + horesInc) >= 24) {
-                // Calculem la diferencia fins a 24
-                int dife = 24 - this.hores;
-                horesInc = horesInc - dife;
-                this.hores = horesInc;
-            } else
-                this.hores += horesInc;
-
-            */
+             * // Si la suma dels segons es superior a 60
+             * if ((this.segons + segonsInc) >= 60) {
+             * // Calculem la diferencia fins a 60
+             * int dife = 60 - this.segons;
+             * segonsInc = segonsInc - dife;
+             * this.segons = segonsInc;
+             * minutsInc++;
+             * } else
+             * this.segons += segonsInc;
+             *
+             * // Si la suma dels minuts es superior a 60
+             * if ((this.minuts + minutsInc) >= 60) {
+             * // Calculem la diferencia fins a 60
+             * int dife = 60 - this.minuts;
+             * minutsInc = minutsInc - dife;
+             * this.minuts = minutsInc;
+             * } else
+             * this.minuts += minutsInc;
+             *
+             * if ((this.hores + horesInc) >= 24) {
+             * // Calculem la diferencia fins a 24
+             * int dife = 24 - this.hores;
+             * horesInc = horesInc - dife;
+             * this.hores = horesInc;
+             * } else
+             * this.hores += horesInc;
+             *
+             */
         }
 
     }
@@ -180,23 +180,29 @@ public class Hora {
             int horesDec = 0;
             int diesDec = 0;
 
+            int horas = segonsDec / 3600; // 2 horas
+            int resto = segonsDec % 3600; // 2400 segundos
+
+            int minutos = resto / 60; // 40 minutos
+            int segundosFinales = resto % 60; // 40 segundos
+
             // Passar de segons a hores, minuts i segons adequadament
-            while(segonsDec > 59){
+            while (segonsDec > 59) {
                 segonsDec -= 60;
                 minutsDec++;
             }
-            while (minutsDec > 59){
+            while (minutsDec > 59) {
                 minutsDec -= 60;
                 horesDec++;
             }
-            while(horesDec > 23){
+            while (horesDec > 23) {
                 horesDec -= 24;
                 diesDec++;
             }
 
-            this.segons = segonsDec;
-            this.minuts = minutsDec;
-            this.hores = horesDec;
+            this.segons = segundosFinales;
+            this.minuts = minutos;
+            this.hores = horas;
         }
     }
 
