@@ -4,8 +4,8 @@
  */
 
 public class GatRenat {
-    private int vides = 7;
-    private String posicio = "estirat";
+    private int vides;
+    private String posicio;
 
     public GatRenat(int vides, String posicio) {
         this.setVides(vides);
