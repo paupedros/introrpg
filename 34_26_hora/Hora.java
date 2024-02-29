@@ -73,19 +73,36 @@ public class Hora {
         if (segons < 0)
             decrementa(segons * -1);
         else {
-
+            int diesInc = 0;
             int horesInc = 0;
             int minutsInc = 0;
             int segonsInc = segons;
+
+            while(segonsInc > 59){
+                segonsInc -= 60;
+                minutsInc += 1;
+            }
+            while (minutsInc > 59){
+                minutsInc -= 60;
+                horesInc++;
+            }
+            while(horesInc > 23){
+                horesInc -= 24;
+                diesInc++;
+            }
+
+            /*
             if ((segons + this.segons) >= 60) { // Si els segons superen al minut
                 minutsInc = Math.abs(segons / 60); // Calculem els minuts a incrementar
-                if (minutsInc >= 60) {
+                if ((minutsInc + this.minuts) >= 60) {
                     horesInc = Math.abs(minutsInc / 60); // Calculem les hores a incrementar
                 }
                 segonsInc = segons - (minutsInc * 60); // Calculem els segons a incrementar
             }
 
-            System.out.println(String.format("hores: %d minuts: %d segons: %d", horesInc, minutsInc, segonsInc));
+            */
+
+            System.out.println(String.format("dies: %d hores: %d minuts: %d segons: %d", diesInc, horesInc, minutsInc, segonsInc));
 
             // Si la suma dels segons es superior a 60
             if ((this.segons + segonsInc) >= 60) {
