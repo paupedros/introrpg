@@ -79,7 +79,7 @@ public class Hora {
             segonsInc = segons - (minutsInc * 60); // Calculem els segons a incrementar
         }
 
-        System.out.println(String.format("hores: %d minuts: %d segons: %d", horesInc, minutsInc, segonsInc));
+        //System.out.println(String.format("hores: %d minuts: %d segons: %d", horesInc, minutsInc, segonsInc));
 
         // Si la suma dels segons es superior a 60
         if ((this.segons + segonsInc) >= 60){
@@ -123,18 +123,7 @@ public class Hora {
     }
 
     public void decrementa(int segons) {
-        if (getSegons() == 0) {
-            setSegons(59);
-            if (getMinuts() == 0) {
-                setMinuts(59);
-                if (getHores() == 0) {
-                    setHores(23);
-                } else
-                    hores--;
-            } else
-                minuts--;
-        } else
-            this.segons -= segons;
+
     }
 
     public int compareTo(Hora hora) {
