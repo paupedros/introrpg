@@ -1,0 +1,7 @@
+/**
+ * MazeGame
+ */
+public class MazeGame {
+
+    
+}

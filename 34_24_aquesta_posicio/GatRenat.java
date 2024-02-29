@@ -13,7 +13,7 @@ public class GatRenat {
     }
 
     public int getVides() {
-        return vides;
+        return this.vides;
     }
 
     public void setVides(int novesVides) {
@@ -23,7 +23,7 @@ public class GatRenat {
     }
 
     public String getPosicio(){
-        return posicio;
+        return this.posicio;
     }
 
     public void setPosicio(String pos) {
