@@ -90,6 +90,7 @@ public class Hora {
                 horesInc -= 24;
                 diesInc++;
             }
+            if (horesInc >= 23) horesInc = horesInc - 23;
 
             /*
             if ((segons + this.segons) >= 60) { // Si els segons superen al minut
