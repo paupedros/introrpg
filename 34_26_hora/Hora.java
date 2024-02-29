@@ -12,8 +12,8 @@ public class Hora {
 
     public Hora(int hores, int minuts, int segons) {
         if ((hores < 0 || hores > 23)
-            || (minuts < 0 || minuts > 23)
-            || (segons < 0 || segons > 23)) {
+            || (minuts < 0 || minuts > 59)
+            || (segons < 0 || segons > 59)) {
             hores = 0;
             minuts = 0;
             segons = 0;
