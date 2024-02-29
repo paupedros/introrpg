@@ -95,15 +95,17 @@ public class Hora {
             segonsRestants = segons - (minutsRestants*60); // Calculem els segons a incrementar
         }
 
-        if (getSegons() == 59){ // Si estem a 59 segons pasem a 0
-            if (this.segons + segonsRestants >= 60)
+        if (getSegons() == 59 && segons >= 1){ // Si estem a 59 segons pasem a 0
+            // Si la suma dels segons es superior o igual a un minut
+            if (this.segons + segonsRestants >= 60){
                 setSegons(segonsRestants - 1);
+                setMinuts(this.minuts + 1);}
             if(getMinuts() == 59){
                 setMinuts(0);
                 if (getHores() == 23){
                     setHores(0);
                 }
-                else this.hores+=hores;
+                else this.hores+=horesRestants;
             }
             else this.minuts+=minutsRestants;
         }
