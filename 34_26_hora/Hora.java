@@ -174,17 +174,11 @@ public class Hora {
             int segonsAra = minutsAra + horesAra + this.segons;
 
             // Calcul de segons total de les hores
-            int segonsDec = segonsAra - segons;
+            int segonsDec = (segonsAra - segons) * -1;
 
             int minutsDec = 0;
             int horesDec = 0;
             int diesDec = 0;
-
-            int horas = segonsDec / 3600; // 2 horas
-            int resto = segonsDec % 3600; // 2400 segundos
-
-            int minutos = resto / 60; // 40 minutos
-            int segundosFinales = resto % 60; // 40 segundos
 
             // Passar de segons a hores, minuts i segons adequadament
             while (segonsDec > 59) {
@@ -200,9 +194,9 @@ public class Hora {
                 diesDec++;
             }
 
-            this.segons = segundosFinales;
-            this.minuts = minutos;
-            this.hores = horas;
+            this.segons = segonsDec;
+            this.minuts = minutsDec;
+            this.hores = horesDec;
         }
     }
 
