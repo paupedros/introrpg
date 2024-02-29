@@ -180,7 +180,7 @@ public class Hora {
                 composaOperadorComparacio(hora1, hora2),
                 hora2);
         System.out.println("Incrementem 1 segon a la primera i decrementem 1 segon a la segona");
-        hora1.incrementa(59);
+        hora1.incrementa();
         hora2.decrementa();
         System.out.printf("Finalment hora1: %s %s hora2: %s%n",
                 hora1,
