@@ -68,6 +68,29 @@ public class Hora {
     }
 
     public void incrementa(int segons) {
+        /**
+         ** Calcular les hores, minuts i segons a sumar
+         *
+         * Si el resultat de dividir els segons a sumar entre 60
+         * es superior o igual a 1, llavors sumem a minuts el resultat absolut:
+         *  Exemple:
+         *      int segons = 340
+         *      int minuts = abs(segons / 60) = 5
+         *      int hores
+         *      if (minuts > 60){ // si superen la hora calculem les hores
+         *          hores = minuts - 60
+         *      }
+         *      int segonsRestants = segons - (60*minuts) = 40
+         *? Llavors quedaria: 5 minuts i 40 segons equivalen a 340 segons
+         */
+
+
+        int minutsRestants = Math.abs(segons / 60);
+        int hores = 0;
+        if (minutsRestants > 60){ // si superen la hora calculem les hores
+            hores = minutsRestants - 60;
+        }
+        int segonsRestants = segons - (60*minutsRestants);
         if (getSegons() == 59){ // Si estem a 59 segons pasem a 0
             setSegons(0);
             if(getMinuts() == 59){
@@ -75,11 +98,11 @@ public class Hora {
                 if (getHores() == 23){
                     setHores(0);
                 }
-                else hores++;
+                else this.hores+=hores;
             }
-            else minuts++;
+            else this.minuts+=minutsRestants;
         }
-        else this.segons+= segons;
+        else this.segons+= segonsRestants;
     }
 
     public void decrementa() {
