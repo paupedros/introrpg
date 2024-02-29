@@ -6,12 +6,12 @@ public class Hora {
     private int minuts = 0;
     private int segons = 0;
 
-    public Hora(){
-        this(0,0,0);
+    public Hora() {
+        this(0, 0, 0);
     }
 
-    public Hora(int hores, int minuts, int segons){
-        if (hores < 0 || minuts < 0 || segons < 0){
+    public Hora(int hores, int minuts, int segons) {
+        if (hores < 0 || minuts < 0 || segons < 0) {
             hores = 0;
             minuts = 0;
             segons = 0;
@@ -21,19 +21,19 @@ public class Hora {
         setSegons(segons);
     }
 
-/* -------------------------------------------------------------------------- */
-/*                              GETTERS & SETTERS                             */
-/* -------------------------------------------------------------------------- */
+    /* -------------------------------------------------------------------------- */
+    /* GETTERS & SETTERS */
+    /* -------------------------------------------------------------------------- */
 
-    public int getHores(){
+    public int getHores() {
         return hores;
     }
 
-    public int getMinuts(){
+    public int getMinuts() {
         return minuts;
     }
 
-    public int getSegons(){
+    public int getSegons() {
         return segons;
     }
 
@@ -41,7 +41,7 @@ public class Hora {
         this.hores = hores;
     }
 
-    public void setMinuts (int minuts) {
+    public void setMinuts(int minuts) {
         this.minuts = minuts;
     }
 
@@ -49,113 +49,96 @@ public class Hora {
         this.segons = segons;
     }
 
-/* -------------------------------------------------------------------------- */
-/*                           INCREMENTA I DECREMENTA                          */
-/* -------------------------------------------------------------------------- */
-    public void incrementa(){
-        if (getSegons() == 59){ // Si estem a 59 segons pasem a 0
+    /* -------------------------------------------------------------------------- */
+    /* INCREMENTA I DECREMENTA */
+    /* -------------------------------------------------------------------------- */
+    public void incrementa() {
+        if (getSegons() == 59) { // Si estem a 59 segons pasem a 0
             setSegons(0);
-            if(getMinuts() == 59){
+            if (getMinuts() == 59) {
                 setMinuts(0);
-                if (getHores() == 23){
+                if (getHores() == 23) {
                     setHores(0);
-                }
-                else hores++;
-            }
-            else minuts++;
-        }
-        else segons++;
+                } else
+                    hores++;
+            } else
+                minuts++;
+        } else
+            segons++;
     }
 
     public void incrementa(int segons) {
-        /**
-         ** Calcular les hores, minuts i segons a sumar
-         *
-         * Si el resultat de dividir els segons a sumar entre 60
-         * es superior o igual a 1, llavors sumem a minuts el resultat absolut:
-         *  Exemple:
-         *      int segons = 340
-         *      int minuts = abs(segons / 60) = 5
-         *      int hores
-         *      if (minuts > 60){ // si superen la hora calculem les hores
-         *          hores = abs(minuts / 60)
-         *      }
-         *      int segonsRestants = segons - (60*minuts) = 40
-         *? Llavors quedaria: 5 minuts i 40 segons equivalen a 340 segons
-         */
-
-        int horesRestants = 0;
-        int minutsRestants = 0;
-        int segonsRestants = segons;
+        int horesInc = 0;
+        int minutsInc = 0;
+        int segonsInc = segons;
         if (segons >= 60) { // Si els segons superen al minut
-            minutsRestants = Math.abs(segons / 60); // Calculem els minuts a incrementar
-            if (minutsRestants >= 60){
-                horesRestants = Math.abs(minutsRestants / 60); // Calculem les hores a incrementar
+            minutsInc = Math.abs(segons / 60); // Calculem els minuts a incrementar
+            if (minutsInc >= 60) {
+                horesInc = Math.abs(minutsInc / 60); // Calculem les hores a incrementar
             }
-            segonsRestants = segons - (minutsRestants*60); // Calculem els segons a incrementar
+            segonsInc = segons - (minutsInc * 60); // Calculem els segons a incrementar
         }
 
-        if (getSegons() == 59 && segons >= 1){ // Si estem a 59 segons pasem a 0
-            // Si la suma dels segons es superior o igual a un minut
-            if (this.segons + segonsRestants >= 60){
-                setSegons(segonsRestants - 1);
-                setMinuts(this.minuts + 1);}
-            if(getMinuts() == 59){
-                setMinuts(0);
-                if (getHores() == 23){
-                    setHores(0);
-                }
-                else this.hores+=horesRestants;
-            }
-            else this.minuts+=minutsRestants;
+        System.out.println(String.format("hores: %d minuts: %d segons: %d", horesInc, minutsInc, segonsInc));
+
+        // Si la suma dels segons es superior a 60
+        if ((this.segons + segonsInc) >= 60){
+            // Calculem la diferencia fins a 60
+            int dife = 60 - this.segons;
+            segonsInc = segonsInc - dife;
+            this.segons = segonsInc;
         }
-        else this.segons+= segonsRestants;
+        else this.segons += segonsInc;
+
+        this.minuts += minutsInc;
+        this.hores += horesInc;
     }
 
     public void decrementa() {
-        if (getSegons() == 0){
+        if (getSegons() == 0) {
             setSegons(59);
-            if (getMinuts() == 0){
+            if (getMinuts() == 0) {
                 setMinuts(59);
-                if(getHores() == 0){
+                if (getHores() == 0) {
                     setHores(23);
-                }
-                else hores--;
-            }
-            else minuts--;
-        }
-        else segons--;
+                } else
+                    hores--;
+            } else
+                minuts--;
+        } else
+            segons--;
     }
 
     public void decrementa(int segons) {
-        if (getSegons() == 0){
+        if (getSegons() == 0) {
             setSegons(59);
-            if (getMinuts() == 0){
+            if (getMinuts() == 0) {
                 setMinuts(59);
-                if(getHores() == 0){
+                if (getHores() == 0) {
                     setHores(23);
-                }
-                else hores--;
-            }
-            else minuts--;
-        }
-        else this.segons -= segons;
+                } else
+                    hores--;
+            } else
+                minuts--;
+        } else
+            this.segons -= segons;
     }
 
-    public int compareTo(Hora hora){
+    public int compareTo(Hora hora) {
         // Obtenim la hora en segons
-        int hora1Num = (this.getHores())*3600 + (this.getMinuts())*60 + this.getSegons();
-        int hora2Num = (hora.getHores())*3600 + (hora.getMinuts())*60 + hora.getSegons();
-        if (hora1Num < hora2Num) return -1;
-        if (hora2Num < hora1Num) return 1;
+        int hora1Num = (this.getHores()) * 3600 + (this.getMinuts()) * 60 + this.getSegons();
+        int hora2Num = (hora.getHores()) * 3600 + (hora.getMinuts()) * 60 + hora.getSegons();
+        if (hora1Num < hora2Num)
+            return -1;
+        if (hora2Num < hora1Num)
+            return 1;
         return 0;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return String.format("%d:%02d:%02d", hores, minuts, segons);
     }
-
 
     /**
      * Compara dues hores i retorna l'operador corresponent
@@ -178,14 +161,14 @@ public class Hora {
     }
 
     public static void main(String[] args) {
-        Hora hora1 = new Hora();
+        Hora hora1 = new Hora(3, 54, 58);
         Hora hora2 = new Hora(0, 0, 2);
         System.out.printf("Inicialment hora1: %s %s hora2: %s%n",
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
                 hora2);
         System.out.println("Incrementem 1 segon a la primera i decrementem 1 segon a la segona");
-        hora1.incrementa();
+        hora1.incrementa(364);
         hora2.decrementa();
         System.out.printf("Finalment hora1: %s %s hora2: %s%n",
                 hora1,
