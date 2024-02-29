@@ -4,8 +4,8 @@
  */
 
 public class GatRenat {
-    private int vides = 7;
-    private String posicio = "estirat";
+    private int vides;
+    private String posicio;
 
     public GatRenat() {
         this(7,"estirat");
@@ -43,6 +43,7 @@ public class GatRenat {
                 || pos.equals("estirat")
                 || pos.equals("assegut"))
             this.posicio = pos;
+        else this.posicio = "estirat";
     }
 
     @Override
