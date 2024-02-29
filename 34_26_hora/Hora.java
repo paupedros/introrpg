@@ -174,7 +174,7 @@ public class Hora {
             int segonsAra = minutsAra + horesAra + this.segons;
 
             // Calcul de segons total de les hores
-            int segonsDec = (segonsAra - segons) * -1;
+            int segonsDec = (segonsAra - segons);
 
             int minutsDec = 0;
             int horesDec = 0;
