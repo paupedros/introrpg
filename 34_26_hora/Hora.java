@@ -90,7 +90,13 @@ public class Hora {
         }
         else this.segons += segonsInc;
 
-        this.minuts += minutsInc;
+        if ((this.minuts + minutsInc) >= 60){
+            // Calculem la diferencia fins a 60
+            int dife = 60 - this.minuts;
+            minutsInc = minutsInc - dife;
+            this.minuts = minutsInc;
+        }
+        else this.minuts += minutsInc;
         this.hores += horesInc;
     }
 
