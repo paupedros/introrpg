@@ -78,21 +78,26 @@ public class Hora {
          *      int minuts = abs(segons / 60) = 5
          *      int hores
          *      if (minuts > 60){ // si superen la hora calculem les hores
-         *          hores = minuts - 60
+         *          hores = abs(minuts / 60)
          *      }
          *      int segonsRestants = segons - (60*minuts) = 40
          *? Llavors quedaria: 5 minuts i 40 segons equivalen a 340 segons
          */
 
-
-        int minutsRestants = Math.abs(segons / 60);
-        int hores = 0;
-        if (minutsRestants > 60){ // si superen la hora calculem les hores
-            hores = Math.abs(minuts / 60);
+        int horesRestants = 0;
+        int minutsRestants = 0;
+        int segonsRestants = segons;
+        if (segons >= 60) { // Si els segons superen al minut
+            minutsRestants = Math.abs(segons / 60); // Calculem els minuts a incrementar
+            if (minutsRestants >= 60){
+                horesRestants = Math.abs(minutsRestants / 60); // Calculem les hores a incrementar
+            }
+            segonsRestants = segons - (minutsRestants*60); // Calculem els segons a incrementar
         }
-        int segonsRestants = segons - (60*minutsRestants);
+
         if (getSegons() == 59){ // Si estem a 59 segons pasem a 0
-            setSegons(0);
+            if (this.segons + segonsRestants >= 60)
+                setSegons(segonsRestants - 1);
             if(getMinuts() == 59){
                 setMinuts(0);
                 if (getHores() == 23){
