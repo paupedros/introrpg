@@ -18,7 +18,7 @@ public class GatRenat {
 
     public void setVides(int novesVides) {
         if (novesVides >= 0) {
-            vides = novesVides;
+            this.vides = novesVides;
         }
     }
 
@@ -31,6 +31,7 @@ public class GatRenat {
                 || pos.equals("estirat")
                 || pos.equals("assegut"))
             this.posicio = pos;
+        else this.posicio = "estirat";
     }
 
     @Override
