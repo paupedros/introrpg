@@ -88,7 +88,7 @@ public class Hora {
         int minutsRestants = Math.abs(segons / 60);
         int hores = 0;
         if (minutsRestants > 60){ // si superen la hora calculem les hores
-            hores = minutsRestants - 60;
+            hores = Math.abs(minuts / 60);
         }
         int segonsRestants = segons - (60*minutsRestants);
         if (getSegons() == 59){ // Si estem a 59 segons pasem a 0
