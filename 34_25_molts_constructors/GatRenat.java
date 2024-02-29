@@ -4,8 +4,8 @@
  */
 
 public class GatRenat {
-    private int vides;
-    private String posicio;
+    private int vides = 7;
+    private String posicio = "estirat";
 
     public GatRenat() {
         this(7,"estirat");
