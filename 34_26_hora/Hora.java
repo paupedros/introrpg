@@ -168,7 +168,35 @@ public class Hora {
         if (segons < 0)
             incrementa(segons * -1);
         else {
-            decrementa();
+            // Passar hora actual a segons
+            int minutsAra = this.minuts * 60;
+            int horesAra = this.hores * 3600;
+            int segonsAra = minutsAra + horesAra + this.segons;
+
+            // Calcul de segons total de les hores
+            int segonsDec = segonsAra - segons;
+
+            int minutsDec = 0;
+            int horesDec = 0;
+            int diesDec = 0;
+
+            // Passar de segons a hores, minuts i segons adequadament
+            while(segonsDec > 59){
+                segonsDec -= 60;
+                minutsDec++;
+            }
+            while (minutsDec > 59){
+                minutsDec -= 60;
+                horesDec++;
+            }
+            while(horesDec > 23){
+                horesDec -= 24;
+                diesDec++;
+            }
+
+            this.segons = segonsDec;
+            this.minuts = minutsDec;
+            this.hores = horesDec;
         }
     }
 
