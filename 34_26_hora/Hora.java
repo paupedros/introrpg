@@ -76,21 +76,33 @@ public class Hora {
             int diesInc = 0;
             int horesInc = 0;
             int minutsInc = 0;
-            int segonsInc = segons;
 
-            while(segonsInc >= 60){
+            // Passar hora actual a segons
+            int minutsAra = this.minuts * 60;
+            int horesAra = this.hores * 3600;
+            int segonsAra = minutsAra + horesAra + this.segons;
+
+            // Calcul de segons total de les hores
+            int segonsInc = segons + segonsAra;
+
+            // Passar de segons a hores, minuts i segons adequadament
+            while(segonsInc > 59){
                 segonsInc -= 60;
-                minutsInc += 1;
+                minutsInc++;
             }
-            while (minutsInc >= 60){
+            while (minutsInc > 59){
                 minutsInc -= 60;
                 horesInc++;
             }
-            while(horesInc >= 24){
+            while(horesInc > 23){
                 horesInc -= 24;
                 diesInc++;
             }
-            if (horesInc >= 23) horesInc = horesInc - 23;
+
+            this.segons = segonsInc;
+            this.minuts = minutsInc;
+            this.hores = horesInc;
+
 
             /*
             if ((segons + this.segons) >= 60) { // Si els segons superen al minut
@@ -104,7 +116,7 @@ public class Hora {
             */
 
             System.out.println(String.format("dies: %d hores: %d minuts: %d segons: %d", diesInc, horesInc, minutsInc, segonsInc));
-
+            /*
             // Si la suma dels segons es superior a 60
             if ((this.segons + segonsInc) >= 60) {
                 // Calculem la diferencia fins a 60
@@ -124,13 +136,15 @@ public class Hora {
             } else
                 this.minuts += minutsInc;
 
-            if ((this.hores + horesInc) >= 60) {
-                // Calculem la diferencia fins a 60
-                int dife = 60 - this.hores;
+            if ((this.hores + horesInc) >= 24) {
+                // Calculem la diferencia fins a 24
+                int dife = 24 - this.hores;
                 horesInc = horesInc - dife;
                 this.hores = horesInc;
             } else
                 this.hores += horesInc;
+
+            */
         }
 
     }
