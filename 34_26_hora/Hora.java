@@ -11,7 +11,9 @@ public class Hora {
     }
 
     public Hora(int hores, int minuts, int segons) {
-        if (hores < 0 || minuts < 0 || segons < 0) {
+        if ((hores < 0 || hores > 23)
+            || (minuts < 0 || minuts > 23)
+            || (segons < 0 || segons > 23)) {
             hores = 0;
             minuts = 0;
             segons = 0;
@@ -82,29 +84,29 @@ public class Hora {
         System.out.println(String.format("hores: %d minuts: %d segons: %d", horesInc, minutsInc, segonsInc));
 
         // Si la suma dels segons es superior a 60
-        if ((this.segons + segonsInc) >= 60){
+        if ((this.segons + segonsInc) >= 60) {
             // Calculem la diferencia fins a 60
             int dife = 60 - this.segons;
             segonsInc = segonsInc - dife;
             this.segons = segonsInc;
-        }
-        else this.segons += segonsInc;
+        } else
+            this.segons += segonsInc;
 
-        if ((this.minuts + minutsInc) >= 60){
+        if ((this.minuts + minutsInc) >= 60) {
             // Calculem la diferencia fins a 60
             int dife = 60 - this.minuts;
             minutsInc = minutsInc - dife;
             this.minuts = minutsInc;
-        }
-        else this.minuts += minutsInc;
+        } else
+            this.minuts += minutsInc;
 
-        if ((this.hores + horesInc) >= 60){
+        if ((this.hores + horesInc) >= 60) {
             // Calculem la diferencia fins a 60
             int dife = 60 - this.hores;
             horesInc = horesInc - dife;
             this.hores = horesInc;
-        }
-        else this.hores += horesInc;
+        } else
+            this.hores += horesInc;
     }
 
     public void decrementa() {
