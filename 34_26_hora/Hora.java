@@ -150,7 +150,11 @@ public class Hora {
     }
 
     public void decrementa(int segons) {
-        decrementa();
+        if (segons < 0)
+            incrementa(segons * -1);
+        else {
+            decrementa();
+        }
     }
 
     public int compareTo(Hora hora) {
