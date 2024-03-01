@@ -1,16 +1,16 @@
 /**
  * Hora
  */
-public class Hora {
+public class Prova {
     private int hores = 0;
     private int minuts = 0;
     private int segons = 0;
 
-    public Hora() {
+    public Prova() {
         this(0, 0, 0);
     }
 
-    public Hora(int hores, int minuts, int segons) {
+    public Prova(int hores, int minuts, int segons) {
         if ((hores < 0 || hores > 23)
                 || (minuts < 0 || minuts > 59)
                 || (segons < 0 || segons > 59)) {
@@ -159,8 +159,7 @@ public class Hora {
         }
     }
 
-
-    public int compareTo(Hora hora) {
+    public int compareTo(Prova hora) {
         // Obtenim la hora en segons
         int hora1Num = (this.getHores()) * 3600 + (this.getMinuts()) * 60 + this.getSegons();
         int hora2Num = (hora.getHores()) * 3600 + (hora.getMinuts()) * 60 + hora.getSegons();
@@ -185,7 +184,7 @@ public class Hora {
      * @param hora2: segona hora a comparar
      * @return operador resultant
      */
-    private static String composaOperadorComparacio(Hora hora1, Hora hora2) {
+    private static String composaOperadorComparacio(Prova hora1, Prova hora2) {
         int comparacio = hora1.compareTo(hora2);
         if (comparacio < 0) {
             return "<";
@@ -197,15 +196,15 @@ public class Hora {
     }
 
     public static void main(String[] args) {
-        Hora hora1 = new Hora(0, 0, 0);
-        Hora hora2 = new Hora(0, 0, 2);
+        Prova hora1 = new Prova(0, 0, 0);
+        Prova hora2 = new Prova(1, 2, 3);
         System.out.printf("Inicialment hora1: %s %s hora2: %s%n",
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
                 hora2);
         System.out.println("Incrementem 1 segon a la primera i decrementem 1 segon a la segona");
         hora1.incrementa();
-        hora2.decrementa();
+        hora2.decrementa(86399);
         System.out.printf("Finalment hora1: %s %s hora2: %s%n",
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
