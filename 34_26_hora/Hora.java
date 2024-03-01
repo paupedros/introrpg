@@ -129,9 +129,7 @@ public class Hora {
             incrementa(segons * -1);
         else {
             // Passar hora actual a segons
-            int minutsAra = this.minuts * 60;
-            int horesAra = this.hores * 3600;
-            int segonsAra = minutsAra + horesAra + this.segons;
+            int segonsAra = this.hores * 3600 + this.minuts * 60 + this.segons;
 
             // Calcul de segons total de les hores
             int segonsTotal = 0;
