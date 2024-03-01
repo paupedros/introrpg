@@ -133,29 +133,33 @@ public class Hora {
             int horesAra = this.hores * 3600;
             int segonsAra = minutsAra + horesAra + this.segons;
 
-            System.out.println(String.format("segons: %d", segonsAra));
-
             // Calcul de segons total de les hores
             int segonsDec = 0;
-            if (segonsAra > segons) {
+            if (segonsAra > segons){
                 segonsDec = segonsAra - segons;
-            } else
-                segonsDec = segons - segonsAra;
+            }
+            else segonsDec = segons - segonsAra;
 
+            int minutsDec = 0;
+            int horesDec = 0;
             int diesDec = 0;
 
-            // Passar de segons a hores, minuts i segons adequadament
-            // Calcular horas
-            int horesDec = segonsDec / 3600;
-            // Calcular minutos restantes
-            int minutsRestants = segonsDec % 3600;
-            // Calcular minutos
-            int minutsDec = minutsRestants / 60;
-            // Calcular segundos restantes
-            int segonsRestants = minutsRestants % 60;
 
-            System.out.println(
-                    String.format("dies: %d hores: %d minuts: %d segons: %d", diesDec, horesDec, minutsDec, segonsRestants));
+            // Passar de segons a hores, minuts i segons adequadament
+            while (segonsDec > 59) {
+                segonsDec -= 60;
+                minutsDec++;
+            }
+            while (minutsDec > 59) {
+                minutsDec -= 60;
+                horesDec++;
+            }
+            while (horesDec > 23) {
+                horesDec -= 24;
+                diesDec++;
+            }
+
+            System.out.println(String.format("dies: %d hores: %d minuts: %d segons: %d", diesDec, horesDec, minutsDec, segonsDec));
 
             this.segons = segonsDec;
             this.minuts = minutsDec;
