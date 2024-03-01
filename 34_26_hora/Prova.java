@@ -201,19 +201,17 @@ public class Prova {
     }
 
     public static void main(String[] args) {
-        Prova hora1 = new Prova(0, 0, 0);
+        Prova hora1 = new Prova(3, 2, 1);
         Prova hora2 = new Prova(0, 0, 0);
-        System.out.printf("Inicialment hora1: %s %s hora2: %s%n",
+        System.out.printf("Inicialment hora1: %s hora2: %s%n",
                 hora1,
-                composaOperadorComparacio(hora1, hora2),
                 hora2);
-        System.out.println("Incrementem 1 segon a la primera i decrementem 1 segon a la segona");
-        hora1.incrementa();
-        hora2.decrementa(1);
-        System.out.printf("Finalment hora1: %s %s hora2: %s%n",
+        hora1.decrementa(2147397247);
+        hora2.decrementa(432001);
+        System.out.printf("Finalment hora1: %s hora2: %s%n",
                 hora1,
-                composaOperadorComparacio(hora1, hora2),
                 hora2);
+
 
     }
 }
