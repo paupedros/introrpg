@@ -26,11 +26,11 @@ public class GatRenat {
         return this.posicio;
     }
 
-    public void setPosicio(String pos) {
-        if (pos.equals("dret")
-                || pos.equals("estirat")
-                || pos.equals("assegut"))
-            this.posicio = pos;
+    public void setPosicio(String posicio) {
+        if (posicio.equals("dret")
+                || posicio.equals("estirat")
+                || posicio.equals("assegut"))
+            this.posicio = posicio;
         else this.posicio = "estirat";
     }
 
