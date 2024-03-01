@@ -131,28 +131,36 @@ public class Hora {
             // Passar hora actual a segons
             int segonsAra = this.hores * 3600 + this.minuts * 60 + this.segons;
 
-            // Calcul de segons total de les hores
-            int segonsTotal = 0;
-            if (segonsAra > segons){
-                segonsTotal = segonsAra - segons;
+            if (segonsAra == 0) {
+                decrementa();
+                decrementa(segons - 1);
             }
-            else segonsTotal = segons - segonsAra;
+            else {
 
-           // Calcular días
-           int diesDec = segonsTotal / 86400; // 86400 segundos en un día
-           // Calcular horas restantes
-           int segonsRestants = segonsTotal % 86400;
-           int horesDec = segonsRestants / 3600; // 3600 segundos en una hora
-           // Calcular minutos restantes
-           int minutsDec = (segonsRestants % 3600) / 60; // 60 segundos en un minuto
-           // Calcular segundos restantes
-           int segonsDec = segonsRestants % 60;
+                // Calcul de segons total de les hores
+                int segonsTotal = 0;
+                if (segonsAra > segons) {
+                    segonsTotal = segonsAra - segons;
+                } else
+                    segonsTotal = segons - segonsAra;
 
-            System.out.println(String.format("dies: %d hores: %d minuts: %d segons: %d", diesDec, horesDec, minutsDec, segonsDec));
+                // Calcular días
+                int diesDec = segonsTotal / 86400; // 86400 segundos en un día
+                // Calcular horas restantes
+                int segonsRestants = segonsTotal % 86400;
+                int horesDec = segonsRestants / 3600; // 3600 segundos en una hora
+                // Calcular minutos restantes
+                int minutsDec = (segonsRestants % 3600) / 60; // 60 segundos en un minuto
+                // Calcular segundos restantes
+                int segonsDec = segonsRestants % 60;
 
-            this.segons = segonsDec;
-            this.minuts = minutsDec;
-            this.hores = horesDec;
+                System.out.println(
+                        String.format("dies: %d hores: %d minuts: %d segons: %d", diesDec, horesDec, minutsDec, segonsDec));
+
+                this.segons = segonsDec;
+                this.minuts = minutsDec;
+                this.hores = horesDec;
+            }
         }
     }
 

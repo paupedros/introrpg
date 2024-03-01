@@ -128,34 +128,39 @@ public class Prova {
         if (segons < 0)
             incrementa(segons * -1);
         else {
-            // Passar hora actual de la instancia a segons
+            // Passar hora actual a segons
             int segonsAra = this.hores * 3600 + this.minuts * 60 + this.segons;
 
-            System.out.println(String.format("segons hora actual: %d --> %s", segonsAra, this.toString()));
+            if (segonsAra == 0) {
+                decrementa();
+                decrementa(segons - 1);
+            }
+            else {
 
-            // Passar de segons a hores, minuts i segons adequadament
-            int segonsTotal = segons;
+                // Calcul de segons total de les hores
+                int segonsTotal = 0;
+                if (segonsAra > segons) {
+                    segonsTotal = segonsAra - segons;
+                } else
+                    segonsTotal = segons - segonsAra;
 
-            // Calcular días
-            int diesDec = segonsTotal / 86400; // 86400 segundos en un día
-            // Calcular horas restantes
-            int segonsRestants = segonsTotal % 86400;
-            int horesDec = segonsRestants / 3600; // 3600 segundos en una hora
-            // Calcular minutos restantes
-            int minutsDec = (segonsRestants % 3600) / 60; // 60 segundos en un minuto
-            // Calcular segundos restantes
-            int segonsDec = segonsRestants % 60;
+                // Calcular días
+                int diesDec = segonsTotal / 86400; // 86400 segundos en un día
+                // Calcular horas restantes
+                int segonsRestants = segonsTotal % 86400;
+                int horesDec = segonsRestants / 3600; // 3600 segundos en una hora
+                // Calcular minutos restantes
+                int minutsDec = (segonsRestants % 3600) / 60; // 60 segundos en un minuto
+                // Calcular segundos restantes
+                int segonsDec = segonsRestants % 60;
 
-            System.out.println(
-                    String.format("dies: %d hores: %d minuts: %d segons: %d",
-                            diesDec, horesDec, minutsDec, segonsDec));
+                System.out.println(
+                        String.format("dies: %d hores: %d minuts: %d segons: %d", diesDec, horesDec, minutsDec, segonsDec));
 
-            int horaFinal = segonsAra - segonsDec;
-            System.out.println("segons hora final: " + horaFinal);
-
-            this.segons = segonsDec;
-            this.minuts = minutsDec;
-            this.hores = horesDec;
+                this.segons = segonsDec;
+                this.minuts = minutsDec;
+                this.hores = horesDec;
+            }
         }
     }
 
@@ -197,14 +202,14 @@ public class Prova {
 
     public static void main(String[] args) {
         Prova hora1 = new Prova(0, 0, 0);
-        Prova hora2 = new Prova(1, 2, 3);
+        Prova hora2 = new Prova(0, 0, 0);
         System.out.printf("Inicialment hora1: %s %s hora2: %s%n",
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
                 hora2);
         System.out.println("Incrementem 1 segon a la primera i decrementem 1 segon a la segona");
         hora1.incrementa();
-        hora2.decrementa(86399);
+        hora2.decrementa(1);
         System.out.printf("Finalment hora1: %s %s hora2: %s%n",
                 hora1,
                 composaOperadorComparacio(hora1, hora2),
