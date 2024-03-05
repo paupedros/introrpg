@@ -37,6 +37,8 @@ public class GatRenat {
         if (instancia == null){
             instancia = new GatRenat(vides, posicio);
         }
+        instancia.setVides(vides);
+        instancia.setPosicio(posicio);
         return instancia;
     }
 
