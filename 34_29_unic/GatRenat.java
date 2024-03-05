@@ -23,6 +23,7 @@ public class GatRenat {
         if (instancia == null){
             instancia = new GatRenat(vides, "estirat");
         }
+        instancia.setVides(vides);
         return instancia;
     }
     public static GatRenat getInstancia(String posicio){
