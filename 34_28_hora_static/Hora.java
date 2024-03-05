@@ -151,6 +151,86 @@ public class Hora {
             segons++;
     }
 
+    public void incrementa(int segons) {
+        if (segons < 0)
+            decrementa(segons * -1);
+        else {
+            int diesInc = 0;
+            int horesInc = 0;
+            int minutsInc = 0;
+
+            // Passar hora actual a segons
+            int minutsAra = this.minuts * 60;
+            int horesAra = this.hores * 3600;
+            int segonsAra = minutsAra + horesAra + this.segons;
+
+            // Calcul de segons total de les hores
+            int segonsInc = segons + segonsAra;
+
+            // Passar de segons a hores, minuts i segons adequadament
+            while (segonsInc > 59) {
+                segonsInc -= 60;
+                minutsInc++;
+            }
+            while (minutsInc > 59) {
+                minutsInc -= 60;
+                horesInc++;
+            }
+            while (horesInc > 23) {
+                horesInc -= 24;
+                diesInc++;
+            }
+
+            this.segons = segonsInc;
+            this.minuts = minutsInc;
+            this.hores = horesInc;
+
+            System.out.println(
+                    String.format("dies: %d hores: %d minuts: %d segons: %d", diesInc, horesInc, minutsInc, segonsInc));
+        }
+
+    }
+
+    public void decrementa(int segons) {
+        if (segons < 0)
+            incrementa(segons * -1);
+        else {
+            // Passar hora actual a segons
+            int segonsAra = this.hores * 3600 + this.minuts * 60 + this.segons;
+
+            if (segonsAra == 0) {
+                decrementa();
+                decrementa(segons - 1);
+            }
+            else {
+
+                // Calcul de segons total de les hores
+                int segonsTotal = 0;
+                if (segonsAra > segons) {
+                    segonsTotal = segonsAra - segons;
+                } else
+                    segonsTotal = segons - segonsAra;
+
+                // Calcular días
+                int diesDec = segonsTotal / 86400; // 86400 segundos en un día
+                // Calcular horas restantes
+                int segonsRestants = segonsTotal % 86400;
+                int horesDec = segonsRestants / 3600; // 3600 segundos en una hora
+                // Calcular minutos restantes
+                int minutsDec = (segonsRestants % 3600) / 60; // 60 segundos en un minuto
+                // Calcular segundos restantes
+                int segonsDec = segonsRestants % 60;
+
+                System.out.println(
+                        String.format("dies: %d hores: %d minuts: %d segons: %d", diesDec, horesDec, minutsDec, segonsDec));
+
+                this.segons = segonsDec;
+                this.minuts = minutsDec;
+                this.hores = horesDec;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Hora hora1 = new Hora(0, 0, 0);
         Hora hora2 = new Hora(0, 0, 2);
