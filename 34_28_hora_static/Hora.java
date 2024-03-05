@@ -65,12 +65,12 @@ public class Hora {
     }
 
     public Hora duplica(){
-        Hora newHora = this;
+        Hora newHora = new Hora(this.getHores(), this.getMinuts(), this.getSegons());
         return newHora;
     }
 
     public static Hora duplica(Hora hora){
-        Hora newHora = hora;
+        Hora newHora = new Hora(hora.getHores(), hora.getMinuts(), hora.getSegons());
         return newHora;
     }
 
