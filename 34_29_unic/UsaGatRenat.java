@@ -1,3 +1,8 @@
+/*
+ * Programa que prova la classe GatRenat i converteix el input de la posicio
+ * per tal que sigui util amb els metodes de la classe
+ */
+
 public class UsaGatRenat {
     public static void main(String[] args) {
         GatRenat renat = GatRenat.getInstancia();
