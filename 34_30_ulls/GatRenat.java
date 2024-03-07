@@ -13,6 +13,14 @@ public class GatRenat {
         this(7, "estirat");
     }
 
+    public GatRenat(int vides) {
+        this(vides, "estirat");
+    }
+
+    public GatRenat(String posicio) {
+        this(7, posicio);
+    }
+
     public GatRenat(int vides, String posicio) {
         this.setVides(vides);
         this.setPosicio(posicio);
@@ -41,27 +49,30 @@ public class GatRenat {
             this.posicio = "estirat";
     }
 
-    public void seu(){
+    public void seu() {
         this.posicio = "assegut";
         ullDret.obret(); // true
         ullEsquerre.tancat(); // false
     }
-    public void aixecat(){
+
+    public void aixecat() {
         this.posicio = "dret";
         ullEsquerre.obret(); // true
         ullDret.obret(); // true
     }
-    public void estirat(){
+
+    public void estirat() {
         this.posicio = "estirat";
         ullEsquerre.tancat(); // false
         ullDret.tancat(); // false
     }
 
-    public UllDeGat getUllDret(){
+    public UllDeGat getUllDret() {
         UllDeGat instancia = new UllDeGat(ullDret.esObert());
         return instancia;
     }
-    public UllDeGat getUllEsquerre(){
+
+    public UllDeGat getUllEsquerre() {
         UllDeGat instancia = new UllDeGat(ullEsquerre.esObert());
         return instancia;
     }
