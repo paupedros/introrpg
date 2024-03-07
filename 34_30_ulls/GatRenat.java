@@ -68,12 +68,16 @@ public class GatRenat {
     }
 
     public UllDeGat getUllDret() {
-        UllDeGat instancia = new UllDeGat(ullDret.esObert());
+        boolean obert = false;
+        if (getPosicio().equals("dret") || getPosicio().equals("assegut")) obert = true;
+        UllDeGat instancia = new UllDeGat(obert);
         return instancia;
     }
 
     public UllDeGat getUllEsquerre() {
-        UllDeGat instancia = new UllDeGat(ullEsquerre.esObert());
+        boolean obert = false;
+        if (getPosicio().equals("dret")) obert = true;
+        UllDeGat instancia = new UllDeGat(obert);
         return instancia;
     }
 
