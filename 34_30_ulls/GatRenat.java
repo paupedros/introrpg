@@ -43,8 +43,8 @@ public class GatRenat {
 
     public void seu(){
         this.posicio = "assegut";
-        ullEsquerre.obret(); // true
-        ullDret.tancat(); // false
+        ullDret.obret(); // true
+        ullEsquerre.tancat(); // false
     }
     public void aixecat(){
         this.posicio = "dret";
