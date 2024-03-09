@@ -4,8 +4,6 @@
  */
 
  public class GatRenat {
-    private UllDeGat ullDret = new UllDeGat();
-    private UllDeGat ullEsquerre = new UllDeGat();
     private int vides = 7;
     private String posicio = "estirat";
     private Picarol picarol;
@@ -77,20 +75,6 @@
         return "passo de fer res";
     }
 
-    public UllDeGat getUllDret() {
-        boolean obert = false;
-        if (getPosicio().equals("dret") || getPosicio().equals("assegut")) obert = true;
-        UllDeGat instancia = new UllDeGat(obert);
-        return instancia;
-    }
-
-    public UllDeGat getUllEsquerre() {
-        boolean obert = false;
-        if (getPosicio().equals("dret")) obert = true;
-        UllDeGat instancia = new UllDeGat(obert);
-        return instancia;
-    }
-
     public boolean hiHaPicarol() {
         if (this.picarol == null) return false;
         return true;
@@ -116,25 +100,5 @@
     @Override
     public String toString() {
         return String.format("Vides: %d. Posició: %s", vides, posicio);
-    }
-
-    public static void main(String[] args) {
-        GatRenat renat = new GatRenat();
-        UllDeGat ullDret = renat.getUllDret();
-        UllDeGat ullEsquerre = renat.getUllEsquerre();
-        System.out.printf("Quan està %s: %b + %b%n",
-                renat.getPosicio(),
-                renat.getUllDret().esObert(),
-                renat.getUllEsquerre().esObert());
-        renat.seu();
-        System.out.printf("Quan està %s: %b + %b%n",
-                renat.getPosicio(),
-                renat.getUllDret().esObert(),
-                renat.getUllEsquerre().esObert());
-        renat.aixecat();
-        System.out.printf("Quan està %s: %b + %b%n",
-                renat.getPosicio(),
-                renat.getUllDret().esObert(),
-                renat.getUllEsquerre().esObert());
     }
 }
