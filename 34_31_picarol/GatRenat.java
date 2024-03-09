@@ -60,7 +60,7 @@
     public String seu(){
         if (!posicio.equals("assegut")){
             setPosicio("assegut");
-            if (this.picarol == null) {
+            if (this.picarol != null) {
                 picarol.sona();
             }
             return "ja m'assec";
