@@ -60,7 +60,7 @@
     public String seu(){
         if (!posicio.equals("assegut")){
             setPosicio("assegut");
-            if (picarol != null) picarol.sona();
+            if (this.picarol != null) picarol.sona();
             return "ja m'assec";
         }
         return "passo de fer res";
