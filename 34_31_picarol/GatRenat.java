@@ -51,7 +51,7 @@
     public String aixecat(){
         if (!posicio.equals("dret")){
             setPosicio("dret");
-            if (picarol != null) picarol.sona();
+            if (this.picarol != null) picarol.sona();
             return "ja m'aixeco";
         }
         return "passo de fer res";
@@ -71,7 +71,7 @@
     public String estirat(){
         if (!posicio.equals("estirat")){
             setPosicio("estirat");
-            if (picarol != null) picarol.sona();
+            if (this.picarol != null) picarol.sona();
             return "ja m'estiro";
         }
         return "passo de fer res";
