@@ -88,7 +88,7 @@
             return null; // retorna null
         }
         Picarol p = this.picarol;
-        this.picarol = new Picarol();
+        this.picarol = picarol;
         return p;
     }
 
