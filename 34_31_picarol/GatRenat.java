@@ -83,12 +83,12 @@
     }
 
     public Picarol agafaPicarol(Picarol picarol) {
-        if (picarol == null){
-            picarol = new Picarol(); // asigna picarol
+        if (this.picarol == null){
+            this.picarol = picarol; // asigna picarol
             return null; // retorna null
         }
-        Picarol p = picarol;
-        picarol = new Picarol();
+        Picarol p = this.picarol;
+        this.picarol = new Picarol();
         return p;
     }
 
