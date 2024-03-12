@@ -12,6 +12,7 @@ public class DemoCrides {
         gat.netejaUrpes();
         gatRenat.netejaUrpes();
         gat.miola();
+        gatRenat.miola();
         Menjar bacalla = new Menjar("bacallà");
         gatRenat.menja(bacalla);
     }
