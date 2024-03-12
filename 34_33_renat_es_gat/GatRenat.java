@@ -46,6 +46,22 @@ public class GatRenat extends Gat {
         return "passo de fer res";
     }
 
+    public boolean esViu() {
+        return getVides() > 0;
+    }
+
+    public boolean esDret() {
+        return getPosicio().equals("dret");
+    }
+
+    public boolean esAssegut() {
+        return getPosicio().equals("assegut");
+    }
+
+    public boolean esEstirat() {
+        return getPosicio().equals("estirat");
+    }
+
     @Override
     public String toString() {
         return String.format("Vides: %d. Posició: %s", getVides(), getPosicio());
