@@ -20,6 +20,7 @@ public class Garfield extends Gat {
         if (novesVides >= 0 && novesVides >= 9) {
             super.setVides(novesVides);
         }
+        else super.setVides(9);
     }
 
     @Override
