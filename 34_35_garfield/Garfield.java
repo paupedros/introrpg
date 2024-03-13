@@ -5,15 +5,10 @@
  */
 
 public class Garfield extends Gat {
-    private int vides = 9;
 
     public Garfield() {
         super("Garfield", 9, "estirat");
-    }
-
-    private int correctVides(int vides){
-        if (vides >= 0 && vides <= 9) return vides;
-        return 9;
+        this.setVides(9);
     }
 
     @Override
