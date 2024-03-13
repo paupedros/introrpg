@@ -13,6 +13,10 @@ public class GatRenat extends Gat {
         this(vides, "estirat");
     }
 
+    public GatRenat(String posicio){
+        this(7, posicio);
+    }
+
     public GatRenat(int vides, String posicio){
         super("Renat", vides, posicio);
     }
