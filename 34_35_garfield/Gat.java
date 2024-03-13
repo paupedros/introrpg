@@ -17,6 +17,10 @@ public class Gat {
 
     }
 
+    public Gat(String nom, String posicio) {
+        this(nom, 7, posicio);
+    }
+
     public Gat(String nom, int vides, String posicio) {
         this.nom = strictNom(nom);
         this.vides = vides;
