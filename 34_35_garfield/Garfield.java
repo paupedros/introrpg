@@ -15,7 +15,7 @@ public class Garfield extends Gat {
     }
 
     public Garfield(int vides, String posicio){
-        super("Garfield", 9, "estirat");
+        super("Garfield", vides, posicio);
     }
 
     private int correctVides(int vides){
