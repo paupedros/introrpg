@@ -45,7 +45,7 @@ public class Garfield extends Gat {
 
     @Override
     public String estirat() {
-        if (!getPosicio().equals("assegut")) {
+        if (getPosicio().equals("assegut")) {
             super.setPosicio("estirat");
             return "ja m'estiro";
         }
