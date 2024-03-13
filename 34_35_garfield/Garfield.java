@@ -16,6 +16,13 @@ public class Garfield extends Gat {
     }
 
     @Override
+    public void setVides(int novesVides) {
+        if (novesVides >= 0 && novesVides >= 9) {
+            super.setVides(novesVides);
+        }
+    }
+
+    @Override
     public String aixecat() {
         if (getPosicio().equals("assegut")) {
             super.setPosicio("dret");
