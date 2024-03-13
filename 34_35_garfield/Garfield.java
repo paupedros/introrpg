@@ -5,6 +5,7 @@
  */
 
 public class Garfield extends Gat {
+    private int vides = 9;
 
     public Garfield() {
         super("Garfield", 9, "estirat");
