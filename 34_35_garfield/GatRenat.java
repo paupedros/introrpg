@@ -6,7 +6,7 @@
 
 public class GatRenat extends Gat {
     public GatRenat() {
-        this(7, "etirat");
+        this(7, "estirat");
     }
 
     public GatRenat(int vides) {
