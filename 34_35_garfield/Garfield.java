@@ -7,16 +7,7 @@
 public class Garfield extends Gat {
 
     public Garfield() {
-        this(9, "estirat");
-    }
-
-    public Garfield(int vides) {
-        this(vides, "estirat");
-    }
-
-    public Garfield(int vides, String posicio){
-        super("Garfield", vides, posicio);
-        super.setVides(correctVides(vides));
+        super("Garfield", 9, "estirat");
     }
 
     private int correctVides(int vides){
