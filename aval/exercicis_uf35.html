@@ -34,17 +34,23 @@
         span.clickable { cursor: pointer; }
         #entry1 { position: relative; }
         td.overdue { color: grey; font-style: italic; }
+        div.important {
+            background-color: yellow;
+            border: 2px solid orange; /* You can adjust the border color as desired */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adjust the shadow properties for desired effect */
+            padding: 10px; /* Adjust padding as needed */
+        }
      </style>
   </head>
   <body>
       <div class="title-container">
-        <a class="discrete" href="https://gatrenat.github.io/introprgdev/">
-        <img src="https://gatrenat.github.io/introprgdev/_static/logoprg.png" alt="logo" title="obre els apunts">
-        </a>
-        <h1>Resultats de la correcció automàtica</h1>
+          <a class="discrete" href="https://gatrenat.github.io/introprgdev/">
+              <img src="https://gatrenat.github.io/introprgdev/_static/logoprg.png" alt="logo" title="obre els apunts">
+          </a>
+          <h1>Resultats de la correcció automàtica</h1>
       </div>
-      <p>Hola Pau</p>
-      <p>Aquest és un resum dels resultats de la correcció automàtica dels exercicis del teu repositori: <tt>git@github.com:paupedros/introrpg.git</b>.</tt><table>
+      <p>Hola Pau</p><p>Aquest és un resum dels resultats de la correcció automàtica dels exercicis del teu repositori: <tt>git@github.com:paupedros/introrpg.git</b>.</tt>
+      <table>
           <tr class="header">
               <th colspan=2>Exercici</th>
               <th class="questionable" title="Data límit del lliurament">data límit</th>
@@ -58,12 +64,12 @@
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
               <td>&nbsp;</td>
-              <td class="result">
-                  <span class='help' title="NP">✖</span>
-              </td>
-              <td>
-                  <span>No lliurat</span>
-                                </td>
+                  <td class="result">
+                      <span class='help' title="NP">✖</span>
+                  </td>
+                  <td>
+                      <span>No lliurat</span>
+                                        </td>
           </tr>
           <tr class="exercise">
               <td><a class="discrete" target="_blank" title="obre l'enunciat" href="https://gatrenat.github.io/introprgdev/exercici_35_01_vi.html">35_01_vi</a></td>
@@ -73,12 +79,12 @@
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
               <td>&nbsp;</td>
-              <td class="result">
-                  <span class='help' title="NP">✖</span>
-              </td>
-              <td>
-                  <span>No lliurat</span>
-                                </td>
+                  <td class="result">
+                      <span class='help' title="NP">✖</span>
+                  </td>
+                  <td>
+                      <span>No lliurat</span>
+                                        </td>
           </tr>
           <tr class="exercise">
               <td><a class="discrete" target="_blank" title="obre l'enunciat" href="https://gatrenat.github.io/introprgdev/exercici_35_02_botiga.html">35_02_botiga</a></td>
@@ -88,12 +94,12 @@
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
               <td>&nbsp;</td>
-              <td class="result">
-                  <span class='help' title="NP">✖</span>
-              </td>
-              <td>
-                  <span>No lliurat</span>
-                                </td>
+                  <td class="result">
+                      <span class='help' title="NP">✖</span>
+                  </td>
+                  <td>
+                      <span>No lliurat</span>
+                                        </td>
           </tr>
           <tr class="exercise">
               <td><a class="discrete" target="_blank" title="obre l'enunciat" href="https://gatrenat.github.io/introprgdev/exercici_35_03_entorn.html">35_03_entorn</a></td>
@@ -103,35 +109,34 @@
                   <span class="activeattrib" title="Exercici amb proves automàtiques">✓</span>
               </td>
               <td>&nbsp;</td>
-              <td class="result">
-                  <span class='help' title="NP">✖</span>
-              </td>
-              <td>
-                  <span>No lliurat</span>
-                                </td>
+                  <td class="result">
+                      <span class='help' title="NP">✖</span>
+                  </td>
+                  <td>
+                      <span>No lliurat</span>
+                                        </td>
           </tr>
-                </table>
-      <p>Darrer commit avaluat #N/A amb data N/A</p><script>
-      // connect results to tooltip
-      document.querySelectorAll('tr.exercise').forEach(function (tr) {
-          const button = tr.querySelector('span.clickable');
-          if (button != null) {
-              button.textContent = "…";
-              button.title = "Click per mostrar detalls";
-              const tooltip = tr.querySelector('span.tooltip');
-              tooltip.style.display = "none";
-              button.addEventListener("click", function () {
-                  if (tooltip.style.display == "inline") {
-                      hideTooltip(tr);
-                  } else {
-                      document.querySelectorAll('span.tooltip:not(hidden)').forEach(function (span) {
-                          hideTooltip(span.parentNode.parentNode);
-                      });
-                      showTooltip(tr);
-                  }
-              })
-          }
-      });
+                </table><p>Darrer commit avaluat #N/A amb data N/A</p><script>
+          // connect results to tooltip
+          document.querySelectorAll('tr.exercise').forEach(function (tr) {
+              const button = tr.querySelector('span.clickable');
+              if (button != null) {
+                  button.textContent = "…";
+                  button.title = "Click per mostrar detalls";
+                  const tooltip = tr.querySelector('span.tooltip');
+                  tooltip.style.display = "none";
+                  button.addEventListener("click", function () {
+                      if (tooltip.style.display == "inline") {
+                          hideTooltip(tr);
+                      } else {
+                          document.querySelectorAll('span.tooltip:not(hidden)').forEach(function (span) {
+                              hideTooltip(span.parentNode.parentNode);
+                          });
+                          showTooltip(tr);
+                      }
+                  })
+              }
+          });
 
       // mark due entries as overdue
       document.querySelectorAll('td[duedate]').forEach(td => {
