@@ -10,6 +10,7 @@ public class Vi {
     public Vi(String nom, int preu) {
         this.nom = normalitzaNom(nom);
         this.preu = preu;
+        this.estoc = 0;
     }
 
     public Vi(String nom, int preu, int estoc) {
