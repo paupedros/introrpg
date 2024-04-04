@@ -11,7 +11,6 @@ public class Gat implements EsserViu {
             this.nom = "anònim";
         } else
             this.nom = nom;
-
     }
 
     Gat(String nom, int vides) {
