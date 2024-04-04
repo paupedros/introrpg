@@ -48,8 +48,8 @@ public class Vi {
 
     public boolean esValid() {
         if (nom.isEmpty()) return false;
-        if (preu < 0) return false;
-        if (estoc < 0) return false;
+        else if (preu < 0) return false;
+        else if (estoc < 0) return false;
         return true;
     }
 
