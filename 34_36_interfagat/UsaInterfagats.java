@@ -58,7 +58,7 @@ public class UsaInterfagats {
             // 1. demana el nom
             System.out.println(gat.getNom());
             // 2. assigna-li una única vida
-            System.out.println(gat.setVides(1));
+            gat.setVides(1);
             // 3. demana que revisqui
             System.out.println(gat.reviu());
             // 4. demana que mori
