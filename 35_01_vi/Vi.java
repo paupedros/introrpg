@@ -5,7 +5,7 @@
 public class Vi {
     private String nom = "NOM NO VÀLID!";
     private int preu = -1;
-    private int estoc = 0;
+    private int estoc = -1;
 
     public Vi(String nom, int preu) {
         this.nom = normalitzaNom(nom);
@@ -18,9 +18,28 @@ public class Vi {
         this.estoc = estoc;
     }
 
+    public String getNom() {
+        return nom;
+    }
+
+    public int getPreu() {
+        return preu;
+    }
+
+    public void setPreu(int preu) {
+        if (preu >= 0) this.preu = preu;
+    }
+
+    public int getEstoc() {
+        return estoc;
+    }
+
+    public void setEstoc(int estoc) {
+        if (estoc >= 0) this.estoc = estoc;
+    }
 
     public static String normalitzaNom(String nom){
-        if (esValid(nom)){
+        if (!nom.isBlank()){
             return nom.strip().replaceAll("\\s+"," ");
         }
         return "NOM NO VÀLID!";
@@ -28,6 +47,9 @@ public class Vi {
 
     public boolean esValid() {
         if (nom.isBlank()) return false;
+        if (preu == -1) return false;
+        if (estoc == -1) return false;
+        return true;
     }
 
     @Override
