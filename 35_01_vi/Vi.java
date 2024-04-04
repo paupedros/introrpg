@@ -9,7 +9,7 @@ public class Vi {
 
     public Vi(String nom, int preu) {
         this.nom = normalitzaNom(nom);
-        this.preu = preu;
+        this.setPreu(preu);
         this.estoc = 0;
     }
 
