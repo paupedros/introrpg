@@ -50,7 +50,7 @@ public class Vi {
         if (nom.isBlank()) return false;
         else if (preu < 0) return false;
         else if (estoc < 0) return false;
-        return true;
+        else return true;
     }
 
     @Override
