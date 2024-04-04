@@ -1,3 +1,7 @@
+/*
+ * Implementacio de la classe GatRenat que es un gat i implementa les caracteristiques
+ * dels animals de companyia i els ensinistrables
+ */
 
 public class GatRenat extends Gat implements AnimalDeCompanyia, Ensinistrable {
     private String posicio = "estirat";
