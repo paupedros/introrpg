@@ -5,6 +5,15 @@ public class GatRenat extends Gat implements AnimalDeCompanyia, Ensinistrable {
     GatRenat() {
         super("Renat");
     }
+    GatRenat(String posicio){
+        super("Renat");
+        if (posicio.equals("dret")
+                || posicio.equals("estirat")
+                || posicio.equals("assegut"))
+            this.posicio = posicio;
+        else
+            this.posicio = "estirat";
+    }
 
     public String getPosicio() {
         return posicio;
