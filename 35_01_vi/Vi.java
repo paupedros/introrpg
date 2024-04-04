@@ -47,7 +47,7 @@ public class Vi {
     }
 
     public boolean esValid() {
-        if (getNom().isBlank()) return false;
+        if (nom.isEmpty()) return false;
         if (preu < 0) return false;
         if (estoc < 0) return false;
         return true;
