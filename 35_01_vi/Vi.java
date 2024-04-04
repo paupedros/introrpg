@@ -3,9 +3,9 @@
  * i metodes
  */
 public class Vi {
-    private String nom;
-    private int preu;
-    private int estoc;
+    private String nom = "NOM NO VÀLID!";
+    private int preu = -1;
+    private int estoc = 0;
 
     public Vi(String nom, int preu) {
         this.nom = normalitzaNom(nom);
