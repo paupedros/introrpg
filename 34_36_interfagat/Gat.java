@@ -7,14 +7,14 @@ public class Gat implements EsserViu {
     private String nom = "anònim";
 
     Gat(String nom) {
-        if (nom == null || nom.isEmpty()) {
+        if (nom == null || nom.isBlank()) {
             this.nom = "anònim";
         } else
             this.nom = nom;
     }
 
     Gat(String nom, int vides) {
-        if (nom == null || nom.isEmpty()) {
+        if (nom == null || nom.isBlank()) {
             this.nom = "anònim";
         } else
             this.nom = nom;
