@@ -10,15 +10,6 @@ public class GatRenat extends Gat implements AnimalDeCompanyia, Ensinistrable {
         return posicio;
     }
 
-    public void setPosicio(String posicio) {
-        if (posicio.equals("dret")
-                || posicio.equals("estirat")
-                || posicio.equals("assegut"))
-            this.posicio = posicio;
-        else
-            this.posicio = "estirat";
-    }
-
     @Override
     public boolean esDret() {
         return getPosicio().equals("dret");
@@ -37,7 +28,7 @@ public class GatRenat extends Gat implements AnimalDeCompanyia, Ensinistrable {
     @Override
     public String aixecat() {
         if (!getPosicio().equals("dret")) {
-            setPosicio("dret");
+            posicio = "dret";
             return "ja m'aixeco";
         }
         return "passo de fer res";
@@ -46,7 +37,7 @@ public class GatRenat extends Gat implements AnimalDeCompanyia, Ensinistrable {
     @Override
     public String seu() {
         if (!getPosicio().equals("assegut")) {
-            setPosicio("assegut");
+            posicio = "assegut";
             return "ja m'assec";
         }
         return "passo de fer res";
@@ -55,7 +46,7 @@ public class GatRenat extends Gat implements AnimalDeCompanyia, Ensinistrable {
     @Override
     public String estirat() {
         if (!getPosicio().equals("estirat")) {
-            setPosicio("estirat");
+            posicio = "estirat";
             return "ja m'estiro";
         }
         return "passo de fer res";
