@@ -6,8 +6,10 @@ public class Gat implements EsserViu{
     private int vides = 7;
     private String nom = "anònim";
 
-    public Gat(String nom){
-        this.nom = nom;
+    Gat(String nom){
+        if (!nom.isBlank() || nom != null)
+            this.nom = nom;
+        this.nom = "anònim";
     }
 
     Gat(String nom, int vides){
