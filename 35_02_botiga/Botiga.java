@@ -21,22 +21,20 @@ public class Botiga {
             // Si no es troba cap vi amb el mateix nom al de afegir
             if (cerca(vi.getNom()) == null) {
                 // Busca un espai null a la llista
-                for (Vi findPlace : vins){
-                    if (findPlace == null){
-                        // Afegeix el nou vi
-                        findPlace = vi;
-                        // Marquem com que s'ha trobat un lloc
-                        placed = true;
+                for (int i = 0; i < vins.length; i++) {
+                    if (vins[i] == null) {
+                        vins[i] = vi;
                         return vi;
                     }
                 }
-            }return null;
+            } else
+                return null;
         }
-
         return vi;
     }
 
     public Vi elimina(String nomVi) {
+        nomVi = Vi.normalitzaNom(nomVi);
         Vi vi = cerca(nomVi);
         if (vi != null) {
             if (vi.getEstoc() > 0) {
@@ -57,9 +55,10 @@ public class Botiga {
 
     public Vi cerca(String nom) {
         nom = Vi.normalitzaNom(nom);
-        for (Vi vi : vins) { // Per cada vi de la llista de vins
+        for (int i = 0; i < vins.length; i++) { // Per cada vi de la llista de vins
+            Vi vi = vins[i];
             if (vi != null && nom.equalsIgnoreCase(vi.getNom()))
-                return new Vi(nom, vi.getPreu(), vi.getEstoc());
+                return vi;
         }
         return null;
     }
