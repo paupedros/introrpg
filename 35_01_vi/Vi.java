@@ -43,7 +43,7 @@ public class Vi {
         if (!nom.isBlank()){
             return nom.strip().replaceAll("\\s+"," ");
         }
-        return "NOM NO VÀLID!";
+        else return "NOM NO VÀLID!";
     }
 
     public boolean esValid() {
