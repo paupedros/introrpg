@@ -16,7 +16,6 @@ public class Botiga {
     }
 
     public Vi afegeix(Vi vi) {
-        boolean placed = false;
         if (vi.esValid()) {
             // Si no es troba cap vi amb el mateix nom al de afegir
             if (cerca(vi.getNom()) == null) {
@@ -38,15 +37,16 @@ public class Botiga {
         nomVi = Vi.normalitzaNom(nomVi);
         Vi vi = cerca(nomVi);
         if (vi != null) {
+            // Si te estoc...
             if (vi.getEstoc() > 0) {
                 return null;
             }
-            // Si te estoc...
             else {
                 for (int i = 0; i < vins.length; i++) {
+                    Vi deletedVi = vins[i];
                     if (nomVi.equals(vins[i].getNom())) {
                         vins[i] = null;
-                        return vins[i];
+                        return deletedVi;
                     }
                 }
             }
