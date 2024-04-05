@@ -56,6 +56,7 @@ public class Botiga {
     }
 
     public Vi cerca(String nom) {
+        if (nom == null) return null;
         nom = Vi.normalitzaNom(nom);
         for (Vi vi : vins) { // Per cada vi de la llista de vins
             if (vi.getNom() == null) continue;
