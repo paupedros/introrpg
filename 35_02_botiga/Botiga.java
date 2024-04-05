@@ -27,6 +27,7 @@ public class Botiga {
                         return vi;
                     }
                 }
+                return null;
             } else
                 return null;
         }
