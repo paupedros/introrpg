@@ -31,7 +31,7 @@ public class Botiga {
             } else
                 return null;
         }
-        return vi;
+        else return null;
     }
 
     public Vi elimina(String nomVi) {
