@@ -48,6 +48,7 @@ public class Vi {
 
     public boolean esValid() {
         if (nom.isBlank()) return false;
+        else if (nom.equals("NOM NO VÀLID!")) return false;
         else if (preu < 0) return false;
         else if (estoc < 0) return false;
         else return true;
