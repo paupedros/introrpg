@@ -40,7 +40,7 @@ public class Vi {
     }
 
     public static String normalitzaNom(String nom){
-        if (nom != null || !nom.isBlank()){
+        if (!nom.isBlank()){
             return nom.trim().replaceAll("\\s+"," ");
         }
         else return "NOM NO VÀLID!";
