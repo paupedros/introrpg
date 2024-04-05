@@ -56,7 +56,7 @@ public class Vi {
 
     @Override
     public String toString() {
-        return String.format("%n    Vi: %s%n    Preu: %d%n    Estoc: %d", nom, preu, estoc);
+        return String.format("%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n", nom, preu, estoc);
     }
     
 }
