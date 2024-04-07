@@ -52,7 +52,7 @@ public class Entorn {
         System.out.print("preu (en cèntims)> ");
         int preu = tractaDades(Entrada.readLine());
         // Si no es un enter sera -1
-        if (preu == -1)
+        if (preu <= -1)
             return;
 
         // ---- ESTOC ----
