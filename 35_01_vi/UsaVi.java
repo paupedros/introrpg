@@ -1,3 +1,8 @@
+/**
+ * Codi per a comprovar el funcionament de les classes implementades
+ * per al projecte de Bona Estrella
+ */
+
 public class UsaVi {
 
     public static void main(String[] args) {
