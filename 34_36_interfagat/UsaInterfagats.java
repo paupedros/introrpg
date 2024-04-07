@@ -1,3 +1,9 @@
+/**
+ * Codi per a probar les classes que hem estat desenvolupant
+ * en aquest exercici, Animal de companyia,
+ * Ensinistrable, Esser viu, Garfield, Gat, GatRenat i Gat salvatge
+ */
+
 public class UsaInterfagats {
     public static void main(String[] args) {
         GatRenat renat = new GatRenat();
