@@ -168,11 +168,7 @@ public class Entorn {
             return 0;
         
         // Si no es un enter indiquem l'error i sortim de la comanda
-        if (!UtilString.esEnter(data)) {
-            System.out.println("ERROR: cal un enter positiu");
-            return -1;
-        }
-        else if (UtilString.esEnter(data) && Integer.parseInt(data) < 0){
+        if (!UtilString.esEnter(data) || (UtilString.esEnter(data) && Integer.parseInt(data) < 0)) {
             System.out.println("ERROR: cal un enter positiu");
             return -1;
         }
