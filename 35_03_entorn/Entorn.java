@@ -52,7 +52,7 @@ public class Entorn {
         System.out.print("preu (en cèntims)> ");
         int preu = tractaDades(Entrada.readLine());
         // Si no es un enter sera -1
-        if (preu <= -1)
+        if (preu == -1)
             return;
 
         // ---- ESTOC ----
@@ -166,8 +166,13 @@ public class Entorn {
         // Si la dada esta buida ho interpretem com un 0
         if (data.isBlank())
             return 0;
+        
         // Si no es un enter indiquem l'error i sortim de la comanda
         if (!UtilString.esEnter(data)) {
+            System.out.println("ERROR: cal un enter positiu");
+            return -1;
+        }
+        else if (UtilString.esEnter(data) && Integer.parseInt(data) < 0){
             System.out.println("ERROR: cal un enter positiu");
             return -1;
         }
