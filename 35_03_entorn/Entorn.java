@@ -100,34 +100,38 @@ public class Entorn {
         // Si es troba el vi
 
         // ---- PREU ----
-        System.out.print(String.format("preu (enter %d)> ", vi.getPreu()));
-        String preuString = Entrada.readLine();
-        // Si el preu no esta en blanc...
-        if (!preuString.isBlank()) {
-            // Si no es un enter donem l'error
-            if (!UtilString.esEnter(preuString) || (UtilString.esEnter(preuString) && Integer.parseInt(preuString) < 0)) {
-                System.out.println("ERROR: cal un enter positiu");
-                return;
-            }
-            // Si es un enter modifiquem el preu del vi
-            vi.setPreu(Integer.parseInt(preuString));
-        }
+        modificaDades("preu", vi);
 
         // ---- ESTOC ----
-        System.out.print(String.format("estoc (enter %d)> ", vi.getEstoc()));
-        String estocString = Entrada.readLine();
-        // Si el preu no esta en blanc...
-        if (!estocString.isBlank()) {
-            // Si no es un enter donem l'error
-            if (!UtilString.esEnter(estocString) || (UtilString.esEnter(estocString) && Integer.parseInt(estocString) < 0)) {
+        modificaDades("estoc", vi);
+
+        System.out.println(String.format("Modificat:%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n", vi.getNom(), vi.getPreu(), vi.getEstoc()));
+
+    }
+
+    private void modificaDades(String opcio, Vi vi){
+        // Mostrem el missatge segons l'opcio seleccionada
+        if (opcio.equals("preu")){
+            System.out.print(String.format("preu (enter %d)> ", vi.getPreu()));
+        }
+        if (opcio.equals("estoc")){
+            System.out.print(String.format("estoc (enter %d)> ", vi.getEstoc()));
+        }
+
+        // Demanem la dada necessaria a modificar
+        String dada = Entrada.readLine();
+
+        // Si la dada introduida esta en blanc
+        if (!dada.isBlank()) {
+            // Si la dada introduida no es un enter o en el cas que sigui un enter i sigui negatiu, donem com a error
+            if (!UtilString.esEnter(dada) || (UtilString.esEnter(dada) && Integer.parseInt(dada) < 0)) {
                 System.out.println("ERROR: cal un enter positiu");
                 return;
             }
-            // Si es un enter modifiquem el preu del vi
-            vi.setEstoc(Integer.parseInt(estocString));
+            // Si es un enter positiu modifiquem la dada corresponent
+            if(opcio.equals("preu")) vi.setPreu(Integer.parseInt(dada));
+            else if (opcio.equals("estoc")) vi.setEstoc(Integer.parseInt(dada));
         }
-
-        System.out.println(String.format("Modificat:%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n", vi.getNom(), vi.getPreu(), vi.getEstoc()));
 
     }
 
