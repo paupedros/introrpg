@@ -103,7 +103,7 @@ public class Entorn {
         if (modificaDades("preu", vi) == -1) return;
 
         // ---- ESTOC ----
-        modificaDades("estoc", vi);
+        if (modificaDades("estoc", vi) == -1) return;
 
         System.out.println(String.format("Modificat:%n    Vi: %s%n    Preu: %d%n    Estoc: %d%n", vi.getNom(), vi.getPreu(), vi.getEstoc()));
 
