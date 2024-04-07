@@ -119,8 +119,8 @@ public class Entorn {
         // Si el preu no esta en blanc...
         if (!estocString.isBlank()) {
             // Si no es un enter donem l'error
-            if (!UtilString.esEnter(estocString)) {
-                System.out.println("ERROR: el valor ha de ser un enter positiu");
+            if (!UtilString.esEnter(estocString) || (UtilString.esEnter(estocString) && Integer.parseInt(estocString) < 0)) {
+                System.out.println("ERROR: ecal un enter positiu");
                 return;
             }
             // Si es un enter modifiquem el preu del vi
