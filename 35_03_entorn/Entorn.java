@@ -63,7 +63,7 @@ public class Entorn {
         // Si no es un enter sera -1
         if (estoc == -1) return;
 
-        
+        // Afegeix aqui ->
     }
 
     private int tractaDades(String data){
