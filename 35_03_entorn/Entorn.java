@@ -105,7 +105,7 @@ public class Entorn {
         // Si el preu no esta en blanc...
         if (!preuString.isBlank()) {
             // Si no es un enter donem l'error
-            if (!UtilString.esEnter(preuString)) {
+            if (!UtilString.esEnter(preuString) || (UtilString.esEnter(preuString) && Integer.parseInt(preuString) < 0)) {
                 System.out.println("ERROR: el valor ha de ser un enter positiu");
                 return;
             }
