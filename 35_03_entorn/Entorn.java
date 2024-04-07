@@ -120,7 +120,7 @@ public class Entorn {
         if (!estocString.isBlank()) {
             // Si no es un enter donem l'error
             if (!UtilString.esEnter(estocString) || (UtilString.esEnter(estocString) && Integer.parseInt(estocString) < 0)) {
-                System.out.println("ERROR: ecal un enter positiu");
+                System.out.println("ERROR: cal un enter positiu");
                 return;
             }
             // Si es un enter modifiquem el preu del vi
