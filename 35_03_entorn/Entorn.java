@@ -100,7 +100,7 @@ public class Entorn {
         // Si es troba el vi
 
         // ---- PREU ----
-        modificaDades("preu", vi);
+        if (modificaDades("preu", vi) == -1) return;
 
         // ---- ESTOC ----
         modificaDades("estoc", vi);
@@ -109,7 +109,7 @@ public class Entorn {
 
     }
 
-    private void modificaDades(String opcio, Vi vi){
+    private int modificaDades(String opcio, Vi vi){
         // Mostrem el missatge segons l'opcio seleccionada
         if (opcio.equals("preu")){
             System.out.print(String.format("preu (enter %d)> ", vi.getPreu()));
@@ -126,12 +126,13 @@ public class Entorn {
             // Si la dada introduida no es un enter o en el cas que sigui un enter i sigui negatiu, donem com a error
             if (!UtilString.esEnter(dada) || (UtilString.esEnter(dada) && Integer.parseInt(dada) < 0)) {
                 System.out.println("ERROR: cal un enter positiu");
-                return;
+                return -1;
             }
             // Si es un enter positiu modifiquem la dada corresponent
             if(opcio.equals("preu")) vi.setPreu(Integer.parseInt(dada));
             else if (opcio.equals("estoc")) vi.setEstoc(Integer.parseInt(dada));
         }
+        return 0;
 
     }
 
