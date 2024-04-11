@@ -71,7 +71,8 @@ public class Botiga {
 
     public Vi getSeguent() {
         while (vins[index] == null){
-            index++;
+            if (index + 1 < DEFAULT_MAX_VINS)
+                index++;
         }
         return vins[index];
     }
