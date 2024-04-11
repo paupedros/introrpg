@@ -15,9 +15,9 @@ public class Entorn {
     public static void main(String[] args) throws IOException {
         Entorn entorn = new Entorn();
         mostraBenvinguda();
+        llegirVins();
         while (true) {
             mostraPrompt();
-            llegirVins();
             String comanda = Entrada.readLine().strip();
             if (comanda.isEmpty())
                 continue;
