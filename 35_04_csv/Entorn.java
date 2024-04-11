@@ -18,6 +18,7 @@ public class Entorn {
         llegirVins();
         while (true) {
             mostraPrompt();
+            entorn.carregarVins();
             String comanda = Entrada.readLine().strip();
             if (comanda.isEmpty())
                 continue;
