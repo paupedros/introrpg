@@ -67,7 +67,9 @@ public class Vi {
     }
 
     public String[] aArrayString() {
-        String[] array = {this.nom, String.valueOf(this.preu), String.valueOf(this.estoc)};
+        String preu = String.valueOf(this.preu);
+        String estoc = String.valueOf(this.estoc);
+        String[] array = {this.nom, preu, estoc};
         return array;
     }
 
