@@ -7,6 +7,8 @@
 import java.io.File;
 import java.io.IOException;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.FileReader;
 
 public class Entorn {
@@ -16,6 +18,7 @@ public class Entorn {
         Entorn entorn = new Entorn();
         mostraBenvinguda();
         llegirVins();
+        entorn.carregarVinsCsv();
         while (true) {
             mostraPrompt();
             String comanda = Entrada.readLine().strip();
@@ -43,7 +46,7 @@ public class Entorn {
                 mostraErrorComandaDesconeguda();
             }
         }
-        entorn.carregarVins();
+        entorn.guardarVins();
         mostraComiat();
     }
 
@@ -229,20 +232,34 @@ public class Entorn {
         System.out.println("Referències llegides: " + lines);
     }
 
-    public void carregarVins() throws IOException {
+    private void carregarVinsCsv() throws IOException {
         File csv = new File("botiga.csv");
+        // Obrim en lectura el fitxer csv
         BufferedReader reader = new BufferedReader(new FileReader(csv));
-        int afegits = 0;
         while(true) {
             String line = reader.readLine();
             if (line == null) break;
 
+            // Passem del fitxer a un Vi
             Vi vi = Vi.deArrayString(line.split(";"));
-            if (botiga.afegeix(vi) != null) afegits++;
+            // Si el vi es null el saltem
+            if (vi == null) continue;
+            // Afegim el vi a la botiga
+            botiga.afegeix(vi);
         }
-        System.out.println("Referències guardades: " + afegits);
 
         reader.close();
+    }
+
+    public void guardarVins() throws IOException {
+        File csv = new File("botiga.csv");
+        BufferedWriter writer = new BufferedWriter(new FileWriter(csv));
+        botiga.iniciaRecorregut();
+        Vi vi = botiga.getSeguent();
+
+        writer.write(String.join(";", vi.aArrayString()));
+        
+        writer.close();
     }
 
     private static int countLines(File file) throws IOException {
