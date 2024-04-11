@@ -68,20 +68,19 @@ public class Botiga {
         index = 0;
     }
 
+    // Retorna el següent vi del array de vins
     public Vi getSeguent() {
-        // Mentre que no ens passem del rang i el vi actual sigui null
-        while (index < vins.length && vins[index] == null) {
-            index++;
-        }
-        // Si no ens hem passat del rang
-        if (index < vins.length){
-            Vi vi = vins[index];
-            index++;
-            return vi;
-        }
-        return null;
-    }
+        Vi vi = null;
+        // Recorre totes les posicions del array
+        for (int i = 0; i < vins.length; i++) {
+            // Si el vi en aquesta posició es null, salta'l
+            if (vins[i] == null) continue;
 
+            vi = vins[index];
+            index++;
+        }
+        return vi;
+    }
     @Override
     public String toString() {
         String result = "";
