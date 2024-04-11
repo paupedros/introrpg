@@ -253,14 +253,14 @@ public class Entorn {
 
     public void guardarVins() throws IOException {
         File csv = new File("botiga.csv");
-        BufferedWriter writer = new BufferedWriter(new FileWriter(csv));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(csv, true));
         botiga.iniciaRecorregut();
         Vi vi = botiga.getSeguent();
-        if (vi != null) {
+        while (vi != null) {
             writer.write(String.join(";", vi.aArrayString()));
+            vi = botiga.getSeguent();
+            writer.newLine();
         }
-
-        
         writer.close();
     }
 
