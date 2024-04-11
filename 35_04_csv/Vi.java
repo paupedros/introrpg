@@ -67,7 +67,8 @@ public class Vi {
     }
 
     public String[] aArrayString() {
-        return new String[]{this.nom, String.valueOf(this.preu), String.valueOf(this.estoc)};
+        String[] array = {this.nom, String.valueOf(this.preu), String.valueOf(this.estoc)};
+        return array;
     }
 
     public static Vi deArrayString(String[] array) {
@@ -75,5 +76,5 @@ public class Vi {
         if(!vi.esValid()) return null;
         return vi;
     }
-    
+
 }
