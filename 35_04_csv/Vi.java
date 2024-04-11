@@ -75,12 +75,11 @@ public class Vi {
 
     public static Vi deArrayString(String[] array) {
         if (array.length != 3) return null;
-        Vi vi = null;
         if (UtilString.esEnter(array[1]) && UtilString.esEnter(array[2])) {
-            vi = new Vi(array[0], Integer.parseInt(array[1]), Integer.parseInt(array[2]));
+            Vi vi = new Vi(array[0], Integer.parseInt(array[1]), Integer.parseInt(array[2]));
+            if (vi.esValid()) return vi;
         }
-        if(!vi.esValid()) return null;
-        return vi;
+        return null;
     }
 
 }
