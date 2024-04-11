@@ -226,7 +226,22 @@ public class Entorn {
         csv.createNewFile();
         int lines = countLines(csv);
         System.out.println("Referències llegides: " + lines);
+    }
 
+    public void carregarVins() throws IOException {
+        File csv = new File("botiga.csv");
+        BufferedReader reader = new BufferedReader(new FileReader(csv));
+        int afegits = 0;
+        while(true) {
+            String line = reader.readLine();
+            if (line == null) break;
+
+            Vi vi = Vi.deArrayString(line.split(";"));
+            if (botiga.afegeix(vi) != null) afegits++;
+        }
+        System.out.println("Referències guardades: " + afegits);
+
+        reader.close();
     }
 
     private static int countLines(File file) throws IOException {
@@ -242,4 +257,7 @@ public class Entorn {
         reader.close();
         return lines;
     }
+
+
+
 }
