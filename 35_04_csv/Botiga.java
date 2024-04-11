@@ -75,9 +75,9 @@ public class Botiga {
         for (int i = 0; i < vins.length; i++) {
             // Si el vi en aquesta posició es null, salta'l
             if (vins[i] == null) continue;
-
             vi = vins[index];
             index++;
+            return vi;
         }
         return vi;
     }
