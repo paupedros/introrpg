@@ -256,8 +256,10 @@ public class Entorn {
         BufferedWriter writer = new BufferedWriter(new FileWriter(csv));
         botiga.iniciaRecorregut();
         Vi vi = botiga.getSeguent();
+        if (vi != null) {
+            writer.write(String.join(";", vi.aArrayString()));
+        }
 
-        writer.write(String.join(";", vi.aArrayString()));
         
         writer.close();
     }
