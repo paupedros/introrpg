@@ -18,32 +18,32 @@ public class Entorn {
         llegirVins();
         while (true) {
             mostraPrompt();
-            entorn.carregarVins();
             String comanda = Entrada.readLine().strip();
             if (comanda.isEmpty())
-                continue;
+            continue;
             if (comanda.equals("surt"))
-                break;
+            break;
             switch (comanda) {
                 case "ajuda":
-                    mostraAjuda();
-                    break;
+                mostraAjuda();
+                break;
                 case "afegeix":
-                    entorn.processaAfegeix();
-                    break;
+                entorn.processaAfegeix();
+                break;
                 case "cerca":
-                    entorn.processaCerca();
-                    break;
+                entorn.processaCerca();
+                break;
                 case "modifica":
-                    entorn.processaModifica();
-                    break;
+                entorn.processaModifica();
+                break;
                 case "elimina":
-                    entorn.processaElimina();
-                    break;
+                entorn.processaElimina();
+                break;
                 default:
-                    mostraErrorComandaDesconeguda();
+                mostraErrorComandaDesconeguda();
             }
         }
+        entorn.carregarVins();
         mostraComiat();
     }
 
