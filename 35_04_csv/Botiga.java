@@ -69,7 +69,7 @@ public class Botiga {
     }
 
     public Vi getSeguent() {
-        while (index < vins.length && vins[index] == null) {
+        while (index +1 < vins.length && vins[index] == null) {
             index++;
         }
         if (index < vins.length) return vins[index];
