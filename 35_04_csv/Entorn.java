@@ -251,17 +251,28 @@ public class Entorn {
         reader.close();
     }
 
+    /**
+     * Crea de nou l'arxiu botiga.csv i carrega amb format csv els vins que hi han dins la botiga,
+     * es guarden els vins que no siguin null
+     */
     public void guardarVins() throws IOException {
+        // Es crea un nou arxiu csv i s'elimina l'existent
         File csv = new File("botiga.csv");
-        BufferedWriter writer = new BufferedWriter(new FileWriter(csv, true));
+        csv.delete();
+        // Creem buffer per escriure al arxiu csv
+        BufferedWriter writer = new BufferedWriter(new FileWriter(csv));
+
+        // Recorrem la botiga
         botiga.iniciaRecorregut();
         int referencies = 0;
         Vi vi = botiga.getSeguent();
         while (vi != null) {
-            referencies++;
-            writer.write(String.join(";", vi.aArrayString()));
+            if (vi != null) {
+                writer.write(String.join(";", vi.aArrayString()));
+                writer.newLine();
+                referencies++;
+            }
             vi = botiga.getSeguent();
-            writer.newLine();
         }
         writer.close();
         System.out.println("Referències guardades: " + referencies);

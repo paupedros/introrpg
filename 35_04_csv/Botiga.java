@@ -75,9 +75,24 @@ public class Botiga {
         }
         // Si no ens hem passat del rang
         if (index < vins.length){
+            Vi vi = vins[index];
             index++;
-            return vins[index];
+            return vi;
         }
         return null;
+    }
+
+    @Override
+    public String toString() {
+        String result = "";
+        for (Vi vi : vins) {
+            if (vi == null){
+                result += "null\n";
+                continue;
+            } 
+            result += vi.getNom();
+            result += "\n";
+        }
+        return result;
     }
 }
