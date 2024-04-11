@@ -74,13 +74,19 @@ public class Vi {
     }
 
     public static Vi deArrayString(String[] array) {
-        if (array.length != 3) return null;
-        if (UtilString.esEnter(array[1]) && UtilString.esEnter(array[2])) {
+        if (arrayValid(array)){
             Vi vi = new Vi(array[0], Integer.parseInt(array[1]), Integer.parseInt(array[2]));
             if (vi.esValid()) return vi;
-            return null;
         }
         return null;
+    }
+
+    public static boolean arrayValid(String[] array) {
+        if (array.length != 3) return false;
+        if (!UtilString.esEnter(array[1]) || !UtilString.esEnter(array[2])) return false;
+        Vi vi = new Vi(array[0], Integer.parseInt(array[1]), Integer.parseInt(array[2]));
+        if (!vi.esValid()) return false;
+        return true;
     }
 
 }

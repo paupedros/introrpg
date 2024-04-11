@@ -286,12 +286,11 @@ public class Entorn {
         while (true) {
             String line = reader.readLine();
             if (line == null) break;
-            lines++;
+            String[] array = line.split(";");
+            if (Vi.arrayValid(array)) lines++;
         }
         reader.close();
         return lines;
     }
-
-
 
 }
