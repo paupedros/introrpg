@@ -227,7 +227,9 @@ public class Entorn {
     public static void llegirVins() throws IOException {
         // Obrim el fitxer csv de la botiga
         File csv = new File("botiga.csv");
+        // Creem l'arxiu botiga
         csv.createNewFile();
+        // Comptem els vins 
         int lines = countLines(csv);
         System.out.println("Referències llegides: " + lines);
     }
@@ -264,6 +266,7 @@ public class Entorn {
 
         // Recorrem la botiga
         botiga.iniciaRecorregut();
+        // inicialitzem el comptador de referencies guardades
         int referencies = 0;
         Vi vi = botiga.getSeguent();
         while (vi != null) {
@@ -287,6 +290,7 @@ public class Entorn {
             String line = reader.readLine();
             if (line == null) break;
             String[] array = line.split(";");
+            // Si la linia es valida per ser un vi la comptem
             if (Vi.arrayValid(array)) lines++;
         }
         reader.close();
