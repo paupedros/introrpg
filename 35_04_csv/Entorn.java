@@ -266,15 +266,19 @@ public class Entorn {
 
         // Recorrem la botiga
         botiga.iniciaRecorregut();
-        // inicialitzem el comptador de referencies guardades
+        // Inicialitzem el comptador de referencies guardades
         int referencies = 0;
+        // Obtenim el vi
         Vi vi = botiga.getSeguent();
+        // Mentre que vi no sigui un null
         while (vi != null) {
+            // Si no es un null el guardem al arxiu csv i incrementem el comptador
             if (vi != null) {
                 writer.write(String.join(";", vi.aArrayString()));
                 writer.newLine();
                 referencies++;
             }
+            // Passem al seguent vi de la botiga
             vi = botiga.getSeguent();
         }
         writer.close();

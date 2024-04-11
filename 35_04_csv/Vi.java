@@ -67,21 +67,30 @@ public class Vi {
     }
 
     public String[] aArrayString() {
+        // Obtenim els strings del numeros
         String preu = String.valueOf(this.preu);
         String estoc = String.valueOf(this.estoc);
+        // Creem l'array amb les dades del vi
         String[] array = {this.nom, preu, estoc};
         return array;
     }
 
     public static Vi deArrayString(String[] array) {
+        // Si l'array es valid per a ser un vi, creem una instancia i si es valida la retornem
         if (arrayValid(array)){
             Vi vi = new Vi(array[0], Integer.parseInt(array[1]), Integer.parseInt(array[2]));
             if (vi.esValid()) return vi;
         }
+        // Si no es valid retornem null
         return null;
     }
 
     public static boolean arrayValid(String[] array) {
+        // Condicions per saber si un array no es valid per construir un vi:
+        /** Llargada diferent a 3
+         *  El preu i el estoc no son enters
+         *  La instancia de vi no es valida
+         */
         if (array.length != 3) return false;
         if (!UtilString.esEnter(array[1]) || !UtilString.esEnter(array[2])) return false;
         Vi vi = new Vi(array[0], Integer.parseInt(array[1]), Integer.parseInt(array[2]));

@@ -70,10 +70,7 @@ public class Botiga {
 
     public Vi getSeguent() {
         // Mentre que no ens passem del rang i el vi actual sigui null
-        // while (index < vins.length && vins[index] == null) {
-        //     index++;
-        // }
-        for (int i = index; i < vins.length && vins[index] == null; i++) {
+        while (index < vins.length && vins[index] == null) {
             index++;
         }
         // Si no ens hem passat del rang
