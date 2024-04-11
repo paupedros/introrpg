@@ -30,8 +30,8 @@ public class Botiga {
                 return null;
             } else
                 return null;
-        }
-        else return null;
+        } else
+            return null;
     }
 
     public Vi elimina(String nomVi) {
@@ -41,8 +41,7 @@ public class Botiga {
             // Si te estoc...
             if (vi.getEstoc() > 0) {
                 return null;
-            }
-            else {
+            } else {
                 for (int i = 0; i < vins.length; i++) {
                     Vi deletedVi = vins[i];
                     if (nomVi.equals(vins[i].getNom())) {
@@ -70,10 +69,10 @@ public class Botiga {
     }
 
     public Vi getSeguent() {
-        while (vins[index] == null){
-            if (index + 1 < DEFAULT_MAX_VINS)
-                index++;
+        while (index < vins.length && vins[index] == null) {
+            index++;
         }
+        if (index < vins.length) return vins[index];
         return vins[index];
     }
 }
