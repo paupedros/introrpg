@@ -255,13 +255,16 @@ public class Entorn {
         File csv = new File("botiga.csv");
         BufferedWriter writer = new BufferedWriter(new FileWriter(csv, true));
         botiga.iniciaRecorregut();
+        int referencies = 0;
         Vi vi = botiga.getSeguent();
         while (vi != null) {
+            referencies++;
             writer.write(String.join(";", vi.aArrayString()));
             vi = botiga.getSeguent();
             writer.newLine();
         }
         writer.close();
+        System.out.println("Referències guardades: " + referencies);
     }
 
     private static int countLines(File file) throws IOException {
