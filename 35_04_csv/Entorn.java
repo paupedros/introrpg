@@ -223,6 +223,7 @@ public class Entorn {
     public static void llegirVins() throws IOException {
         // Obrim el fitxer csv de la botiga
         File csv = new File("botiga.csv");
+        csv.createNewFile();
         int lines = countLines(csv);
         System.out.println("Referències llegides: " + lines);
 
