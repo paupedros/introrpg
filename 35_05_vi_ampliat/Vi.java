@@ -61,6 +61,7 @@ public class Vi {
             lloc = normalitzaString(lloc);
             return;
         }
+        this.lloc = lloc;
     }
 
     public String getOrigen() {
