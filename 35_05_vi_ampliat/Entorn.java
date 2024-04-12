@@ -115,7 +115,7 @@ public class Entorn {
             return;
         }
         // Si es troba el vi
-        System.out.println(
+        System.out.print(
                 String.format("Trobat:%n    %s", vi));
     }
 
