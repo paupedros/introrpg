@@ -92,7 +92,8 @@ public class Entorn {
         Vi vi = null;
 
         // Inicialitzem les propietats per defecte
-        String[] propietats = { null, null, "-1", "-1", null, null, null, null }; // ref, nom, preu, estoc, lloc, origen,
+        String[] propietats = { null, null, "-1", "-1", null, null, null, null }; // ref, nom, preu, estoc, lloc,
+                                                                                  // origen,
                                                                                   // tipus,
         // collita
         // Si la ref esta buida demanem les altres propietats
@@ -135,7 +136,10 @@ public class Entorn {
         // Si no esta buit
         if (preu.equals("!"))
             return properties;
-        else if (!UtilString.esEnter(preu)) return properties;
+        else if (!UtilString.esEnter(preu)) {
+            System.out.println("ERROR: el valor ha de ser un enter positiu");
+            return properties;
+        }
         if (!preu.isBlank()) {
             properties[2] = preu;
         }
@@ -145,6 +149,10 @@ public class Entorn {
         // Si no esta buit
         if (estoc.equals("!"))
             return properties;
+        else if (!UtilString.esEnter(estoc)) {
+            System.out.println("ERROR: el valor ha de ser un enter positiu");
+            return properties;
+        }
         if (!estoc.isBlank()) {
             properties[3] = estoc;
         }
@@ -152,7 +160,7 @@ public class Entorn {
         System.out.print("lloc> ");
         String lloc = Entrada.readLine();
         if (lloc.equals("!"))
-        return properties;
+            return properties;
         // Si no esta buit
         if (!lloc.isBlank()) {
             properties[4] = lloc;
