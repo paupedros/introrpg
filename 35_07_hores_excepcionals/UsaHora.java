@@ -6,7 +6,7 @@ public class UsaHora {
             hora.setSegons(segons);
         }
         catch(Exception e) {
-            System.out.println(e);
+            System.out.println("Error " + e);
         }
     }
     public static void main(String[] args) {
