@@ -8,11 +8,11 @@ public class Hora {
     private int minuts = 0;
     private int segons = 0;
 
-    public Hora() {
+    public Hora() throws Exception {
         this(0, 0, 0);
     }
 
-    public Hora(int hores, int minuts, int segons) {
+    public Hora(int hores, int minuts, int segons) throws Exception {
         if ((hores < 0 || hores > 23)
                 || (minuts < 0 || minuts > 59)
                 || (segons < 0 || segons > 59)) {
@@ -76,12 +76,12 @@ public class Hora {
         return true;
     }
 
-    public Hora duplica(){
+    public Hora duplica() throws Exception {
         Hora newHora = new Hora(this.getHores(), this.getMinuts(), this.getSegons());
         return newHora;
     }
 
-    public static Hora duplica(Hora hora){
+    public static Hora duplica(Hora hora) throws Exception {
         Hora newHora = new Hora(hora.getHores(), hora.getMinuts(), hora.getSegons());
         return newHora;
     }
@@ -132,7 +132,7 @@ public class Hora {
     public String toString() {
         return String.format("%d:%02d:%02d", hores, minuts, segons);
     }
-
+/*
     public void decrementa() {
         if (getSegons() == 0) {
             setSegons(59);
@@ -259,4 +259,5 @@ public class Hora {
                 hora2);
 
     }
+    */
 }
