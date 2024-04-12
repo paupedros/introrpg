@@ -131,6 +131,7 @@ public class Botiga {
             index++;
             if (vi == null) {
                 vi = vins[index];
+                index++;
             }
             if (index > vins.length) index = 0;
             return vi;
