@@ -105,7 +105,7 @@ public class Vi {
     @Override
     public String toString() {
         return String.format(
-                "    Ref: %s%n    Nom: %s%n    Preu: %d%n    Estoc: %d%n    Lloc: %s%n    D.O.: %s%n    Tipus: %s%n    Collita: %s",
+                "Ref: %s%n    Nom: %s%n    Preu: %d%n    Estoc: %d%n    Lloc: %s%n    D.O.: %s%n    Tipus: %s%n    Collita: %s",
                 ref, nom, preu, estoc, lloc, origen, tipus, collita);
     }
 
