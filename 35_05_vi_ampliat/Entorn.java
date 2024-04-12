@@ -138,14 +138,15 @@ public class Entorn {
         System.out.print("preu max.> ");
         String preu = Entrada.readLine();
         // Si no esta buit
-        if (preu.equals("!"))
-            return properties;
-        else if (!UtilString.esEnter(preu)) {
-            System.out.println("ERROR: el valor ha de ser un enter positiu");
-            properties[2] = "-2";
-            return properties;
-        }
         if (!preu.isBlank()) {
+            if (preu.equals("!"))
+                return properties;
+            if (!UtilString.esEnter(preu)) {
+                System.out.println("ERROR: el valor ha de ser un enter positiu");
+                properties[2] = "-2";
+                return properties;
+            }
+
             properties[2] = preu;
         }
 
