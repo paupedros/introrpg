@@ -41,28 +41,28 @@ public class Hora {
         return segons;
     }
 
-    public boolean setHores(int hores) {
-        if (hores >= 0 && hores < 24) {
-            this.hores = hores;
-            return true;
+    public void setHores(int hores) throws Exception {
+        if (hores>=0 && hores<24) {
+            this.hores=hores;
+        } else {
+            throw new Exception("hores fora de rang: " + hores);
         }
-        return false;
     }
 
-    public boolean setMinuts(int minuts) {
+    public void setMinuts(int minuts) throws Exception {
         if (minuts >= 0 && minuts < 60) {
             this.minuts = minuts;
-            return true;
+        } else {
+            throw new Exception("minuts fora de rang: " + minuts);
         }
-        return false;
     }
 
-    public boolean setSegons(int segons) {
+    public void setSegons(int segons) throws Exception {
         if (segons >= 0 && segons < 60) {
             this.segons = segons;
-            return true;
+        } else {
+            throw new Exception("segons fora de rang: " + segons);
         }
-        return false;
     }
 
     public static boolean esValida(int hora, int minuts, int segons){

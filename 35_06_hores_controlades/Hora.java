@@ -8,11 +8,11 @@ public class Hora {
     private int minuts = 0;
     private int segons = 0;
 
-    public Hora() throws Exception {
+    public Hora() {
         this(0, 0, 0);
     }
 
-    public Hora(int hores, int minuts, int segons) throws Exception {
+    public Hora(int hores, int minuts, int segons){
         if ((hores < 0 || hores > 23)
                 || (minuts < 0 || minuts > 59)
                 || (segons < 0 || segons > 59)) {
@@ -41,28 +41,28 @@ public class Hora {
         return segons;
     }
 
-    public void setHores(int hores) throws Exception {
-        if (hores>=0 && hores<24) {
-            this.hores=hores;
-        } else {
-            throw new Exception("hores fora de rang: " + hores);
+    public boolean setHores(int hores) {
+        if (hores >= 0 && hores < 24) {
+            this.hores = hores;
+            return true;
         }
+        return false;
     }
 
-    public void setMinuts(int minuts) throws Exception {
+    public boolean setMinuts(int minuts) {
         if (minuts >= 0 && minuts < 60) {
             this.minuts = minuts;
-        } else {
-            throw new Exception("minuts fora de rang: " + minuts);
+            return true;
         }
+        return false;
     }
 
-    public void setSegons(int segons) throws Exception {
+    public boolean setSegons(int segons) {
         if (segons >= 0 && segons < 60) {
             this.segons = segons;
-        } else {
-            throw new Exception("segons fora de rang: " + segons);
+            return true;
         }
+        return false;
     }
 
     public static boolean esValida(int hora, int minuts, int segons) {
@@ -76,12 +76,12 @@ public class Hora {
         return true;
     }
 
-    public Hora duplica() throws Exception{
+    public Hora duplica(){
         Hora newHora = new Hora(this.getHores(), this.getMinuts(), this.getSegons());
         return newHora;
     }
 
-    public static Hora duplica(Hora hora) throws Exception {
+    public static Hora duplica(Hora hora){
         Hora newHora = new Hora(hora.getHores(), hora.getMinuts(), hora.getSegons());
         return newHora;
     }
