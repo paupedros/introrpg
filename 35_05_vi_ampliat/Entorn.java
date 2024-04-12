@@ -135,6 +135,7 @@ public class Entorn {
         // Si no esta buit
         if (preu.equals("!"))
             return properties;
+        else if (!UtilString.esEnter(preu)) return properties;
         if (!preu.isBlank()) {
             properties[2] = preu;
         }
