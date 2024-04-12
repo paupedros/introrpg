@@ -20,7 +20,7 @@ public class Botiga {
         if (vi.esValid()) {
             // Si no es troba cap vi amb el mateix nom al de afegir
             Vi cercaVi = cerca(vi.getRef());
-            //System.out.println(cercaVi);
+            // System.out.println(cercaVi);
             if (cercaVi == null) {
                 // Busca un espai null a la llista
                 for (int i = 0; i < vins.length; i++) {
@@ -69,7 +69,8 @@ public class Botiga {
     public Vi cerca(Vi plantilla) {
 
         for (Vi vi : vins) {
-            if (vi == null) continue;
+            if (vi == null)
+                continue;
             // STRINGS
             // -------------
             // Si la referencia no esta buida...
@@ -96,14 +97,31 @@ public class Botiga {
             // ENTERS
             // -----------
 
-            if (plantilla.getPreu() == -1){
-                if (plantilla.getEstoc() == -1) return vi;
-                else if (vi.getEstoc() > plantilla.getEstoc()) return vi;
+            if (plantilla.getPreu() == -1) {
+                if (plantilla.getEstoc() == -1)
+                    return vi;
+                else if (vi.getEstoc() > plantilla.getEstoc())
+                    return vi;
             }
             // Si s'especifica el preu maxim
             else if (vi.getPreu() <= plantilla.getPreu()) {
-                if (plantilla.getEstoc() == -1) return vi;
-                else if (vi.getEstoc() > plantilla.getEstoc()) return vi;
+                if (plantilla.getEstoc() == -1)
+                    return vi;
+                else if (vi.getEstoc() > plantilla.getEstoc())
+                    return vi;
+            }
+
+            if (plantilla.getEstoc() == -1) {
+                if (plantilla.getPreu() == -1)
+                    return vi;
+                else if (vi.getPreu() <= plantilla.getPreu())
+                    return vi;
+            }
+            else if (vi.getEstoc() > plantilla.getEstoc()) {
+                if (plantilla.getPreu() == -1)
+                    return vi;
+                else if (vi.getPreu() <= plantilla.getPreu())
+                    return vi;
             }
 
 
