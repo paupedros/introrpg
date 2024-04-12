@@ -73,11 +73,11 @@ public class Vi {
     }
 
     public static String normalitzaString(String text) {
+        if (text == null || text.isEmpty())
+            return null;
         if (!text.isBlank()) {
             return text.trim().replaceAll("\\s+", " ");
         }
-        if (text == null || text.isEmpty())
-            return null;
         return null;
     }
 
@@ -143,7 +143,6 @@ public class Vi {
         /**
          * Llargada diferent a 8
          * El preu i el estoc no son enters
-         * La instancia de vi no es valida
          */
 
         if (array.length != 8) {

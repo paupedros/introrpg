@@ -31,7 +31,7 @@ public class Entorn {
                     mostraAjuda();
                     break;
                 case "afegeix":
-                    entorn.processaAfegeix();
+                    entorn.noAvailable();
                     break;
                 case "cerca":
                     entorn.processaCerca();
@@ -86,11 +86,29 @@ public class Entorn {
     }
 
     public void processaCerca() {
+        // Demanem la referencia del vi a buscar
         System.out.print("ref> ");
         String ref = Entrada.readLine();
-        if (ref.equals("!"))
+        Vi vi = null;
+
+        // Inicialitzem les propietats per defecte
+        String[] propietats = { null, null, "-1", "-1", null, null, null, null }; // ref, nom, preu, estoc, lloc, origen,
+                                                                                  // tipus,
+        // collita
+        // Si la ref esta buida demanem les altres propietats
+        if (ref.isBlank()) {
+            ref = null;
+            // Obtenim les propietats
+            propietats = askProperties(propietats);
+            Vi plantilla = new Vi(propietats[0], propietats[1], Integer.parseInt(propietats[2]),
+                    Integer.parseInt(propietats[3]), propietats[4], propietats[5], propietats[6], propietats[7]);
+            vi = botiga.cerca(plantilla);
+        }
+        // Si coincideix amb un '!'
+        else if (ref.equals("!"))
             return;
-        Vi vi = botiga.cerca(ref);
+        else
+            vi = botiga.cerca(ref);
         // Si no es troba el vi
         if (vi == null) {
             System.out.println("No trobat");
@@ -99,6 +117,75 @@ public class Entorn {
         // Si es troba el vi
         System.out.println(
                 String.format("Trobat:%n    %s", vi));
+    }
+
+    private String[] askProperties(String[] properties) {
+        System.out.print("nom> ");
+        String nom = Entrada.readLine();
+        // Si no esta buit
+        if (nom.equals("!"))
+            return properties;
+        if (!nom.isBlank()) {
+            properties[1] = nom;
+        }
+        // Si esta buit segueix en null
+
+        System.out.print("preu max.> ");
+        String preu = Entrada.readLine();
+        // Si no esta buit
+        if (preu.equals("!"))
+            return properties;
+        if (!preu.isBlank()) {
+            properties[2] = preu;
+        }
+
+        System.out.print("estoc min.> ");
+        String estoc = Entrada.readLine();
+        // Si no esta buit
+        if (estoc.equals("!"))
+            return properties;
+        if (!estoc.isBlank()) {
+            properties[3] = estoc;
+        }
+
+        System.out.print("lloc> ");
+        String lloc = Entrada.readLine();
+        if (lloc.equals("!"))
+        return properties;
+        // Si no esta buit
+        if (!lloc.isBlank()) {
+            properties[4] = lloc;
+        }
+
+        System.out.print("D.O.> ");
+        String origen = Entrada.readLine();
+        // Si no esta buit
+        if (origen.equals("!"))
+            return properties;
+        if (!origen.isBlank()) {
+            properties[5] = origen;
+        }
+
+        System.out.print("tipus> ");
+        String tipus = Entrada.readLine();
+        // Si no esta buit
+        if (tipus.equals("!"))
+            return properties;
+        if (!tipus.isBlank()) {
+            properties[6] = tipus;
+        }
+
+        System.out.print("collita> ");
+        String collita = Entrada.readLine();
+        // Si no esta buit
+        if (collita.equals("!"))
+            return properties;
+        if (!collita.isBlank()) {
+            properties[7] = collita;
+        }
+
+        return properties;
+
     }
 
     public void processaModifica() {
@@ -189,7 +276,7 @@ public class Entorn {
         System.out.println("No eliminat");
     }
 
-    private int tractaDades(String data) {
+    private static int tractaDades(String data) {
         // Si la dada esta buida ho interpretem com un 0
         if (data.isBlank())
             return 0;
@@ -248,7 +335,7 @@ public class Entorn {
 
             // Passem del fitxer a un Vi
             Vi vi = Vi.deArrayString(line.split(";"));
-            //System.out.println(vi);
+            // System.out.println(vi);
             // Si el vi es null el saltem
             if (vi == null)
                 continue;
