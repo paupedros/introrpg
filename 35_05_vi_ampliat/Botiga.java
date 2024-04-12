@@ -89,7 +89,7 @@ public class Botiga {
             if (plantilla.getTipus() != null)
                 if (!plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))
                     continue;
-            if (plantilla.getRef() != null)
+            if (plantilla.getCollita() != null)
                 if (!plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))
                     continue;
 
