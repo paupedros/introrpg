@@ -146,7 +146,6 @@ public class Entorn {
                 properties[2] = "-2";
                 return properties;
             }
-
             properties[2] = preu;
         }
 

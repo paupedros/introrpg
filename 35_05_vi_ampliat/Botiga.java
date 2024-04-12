@@ -98,10 +98,13 @@ public class Botiga {
             if (plantilla.getPreu() == -1){
                 return vi;
             }
-            else if (vi.getPreu() <= plantilla.getPreu()) return vi;
+            // Si s'especifica el preu maxim
+            else if (vi.getPreu() <= plantilla.getPreu()) {
+                if (plantilla.getEstoc() == -1) return vi;
+                else if (vi.getEstoc() > plantilla.getEstoc()) return vi;
 
-            if (plantilla.getEstoc() == -1) return vi;
-            else if (vi.getEstoc() > plantilla.getEstoc()) return vi;
+            } return vi;
+
 
         }
         return null;
