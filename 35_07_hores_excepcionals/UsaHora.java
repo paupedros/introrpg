@@ -1,3 +1,7 @@
+/*
+ * Codi per probar les funcionalitats de les excepcions dels setters a les hores
+ */
+
 public class UsaHora {
     private static void canviaHora(Hora hora, int hores, int minuts, int segons) {
 
