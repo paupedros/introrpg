@@ -248,7 +248,7 @@ public class Entorn {
 
             // Passem del fitxer a un Vi
             Vi vi = Vi.deArrayString(line.split(";"));
-            System.out.println(vi);
+            //System.out.println(vi);
             // Si el vi es null el saltem
             if (vi == null)
                 continue;
