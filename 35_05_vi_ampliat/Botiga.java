@@ -46,7 +46,7 @@ public class Botiga {
             } else {
                 for (int i = 0; i < vins.length; i++) {
                     Vi deletedVi = vins[i];
-                    if (refVi.equals(vins[i].getRef())) {
+                    if (refVi.equalsIgnoreCase(vins[i].getRef())) {
                         vins[i] = null;
                         return deletedVi;
                     }
@@ -69,6 +69,7 @@ public class Botiga {
     public Vi cerca(Vi plantilla) {
 
         for (Vi vi : vins) {
+            if (vi == null) continue;
             // STRINGS
             // -------------
             // Si la referencia no esta buida...
