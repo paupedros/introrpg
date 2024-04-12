@@ -57,10 +57,7 @@ public class Vi {
     }
 
     public void setLloc(String lloc) {
-        if (lloc != null) {
-            lloc = lloc.trim();
-        }
-        this.lloc = lloc;
+        this.lloc = normalitzaString(lloc);
     }
 
     public String getOrigen() {
