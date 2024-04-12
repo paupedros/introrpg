@@ -120,8 +120,8 @@ public class Entorn {
             return;
         }
         // Si es troba el vi
-        System.out.println(
-                String.format("Trobat:%n    %s", vi));
+        System.out.print(
+                String.format("Trobat:%s", vi));
     }
 
     private String[] askProperties(String[] properties) {
