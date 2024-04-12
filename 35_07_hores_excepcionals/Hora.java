@@ -8,11 +8,11 @@ public class Hora {
     private int minuts = 0;
     private int segons = 0;
 
-    public Hora() throws Exception {
+    public Hora() {
         this(0, 0, 0);
     }
 
-    public Hora(int hores, int minuts, int segons) throws Exception {
+    public Hora(int hores, int minuts, int segons) {
         if ((hores < 0 || hores > 23)
                 || (minuts < 0 || minuts > 59)
                 || (segons < 0 || segons > 59)) {
@@ -41,33 +41,32 @@ public class Hora {
         return segons;
     }
 
-    public void setHores(int hores) throws Exception {
+    public boolean setHores(int hores) {
         if (hores >= 0 && hores < 24) {
             this.hores = hores;
-        } else {
-            throw new Exception("hores fora de rang: " + hores);
+            return true;
         }
+        return false;
     }
 
-    public void setMinuts(int minuts) throws Exception {
-
+    public boolean setMinuts(int minuts) {
         if (minuts >= 0 && minuts < 60) {
             this.minuts = minuts;
-        } else {
-            throw new Exception("minuts fora de rang: " + minuts);
+            return true;
         }
+        return false;
     }
 
-    public void setSegons(int segons) throws Exception {
+    public boolean setSegons(int segons) {
         if (segons >= 0 && segons < 60) {
             this.segons = segons;
-        } else {
-            throw new Exception("segons fora de rang: " + segons);
+            return true;
         }
+        return false;
     }
 
-    public static boolean esValida(int hora, int minuts, int segons) {
-        if (hora > 23 || hora < 0)
+    public static boolean esValida(int hora, int minuts, int segons){
+        if(hora > 23 || hora < 0)
             return false;
         if (minuts > 59 || minuts < 0)
             return false;
@@ -77,12 +76,12 @@ public class Hora {
         return true;
     }
 
-    public Hora duplica() throws Exception{
+    public Hora duplica(){
         Hora newHora = new Hora(this.getHores(), this.getMinuts(), this.getSegons());
         return newHora;
     }
 
-    public static Hora duplica(Hora hora) throws Exception {
+    public static Hora duplica(Hora hora){
         Hora newHora = new Hora(hora.getHores(), hora.getMinuts(), hora.getSegons());
         return newHora;
     }
@@ -134,7 +133,6 @@ public class Hora {
         return String.format("%d:%02d:%02d", hores, minuts, segons);
     }
 
-    /*
     public void decrementa() {
         if (getSegons() == 0) {
             setSegons(59);
@@ -215,7 +213,8 @@ public class Hora {
             if (segonsAra == 0) {
                 decrementa();
                 decrementa(segons - 1);
-            } else {
+            }
+            else {
 
                 // Calcul de segons total de les hores
                 int segonsTotal = 0;
@@ -235,8 +234,7 @@ public class Hora {
                 int segonsDec = segonsRestants % 60;
 
                 System.out.println(
-                        String.format("dies: %d hores: %d minuts: %d segons: %d", diesDec, horesDec, minutsDec,
-                                segonsDec));
+                        String.format("dies: %d hores: %d minuts: %d segons: %d", diesDec, horesDec, minutsDec, segonsDec));
 
                 this.segons = segonsDec;
                 this.minuts = minutsDec;
@@ -244,22 +242,21 @@ public class Hora {
             }
         }
     }
-    
+
     public static void main(String[] args) {
         Hora hora1 = new Hora(0, 0, 0);
         Hora hora2 = new Hora(0, 0, 2);
         System.out.printf("Inicialment hora1: %s %s hora2: %s%n",
-        hora1,
-        composaOperadorComparacio(hora1, hora2),
-        hora2);
+                hora1,
+                composaOperadorComparacio(hora1, hora2),
+                hora2);
         System.out.println("Incrementem 1 segon a la primera i decrementem 1 segon a la segona");
         hora1.incrementa();
         hora2.decrementa();
         System.out.printf("Finalment hora1: %s %s hora2: %s%n",
-        hora1,
-        composaOperadorComparacio(hora1, hora2),
-        hora2);
-        
+                hora1,
+                composaOperadorComparacio(hora1, hora2),
+                hora2);
+
     }
-    */
 }
