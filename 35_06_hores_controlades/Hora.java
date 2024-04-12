@@ -42,7 +42,7 @@ public class Hora {
     }
 
     public boolean setHores(int hores) {
-        if (hores >= 0 || hores < 24) {
+        if (hores >= 0 && hores < 24) {
             this.hores = hores;
             return true;
         }
@@ -50,7 +50,7 @@ public class Hora {
     }
 
     public boolean setMinuts(int minuts) {
-        if (minuts >= 0 || minuts < 60) {
+        if (minuts >= 0 && minuts < 60) {
             this.minuts = minuts;
             return true;
         }
@@ -58,7 +58,7 @@ public class Hora {
     }
 
     public boolean setSegons(int segons) {
-        if (segons >= 0 || segons < 60) {
+        if (segons >= 0 && segons < 60) {
             this.segons = segons;
             return true;
         }
