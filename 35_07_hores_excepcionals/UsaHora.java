@@ -1,14 +1,16 @@
 public class UsaHora {
     private static void canviaHora(Hora hora, int hores, int minuts, int segons) {
+
         try {
             hora.setHores(hores);
             hora.setMinuts(minuts);
             hora.setSegons(segons);
-        }
-        catch(Exception e) {
-            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            throw e;
+            //System.out.println(e);
         }
     }
+
     public static void main(String[] args) {
         Hora hora = new Hora();
         System.out.println("Inicialment " + hora);
