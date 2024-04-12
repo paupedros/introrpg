@@ -318,7 +318,7 @@ public class Entorn {
     }
 
     public static void mostraAjuda() {
-        System.out.println(String.format("Comandes disponibles:%najuda%ncerca%nafegeix%nmodifica%nelimina%nsurt"));
+        System.out.println(String.format("Comandes disponibles:%najuda%ncerca%nsurt"));
     }
 
     public static void mostraErrorComandaDesconeguda() {
