@@ -101,6 +101,9 @@ public class Entorn {
             ref = null;
             // Obtenim les propietats
             propietats = askProperties(propietats);
+            // Si les propietats que han de ser enters s'han introduit malament...
+            if (propietats[2].equals("-2") || propietats[3].equals("-2")) return;
+
             Vi plantilla = new Vi(propietats[0], propietats[1], Integer.parseInt(propietats[2]),
                     Integer.parseInt(propietats[3]), propietats[4], propietats[5], propietats[6], propietats[7]);
             vi = botiga.cerca(plantilla);
@@ -138,6 +141,7 @@ public class Entorn {
             return properties;
         else if (!UtilString.esEnter(preu)) {
             System.out.println("ERROR: el valor ha de ser un enter positiu");
+            properties[2] = "-2";
             return properties;
         }
         if (!preu.isBlank()) {
@@ -151,6 +155,7 @@ public class Entorn {
             return properties;
         else if (!UtilString.esEnter(estoc)) {
             System.out.println("ERROR: el valor ha de ser un enter positiu");
+            properties[3] = "-2";
             return properties;
         }
         if (!estoc.isBlank()) {
