@@ -60,7 +60,7 @@ public class Vi {
         if (lloc != null) {
             lloc = normalitzaString(lloc);
         }
-        this.lloc = "P21E45N55E";
+        this.lloc = lloc;
     }
 
     public String getOrigen() {
