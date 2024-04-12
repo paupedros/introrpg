@@ -13,13 +13,6 @@ public class Hora {
     }
 
     public Hora(int hores, int minuts, int segons) throws Exception {
-        if ((hores < 0 || hores > 23)
-                || (minuts < 0 || minuts > 59)
-                || (segons < 0 || segons > 59)) {
-            hores = 0;
-            minuts = 0;
-            segons = 0;
-        }
         setHores(hores);
         setMinuts(minuts);
         setSegons(segons);
