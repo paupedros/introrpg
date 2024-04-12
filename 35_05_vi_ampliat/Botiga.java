@@ -119,7 +119,7 @@ public class Botiga {
     }
 
     public Vi getSeguent() {
-        if (index > DEFAULT_MAX_VINS) return null;
+        if (index > DEFAULT_MAX_VINS) index = 0;
         // Mentre que no ens passem del rang i el vi actual sigui null
         while (index < vins.length && vins[index] == null) {
             index++;
