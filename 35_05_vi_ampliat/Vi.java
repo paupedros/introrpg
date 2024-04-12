@@ -104,7 +104,9 @@ public class Vi {
 
     @Override
     public String toString() {
-        return String.format("%n    Ref: %s%n    Nom: %s%n    Preu: %d%n    Estoc: %d%n    Lloc: %s%n    D.O.: %s%n    Tipus: %s%n    Collita: %s", ref, nom, preu, estoc, lloc, origen, tipus, collita);
+        return String.format(
+                "%n    Ref: %s%n    Nom: %s%n    Preu: %d%n    Estoc: %d%n    Lloc: %s%n    D.O.: %s%n    Tipus: %s%n    Collita: %s",
+                ref, nom, preu, estoc, lloc, origen, tipus, collita);
     }
 
     public String[] aArrayString() {
@@ -112,7 +114,7 @@ public class Vi {
         String preu = String.valueOf(this.preu);
         String estoc = String.valueOf(this.estoc);
         // Creem l'array amb les dades del vi
-        String[] array = { this.ref, this.nom, this.tipus, preu, this.collita, estoc, this.origen, this.lloc };
+        String[] array = { this.ref, this.nom, preu, estoc, this.lloc, this.origen, this.tipus, this.collita };
         return array;
     }
 
@@ -122,12 +124,12 @@ public class Vi {
         if (arrayValid(array)) {
             String ref = array[0];
             String nom = array[1];
-            String tipus = array[2];
-            int preu = Integer.parseInt(array[3]);
-            String collita = array[4];
-            int estoc = Integer.parseInt(array[5]);
-            String origen = array[6];
-            String lloc = array[7];
+            int preu = Integer.parseInt(array[2]);
+            int estoc = Integer.parseInt(array[3]);
+            String lloc = array[4];
+            String origen = array[5];
+            String tipus = array[6];
+            String collita = array[7];
             Vi vi = new Vi(ref, nom, preu, estoc, lloc, origen, tipus, collita);
             if (vi.esValid())
                 return vi;
@@ -143,23 +145,13 @@ public class Vi {
          * El preu i el estoc no son enters
          * La instancia de vi no es valida
          */
-        if (array.length != 8)
+
+        if (array.length != 8) {
             return false;
-        if (!UtilString.esEnter(array[3]) || !UtilString.esEnter(array[5]))
+        }
+        if (!UtilString.esEnter(array[2]) || !UtilString.esEnter(array[3])) {
             return false;
-        // Constructor: ref, nom, preu, estoc, lloc, origen, tipus, collita
-        // Array: ref nom tipus preu collita estoc origen lloc
-        String ref = array[0];
-        String nom = array[1];
-        String tipus = array[2];
-        int preu = Integer.parseInt(array[3]);
-        String collita = array[4];
-        int estoc = Integer.parseInt(array[5]);
-        String origen = array[6];
-        String lloc = array[7];
-        Vi vi = new Vi(ref, nom, preu, estoc, lloc, origen, tipus, collita);
-        if (!vi.esValid())
-            return false;
+        }
         return true;
     }
 
