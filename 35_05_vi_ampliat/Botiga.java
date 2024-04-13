@@ -121,11 +121,12 @@ public class Botiga {
     public Vi getSeguent() {
         // Mentre que no ens passem del rang i el vi actual sigui null
         while (index < vins.length) {
+            Vi newVi = vins[index];
             index++;
-            if (vins[index] == null){
+            if (newVi == null){
                 continue;
             }
-            return vins[index];
+            return newVi;
         }
         return null;
     }
