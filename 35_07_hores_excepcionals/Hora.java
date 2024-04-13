@@ -8,8 +8,10 @@ public class Hora {
     private int minuts = 0;
     private int segons = 0;
 
-    public Hora() throws Exception {
-        this(0, 0, 0);
+    public Hora() {
+        this.hores = 0;
+        this.minuts = 0;
+        this.segons = 0;
     }
 
     public Hora(int hores, int minuts, int segons) throws Exception {
