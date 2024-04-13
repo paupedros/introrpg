@@ -124,7 +124,7 @@ public class Vi {
     public static Vi deArrayString(String[] array) {
         // Si l'array es valid per a ser un vi, creem una instancia i si es valida la
         // retornem
-        if (array.length == 8 && (UtilString.esEnter(array[2]) || UtilString.esEnter(array[3]))) {
+        if (arrayValid(array)) {
             String ref = array[0];
             String nom = array[1];
             int preu = Integer.parseInt(array[2]);
@@ -139,6 +139,22 @@ public class Vi {
         }
         // Si no es valid retornem null
         return null;
+    }
+
+    private static boolean arrayValid(String[] array) {
+        // Condicions per saber si un array no es valid per construir un vi:
+        /**
+         * Llargada diferent a 8
+         * El preu i el estoc no son enters
+         */
+
+        if (array.length != 8) {
+            return false;
+        }
+        if (!UtilString.esEnter(array[2]) || !UtilString.esEnter(array[3])) {
+            return false;
+        }
+        return true;
     }
 
 }
