@@ -46,7 +46,7 @@ public class Botiga {
             } else {
                 for (int i = 0; i < vins.length; i++) {
                     Vi deletedVi = vins[i];
-                    if (deletedVi == null) return null;
+                    if (deletedVi == null) continue;
                     if (refVi.equalsIgnoreCase(vins[i].getRef())) {
                         vins[i] = null;
                         return deletedVi;
