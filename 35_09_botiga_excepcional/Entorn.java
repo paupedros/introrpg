@@ -17,7 +17,7 @@ public class Entorn {
     public static void main(String[] args) throws Exception {
         Entorn entorn = new Entorn();
         mostraBenvinguda();
-        llegirVins();
+        //llegirVins();
         entorn.carregarVinsCsv();
         while (true) {
             mostraPrompt();
@@ -331,7 +331,7 @@ public class Entorn {
 
     /* ---- CARREGAR VINS DE CSV ---- */
 
-    public static void llegirVins() throws IOException {
+    public void llegirVins() throws Exception {
         // Obrim el fitxer csv de la botiga
         File csv = new File("botiga.csv");
         // Creem l'arxiu botiga
@@ -343,13 +343,15 @@ public class Entorn {
 
     private void carregarVinsCsv() throws Exception {
         File csv = new File("botiga.csv");
+        // Creem l'arxiu botiga si no existia
+        csv.createNewFile();
         // Obrim en lectura el fitxer csv
         BufferedReader reader = new BufferedReader(new FileReader(csv));
+        int lines = 0;
         while (true) {
             String line = reader.readLine();
             if (line == null)
                 break;
-
             // Passem del fitxer a un Vi
             Vi vi = Vi.deArrayString(line.split(";"));
             // System.out.println(vi);
@@ -359,9 +361,11 @@ public class Entorn {
             // Afegim el vi a la botiga
             try {
                 botiga.afegeix(vi);
-            }
-            catch (Exception e) {
+                lines++;
+            } catch (Exception e) {
                 System.out.println("ERROR: massa entrades a botiga.csv");
+            } finally {
+                System.out.println("Referències llegides: " + lines);
             }
         }
 
