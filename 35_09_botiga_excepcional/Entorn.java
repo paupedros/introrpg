@@ -357,7 +357,12 @@ public class Entorn {
             if (vi == null)
                 continue;
             // Afegim el vi a la botiga
-            botiga.afegeix(vi);
+            try {
+                botiga.afegeix(vi);
+            }
+            catch (Exception e) {
+                throw new Exception("ERROR: massa entrades a botiga.csv");
+            }
         }
 
         reader.close();
