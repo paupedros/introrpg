@@ -17,7 +17,6 @@ public class Entorn {
     public static void main(String[] args) throws Exception {
         Entorn entorn = new Entorn();
         mostraBenvinguda();
-        //llegirVins();
         entorn.carregarVinsCsv();
         while (true) {
             mostraPrompt();
@@ -331,16 +330,6 @@ public class Entorn {
 
     /* ---- CARREGAR VINS DE CSV ---- */
 
-    public void llegirVins() throws Exception {
-        // Obrim el fitxer csv de la botiga
-        File csv = new File("botiga.csv");
-        // Creem l'arxiu botiga
-        csv.createNewFile();
-        // Comptem els vins
-        int lines = countLines(csv);
-        System.out.println("Referències llegides: " + lines);
-    }
-
     private void carregarVinsCsv() throws Exception {
         File csv = new File("botiga.csv");
         // Creem l'arxiu botiga si no existia
@@ -403,23 +392,4 @@ public class Entorn {
         writer.close();
         System.out.println("Referències guardades: " + referencies);
     }
-
-    private static int countLines(File file) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(file));
-
-        // Comptem les linies que te l'arxiu, els vins que hi han
-        int lines = 0;
-        while (true) {
-            String line = reader.readLine();
-            if (line == null)
-                break;
-            String[] array = line.split(";");
-            // Si la linia es valida per ser un vi la comptem
-            if (Vi.arrayValid(array))
-                lines++;
-        }
-        reader.close();
-        return lines;
-    }
-
 }

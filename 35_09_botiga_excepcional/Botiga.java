@@ -35,7 +35,7 @@ public class Botiga {
             } else
                 throw new IllegalArgumentException("Referència de vi repetida");
         } else
-            throw new IllegalArgumentException("El vi ha de ser valid");
+            throw new IllegalArgumentException("El vi ha de ser vàlid");
     }
 
     public Vi elimina(String refVi) {

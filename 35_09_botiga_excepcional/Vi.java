@@ -141,7 +141,7 @@ public class Vi {
         return null;
     }
 
-    public static boolean arrayValid(String[] array) {
+    private static boolean arrayValid(String[] array) {
         // Condicions per saber si un array no es valid per construir un vi:
         /**
          * Llargada diferent a 8
