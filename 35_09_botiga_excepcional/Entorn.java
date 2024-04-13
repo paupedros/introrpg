@@ -361,7 +361,7 @@ public class Entorn {
                 botiga.afegeix(vi);
             }
             catch (Exception e) {
-                throw new Exception("ERROR: massa entrades a botiga.csv");
+                System.out.println("ERROR: massa entrades a botiga.csv");
             }
         }
 
