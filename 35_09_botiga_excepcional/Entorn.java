@@ -364,10 +364,9 @@ public class Entorn {
                 lines++;
             } catch (Exception e) {
                 System.out.println("ERROR: massa entrades a botiga.csv");
-            } finally {
-                System.out.println("Referències llegides: " + lines);
             }
         }
+        System.out.println("Referències llegides: " + lines);
 
         reader.close();
     }
