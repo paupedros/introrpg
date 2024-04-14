@@ -1,3 +1,7 @@
+/*
+ * Programa per utilitzar la classe hora, amb les hores controlades amb filtres als setters
+ */
+
 public class UsaHora {
     public static void main(String[] args) {
         Hora hora = new Hora();
