@@ -11,6 +11,6 @@ public enum GatPosicio {
                 return pos;
             }
         }
-        throw new IllegalArgumentException("Posicio invalida");
+        throw new IllegalArgumentException(String.format("Valor \"%s\" no suportat per GatPosicio", posicio));
     }
 }
