@@ -5,6 +5,10 @@
 public class GatRenat {
     private GatPosicio posicio = GatPosicio.ESTIRAT;
 
+    public GatRenat() {
+        this.posicio = GatPosicio.ESTIRAT;
+    }
+
     public GatRenat(GatPosicio posicio) {
         this.posicio = posicio;
     }
