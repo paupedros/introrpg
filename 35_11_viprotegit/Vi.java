@@ -14,15 +14,15 @@ public class Vi {
 
     public Vi(String ref, String nom,
             int preu, int estoc,
-            String lloc, String origen,
-            String tipus, String collita) {
+            String lloc, Origen origen,
+            Tipus tipus, String collita) {
         this.ref = UtilString.normalitzaString(ref);
         this.nom = UtilString.normalitzaString(nom);
         this.setPreu(preu);
         this.setEstoc(estoc);
         this.setLloc(lloc);
-        this.origen = Origen.fromString(origen);
-        this.tipus = Tipus.fromString(tipus);
+        this.origen = origen;
+        this.tipus = tipus;
         this.collita = UtilString.normalitzaString(collita);
     }
 
@@ -123,8 +123,8 @@ public class Vi {
             int preu = Integer.parseInt(array[2]);
             int estoc = Integer.parseInt(array[3]);
             String lloc = array[4];
-            String origen = array[5];
-            String tipus = array[6];
+            Origen origen = Origen.fromString(array[5]);
+            Tipus tipus = Tipus.fromString(array[6]);
             String collita = array[7];
             Vi vi = new Vi(ref, nom, preu, estoc, lloc, origen, tipus, collita);
             if (vi.esValid())

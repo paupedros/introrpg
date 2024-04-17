@@ -105,8 +105,9 @@ public class Entorn {
                 return;
 
             Vi plantilla = new Vi(propietats[0], propietats[1], Integer.parseInt(propietats[2]),
-                    Integer.parseInt(propietats[3]), propietats[4], propietats[5], propietats[6], propietats[7]);
-            //System.out.println(plantilla);
+                    Integer.parseInt(propietats[3]), propietats[4], Origen.fromString(propietats[5]),
+                    Tipus.fromString(propietats[6]), propietats[7]);
+            // System.out.println(plantilla);
             vi = botiga.cerca(plantilla);
         }
         // Si coincideix amb un '!'
