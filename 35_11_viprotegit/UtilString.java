@@ -629,6 +629,7 @@ public class UtilString {
 
 	public static boolean esPlantillaDeText(String plantilla, String text) {
 		if (plantilla == null || plantilla.isBlank()) return true;
+		if (text == null || text.isBlank()) return false;
 		text = normalitzaString(text);
 		plantilla = normalitzaString(plantilla);
 		if (plantilla.equalsIgnoreCase(text) || plantilla.startsWith(text)) return true;
