@@ -33,8 +33,8 @@
      * sino coincideix retornem ALTRE
      */
     public static Origen fromString(String string){
-        string = string.toUpperCase();
         if(string==null || string.isBlank()) return null;
+        string = string.toUpperCase();
         for (Origen origen : Origen.values()){
             if (origen.name().startsWith(string)){
                 return origen;

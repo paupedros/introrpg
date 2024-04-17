@@ -14,8 +14,8 @@ public enum Tipus {
      * sino coincideix retornem ALTRE
      */
     public static Tipus fromString(String string){
-        string = string.toUpperCase();
         if(string==null || string.isBlank()) return null;
+        string = string.toUpperCase();
         for (Tipus tipus : Tipus.values()){
             // Si el tipus comença amb la string demanada retornem el tipus
             if (tipus.name().startsWith(string)){
