@@ -13,12 +13,14 @@ public class Botiga {
     }
 
     Botiga(int maxVins) {
-        if (maxVins < 1) throw new IllegalArgumentException("No es pot crear una botiga amb menys d'un vi");
+        if (maxVins < 1)
+            throw new IllegalArgumentException("No es pot crear una botiga amb menys d'un vi");
         vins = new Vi[maxVins];
     }
 
     public Vi afegeix(Vi vi) throws BotigaException {
-        if (vi == null) throw new IllegalArgumentException("El vi no pot ser null");
+        if (vi == null)
+            throw new IllegalArgumentException("El vi no pot ser null");
         if (vi.esValid()) {
             // Si no es troba cap vi amb el mateix nom al de afegir
             Vi cercaVi = cerca(vi.getRef());
@@ -39,7 +41,8 @@ public class Botiga {
     }
 
     public Vi elimina(String refVi) {
-        if (refVi == null) throw new IllegalArgumentException("La referència no pot ser null");
+        if (refVi == null)
+            throw new IllegalArgumentException("La referència no pot ser null");
         refVi = UtilString.normalitzaString(refVi);
         Vi vi = cerca(refVi);
         if (vi != null) {
@@ -49,7 +52,8 @@ public class Botiga {
             } else {
                 for (int i = 0; i < vins.length; i++) {
                     Vi deletedVi = vins[i];
-                    if (deletedVi == null) continue;
+                    if (deletedVi == null)
+                        continue;
                     if (refVi.equalsIgnoreCase(vins[i].getRef())) {
                         vins[i] = null;
                         return deletedVi;
@@ -59,9 +63,10 @@ public class Botiga {
         }
         throw new IllegalArgumentException("La instància a eliminar ha d'estar present");
     }
-    
+
     public Vi cerca(String ref) {
-        if (ref == null) throw new IllegalArgumentException("La referència no pot ser null");
+        if (ref == null)
+            throw new IllegalArgumentException("La referència no pot ser null");
         ref = UtilString.normalitzaString(ref);
         for (int i = 0; i < vins.length; i++) { // Per cada vi de la llista de vins
             Vi vi = vins[i];
@@ -72,32 +77,27 @@ public class Botiga {
     }
 
     public Vi cerca(Vi plantilla) {
-        if (plantilla == null) throw new IllegalArgumentException("La plantilla no pot ser null");
+        if (plantilla == null)
+            throw new IllegalArgumentException("La plantilla no pot ser null");
         for (Vi vi : vins) {
             if (vi == null)
                 continue;
             // STRINGS
             // -------------
             // Si la referencia no esta buida...
-            if (plantilla.getRef() != null)
-                // Si les referencies no coincideixen...
-                if (!UtilString.esPlantillaDeText(plantilla.getRef(), vi.getRef()))
-                    continue;
-            if (plantilla.getNom() != null)
-                if (!plantilla.getNom().equalsIgnoreCase(vi.getNom()))
-                    continue;
-            if (plantilla.getLloc() != null)
-                if (!plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))
-                    continue;
-            if (plantilla.getOrigen() != null)
-                if (!plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))
-                    continue;
-            if (plantilla.getTipus() != null)
-                if (!plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))
-                    continue;
-            if (plantilla.getCollita() != null)
-                if (!plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))
-                    continue;
+            if (plantilla.getRef() != null && !UtilString.esPlantillaDeText(plantilla.getRef(), vi.getRef()))
+                continue;
+            if (plantilla.getNom() != null && !UtilString.esPlantillaDeText(plantilla.getNom(), vi.getNom()))
+                continue;
+            if (plantilla.getLloc() != null && !UtilString.esPlantillaDeText(plantilla.getLloc(), vi.getLloc()))
+                continue;
+            if (plantilla.getOrigen() != null && !UtilString.esPlantillaDeText(plantilla.getOrigen(), vi.getOrigen()))
+                continue;
+            if (plantilla.getTipus() != null && !UtilString.esPlantillaDeText(plantilla.getTipus(), vi.getTipus()))
+                continue;
+            if (plantilla.getCollita() != null
+                    && !UtilString.esPlantillaDeText(plantilla.getCollita(), vi.getCollita()))
+                continue;
 
             // ENTERS
             // -----------
@@ -128,7 +128,7 @@ public class Botiga {
         while (index < vins.length) {
             Vi newVi = vins[index];
             index++;
-            if (newVi == null){
+            if (newVi == null) {
                 continue;
             }
             return newVi;
