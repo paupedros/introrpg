@@ -11,7 +11,7 @@
     CONCA_DE_BARBERA("Conca de Barberà"),
     COSTERS_DEL_SEGRE("Costers del Segre"),
     EMPORDA("Empordà"),
-    MONTANT("Montsant"),
+    MONTSANT("Montsant"),
     PRIORAT("Priorat"),
     ALELLA("Alella"),
     PLA_DE_BAGES("Pla de Bages"),
