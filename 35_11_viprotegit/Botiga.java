@@ -97,7 +97,7 @@ public class Botiga {
                 if (!UtilString.esPlantillaDeText(plantilla.getLloc(), vi.getLloc()))
                     continue;
             if (plantilla.getOrigen() != null)
-                if (!UtilString.esPlantillaDeText(plantilla.getOrigen(), vi.getOrigen()))
+                if (UtilString.esPlantillaDeText(plantilla.getOrigen(), vi.getOrigen()))
                     continue;
             if (plantilla.getTipus() != null)
                 if (!UtilString.esPlantillaDeText(plantilla.getTipus(), vi.getTipus()))
