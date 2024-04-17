@@ -34,7 +34,6 @@
      */
     public static Origen fromString(String string){
         if(string==null || string.isBlank()) return null;
-        string = string.toUpperCase();
         for (Origen origen : Origen.values()){
             if (origen.descr.startsWith(string)){
                 return origen;
