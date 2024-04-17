@@ -83,8 +83,6 @@ public class Botiga {
                 // Si les referencies no coincideixen...
                 if (!UtilString.esPlantillaDeText(plantilla.getRef(), vi.getRef()))
                     continue;
-                if (!plantilla.getRef().equalsIgnoreCase(vi.getRef()))
-                    continue;
             if (plantilla.getNom() != null)
                 if (!plantilla.getNom().equalsIgnoreCase(vi.getNom()))
                     continue;
