@@ -36,7 +36,7 @@
         if(string==null || string.isBlank()) return null;
         string = string.toUpperCase();
         for (Origen origen : Origen.values()){
-            if (origen.name().startsWith(string)){
+            if (origen.descr.startsWith(string)){
                 return origen;
             }
         }
