@@ -632,7 +632,9 @@ public class UtilString {
 		if (text == null || text.isBlank()) return false;
 		text = normalitzaString(text);
 		plantilla = normalitzaString(plantilla);
-		if (plantilla.equalsIgnoreCase(text) || plantilla.startsWith(text)) return true;
+		text = text.toUpperCase();
+		plantilla = plantilla.toUpperCase();
+		if (plantilla.equals(text) || plantilla.startsWith(text)) return true;
 		return false;
 	}
 
