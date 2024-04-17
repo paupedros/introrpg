@@ -82,7 +82,7 @@ public class Botiga {
         for (Vi vi : vins) {
             if (vi == null)
                 continue;
-                //System.out.println(vi);
+            // System.out.println(vi);
             // STRINGS
             // -------------
             // Si la referencia no esta buida...
@@ -94,10 +94,10 @@ public class Botiga {
                 if (!UtilString.esPlantillaDeText(plantilla.getNom(), vi.getNom()))
                     continue;
             if (plantilla.getLloc() != null)
-                if (!plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))
+                if (!UtilString.esPlantillaDeText(plantilla.getLloc(), vi.getLloc()))
                     continue;
             if (plantilla.getOrigen() != null)
-                if (!plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))
+                if (!UtilString.esPlantillaDeText(plantilla.getOrigen(), vi.getOrigen()))
                     continue;
             if (plantilla.getTipus() != null)
                 if (!plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))
