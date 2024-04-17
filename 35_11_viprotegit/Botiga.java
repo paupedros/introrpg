@@ -100,10 +100,10 @@ public class Botiga {
                 if (!UtilString.esPlantillaDeText(plantilla.getOrigen(), vi.getOrigen()))
                     continue;
             if (plantilla.getTipus() != null)
-                if (!plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))
+                if (!UtilString.esPlantillaDeText(plantilla.getTipus(), vi.getTipus()))
                     continue;
             if (plantilla.getCollita() != null)
-                if (!plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))
+                if (!UtilString.esPlantillaDeText(plantilla.getCollita(), vi.getCollita()))
                     continue;
 
             // ENTERS
