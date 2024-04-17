@@ -85,19 +85,25 @@ public class Botiga {
             // STRINGS
             // -------------
             // Si la referencia no esta buida...
-            if (plantilla.getRef() != null && !UtilString.esPlantillaDeText(plantilla.getRef(), vi.getRef()))
-                continue;
-            if (plantilla.getNom() != null && !UtilString.esPlantillaDeText(plantilla.getNom(), vi.getNom()))
-                continue;
-            if (plantilla.getLloc() != null && !UtilString.esPlantillaDeText(plantilla.getLloc(), vi.getLloc()))
-                continue;
-            if (plantilla.getOrigen() != null && !UtilString.esPlantillaDeText(plantilla.getOrigen(), vi.getOrigen()))
-                continue;
-            if (plantilla.getTipus() != null && !UtilString.esPlantillaDeText(plantilla.getTipus(), vi.getTipus()))
-                continue;
-            if (plantilla.getCollita() != null
-                    && !UtilString.esPlantillaDeText(plantilla.getCollita(), vi.getCollita()))
-                continue;
+            if (plantilla.getRef() != null)
+                // Si les referencies no coincideixen...
+                if (!UtilString.esPlantillaDeText(plantilla.getRef(), vi.getRef()))
+                    continue;
+            if (plantilla.getNom() != null)
+                if (!UtilString.esPlantillaDeText(plantilla.getNom(), vi.getNom()))
+                    continue;
+            if (plantilla.getLloc() != null)
+                if (!plantilla.getLloc().equalsIgnoreCase(vi.getLloc()))
+                    continue;
+            if (plantilla.getOrigen() != null)
+                if (!plantilla.getOrigen().equalsIgnoreCase(vi.getOrigen()))
+                    continue;
+            if (plantilla.getTipus() != null)
+                if (!plantilla.getTipus().equalsIgnoreCase(vi.getTipus()))
+                    continue;
+            if (plantilla.getCollita() != null)
+                if (!plantilla.getCollita().equalsIgnoreCase(vi.getCollita()))
+                    continue;
 
             // ENTERS
             // -----------
