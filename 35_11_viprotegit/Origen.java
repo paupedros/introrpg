@@ -34,8 +34,10 @@
      */
     public static Origen fromString(String string){
         if(string==null || string.isBlank()) return null;
+        string = string.toLowerCase();
         for (Origen origen : Origen.values()){
-            if (origen.descr.startsWith(string)){
+            String desc = origen.descr.toLowerCase();
+            if (desc.equalsIgnoreCase(string) || desc.startsWith(string)){
                 return origen;
             }
         }
