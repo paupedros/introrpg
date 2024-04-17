@@ -13,7 +13,7 @@ public enum Tipus {
      * si coincideix amb algun valor retornem la coincident,
      * sino coincideix retornem ALTRE
      */
-    public Tipus fromString(String string){
+    public static Tipus fromString(String string){
         string = string.toUpperCase();
         if(string==null || string.isBlank()) return null;
         for (Tipus tipus : Tipus.values()){

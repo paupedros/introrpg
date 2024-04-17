@@ -21,8 +21,8 @@ public class Vi {
         this.setPreu(preu);
         this.setEstoc(estoc);
         this.setLloc(lloc);
-        this.origen = this.origen.fromString(origen);
-        this.tipus = this.tipus.fromString(tipus);
+        this.origen = Origen.fromString(origen);
+        this.tipus = Tipus.fromString(tipus);
         this.collita = UtilString.normalitzaString(collita);
     }
 

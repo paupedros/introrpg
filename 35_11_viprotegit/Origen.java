@@ -32,7 +32,7 @@
      * si coincideix amb algun valor retornem la coincident,
      * sino coincideix retornem ALTRE
      */
-    public Origen fromString(String string){
+    public static Origen fromString(String string){
         string = string.toUpperCase();
         if(string==null || string.isBlank()) return null;
         for (Origen origen : Origen.values()){
