@@ -27,7 +27,7 @@ public enum Tipus {
      */
     public static Tipus fromString(String string){
         if(string==null || string.isBlank()) return null;
-        string = string.toLowerCase();
+        string = UtilString.normalitzaString(string.toLowerCase());
         for (Tipus tipus : Tipus.values()){
             String desc = tipus.descr.toLowerCase();
             // Si el tipus comença amb la string demanada retornem el tipus
