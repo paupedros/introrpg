@@ -1,5 +1,7 @@
 /*
- * Classe per probar les implementacions amb enums de posicio
+ * Classe per probar les implementacions amb enums de posicio,
+ * aquest enum conte les posicions posibles que pot tenir el GatRenat
+ * i amb un fromString podem convertir d'un string a la posicio corresponent
  */
 
 public class UsaGatRenat {
