@@ -64,6 +64,7 @@ public class Vi {
     }
 
     public String getOrigen() {
+        if (origen == null) return null;
         return origen.toString();
     }
 
