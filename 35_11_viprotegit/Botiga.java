@@ -82,6 +82,7 @@ public class Botiga {
         for (Vi vi : vins) {
             if (vi == null)
                 continue;
+                //System.out.println(vi);
             // STRINGS
             // -------------
             // Si la referencia no esta buida...

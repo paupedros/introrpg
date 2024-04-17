@@ -634,7 +634,8 @@ public class UtilString {
 		plantilla = normalitzaString(plantilla);
 		text = text.toUpperCase();
 		plantilla = plantilla.toUpperCase();
-		if (plantilla.equals(text) || plantilla.startsWith(text)) return true;
+		//System.out.println(String.format("plantilla: %s    text: %s", plantilla, text));
+		if (text.equals(plantilla) || text.startsWith(plantilla)) return true;
 		return false;
 	}
 
