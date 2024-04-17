@@ -69,6 +69,7 @@ public class Vi {
     }
 
     public String getTipus() {
+        if (tipus == null) return null;
         return tipus.toString();
     }
 
