@@ -135,7 +135,18 @@ public class Entorn {
         }
         // Si es troba el vi
         System.out.print(
-                String.format("Trobat:%s", vins));
+                String.format("Trobat:%s", printList(vins)));
+    }
+
+    private String printList(List<Vi> list) {
+        String result = "";
+
+        for (Vi vi : list) {
+            if (list.indexOf(vi) == 0)
+                result += "" + "\n" + vi.toString();
+            else result +=  vi.toString();
+        }
+        return result;
     }
 
     private String[] askProperties(String[] properties) {
