@@ -11,6 +11,7 @@ public class EnvoltaString {
     public boolean equals(EnvoltaString altre) {
         return valor.equalsIgnoreCase(altre.valor);
     }
+
     public static void main(String[] args) {
         String nom1 = "Renat";
         String nom2 = new String("Renat");
