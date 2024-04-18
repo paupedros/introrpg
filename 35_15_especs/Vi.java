@@ -144,6 +144,9 @@ public class Vi {
             Origen origen = Origen.fromString(array[5]);
             Tipus tipus = Tipus.fromString(array[6]);
             String collita = array[7];
+            if (!esValid(ref, nom, preu, estoc, lloc, origen, tipus, collita)) {
+                return null;
+            }
             Vi vi = new Vi(ref, nom, preu, estoc, lloc, origen, tipus, collita);
             return vi;
         }
