@@ -137,7 +137,7 @@ public class Entorn {
         String result = "";
 
         for (Vi vi : list) {
-            if (list.indexOf(vi) == 0)
+            if (list.indexOf(vi) != 0)
                 result += "" + "\n" + vi.toString();
             else result +=  vi.toString();
         }
