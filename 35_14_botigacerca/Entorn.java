@@ -118,19 +118,15 @@ public class Entorn {
 
         // Manejo de resultados de búsqueda
         if (vins != null && !vins.isEmpty()) {
-            System.out.println("Trobat:");
-            for (Vi foundVi : vins) {
-                System.out.println(foundVi);
-            }
+            // Si es troba el vi
+            System.out.print(
+                    String.format("Trobat:%s", printList(vins)));
         } else if (vi != null) {
             System.out.println("Trobat: " + vi);
         } else {
             System.out.println("No trobat");
         }
 
-        // Si es troba el vi
-        System.out.print(
-                String.format("Trobat:%s", printList(vins)));
     }
 
     private String printList(List<Vi> list) {
@@ -139,7 +135,8 @@ public class Entorn {
         for (Vi vi : list) {
             if (list.indexOf(vi) != 0)
                 result += "" + "\n" + vi.toString();
-            else result +=  vi.toString();
+            else
+                result += vi.toString();
         }
         return result;
     }
