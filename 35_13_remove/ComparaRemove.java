@@ -76,7 +76,7 @@ public class ComparaRemove {
     private static List<Integer> emplena(List<Integer> llista) {
         // codi que emplena la llista amb enters del 0 a LONGITUD - 1
         for (int i = 0; i < LONGITUD - 1; i++) {
-            llista.add(i, 0);
+            llista.add(0);
         }
         return llista;
     }
@@ -84,7 +84,7 @@ public class ComparaRemove {
         long tempsInicial = System.nanoTime();
         // codi que elimina un a un tots els elements de la llista per la posició 0
         for (int i = 0; i < llista.size() - 1; i++) {
-            llista.remove(i);
+            llista.remove(0);
         }
         return System.nanoTime() - tempsInicial;
     }
@@ -92,7 +92,7 @@ public class ComparaRemove {
         long tempsInicial = System.nanoTime();
         // codi que elimina un a un tots els elements de la llista per la darrera posició
         for (int i = llista.size() - 1; i >= 0; i--) {
-            llista.remove(i);
+            llista.remove(llista.size() - 1);
         }
         return System.nanoTime() - tempsInicial;
     }
