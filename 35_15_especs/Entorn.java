@@ -103,6 +103,8 @@ public class Entorn {
                 System.out.println(e.getMessage());
                 return;
             }
+
+
             Especificacio plantilla = crearPlantilla(properties);
             // System.out.println(plantilla);
             vins = botiga.cerca(plantilla, Integer.parseInt(properties[1]), Integer.parseInt(properties[2]));
@@ -154,7 +156,8 @@ public class Entorn {
         // Si no esta buit
         if (!preu.isBlank()) {
             if (preu.equals("!"))
-                throw new IllegalArgumentException();
+                properties[1] = null;
+                properties[2] = "-1";
             if (!UtilString.esEnter(preu)) {
                 throw new IllegalArgumentException("ERROR: el valor ha de ser un enter positiu");
             }
