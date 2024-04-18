@@ -3,7 +3,12 @@
  * si dues Strings son iguals sense distingir entre majuscules ni minuscules
  * 
  * Explicacio nota:
- * S'està comparant un String amb un Object, no podrà donar mai true.
+ * Quan estem comparant nom1 estem comparant un String amb una instancia d'un objecte que no te res
+ * a veure amb String (són dos classes diferents). 
+ * Al inreves seria al contrari, podria donar true ja que el equals de EnvoltaString
+ * permet Strings.
+ * El equals del String no es pot sobreescriure (Override) ja que, la classe
+ * String es una classe final i no es pot modificar el seu contingut.
  */
  public class UsaEnvoltaString {
     public static void main(String[] args) {
