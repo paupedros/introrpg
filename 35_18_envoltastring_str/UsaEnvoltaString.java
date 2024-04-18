@@ -1,6 +1,9 @@
 /*
  * Codi que posa a prova el EnvoltaString que retornara true
  * si dues Strings son iguals sense distingir entre majuscules ni minuscules
+ * 
+ * Explicacio nota:
+ * S'està comparant un String amb un Object, no podrà donar mai true.
  */
  public class UsaEnvoltaString {
     public static void main(String[] args) {
