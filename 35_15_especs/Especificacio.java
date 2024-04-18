@@ -21,10 +21,12 @@ public class Especificacio {
     }
 
     public String getOrigen(){
+        if (origen == null) return null;
         return origen.toString();
     }
 
     public String getTipus(){
+        if (tipus == null) return null;
         return tipus.toString();
     }
 

@@ -22,8 +22,11 @@ public class test {
         System.out.print("nom> ");
         String nom = Entrada.readLine();
         // Si no esta buit
-        if (nom.equals("!"))
+        if (nom.equals("!")) {
+            properties[1] = "-1";
+            properties[2] = "-1";
             return properties;
+        }
         if (!nom.isBlank()) {
             properties[0] = nom;
         }
