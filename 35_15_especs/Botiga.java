@@ -61,8 +61,9 @@ public class Botiga {
             throw new IllegalArgumentException("La referència no pot ser null");
         ref = UtilString.normalitzaString(ref);
 
-        for (int i = 0; i < vins.size() - 1; i++) { // Per cada vi de la llista de vins
+        for (int i = 0; i < vins.size(); i++) { // Per cada vi de la llista de vins
             Vi vi = vins.get(i);
+            //System.out.println(vi);
             if (vi != null && ref.equalsIgnoreCase(vi.getRef()))
                 return vi;
         }
