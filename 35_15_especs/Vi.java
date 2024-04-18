@@ -62,7 +62,7 @@ public class Vi {
     public void setLloc(String lloc) {
         // Si el lloc es null o esta vuit no fem res
         if (lloc == null || lloc.isBlank())
-            return;
+            throw new IllegalArgumentException();
         this.lloc = UtilString.normalitzaString(lloc);
     }
 
