@@ -119,7 +119,7 @@ public class Entorn {
             System.out.print(
                     String.format("Trobat:%s", printList(vins)));
         } else if (vi != null) {
-            System.out.println("Trobat: " + vi);
+            System.out.println("Trobat:" + vi);
         } else {
             System.out.println("No trobat");
         }
