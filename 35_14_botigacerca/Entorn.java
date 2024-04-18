@@ -128,11 +128,6 @@ public class Entorn {
             System.out.println("No trobat");
         }
 
-        // Si no es troba el vi
-        if (vins.size() == 0 || vi == null) {
-            System.out.println("No trobat");
-            return;
-        }
         // Si es troba el vi
         System.out.print(
                 String.format("Trobat:%s", printList(vins)));
