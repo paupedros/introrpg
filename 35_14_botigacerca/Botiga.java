@@ -14,7 +14,7 @@ public class Botiga {
     }
 
     public List<Vi> getVins() {
-        return vins;
+        return List.copyOf(vins);
     }
 
     public Vi afegeix(Vi vi) {
