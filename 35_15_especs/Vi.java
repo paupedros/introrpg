@@ -16,7 +16,7 @@ public class Vi {
             int preu, int estoc,
             String lloc, Origen origen,
             Tipus tipus, String collita) {
-        if (!esValid(ref, nom, preu, estoc, lloc, origen, tipus, collita)){
+        if (!esValid(ref, nom, preu, estoc, lloc, origen, tipus, collita)) {
             throw new IllegalArgumentException();
         }
         this.ref = UtilString.normalitzaString(ref);
@@ -44,6 +44,8 @@ public class Vi {
     public void setPreu(int preu) {
         if (preu >= 0)
             this.preu = preu;
+        else
+            throw new IllegalArgumentException();
     }
 
     public int getEstoc() {
@@ -53,6 +55,8 @@ public class Vi {
     public void setEstoc(int estoc) {
         if (estoc >= 0)
             this.estoc = estoc;
+        else
+            throw new IllegalArgumentException();
     }
 
     public String getLloc() {
@@ -82,7 +86,8 @@ public class Vi {
         return collita;
     }
 
-    public static boolean esValid(String ref, String nom, int preu, int estoc, String lloc, Origen origen, Tipus tipus, String collita) {
+    public static boolean esValid(String ref, String nom, int preu, int estoc, String lloc, Origen origen, Tipus tipus,
+            String collita) {
         if (ref == null || ref.isBlank()) {
             return false;
         }
@@ -139,7 +144,7 @@ public class Vi {
             Origen origen = Origen.fromString(array[5]);
             Tipus tipus = Tipus.fromString(array[6]);
             String collita = array[7];
-            if (!esValid(ref, nom, preu, estoc, lloc, origen, tipus, collita)){
+            if (!esValid(ref, nom, preu, estoc, lloc, origen, tipus, collita)) {
                 throw new IllegalArgumentException();
             }
             Vi vi = new Vi(ref, nom, preu, estoc, lloc, origen, tipus, collita);
