@@ -8,53 +8,53 @@
 
 Comparant l'eficiència de les llistes
 Comparació quan eliminem sempre de l'inici
-test remove(0) LinkedList:     259
-test remove(0) ArrayList:      224
+test remove(0) LinkedList:     2000516
+test remove(0) ArrayList:      255892691
 
 Comparació quan eliminem sempre del final
-test remove(últim) LinkedList: 303
-test remove(últim) ArrayList:  227
+test remove(últim) LinkedList: 3111691
+test remove(últim) ArrayList:  1527462
 Comparació quan eliminem sempre del mig
-test remove(mig) LinkedList: 15925
-test remove(mig) ArrayList:    828
+test remove(mig) LinkedList:   4016565922
+test remove(mig) ArrayList:    178794495
 
         Segona execució:
         ================
 Comparant l'eficiència de les llistes
 
 Comparació quan eliminem sempre de l'inici
-test remove(0) LinkedList:     269
-test remove(0) ArrayList:      170
+test remove(0) LinkedList:     2093906
+test remove(0) ArrayList:      259322910
 Comparació quan eliminem sempre del final
-test remove(últim) LinkedList: 247
-test remove(últim) ArrayList:  189
+test remove(últim) LinkedList: 3180756
+test remove(últim) ArrayList:  2805786
 
 Comparació quan eliminem sempre del mig
-test remove(mig) LinkedList:  5894
-test remove(mig) ArrayList:    433
+test remove(mig) LinkedList:   3481907771
+test remove(mig) ArrayList:    162320542
         Tercera execució:
         =================
 
 Comparant l'eficiència de les llistes
 Comparació quan eliminem sempre de l'inici
-test remove(0) LinkedList:     265
-test remove(0) ArrayList:      200
+test remove(0) LinkedList:     2047031
+test remove(0) ArrayList:      266655008
 
 Comparació quan eliminem sempre del final
-test remove(últim) LinkedList: 328
-test remove(últim) ArrayList:  252259
+test remove(últim) LinkedList: 4364889
+test remove(últim) ArrayList:  2758740
 Comparació quan eliminem sempre del mig
-test remove(mig) LinkedList:  6459
-test remove(mig) ArrayList:    297
+test remove(mig) LinkedList:   3797338695
+test remove(mig) ArrayList:    172298433
 
         Resultats
         =========
 ========== ================== ================== ======================================================
 **prova**  **linkedList**      **ArrayList**      **resultat**
 ---------- ------------------ ------------------ ------------------------------------------------------
-inici       264                 198                1
-final       292                 84225              288
-mig         9426                519                18
+inici       2047151             260623536          127
+final       3552445             2363996            2
+mig         3765270796          171137823          22
 ========== ================== ================== ======================================================
 
     Per calcular cada columna:
