@@ -154,7 +154,7 @@ public class Entorn {
         // Si no esta buit
         if (!preu.isBlank()) {
             if (preu.equals("!"))
-                return properties;
+                throw new IllegalArgumentException();
             if (!UtilString.esEnter(preu)) {
                 throw new IllegalArgumentException("ERROR: el valor ha de ser un enter positiu");
             }
