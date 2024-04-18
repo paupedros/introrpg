@@ -33,8 +33,11 @@ public class test {
         String preu = Entrada.readLine();
         // Si no esta buit
         if (!preu.isBlank()) {
-            if (preu.equals("!"))
+            if (preu.equals("!")) {
+                properties[1] = "-1";
+                properties[2] = "-1";
                 return properties;
+            }
             if (!UtilString.esEnter(preu)) {
                 throw new IllegalArgumentException("ERROR: el valor ha de ser un enter positiu");
             }

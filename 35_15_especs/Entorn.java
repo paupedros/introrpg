@@ -103,10 +103,8 @@ public class Entorn {
                 System.out.println(e.getMessage());
                 return;
             }
-
-
             Especificacio plantilla = crearPlantilla(properties);
-            // System.out.println(plantilla);
+            //System.out.println(plantilla);
             vins = botiga.cerca(plantilla, Integer.parseInt(properties[1]), Integer.parseInt(properties[2]));
         }
         // Si coincideix amb un '!'
