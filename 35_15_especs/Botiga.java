@@ -20,7 +20,7 @@ public class Botiga {
     public Vi afegeix(Vi vi) {
         if (vi == null)
             throw new IllegalArgumentException("El vi no pot ser null");
-        if (vi.esValid()) {
+        if (Vi.esValid(vi.getRef(), vi.getNom(), vi.getPreu(), vi.getEstoc(), vi.getLloc(), Origen.fromString(vi.getOrigen()), Tipus.fromString(vi.getTipus()), vi.getCollita())) {
             // Si no es troba cap vi amb el mateix nom al de afegir
             Vi cercaVi = cerca(vi.getRef());
             if (cercaVi == null) {

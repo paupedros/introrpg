@@ -16,6 +16,9 @@ public class Vi {
             int preu, int estoc,
             String lloc, Origen origen,
             Tipus tipus, String collita) {
+        if (!esValid(ref, nom, preu, estoc, lloc, origen, tipus, collita)){
+            throw new IllegalArgumentException();
+        }
         this.ref = UtilString.normalitzaString(ref);
         this.nom = UtilString.normalitzaString(nom);
         this.setPreu(preu);
@@ -79,25 +82,32 @@ public class Vi {
         return collita;
     }
 
-    public boolean esValid() {
-        if (ref == null || ref.isBlank())
+    public static boolean esValid(String ref, String nom, int preu, int estoc, String lloc, Origen origen, Tipus tipus, String collita) {
+        if (ref == null || ref.isBlank()) {
             return false;
-        else if (nom == null || nom.isBlank())
+        }
+        if (nom == null || nom.isBlank()) {
             return false;
-        else if (preu < 0)
+        }
+        if (preu < 0) {
             return false;
-        else if (estoc < 0)
+        }
+        if (estoc < 0) {
             return false;
-        else if (lloc == null || lloc.isBlank())
+        }
+        if (lloc == null || lloc.isBlank()) {
             return false;
-        else if (origen == null || origen.toString().isBlank())
+        }
+        if (origen == null || origen.toString().isBlank()) {
             return false;
-        else if (tipus == null || tipus.toString().isBlank())
+        }
+        if (tipus == null || tipus.toString().isBlank()) {
             return false;
-        else if (collita == null || collita.isBlank())
+        }
+        if (collita == null || collita.isBlank()) {
             return false;
-        else
-            return true;
+        }
+        return true;
     }
 
     @Override
@@ -130,8 +140,7 @@ public class Vi {
             Tipus tipus = Tipus.fromString(array[6]);
             String collita = array[7];
             Vi vi = new Vi(ref, nom, preu, estoc, lloc, origen, tipus, collita);
-            if (vi.esValid())
-                return vi;
+            return vi;
         }
         // Si no es valid retornem null
         return null;
