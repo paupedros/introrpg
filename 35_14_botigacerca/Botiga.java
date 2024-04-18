@@ -22,6 +22,7 @@ public class Botiga {
             throw new IllegalArgumentException("El vi no pot ser null");
         if (vi.esValid()) {
             // Si no es troba cap vi amb el mateix nom al de afegir
+            if (vins.contains(vi)) throw new IllegalArgumentException("Referència de vi repetida");
             if (!vins.contains(vi)) {
                 vins.add(vi);
                 return vi;
