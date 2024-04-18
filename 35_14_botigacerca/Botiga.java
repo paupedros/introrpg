@@ -17,14 +17,12 @@ public class Botiga {
         return vins;
     }
 
-    public Vi afegeix(Vi vi) throws BotigaException {
+    public Vi afegeix(Vi vi) {
         if (vi == null)
             throw new IllegalArgumentException("El vi no pot ser null");
         if (vi.esValid()) {
             // Si no es troba cap vi amb el mateix nom al de afegir
-            Vi cercaVi = cerca(vi.getRef());
-            // System.out.println(cercaVi);
-            if (cercaVi == null) {
+            if (vins.contains(vi)) {
                 // Busca un espai null a la llista
                 vins.add(vi);
                 // for (int i = 0; i < vins.size() - 1; i++) {
@@ -33,7 +31,7 @@ public class Botiga {
                 //         return vi;
                 //     }
                 // }
-                throw new BotigaException();
+                return vi;
             } else
                 throw new IllegalArgumentException("Referència de vi repetida");
         } else
