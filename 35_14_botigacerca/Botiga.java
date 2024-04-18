@@ -22,7 +22,7 @@ public class Botiga {
             throw new IllegalArgumentException("El vi no pot ser null");
         if (vi.esValid()) {
             // Si no es troba cap vi amb el mateix nom al de afegir
-            if (vins.contains(vi)) {
+            if (!vins.contains(vi)) {
                 // Busca un espai null a la llista
                 vins.add(vi);
                 // for (int i = 0; i < vins.size() - 1; i++) {
