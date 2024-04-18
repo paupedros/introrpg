@@ -23,14 +23,7 @@ public class Botiga {
         if (vi.esValid()) {
             // Si no es troba cap vi amb el mateix nom al de afegir
             if (!vins.contains(vi)) {
-                // Busca un espai null a la llista
                 vins.add(vi);
-                // for (int i = 0; i < vins.size() - 1; i++) {
-                //     if (vins[i] == null) {
-                //         vins[i] = vi;
-                //         return vi;
-                //     }
-                // }
                 return vi;
             } else
                 throw new IllegalArgumentException("Referència de vi repetida");

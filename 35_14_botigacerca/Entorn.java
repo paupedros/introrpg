@@ -90,7 +90,7 @@ public class Entorn {
         // Demanem la referencia del vi a buscar
         System.out.print("ref> ");
         String ref = Entrada.readLine();
-        List<Vi> vins = null;
+        List<Vi> vins = new LinkedList<>();
         Vi vi = null;
 
         // Inicialitzem les propietats per defecte
@@ -106,10 +106,7 @@ public class Entorn {
             // Si les propietats que han de ser enters s'han introduit malament...
             if (propietats[2].equals("-2") || propietats[3].equals("-2"))
                 return;
-
-            Vi plantilla = new Vi(propietats[0], propietats[1], Integer.parseInt(propietats[2]),
-                    Integer.parseInt(propietats[3]), propietats[4], Origen.fromString(propietats[5]),
-                    Tipus.fromString(propietats[6]), propietats[7]);
+            Vi plantilla = crearPlantilla(propietats);
             // System.out.println(plantilla);
             vins = botiga.cerca(plantilla);
         }
@@ -118,8 +115,21 @@ public class Entorn {
             return;
         else
             vi = botiga.cerca(ref);
+
+        // Manejo de resultados de búsqueda
+        if (vins != null && !vins.isEmpty()) {
+            System.out.println("Trobat:");
+            for (Vi foundVi : vins) {
+                System.out.println(foundVi);
+            }
+        } else if (vi != null) {
+            System.out.println("Trobat: " + vi);
+        } else {
+            System.out.println("No trobat");
+        }
+
         // Si no es troba el vi
-        if (vins.size() == 0) {
+        if (vins.size() == 0 || vi == null) {
             System.out.println("No trobat");
             return;
         }
@@ -207,6 +217,19 @@ public class Entorn {
 
         return properties;
 
+    }
+
+    private Vi crearPlantilla(String[] propietats) {
+        // Crear objeto Vi con las propiedades
+        return new Vi(
+                propietats[0],
+                propietats[1],
+                Integer.parseInt(propietats[2]),
+                Integer.parseInt(propietats[3]),
+                propietats[4],
+                Origen.fromString(propietats[5]),
+                Tipus.fromString(propietats[6]),
+                propietats[7]);
     }
 
     public void processaModifica() {
