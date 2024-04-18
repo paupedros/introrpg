@@ -165,7 +165,8 @@ public class Entorn {
                 throw new IllegalArgumentException("ERROR: el valor ha de ser un enter positiu");
             }
             properties[1] = preu;
-        }
+        } else
+            properties[1] = "-1";
 
         System.out.print("estoc min.> ");
         String estoc = Entrada.readLine();
@@ -177,7 +178,8 @@ public class Entorn {
                 throw new IllegalArgumentException("ERROR: el valor ha de ser un enter positiu");
             }
             properties[2] = estoc;
-        }
+        } else
+            properties[2] = "-1";
 
         System.out.print("D.O.> ");
         String origen = Entrada.readLine();
