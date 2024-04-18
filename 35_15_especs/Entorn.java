@@ -104,7 +104,7 @@ public class Entorn {
                 return;
             }
             Especificacio plantilla = crearPlantilla(properties);
-            //System.out.println(plantilla);
+            // System.out.println(plantilla);
             vins = botiga.cerca(plantilla, Integer.parseInt(properties[1]), Integer.parseInt(properties[2]));
         }
         // Si coincideix amb un '!'
@@ -142,8 +142,11 @@ public class Entorn {
         System.out.print("nom> ");
         String nom = Entrada.readLine();
         // Si no esta buit
-        if (nom.equals("!"))
+        if (nom.equals("!")) {
+            properties[1] = "-1";
+            properties[2] = "-1";
             return properties;
+        }
         if (!nom.isBlank()) {
             properties[0] = nom;
         }
