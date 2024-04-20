@@ -628,9 +628,12 @@ public class UtilString {
     }
 
 	public static boolean esPlantillaDeText(String plantilla, String text) {
-		text = normalitzaString(text);
-		plantilla = normalitzaString(plantilla);
-		if (plantilla.equalsIgnoreCase(text) || plantilla.startsWith(text)) return true;
+		if (plantilla == null || plantilla.isBlank()) return true;
+		if (text == null || text.isBlank()) return false;
+		text = normalitzaString(text.toUpperCase());
+		plantilla = normalitzaString(plantilla.toUpperCase());
+		//System.out.println(String.format("plantilla: %s    text: %s", plantilla, text));
+		if (text.equals(plantilla) || text.startsWith(plantilla)) return true;
 		return false;
 	}
 
