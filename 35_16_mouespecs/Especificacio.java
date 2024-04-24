@@ -37,10 +37,10 @@ public class Especificacio {
     }
 
     public boolean esComplet() {
-        if (nom != null)
+        if (nom != null && !nom.isBlank())
             if (origen != null)
                 if (tipus != null)
-                    if (collita != null)
+                    if (collita != null && !collita.isBlank())
                         return true;
         return false;
     }
