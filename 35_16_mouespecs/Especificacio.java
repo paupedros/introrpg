@@ -45,7 +45,7 @@ public class Especificacio {
 
     @Override
     public String toString() {
-        return String.format("D.O.: %s%n    Tipus: %s%n    Collita: %s%n", origen, tipus, collita);
+        return String.format("Nom: %s%n    D.O.: %s%n    Tipus: %s%n    Collita: %s%n", nom, origen, tipus, collita);
     }
 
     public String[] aArrayString() {
