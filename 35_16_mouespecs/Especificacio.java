@@ -10,10 +10,10 @@ public class Especificacio {
     private String collita;
 
     Especificacio(String nom, Origen origen, Tipus tipus, String collita) {
-        this.nom = nom;
+        this.nom = UtilString.normalitzaString(nom);
         this.origen = origen;
         this.tipus = tipus;
-        this.collita = collita;
+        this.collita = UtilString.normalitzaString(collita);
     }
 
     public String getNom() {
