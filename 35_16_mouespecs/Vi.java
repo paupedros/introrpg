@@ -83,8 +83,8 @@ public class Vi {
     @Override
     public String toString() {
         return String.format(
-                "%n    Ref: %s%n    Preu: %d%n    Estoc: %d%n    Lloc: %s%n    %s",
-                ref, preu, estoc, lloc, espec);
+                "%n    Ref: %s%n    Nom: %s%n    Preu: %d%n    Estoc: %d%n    Lloc: %s%n    %s",
+                ref, espec.getNom(), preu, estoc, lloc, espec);
     }
 
     public String[] aArrayString() {
