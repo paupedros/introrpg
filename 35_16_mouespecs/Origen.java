@@ -25,6 +25,9 @@ public enum Origen {
 
     @Override
     public String toString() {
+        if (descr == null) {
+            return null;
+        }
         return descr;
     }
 
