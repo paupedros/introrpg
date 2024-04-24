@@ -86,18 +86,6 @@ public class Botiga {
             // -------------
             if (!espec.esPlantillaDe(vi))
                 continue;
-            // if (espec.getNom() != null)
-            //     if (!UtilString.esPlantillaDeText(espec.getNom(), vi.getNom()))
-            //         continue;
-            // if (espec.getOrigen() != null)
-            //     if (!UtilString.esPlantillaDeText(espec.getOrigen(), vi.getOrigen()))
-            //         continue;
-            // if (espec.getTipus() != null)
-            //     if (!UtilString.esPlantillaDeText(espec.getTipus(), vi.getTipus()))
-            //         continue;
-            // if (espec.getCollita() != null)
-            //     if (!UtilString.esPlantillaDeText(espec.getCollita(), vi.getCollita()))
-            //         continue;
 
             // ENTERS
             // -----------

@@ -9,28 +9,30 @@ public class Especificacio {
     private Tipus tipus;
     private String collita;
 
-    Especificacio (String nom, Origen origen, Tipus tipus, String collita){
+    Especificacio(String nom, Origen origen, Tipus tipus, String collita) {
         this.nom = nom;
         this.origen = origen;
         this.tipus = tipus;
         this.collita = collita;
     }
 
-    public String getNom(){
+    public String getNom() {
         return nom;
     }
 
-    public String getOrigen(){
-        if (origen == null) return null;
+    public String getOrigen() {
+        if (origen == null)
+            return null;
         return origen.toString();
     }
 
-    public String getTipus(){
-        if (tipus == null) return null;
+    public String getTipus() {
+        if (tipus == null)
+            return null;
         return tipus.toString();
     }
 
-    public String getCollita(){
+    public String getCollita() {
         return collita;
     }
 
@@ -49,7 +51,7 @@ public class Especificacio {
     }
 
     public String[] aArrayString() {
-        String[] array = {nom, origen.toString(), tipus.toString(), collita};
+        String[] array = { nom, origen.toString(), tipus.toString(), collita };
         return array;
     }
 
@@ -58,9 +60,18 @@ public class Especificacio {
     }
 
     public boolean esPlantillaDe(Vi plantilla) {
-        if (Vi.esValid(plantilla.getRef(), plantilla.getPreu(), plantilla.getEstoc(), plantilla.getLloc(), plantilla.getEspec()))
-            return true;
-        return false;
+        if (nom != null)
+            if (!UtilString.esPlantillaDeText(nom, plantilla.getEspec().getNom()))
+                return false;
+        if (plantilla.getEspec().getOrigen() != null)
+            if (!UtilString.esPlantillaDeText(origen.toString(), plantilla.getEspec().getOrigen()))
+                return false;
+        if (plantilla.getEspec().getTipus() != null)
+            if (!UtilString.esPlantillaDeText(tipus.toString(), plantilla.getEspec().getTipus()))
+                return false;
+        if (plantilla.getEspec().getCollita() != null)
+            if (!UtilString.esPlantillaDeText(collita, plantilla.getEspec().getCollita()))
+                return false;
+        return true;
     }
 }
-
