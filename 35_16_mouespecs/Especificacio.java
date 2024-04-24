@@ -63,13 +63,13 @@ public class Especificacio {
         if (nom != null)
             if (!UtilString.esPlantillaDeText(nom, plantilla.getEspec().getNom()))
                 return false;
-        if (plantilla.getEspec().getOrigen() != null)
+        if (origen != null)
             if (!UtilString.esPlantillaDeText(origen.toString(), plantilla.getEspec().getOrigen()))
                 return false;
-        if (plantilla.getEspec().getTipus() != null)
+        if (tipus != null)
             if (!UtilString.esPlantillaDeText(tipus.toString(), plantilla.getEspec().getTipus()))
                 return false;
-        if (plantilla.getEspec().getCollita() != null)
+        if (collita != null)
             if (!UtilString.esPlantillaDeText(collita, plantilla.getEspec().getCollita()))
                 return false;
         return true;
