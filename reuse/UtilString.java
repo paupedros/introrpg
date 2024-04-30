@@ -618,15 +618,12 @@ public class UtilString {
 		return junta(cadenes, separador, separador);
 	}
 
-	public static String normalitzaString(String text) {
-        if (text == null || text.isEmpty())
+    public static String normalitzaString(String input) {
+        if (input == null || input.isBlank())
             return null;
-        if (!text.isBlank()) {
-            return text.trim().replaceAll("\\s+", " ");
-        }
-        return null;
+        return input.trim().replaceAll("\\s+", " ");
     }
-
+	
 	public static boolean esPlantillaDeText(String plantilla, String text) {
 		if (plantilla == null || plantilla.isBlank()) return true;
 		if (text == null || text.isBlank()) return false;
