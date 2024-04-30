@@ -8,7 +8,7 @@ public class Punt {
     private int y = 0;
 
     public int getX() { return x; }
-    public int getY(){ return 0; }
+    public int getY(){ return y; }
 
     public void setX(int x) {
         this.x = x;
