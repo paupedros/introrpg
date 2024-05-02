@@ -43,6 +43,13 @@ public class TestPunt {
     }
 
     @Test
+    public void constructorXY(){
+        Punt p = new Punt(42, 42);
+        assertEquals(42, p.getX());
+        assertEquals(42, p.getY());
+    }
+
+    @Test
     public void suma(){
         Punt p1 = new Punt(3,2);
         Punt p2 = new Punt(4,5);
