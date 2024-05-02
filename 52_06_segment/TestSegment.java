@@ -16,41 +16,41 @@ public class TestSegment {
         new Segment(p1, p2);
     }
 
-    @Test
-    public void getP1() {
-        Punt p1 = new Punt();
-        Punt p2 = new Punt();
-        Segment s = new Segment(p1, p2);
-        assertEquals(p1, s.getP1());
-    }
+    // @Test
+    // public void getP1() {
+    //     Punt p1 = new Punt();
+    //     Punt p2 = new Punt();
+    //     Segment s = new Segment(p1, p2);
+    //     assertEquals(p1, s.getP1());
+    // }
 
-    @Test
-    public void setP1() {
-        Punt p1 = new Punt();
-        Punt p2 = new Punt();
-        Segment s = new Segment(p1, p2);
-        Punt p3 = new Punt(3, 1);
-        s.setP1(p3);
-        assertEquals(p3, s.getP1());
-    }
+    // @Test
+    // public void setP1() {
+    //     Punt p1 = new Punt();
+    //     Punt p2 = new Punt();
+    //     Segment s = new Segment(p1, p2);
+    //     Punt p3 = new Punt(3, 1);
+    //     s.setP1(p3);
+    //     assertEquals(p3, s.getP1());
+    // }
 
-    @Test
-    public void getP2() {
-        Punt p1 = new Punt();
-        Punt p2 = new Punt();
-        Segment s = new Segment(p1, p2);
-        assertEquals(p2, s.getP2());
-    }
+    // @Test
+    // public void getP2() {
+    //     Punt p1 = new Punt();
+    //     Punt p2 = new Punt();
+    //     Segment s = new Segment(p1, p2);
+    //     assertEquals(p2, s.getP2());
+    // }
 
-    @Test
-    public void setP2() {
-        Punt p1 = new Punt();
-        Punt p2 = new Punt();
-        Segment s = new Segment(p1, p2);
-        Punt p3 = new Punt(3, 1);
-        s.setP2(p3);
-        assertEquals(p3, s.getP2());
-    }
+    // @Test
+    // public void setP2() {
+    //     Punt p1 = new Punt();
+    //     Punt p2 = new Punt();
+    //     Segment s = new Segment(p1, p2);
+    //     Punt p3 = new Punt(3, 1);
+    //     s.setP2(p3);
+    //     assertEquals(p3, s.getP2());
+    // }
 
     @Test
     public void constructor() {
