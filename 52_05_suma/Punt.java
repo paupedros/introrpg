@@ -7,6 +7,16 @@ public class Punt {
     private int x = 0;
     private int y = 0;
 
+    public Punt(){
+        x = 0;
+        y = 0;
+    }
+
+    public Punt(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
     public int getX() { return x; }
     public int getY(){ return y; }
 
@@ -16,4 +26,6 @@ public class Punt {
     public void setY(int y) {
         this.y = y;
     }
+
+    public void suma(Punt p) { x+=p.x; y+=p.y; }
 }

@@ -36,8 +36,18 @@ public class TestPunt {
 
     @Test
     public void setY42(){
+        // Comprova que el setter deixi la propietat amb el valor esperat
         Punt p = new Punt();
         p.setY(42);
         assertEquals(42, p.getY());
+    }
+
+    @Test
+    public void suma(){
+        Punt p1 = new Punt(3,2);
+        Punt p2 = new Punt(4,5);
+        p1.suma(p2);
+        assertEquals(7, p1.getX());
+        assertEquals(7, p1.getY());
     }
 }
