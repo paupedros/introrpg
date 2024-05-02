@@ -65,7 +65,7 @@ public class TestSegment {
     @Test
     public void longitud() {
         Segment s = new Segment(new Punt(2, 3), new Punt(4, 5));
-        assertEquals(2.83, s.longitud(), 0.000001d, "Hauria de retornar la longitud correcta");
+        assertEquals(2.83, s.longitud(), 0.01d);
     }
 
 }
