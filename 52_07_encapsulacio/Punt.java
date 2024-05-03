@@ -4,7 +4,7 @@
  */
 
 public class Punt {
-    private int[] coord = {0, 0};
+    private int[] coord = new int[2];
 
     public Punt(){
         coord[0] = 0;
