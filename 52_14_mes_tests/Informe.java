@@ -28,7 +28,6 @@ public class Informe {
         Lloguer luxe3dies = new Lloguer(luxe, 3);
         Lloguer luxe5dies = new Lloguer(luxe, 5);
 
-
         client.getLloguers().add(basic4dies);
 		client.getLloguers().add(general5dies);
 		client.getLloguers().add(luxe3dies);
