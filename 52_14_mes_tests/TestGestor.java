@@ -24,6 +24,11 @@
     lloguer més de 2 dies (bonificacio)
     2 lloguers 1 dia
 
+    MIX
+    Client amb 1 basic 1 general
+    Client 1 basic 1 general 1 luxe
+    Client 1 basic 4 dies 1 general 5 dies  1 luxe 3 dies
+
  */
 
 import org.junit.Test;
@@ -37,6 +42,13 @@ public class TestGestor {
         String esperat = demo.informe();
         String resultat = demo.informe();
         assertEquals(esperat, resultat);
+    }
+
+
+    // NONE
+    @Test
+    public void ClientCapLloguer() {
+        Client client = 
     }
 
 }
