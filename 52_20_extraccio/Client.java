@@ -70,7 +70,7 @@ public class Client {
         return resultat;
     }
 
-    public static int bonificacionsDeLloguer(Lloguer lloguer) {
+    private static int bonificacionsDeLloguer(Lloguer lloguer) {
         if (lloguer.getVehicle().getCategoria() == Vehicle.LUXE &&
                     lloguer.getDies() > 1) {
                 return 2;
