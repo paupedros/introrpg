@@ -25,6 +25,8 @@ class Client{
     - nom: String
     - telèfon: String
     + informe() String
+    - importTotal() double
+    - bonificacionsTotal() int
 }
 
 Lloguer --|> Vehicle
@@ -39,13 +41,19 @@ sequenceDiagram
     Usuari->>unClient: informe()
     
     loop
-        unClient->>unLloguer: bonificacions()
-        unClient->>unLloguer: quantitat()
         unClient->>unLloguer: getVehicle()
         unClient->>unVehicle: getMarca()
         unClient->>unVehicle: getModel()
         unClient->>unVehicle: getCategoria()
-        unClient->>unLloguer: getDies()
+        unClient->>unLloguer: quantitat()
+        unLloguer->>unVehicle: getCategoria()
+    end
+
+    loop importTotal()
+        unClient->>unLloguer: quantitat()
+    end
+
+    loop bonificacionsTotal()
         unClient->>unLloguer: bonificacions()
     end
 
