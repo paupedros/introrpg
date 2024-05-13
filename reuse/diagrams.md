@@ -25,6 +25,9 @@ class Client{
     - nom: String
     - telèfon: String
     + informe() String
+    - composaCapsalera() String
+    - composaDetall() String
+    - composaPeu() String
     - importTotal() double
     - bonificacionsTotal() int
 }
