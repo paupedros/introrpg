@@ -75,4 +75,6 @@ public class Client {
         }
         return total;
     }
+
+    private int 
 }
