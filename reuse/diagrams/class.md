@@ -1,5 +1,6 @@
 ```mermaid
 classDiagram
+direction RL
 class Vehicle{
     + BASIC = 1: int$
     + GENERAL = 2: int$
@@ -28,5 +29,24 @@ class Client{
 
 Lloguer --|> Vehicle
 Client --|> "many" Lloguer
+
+```
+<hr>
+
+```mermaid
+sequenceDiagram
+
+    Usuari->>unClient: informe()
+    
+    loop
+        unClient->>unLloguer: bonificacions()
+        unClient->>unLloguer: quantitat()
+        unClient->>unLloguer: getVehicle()
+        unClient->>unVehicle: getMarca()
+        unClient->>unVehicle: getModel()
+        unClient->>unVehicle: getCategoria()
+        unClient->>unLloguer: getDies()
+        unClient->>unLloguer: bonificacions()
+    end
 
 ```
