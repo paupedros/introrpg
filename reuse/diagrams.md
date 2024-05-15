@@ -57,13 +57,15 @@ loop for each Lloguer
     activate unLloguer
     unLloguer --> unClient: vehicle
     unClient -> unVehicle: getMarca()
-    unVehicle --> unClient: marca
     activate unVehicle
+    unVehicle --> unClient: marca
     unClient -> unVehicle: getModel()
     unVehicle --> unClient: model
     unClient -> unLloguer: quantitat()
     unLloguer -> unVehicle: getCategoria()
+    unVehicle --> unLloguer: categoria
     deactivate unVehicle
+    unLloguer --> unClient: quantitat
     deactivate unLloguer
 end
 return detall
@@ -77,7 +79,9 @@ loop for each Lloguer
     activate unLloguer
     unLloguer -> unVehicle: getCategoria()
     activate unVehicle
+    unVehicle --> unLloguer: categoria
     deactivate unVehicle
+    unLloguer --> unClient: quantitat
     deactivate unLloguer
 end
 return importTotal
@@ -89,7 +93,9 @@ loop for each Lloguer
     activate unLloguer
     unLloguer -> unVehicle: getCategoria()
     activate unVehicle
+    unVehicle --> unLloguer: categoria
     deactivate unVehicle
+    unLloguer --> unClient: bonificacions
     deactivate unLloguer
 end
 return bonificacionsTotal
