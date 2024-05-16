@@ -377,7 +377,7 @@ public class TestGestor {
 			</table>
 			<p>Import a pagar: <em>810.0€</em></p>
 			<p>Punts guanyats: <em>4</em></p>
-				""";
+			""";
 		assertEquals(esperat, result);
 	}
 
