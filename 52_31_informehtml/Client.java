@@ -105,11 +105,11 @@ public class Client {
     private String composaDetallHTML() {
         String resultat = """
 			<table>
-				<tr>
-					<td><strong>Marca</strong></td>
-					<td><strong>Model</strong></td>
-					<td><strong>Import</strong></td>
-				</tr>
+			  <tr>
+			    <td><strong>Marca</strong></td>
+			    <td><strong>Model</strong></td>
+			    <td><strong>Import</strong></td>
+			    </tr>
             """;
 		for (Lloguer lloguer : lloguers) {
 			// composa els resultats d'aquest lloguer
