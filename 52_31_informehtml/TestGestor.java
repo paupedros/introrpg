@@ -366,14 +366,14 @@ public class TestGestor {
 		String esperat = """
 			<p>Informe de lloguers del client <em>Eugènia Salinas Roig</em> (<strong>51590695Q</strong>)</p>
 			<table>
-			  <tr>
-				<td><strong>Marca</strong></td>
-				<td><strong>Model</strong></td>
-				<td><strong>Import</strong></td>
-			  </tr>
-			  <tr><td>Seat</td><td>600</td><td>90.0€</td></tr>
-			  <tr><td>Tata</td><td>Vista</td><td>180.0€</td></tr>
-			  <tr><td>Fiat</td><td>Uno</td><td>540.0€</td></tr>
+				<tr>
+					<td><strong>Marca</strong></td>
+					<td><strong>Model</strong></td>
+					<td><strong>Import</strong></td>
+				</tr>
+				<tr><td>Seat</td><td>600</td><td>90.0€</td></tr>
+				<tr><td>Tata</td><td>Vista</td><td>180.0€</td></tr>
+				<tr><td>Fiat</td><td>Uno</td><td>540.0€</td></tr>
 			</table>
 			<p>Import a pagar: <em>810.0€</em></p>
 			<p>Punts guanyats: <em>4</em></p>
