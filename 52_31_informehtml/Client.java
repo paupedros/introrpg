@@ -113,7 +113,7 @@ public class Client {
             """;
 		for (Lloguer lloguer : lloguers) {
 			// composa els resultats d'aquest lloguer
-			resultat += String.format("\t<tr><td>%s</td><td>%s</td><td>%s€</td></tr>%n", 
+			resultat += String.format("    <tr><td>%s</td><td>%s</td><td>%s€</td></tr>%n", 
 			lloguer.getVehicle().getMarca(), lloguer.getVehicle().getModel(), 
 			lloguer.calculaPreuLloguer() * EUROS_PER_UNITAT_DE_COST);
 		}
