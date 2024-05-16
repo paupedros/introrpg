@@ -109,7 +109,7 @@ public class Client {
 			    <td><strong>Marca</strong></td>
 			    <td><strong>Model</strong></td>
 			    <td><strong>Import</strong></td>
-			    </tr>
+			  </tr>
             """;
 		for (Lloguer lloguer : lloguers) {
 			// composa els resultats d'aquest lloguer
