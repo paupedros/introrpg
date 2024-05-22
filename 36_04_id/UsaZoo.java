@@ -1,7 +1,8 @@
 /*
  * Classe que utilitzarem per a veure el funcionament
  * del jdbc per poder connectar-se a la base de dades i fer-hi canvis.
- * En aquest cas estarem provant per fer selects de la taula CATEGORIES
+ * En aquest cas estarem provant l'obtenció del nou id generat pel SGBD
+ * i assignar-lo a la nova categoria
  */
 
 import java.sql.SQLException;
@@ -28,14 +29,14 @@ public class UsaZoo {
         zoo.afegeixCategoria(mamifer);
 
         System.out.println();
-        System.out.println("Mostrem les categories disponibles ara");
-        ZooUtils.mostraCategories(zoo.recuperaCategories());
+        System.out.println("Un cop inserides les categories queden: ");
+        System.out.println("\t"+ ocell);
+        System.out.println("\t"+ mamifer);
         System.out.println();
-        System.out.println("Consultem algunes categories");
-        System.out.println("En consultar per la categoria ocell obtenim " + zoo.obteCategoriaPerNom("ocell"));
-        System.out.println("En consultar per la categoria mamífer obtenim " + zoo.obteCategoriaPerNom("mamífer"));
-        System.out.println("En consultar per la categoria peix obtenim " + zoo.obteCategoriaPerNom("peix"));
+        System.out.println("Mostrem les categories disponibles finalment");
+        ZooUtils.mostraCategories(zoo.recuperaCategories());
 
+        System.out.println();
         System.out.print("Finalment tanquem la connexió amb la base de dades: ");
         zoo.desconnecta();
         System.out.println("desconnectat");
