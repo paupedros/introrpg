@@ -166,7 +166,6 @@ public class Zoo {
         if (!animal.idIndefinit()) return;
         int idCat = -1;
         if (!animal.getCategoria().idIndefinit()) idCat = animal.getCategoria().getId();
-        System.out.println("id inicial: " + idCat);
         // Mirem si la categoria del animal a inserir esta dins de la bdd
         if (obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
             // Afegim la nova categoria
@@ -174,7 +173,6 @@ public class Zoo {
             // Obtenim el id de la categoria nova
             idCat = animal.getCategoria().getId();
         }
-        System.out.println("id final: " + idCat);
         // Inserim l'animal a la bdd
         String sql = String.format("INSERT INTO ANIMALS VALUES (%d, '%s')", idCat, animal.getNom());
         try(Statement st = conn.createStatement()) {
