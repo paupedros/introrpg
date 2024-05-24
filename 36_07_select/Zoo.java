@@ -146,7 +146,8 @@ public class Zoo {
         String sql = """
                 CREATE TABLE IF NOT EXISTS ANIMALS(
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    nom VARCHAR(40)
+                    nom VARCHAR(40),
+                    id_cat INTEGER
                     )
                     """;
         try (Statement st = conn.createStatement()) {
@@ -176,7 +177,7 @@ public class Zoo {
             idCat = animal.getCategoria().getId();
         }
         // Inserim l'animal a la bdd
-        String sql = String.format("INSERT INTO ANIMALS VALUES (%d, '%s')", idCat, animal.getNom());
+        String sql = String.format("INSERT INTO ANIMALS VALUES ('%s', %d)", animal.getNom(), idCat);
         try (Statement st = conn.createStatement()) {
             st.executeUpdate(sql);
         }
