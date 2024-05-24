@@ -19,4 +19,16 @@ public class ZooUtils {
         }
     }
 
+    public static void mostraAnimals(List<Animal> animals) {
+        if (animals.size() < 1) {
+            System.out.println("Cap animal");
+            return;
+        }
+        String result = "Nombre de categories: " + animals.size();
+        for (Animal animal : animals) {
+            result += "\n\t" + animal;
+        }
+        System.out.println(result);
+    }
+
 }

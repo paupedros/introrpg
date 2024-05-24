@@ -33,4 +33,11 @@ public class Animal {
     public boolean idIndefinit() {
         return id < 0 ? true : false;
     }
+
+    @Override
+    public String toString() {
+        return "Animal(id:" +
+            (id < 0 ? "indefinit" : id) +
+            ", " + nom + ", " + categoria + ")";
+    }
 }
