@@ -166,16 +166,7 @@ public class Zoo {
         // Si el id està definit, no fem res
         if (!animal.idIndefinit())
             return;
-        int idCat = -1;
-        if (!animal.getCategoria().idIndefinit())
-            idCat = animal.getCategoria().getId();
-        // Mirem si la categoria del animal a inserir esta dins de la bdd
-        if (obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
-            // Afegim la nova categoria
-            afegeixCategoria(animal.getCategoria());
-            // Obtenim el id de la categoria nova
-            idCat = animal.getCategoria().getId();
-        }
+        int idCat = getIdCat(animal);
         // Inserim l'animal a la bdd
         String sql = String.format("INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', %d)", animal.getNom(), idCat);
         try (Statement st = conn.createStatement()) {
@@ -185,6 +176,22 @@ public class Zoo {
             int id = rs.getInt(1);
             animal.setId(id);
         }
+    }
+
+    private int getIdCat(Animal animal) throws SQLException {
+        // Comencem amb un id indefinit
+        int idCat = -1;
+        // Si el id ja esta definit, obtenim el id
+        if (!animal.getCategoria().idIndefinit())
+            idCat = animal.getCategoria().getId();
+        // Si la categoria no esta dins la bdd
+        if (obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
+            // Afegim la nova categoria
+            afegeixCategoria(animal.getCategoria());
+            // Obtenim el id de la categoria nova
+            idCat = animal.getCategoria().getId();
+        }
+        return idCat;
     }
 
     public Animal obteAnimalPerNom(String nom) throws SQLException {
