@@ -24,7 +24,7 @@ public class ZooUtils {
             System.out.println("Cap animal");
             return;
         }
-        String result = "Nombre de categories: " + animals.size();
+        String result = "Nombre de animals: " + animals.size();
         for (Animal animal : animals) {
             result += "\n\t" + animal;
         }
