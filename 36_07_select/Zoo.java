@@ -177,7 +177,7 @@ public class Zoo {
             idCat = animal.getCategoria().getId();
         }
         // Inserim l'animal a la bdd
-        String sql = String.format("INSERT INTO ANIMALS VALUES ('%s', %d)", animal.getNom(), idCat);
+        String sql = String.format("INSERT INTO ANIMALS (nom, id_cat) VALUES ('%s', %d)", animal.getNom(), idCat);
         try (Statement st = conn.createStatement()) {
             st.executeUpdate(sql);
         }
