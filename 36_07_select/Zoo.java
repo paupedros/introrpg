@@ -166,9 +166,7 @@ public class Zoo {
         // Si l'animal ja esta a la bdd, no fem res
         if (!animal.idIndefinit())
             return;
-        
         manageCategoria(animal);
-
         int idCat = animal.getCategoria().getId();
         // Inserim l'animal a la bdd
         String sql = String.format("INSERT INTO ANIMALS (nom, categoria) VALUES ('%s', %d)", animal.getNom(), idCat);
@@ -192,7 +190,7 @@ public class Zoo {
     }
 
     public Animal obteAnimalPerNom(String nom) throws SQLException {
-        String sql = "SELECT * FROM ANIMALS WHERE nom = " + nom + " ORDER BY id LIMIT 1";
+        String sql = "SELECT * FROM ANIMALS WHERE nom = '" + nom + "' ORDER BY id LIMIT 1";
 
         try (Statement st = conn.createStatement();) {
             ResultSet rs = st.executeQuery(sql);
