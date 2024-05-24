@@ -190,7 +190,9 @@ public class Zoo {
     }
 
     public Animal obteAnimalPerNom(String nom) throws SQLException {
-        String sql = "SELECT * FROM ANIMALS WHERE nom = '" + nom + "' ORDER BY id LIMIT 1";
+        // Obtindrem dels animals: nom, id
+        // de la categoria nomes el nom
+        String sql = "SELECT ANIMALS.nom AS nom, ANIMALS.id as id, CATEGORIES.nom AS cat_nom FROM ANIMALS, CATEGORIES WHERE CATEGORIES.id = ANIMALS.categoria AND ANIMALS.nom = '" + nom + "' ORDER BY ANIMALS.id LIMIT 1";
 
         try (Statement st = conn.createStatement();) {
             ResultSet rs = st.executeQuery(sql);
@@ -200,7 +202,7 @@ public class Zoo {
 
             String nomAnimal = rs.getString("nom");
             int idAnimal = rs.getInt("id");
-            Categoria categoria = obteCategoriaPerNom(rs.getString("categoria"));
+            Categoria categoria = obteCategoriaPerNom(rs.getString("cat_nom"));
 
             return new Animal(idAnimal, nomAnimal, categoria);
         }
@@ -222,7 +224,7 @@ public class Zoo {
             while(rs.next()){
                 String nomAnimal = rs.getString("nom_animal");
                 String nomCategoria = rs.getString("nom_categoria");
-                Categoria categoria = new Categoria(rs.getInt("id_categoria"), nomCategoria);
+                Categoria categoria = obteCategoriaPerNom(nomCategoria);
                 Animal animal = new Animal(rs.getInt("id_animal"), nomAnimal, categoria);
                 animals.add(animal);
             }
