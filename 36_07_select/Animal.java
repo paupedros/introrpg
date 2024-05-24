@@ -27,6 +27,12 @@ public class Animal {
         if (!idIndefinit()) return id;
         return -1;
     }
+    public void setId(int id) {
+        if (id < 0) {
+            throw new IllegalArgumentException("L'identificador ha de ser positiu");
+        }
+        this.id = id;
+    }
     public String getNom() {return nom;}
     public Categoria getCategoria() {return categoria;}
 
