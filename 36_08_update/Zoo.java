@@ -1,6 +1,7 @@
 /*
  * Classe per a poder accedir a la base de dades dels animals del zoo
- * té els metodes per connectar-se i desconnectar-se
+ * té els metodes per connectar-se i desconnectar-se,
+ * gestio de les taules de categories i animals
  */
 
 import java.sql.DriverManager;
