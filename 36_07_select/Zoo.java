@@ -184,7 +184,7 @@ public class Zoo {
         int idCat = -1;
         // Si el id ja esta definit, obtenim el id
         if (!animal.getCategoria().idIndefinit())
-            idCat = animal.getCategoria().getId();
+            return animal.getCategoria().getId();
         // Si la categoria no esta dins la bdd
         if (obteCategoriaPerNom(animal.getCategoria().getNom()) == null) {
             // Afegim la nova categoria
