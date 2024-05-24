@@ -55,13 +55,13 @@ public class UsaZoo {
         ZooUtils.mostraCategories(zoo.recuperaCategories());
         System.out.println();
         System.out.println("Recuperem ara alguns animals per nom");
-        // System.out.println("El guppy: " + zoo.obteAnimalPerNom("guppy"));
-        // System.out.println("El gat: " + zoo.obteAnimalPerNom("gat"));
-        // System.out.println("El gat Renat: " + zoo.obteAnimalPerNom("Renat"));
+        System.out.println("El guppy: " + zoo.obteAnimalPerNom("guppy"));
+        System.out.println("El gat: " + zoo.obteAnimalPerNom("gat"));
+        System.out.println("El gat Renat: " + zoo.obteAnimalPerNom("Renat"));
 
-        // System.out.println();
-        // System.out.print("Finalment tanquem la connexió amb la base de dades: ");
-        // zoo.desconnecta();
-        // System.out.println("desconnectat");
+        System.out.println();
+        System.out.print("Finalment tanquem la connexió amb la base de dades: ");
+        zoo.desconnecta();
+        System.out.println("desconnectat");
     }
 }

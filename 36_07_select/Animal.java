@@ -35,6 +35,10 @@ public class Animal {
     }
     public String getNom() {return nom;}
     public Categoria getCategoria() {return categoria;}
+    public void setCategoria(Categoria categoria) {
+        if (categoria == null) throw new IllegalArgumentException("La categoria no pot ser null");
+        this.categoria = categoria;
+    }
 
     public boolean idIndefinit() {
         return id < 0 ? true : false;
