@@ -192,7 +192,7 @@ public class Zoo {
             // Obtenim el id de la categoria nova
             idCat = animal.getCategoria().getId();
         }
-        return idCat;
+        return animal.getCategoria().getId();
     }
 
     public Animal obteAnimalPerNom(String nom) throws SQLException {
