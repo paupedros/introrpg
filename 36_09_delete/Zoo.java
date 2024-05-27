@@ -303,13 +303,10 @@ public class Zoo {
         
         // Eliminació dels animals en cascada
         String deleteAnimal = "DELETE FROM ANIMALS WHERE categoria = " + categoria.getId();
-        try (Statement st = conn.createStatement() ) {
-            st.executeUpdate(deleteAnimal);
-        }
-
         // Eliminació de la categoria
         String deleteCat = "DELETE FROM CATEGORIES WHERE id = " + categoria.getId();
         try (Statement st = conn.createStatement() ) {
+            st.executeUpdate(deleteAnimal);
             st.executeUpdate(deleteCat);
         }
     }
